@@ -1,0 +1,135 @@
+"platform: bot":
+  - changed-files:
+      - any-glob-to-any-file: bot/**
+
+"platform: website":
+  - changed-files:
+      - any-glob-to-any-file: website/**
+
+"lang: bg":
+  - changed-files:
+      - any-glob-to-any-file: "**/bg.yml"
+
+"lang: cs":
+  - changed-files:
+      - any-glob-to-any-file: "**/cs.yml"
+
+"lang: da":
+  - changed-files:
+      - any-glob-to-any-file: "**/da.yml"
+
+"lang: de":
+  - changed-files:
+      - any-glob-to-any-file: "**/de.yml"
+
+"lang: el":
+  - changed-files:
+      - any-glob-to-any-file: "**/el.yml"
+
+"lang: en-GB":
+  - changed-files:
+      - any-glob-to-any-file: "**/en-GB.yml"
+
+"lang: en-US":
+  - changed-files:
+      - any-glob-to-any-file: "**/en-US.yml"
+
+"lang: es-419":
+  - changed-files:
+      - any-glob-to-any-file: "**/es-419.yml"
+
+"lang: es-ES":
+  - changed-files:
+      - any-glob-to-any-file: "**/es-ES.yml"
+
+"lang: fi":
+  - changed-files:
+      - any-glob-to-any-file: "**/fi.yml"
+
+"lang: fr":
+  - changed-files:
+      - any-glob-to-any-file: "**/fr.yml"
+
+"lang: hi":
+  - changed-files:
+      - any-glob-to-any-file: "**/hi.yml"
+
+"lang: hr":
+  - changed-files:
+      - any-glob-to-any-file: "**/hr.yml"
+
+"lang: hu":
+  - changed-files:
+      - any-glob-to-any-file: "**/hu.yml"
+
+"lang: id":
+  - changed-files:
+      - any-glob-to-any-file: "**/id.yml"
+
+"lang: it":
+  - changed-files:
+      - any-glob-to-any-file: "**/it.yml"
+
+"lang: ja":
+  - changed-files:
+      - any-glob-to-any-file: "**/ja.yml"
+
+"lang: ko":
+  - changed-files:
+      - any-glob-to-any-file: "**/ko.yml"
+
+"lang: lt":
+  - changed-files:
+      - any-glob-to-any-file: "**/lt.yml"
+
+"lang: nl":
+  - changed-files:
+      - any-glob-to-any-file: "**/nl.yml"
+
+"lang: no":
+  - changed-files:
+      - any-glob-to-any-file: "**/no.yml"
+
+"lang: pl":
+  - changed-files:
+      - any-glob-to-any-file: "**/pl.yml"
+
+"lang: pt-BR":
+  - changed-files:
+      - any-glob-to-any-file: "**/pt-BR.yml"
+
+"lang: ro":
+  - changed-files:
+      - any-glob-to-any-file: "**/ro.yml"
+
+"lang: ru":
+  - changed-files:
+      - any-glob-to-any-file: "**/ru.yml"
+
+"lang: sv-SE":
+  - changed-files:
+      - any-glob-to-any-file: "**/sv-SE.yml"
+
+"lang: th":
+  - changed-files:
+      - any-glob-to-any-file: "**/th.yml"
+
+"lang: tr":
+  - changed-files:
+      - any-glob-to-any-file: "**/tr.yml"
+
+"lang: uk":
+  - changed-files:
+      - any-glob-to-any-file: "**/uk.yml"
+
+"lang: vi":
+  - changed-files:
+      - any-glob-to-any-file: "**/vi.yml"
+
+"lang: zh-CN":
+  - changed-files:
+      - any-glob-to-any-file: "**/zh-CN.yml"
+
+"lang: zh-TW":
+  - changed-files:
+      - any-glob-to-any-file: "**/zh-TW.yml"
