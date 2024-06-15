@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "locale": "en-US",
+    "name": "English, US",
+    "name_native": "English, US",
+    "emoji_unicode": "🇺🇸"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Close a poll.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to close."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Copy an existing poll.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to copy."
+        },
+        "channel": {
+          "description": "The channel to copy the poll to."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Delete a poll completely.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to delete."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Modify an existing poll.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to modify."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Export the results of a poll.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to export."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Show a list of all polls on the current server.",
+      "options": {
+        "status": {
+          "description": "Which status should the polls have?",
+          "choices": {
+            "all": "All",
+            "open": "Open",
+            "running": "Running",
+            "closed": "Closed"
+          }
+        },
+        "channel": {
+          "description": "In which channel should the polls be?"
+        },
+        "user": {
+          "description": "From which user should the polls be?"
+        }
+      }
+    },
+    "poll": {
+      "description": "Create a normal poll.",
+      "options": {
+        "question": {
+          "description": "What is the question of the poll?"
+        },
+        "type": {
+          "description": "What type of poll should be created?",
+          "choices": {
+            "normal-buttons": "Normal (Buttons)",
+            "normal-selectmenu": "Normal (Select Menu)",
+            "anonymous-buttons": "Anonymous (Buttons)",
+            "anonymous-selectmenu": "Anonymous (Select Menu)",
+            "hidden-buttons": "Hidden (Buttons)",
+            "hidden-selectmenu": "Hidden (Select Menu)"
+          }
+        },
+        "maxchoices": {
+          "description": "How many answers can each user choose? (Default: 1)"
+        },
+        "text": {
+          "description": "Which text should be appear above the poll?"
+        },
+        "allowedrole": {
+          "description": "Which role is allowed to vote? (Default: Everyone)"
+        },
+        "answer": {
+          "description": "Answer {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Create a more complex poll with the poll builder."
+    },
+    "pollresult": {
+      "description": "Publish the result of a closed poll again.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to publish the result of."
+        },
+        "text": {
+          "description": "Which text should be appear above the published poll result?"
+        },
+        "channel": {
+          "description": "The channel to publish the result to."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Reopen a already closed poll.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to reopen."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Repeat a poll at certain time intervals.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to repeat."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Show a specific poll with all information and actions.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to show."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Create a time-based poll.",
+      "options": {
+        "question": {
+          "description": "What is the question of the poll?"
+        },
+        "time": {
+          "description": "How long should the poll run?"
+        },
+        "type": {
+          "description": "What type of poll should be created?",
+          "choices": {
+            "normal-buttons": "Normal (Buttons)",
+            "normal-selectmenu": "Normal (Select Menu)",
+            "anonymous-buttons": "Anonymous (Buttons)",
+            "anonymous-selectmenu": "Anonymous (Select Menu)",
+            "hidden-buttons": "Hidden (Buttons)",
+            "hidden-selectmenu": "Hidden (Select Menu)"
+          }
+        },
+        "maxchoices": {
+          "description": "How many answers can each user choose? (Default: 1)"
+        },
+        "text": {
+          "description": "Which text should be appear above the poll?"
+        },
+        "allowedrole": {
+          "description": "Which role is allowed to vote? (Default: Everyone)"
+        },
+        "answer": {
+          "description": "Answer {{id}}"
+        }
+      }
+    },
+    "debug": {
+      "description": "Check the server permissions and some common issues.",
+      "options": {
+        "channel": {
+          "description": "Channel to debug. (Default: Current channel)"
+        }
+      }
+    },
+    "help": {
+      "description": "Get assistance and information about available commands."
+    },
+    "invite": {
+      "description": "Get a link to add the bot to your own server."
+    },
+    "premium": {
+      "description": "Check the current premium status of this server."
+    },
+    "settings": {
+      "description": "Change the settings of this server.",
+      "subcommands": {
+        "colors": {
+          "description": "Change the default colors of this server.",
+          "subcommands": {
+            "embeds": {
+              "description": "Change the default colors of embeds.",
+              "options": {
+                "state": {
+                  "description": "The state of the embeds.",
+                  "choices": {
+                    "open": "Open",
+                    "closed": "Closed",
+                    "running": "Running",
+                    "result": "Result"
+                  }
+                },
+                "color": {
+                  "description": "The color of the embeds."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Change the default colors of buttons.",
+              "options": {
+                "color": {
+                  "description": "The color of the buttons.",
+                  "choices": {
+                    "primary": "Primary (Blurple)",
+                    "secondary": "Secondary (Grey)",
+                    "success": "Success (Green)",
+                    "danger": "Danger (Red)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Change the settings of events.",
+          "options": {
+            "setting": {
+              "description": "Which setting should be changed?",
+              "choices": {
+                "remove_votes_on_ban": "Remove active votes when a user is banned",
+                "remove_votes_on_kick": "Remove active votes when a user is kicked",
+                "remove_votes_on_leave": "Remove active votes when a user leaves"
+              }
+            },
+            "status": {
+              "description": "To which status should the setting be changed?",
+              "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "Change the default emojis of this server."
+        },
+        "language": {
+          "description": "Change the language of this server."
+        },
+        "threads": {
+          "description": "Change the settings of threads.",
+          "options": {
+            "setting": {
+              "description": "Which setting should be changed?",
+              "choices": {
+                "create_thread_with_poll": "Create a thread when a new poll is created",
+                "lock_and_unlock_thread_with_poll": "Lock/unlock a thread when the related poll is closed/reopened"
+              }
+            },
+            "status": {
+              "description": "To which status should the setting be changed?",
+              "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Close"
+    },
+    "details": {
+      "name": "Details"
+    },
+    "edit": {
+      "name": "Edit"
+    },
+    "participants": {
+      "name": "Participants"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Go to page",
+      "components": {
+        "page_number": {
+          "label": "Page number",
+          "placeholder": "Please enter the page number you want to go to..."
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Poll created",
+        "description": "The poll has been successfully created."
+      },
+      "status": {
+        "open": "Open",
+        "running": "Running",
+        "closed": "Closed"
+      },
+      "reactions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "select": {
+        "placeholder": "Select an option to vote...",
+        "votes_one": "{{count}} vote",
+        "votes_other": "{{count}} votes"
+      },
+      "description": {
+        "question": "Question",
+        "choices": "Choices",
+        "result": "Result",
+        "final_result": "Final Result",
+        "settings": "Settings"
+      },
+      "result": {
+        "title": "Poll Result",
+        "votes_one": "{{count}} vote",
+        "votes_other": "{{count}} votes",
+        "users_one": "from {{count}} user",
+        "users_other": "from {{count}} users"
+      },
+      "settings": {
+        "ends": "Ends {{- timestamp}}",
+        "ended": "Poll already ended",
+        "closed": "No other votes allowed",
+        "anonymous": "Anonymous Poll",
+        "hidden": "Hidden Poll",
+        "maxchoices_one": "allowed choice",
+        "maxchoices_other": "allowed choices",
+        "allowedroles": "Allowed roles"
+      },
+      "participants": {
+        "title": "Participants",
+        "votes": "Users who voted for this option:",
+        "no_votes": "No user has voted for this option.",
+        "select": {
+          "placeholder": "Select an option to see the participants...",
+          "participants_one": "{{count}} participant",
+          "participants_other": "{{count}} participants"
+        }
+      },
+      "info": {
+        "title": "Poll Information",
+        "fields": {
+          "id": "ID",
+          "status": "Status",
+          "creator": "Creator",
+          "created_at": "Created at",
+          "ends_at": "Ends at",
+          "closed_at": "Closed at",
+          "question": "Question",
+          "choices": "Choices",
+          "result": "Result",
+          "settings": "Settings",
+          "message": "Message"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Vote added",
+        "description": "You have successfully voted for the option {{option}}.",
+        "description2_one": "You have **{{count}} vote left**.",
+        "description2_other": "You have **{{count}} votes left**."
+      },
+      "added_selected": {
+        "title": "Votes added",
+        "description1": "You have successfully voted for the following options:",
+        "description2_one": "You have **{{count}} vote left**.",
+        "description2_other": "You have **{{count}} votes left**."
+      },
+      "removed": {
+        "title": "Vote removed",
+        "description": "You have successfully removed your vote for the option {{option}}."
+      },
+      "removed_selected": {
+        "title": "Votes removed",
+        "description": "You have successfully removed your votes for the following options:"
+      },
+      "removed_all": {
+        "title": "All votes removed",
+        "description": "You have successfully removed all your votes for this poll."
+      },
+      "manage": {
+        "title": "Manage your votes",
+        "description": "You can remove your votes from the poll by selecting the options below."
+      },
+      "select": {
+        "placeholder": "Select one or more options to remove your votes..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Close poll",
+          "description1": "Are you sure you want to close this poll?",
+          "description2": "Poll ID: {{id}}",
+          "description3": "Poll Question: {{question}}"
+        },
+        "success": {
+          "title": "Poll closed",
+          "description": "The poll has been successfully closed.",
+          "error": "However, the original message could not be updated.",
+          "error_missingaccess": "However, the original message could not be updated because the bot does not have the permissions to access the channel.",
+          "error_unknownchannel": "However, the original message could not be updated because the channel could not be found.",
+          "error_unknownmessage": "However, the original message could not be updated because the message could not be found."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Delete poll",
+          "description1": "Are you sure you want to delete the this poll permanently?",
+          "description2": "Poll ID: {{id}}",
+          "description3": "Poll Question: {{question}}"
+        },
+        "success": {
+          "title": "Poll deleted",
+          "description": "The poll has been successfully deleted.",
+          "error": "However, the original message could not be deleted.",
+          "error_missingaccess": "However, the original message could not be deleted because the bot does not have the permissions to access the channel.",
+          "error_unknownchannel": "However, the original message could not be deleted because the channel could not be found.",
+          "error_unknownmessage": "However, the original message could not be deleted because the message could not be found."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Export poll",
+          "description": "You can export the poll to a file and use it outside of the bot.\nPlease select the format you want to export the poll."
+        },
+        "success": {
+          "title": "Poll exported",
+          "description": "The poll has been successfully exported and is attached to this message.\nYou can now download the attached file and use it outside of the bot."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Polls List"
+        }
+      },
+      "select": {
+        "placeholder": "Select a poll to show..."
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Poll result published",
+          "description": "The poll result has been successfully published in {{- channel}}."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Reopen poll",
+          "description1": "Are you sure you want to reopen this poll?",
+          "description2": "Poll ID: {{id}}",
+          "description3": "Poll Question: {{question}}"
+        },
+        "success": {
+          "title": "Poll reopened",
+          "description": "The poll has been successfully reopened."
+        }
+      }
+    },
+    "debug": {
+      "content": "If you need help from our support team, please share the following link with them:",
+      "embeds": {
+        "success": {
+          "title": "Debug",
+          "fields": {
+            "guild_information": {
+              "title": "Server Information",
+              "guild_id": "Server ID",
+              "guild_name": "Server Name",
+              "guild_language": "Server Language",
+              "guild_preferred_locale": "Server Preferred Locale",
+              "channel_id": "Channel ID",
+              "channel_name": "Channel Name"
+            },
+            "user_information": {
+              "title": "User Information",
+              "user_id": "User ID",
+              "user_name": "Username",
+              "user_locale": "User Locale",
+              "guild_owner": "Server Owner",
+              "permissions": "Permissions"
+            },
+            "bot_information": {
+              "title": "Bot Information",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "App Server Permissions"
+            },
+            "channel_permissions": {
+              "title": "Channel Permissions ({{- channel}})"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "EasyPoll Help",
+          "fields": {
+            "poll": "Poll Commands",
+            "miscellaneous": "Miscellaneous Commands",
+            "settings": "Settings Commands"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "Invite EasyPoll to your server!",
+          "description": "Click the button below to invite EasyPoll to your server."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "This server does not have premium!",
+          "description": "Get premium to unlock more features!"
+        },
+        "premium": {
+          "title": "This server has premium!",
+          "fields": {
+            "premium_until": "Premium until"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Change language",
+            "text": "Here you can change the language of the bot on this server.\n\nPlease select a language for the bot on this server:",
+            "select": {
+              "placeholder": "Select a language..."
+            }
+          },
+          "changed": {
+            "title": "Language changed",
+            "description": "The language of the bot on this server has been changed to {{- language}}."
+          }
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "Poll ID: {{id}}",
+    "poll_type": "Type: {{type}} ({{votingType}})",
+    "error_id": "Error ID: {{id}}",
+    "pages": "Page {{page}} of {{pages}}"
+  },
+  "errors": {
+    "default": {
+      "title": "Task failed successfully!",
+      "description": "An error has occured but I'm unable to tell you why.\nPlease ask the support for more help."
+    },
+    "guild_command": {
+      "title": "Server command!",
+      "description": "This command can only be used in servers."
+    },
+    "missing_bot_permissions": {
+      "title": "Missing permissions!",
+      "description1": "The bot is missing the following permissions:",
+      "description2": "Please make sure the bot has all the required permissions."
+    },
+    "missing_user_permissions": {
+      "title": "Missing permissions!",
+      "description1": "You are missing the following permissions:",
+      "description2": "You cannot perform this action without the required permissions."
+    },
+    "premium_required": {
+      "title": "Premium required!",
+      "description": "This feature is only available for premium servers. Please get premium to use this feature."
+    },
+    "invalid_channel_type": {
+      "title": "Invalid channel type!",
+      "description": "The selected channel is not a allowed channel type for this action."
+    },
+    "invalid_color": {
+      "title": "Invalid color!",
+      "description": "The entered color is invalid. Please make sure the color is in the correct format."
+    },
+    "invalid_page": {
+      "title": "Invalid page!",
+      "description": "The entered page number is invalid. Please make sure the page number is in the correct format and within the valid range."
+    },
+    "invalid_time": {
+      "title": "Invalid time!",
+      "description": "The entered time is invalid. Please make sure the time is in the correct format."
+    },
+    "max_time": {
+      "title": "Maximum time reached!",
+      "description": "You have reached the maximum time of {{maxtime}}.\nPlease make sure the entered time is not longer than the maximum allowed time.",
+      "description_upgrade": "You can increase the maximum time to {{maxtime}} by upgrading to premium."
+    },
+    "unknown_emoji": {
+      "title": "Unknown emoji!",
+      "description": "You have specified an unknown emoji!\nYou can only use emojis from servers where EasyPoll is invited. Please make sure {{- emoji}} is an **official Discord** emoji or an emoji **from this server**."
+    },
+    "restricted": {
+      "title": "You cannot perform this action!",
+      "description": "You or this server is restricted from using this action.",
+      "description_user": "You are restricted from using this action.",
+      "description_guild": "This server is restricted from using this action.",
+      "fields": {
+        "reason": "Reason",
+        "expires_at": "Expires at"
+      }
+    },
+    "already_voted": {
+      "title": "Already voted for this option!",
+      "description": "You have already voted for this option and cannot vote again for the same option."
+    },
+    "max_choices_reached": {
+      "title": "Reached the maximum number of choices!",
+      "description": "You have reached the maximum number of choices for this poll. You can remove some of your votes to vote for other options."
+    },
+    "not_allowed_role": {
+      "title": "Only certain roles allowed for this poll!",
+      "description": "You cannot vote for this poll because you do not own any of the allowed roles."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "This poll is already closed!",
+        "description": "You cannot interact with this poll because it is already closed."
+      },
+      "not_closed": {
+        "title": "This poll is not closed!",
+        "description": "The poll could not be reopened because it is not closed."
+      },
+      "not_voted": {
+        "title": "Not voted for this option!",
+        "description": "You cannot remove your vote for this option because you have not voted for this option."
+      },
+      "no_votes": {
+        "title": "No votes on this poll!",
+        "description": "You have not voted for any option on this poll."
+      },
+      "invalid_poll": {
+        "title": "This is not a poll!",
+        "description_input": "The entered id is not a poll. Make sure you have entered the correct poll or message id.",
+        "description_select": "The selected message is not a poll. Make sure you have selected the correct poll message."
+      },
+      "participants_not_available": {
+        "title": "Participants list not allowed!",
+        "description": "The participants list is not available for this poll."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Vote remove not allowed!",
+        "description": "You cannot remove your vote for this poll because the remove votes is not allowed."
+      },
+      "no_polls_found": {
+        "title": "No polls found!",
+        "description": "There are no polls found in this server that match the seached criteria."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Website",
+    "invite": "Invite",
+    "support": "Support",
+    "wiki": "Wiki",
+    "premium": "Get Premium",
+    "troubleshooting": "Troubleshooting",
+    "participants": "Participants",
+    "enable": "Enable",
+    "disable": "Disable",
+    "delete": "Delete",
+    "reopen": "Reopen",
+    "close": "Close",
+    "back": "Back",
+    "cancel": "No, cancel",
+    "confirm_close": "Yes, close the poll",
+    "confirm_delete": "Yes, delete the poll",
+    "confirm_reopen": "Yes, reopen the poll",
+    "go_to_message": "Go to the message",
+    "go_to_page": "Go to page",
+    "remove_all_votes": "Remove all your votes",
+    "remove_vote": "Remove this vote",
+    "manage_votes": "Manage your votes",
+    "export_json": "Export as JSON",
+    "export_csv": "Export as CSV"
+  },
+  "permissions": {
+    "add_reactions": "Add Reactions",
+    "view_audit_log": "View Audit Log",
+    "view_channel": "View Channels",
+    "send_messages": "Send Messages",
+    "manage_messages": "Manage Messages",
+    "manage_guild": "Manage Server",
+    "embed_links": "Embed Links",
+    "attach_files": "Attach Files",
+    "read_message_history": "Read Message History",
+    "mention_everyone": "Mention Everyone",
+    "use_external_emojis": "Use External Emojis",
+    "manage_webhooks": "Manage Webhooks",
+    "manage_threads": "Manage Threads",
+    "create_public_threads": "Create Public Threads",
+    "send_messages_in_threads": "Send Messages in Threads"
+  }
+}

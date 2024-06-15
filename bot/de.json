@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "locale": "de",
+    "name": "German",
+    "name_native": "Deutsch",
+    "emoji_unicode": "🇩🇪"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Schließe eine Umfrage.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die geschlossen werden soll."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Kopiere eine bestehende Umfrage.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die kopiert werden soll."
+        },
+        "channel": {
+          "description": "Der Kanal, in den die Umfrage kopiert werden soll."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Lösche eine Umfrage vollständig.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die gelöscht werden soll."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Ändere eine bestehende Umfrage.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die geändert werden soll."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Exportiere die Ergebnisse einer Umfrage.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die exportiert werden soll."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Zeige eine Liste mit allen Umfragen auf dem aktuellen Server.",
+      "options": {
+        "status": {
+          "description": "Welchen Status sollen die Umfragen haben?",
+          "choices": {
+            "all": "Alle",
+            "open": "Offen",
+            "running": "Laufend",
+            "closed": "Geschlossen"
+          }
+        },
+        "channel": {
+          "description": "In welchem Kanal sollen die Umfragen sein?"
+        },
+        "user": {
+          "description": "Von welchem Nutzer sollen die Umfragen sein?"
+        }
+      }
+    },
+    "poll": {
+      "description": "Erstelle eine normale Umfrage.",
+      "options": {
+        "question": {
+          "description": "Was ist die Frage der Umfrage?"
+        },
+        "type": {
+          "description": "Welche Art von Umfrage soll erstellt werden?",
+          "choices": {
+            "normal-buttons": "Normal (Schaltflächen)",
+            "normal-selectmenu": "Normal (Menü Auswahl)",
+            "anonymous-buttons": "Anonym (Schaltflächen)",
+            "anonymous-selectmenu": "Anonym (Menü Auswahl)",
+            "hidden-buttons": "Verdeckt (Schaltflächen)",
+            "hidden-selectmenu": "Verdeckt (Menü Auswahl)"
+          }
+        },
+        "maxchoices": {
+          "description": "Wie viele Antworten kann jeder Nutzer auswählen? (Standard: 1)"
+        },
+        "text": {
+          "description": "Welcher Text soll über der Umfrage stehen?"
+        },
+        "allowedrole": {
+          "description": "Welche Rolle darf abstimmen? (Standard: Jeder)"
+        },
+        "answer": {
+          "description": "Antwort {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Erstelle eine komplexere Umfrage mit dem Umfrage-Ersteller."
+    },
+    "pollresult": {
+      "description": "Veröffentlich das Ergebnis einer geschlossenen Umfrage erneut.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, deren Ergebnis veröffentlicht werden soll."
+        },
+        "text": {
+          "description": "Welcher Text soll über dem veröffentlichten Umfrageergebnis stehen?"
+        },
+        "channel": {
+          "description": "Der Kanal, in dem das Ergebnis veröffentlicht werden soll."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Öffne eine bereits geschlossene Umfrage erneut.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die erneut geöffnet werden soll."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Wiederhole eine Umfrage in bestimmten Zeitabständen.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die wiederholt werden soll."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Zeige eine spezifische Umfrage mit allen Informationen und Aktionen.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die angezeigt werden soll."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Erstelle eine zeitbasierte Umfrage.",
+      "options": {
+        "question": {
+          "description": "Was ist die Frage der Umfrage?"
+        },
+        "time": {
+          "description": "Wie lange soll die Umfrage laufen?"
+        },
+        "type": {
+          "description": "Welche Art von Umfrage soll erstellt werden?",
+          "choices": {
+            "normal-buttons": "Normal (Schaltflächen)",
+            "normal-selectmenu": "Normal (Menü Auswahl)",
+            "anonymous-buttons": "Anonym (Schaltflächen)",
+            "anonymous-selectmenu": "Anonym (Menü Auswahl)",
+            "hidden-buttons": "Verdeckt (Schaltflächen)",
+            "hidden-selectmenu": "Verdeckt (Menü Auswahl)"
+          }
+        },
+        "maxchoices": {
+          "description": "Wie viele Antworten kann jeder Nutzer auswählen? (Standard: 1)"
+        },
+        "text": {
+          "description": "Welcher Text soll über der Umfrage stehen?"
+        },
+        "allowedrole": {
+          "description": "Welche Rolle darf abstimmen? (Standard: Jeder)"
+        },
+        "answer": {
+          "description": "Antwort {{id}}"
+        }
+      }
+    },
+    "debug": {
+      "description": "Überprüfe die Serverberechtigungen und einige häufige Probleme.",
+      "options": {
+        "channel": {
+          "description": "Kanal zum Debuggen. (Standard: Aktueller Kanal)"
+        }
+      }
+    },
+    "help": {
+      "description": "Erhalte Unterstützung und Informationen über verfügbare Befehle."
+    },
+    "invite": {
+      "description": "Erhalte einen Link, um den Bot zu deinem eigenen Server hinzuzufügen."
+    },
+    "premium": {
+      "description": "Prüfe den aktuellen Premium-Status dieses Servers."
+    },
+    "settings": {
+      "description": "Ändere die Einstellungen dieses Servers.",
+      "subcommands": {
+        "colors": {
+          "description": "Ändere die Standardfarben des Servers.",
+          "subcommands": {
+            "embeds": {
+              "description": "Ändere die Standardfarben von Einbettungen.",
+              "options": {
+                "state": {
+                  "description": "Der Zustand der Einbettungen.",
+                  "choices": {
+                    "open": "Offen",
+                    "closed": "Geschlossen",
+                    "running": "Laufend",
+                    "result": "Ergebnis"
+                  }
+                },
+                "color": {
+                  "description": "Die Farbe der Einbettungen."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Ändere die Standardfarben der Schaltflächen.",
+              "options": {
+                "color": {
+                  "description": "Die Farbe der Schaltflächen.",
+                  "choices": {
+                    "primary": "Primär (Blau)",
+                    "secondary": "Sekundär (Grau)",
+                    "success": "Erfolg (Grün)",
+                    "danger": "Gefahr (Rot)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Ändere die Einstellungen von Ereignissen.",
+          "options": {
+            "setting": {
+              "description": "Welche Einstellung soll geändert werden?",
+              "choices": {
+                "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
+                "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
+                "remove_votes_on_leave": "Aktive Stimmen entfernen, wenn ein Nutzer verlässt"
+              }
+            },
+            "status": {
+              "description": "Zu welchem Status soll die Einstellung geändert werden?",
+              "choices": {
+                "enable": "Aktiviert",
+                "disable": "Deaktiviert"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "Ändere die Standard-Emojis dieses Servers."
+        },
+        "language": {
+          "description": "Ändere die Sprache des Servers."
+        },
+        "threads": {
+          "description": "Ändere die Einstellungen von Threads.",
+          "options": {
+            "setting": {
+              "description": "Welche Einstellung soll geändert werden?",
+              "choices": {
+                "create_thread_with_poll": "Einen Thread erstellen, wenn eine neue Umfrage erstellt wird",
+                "lock_and_unlock_thread_with_poll": "Sperren/Entsperren von Threads, wenn die zugehörige Umfrage geschlossen/geöffnet wird"
+              }
+            },
+            "status": {
+              "description": "Zu welchem Status soll die Einstellung geändert werden?",
+              "choices": {
+                "enable": "Aktiviert",
+                "disable": "Deaktiviert"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Schließen"
+    },
+    "details": {
+      "name": "Einzelheiten"
+    },
+    "edit": {
+      "name": "Bearbeiten"
+    },
+    "participants": {
+      "name": "Teilnehmer"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Gehe zu Seite",
+      "components": {
+        "page_number": {
+          "label": "Seitenzahl",
+          "placeholder": "Bitte gebe die Seitenzahl ein, zu der du wechseln möchtest..."
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Umfrage erstellt",
+        "description": "Die Umfrage wurde erfolgreich erstellt."
+      },
+      "status": {
+        "open": "Offen",
+        "running": "Laufend",
+        "closed": "Geschlossen"
+      },
+      "reactions": {
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "select": {
+        "placeholder": "Wähle eine Option um abzustimmen...",
+        "votes_one": "{{count}} Stimme",
+        "votes_other": "{{count}} Stimmen"
+      },
+      "description": {
+        "question": "Frage",
+        "choices": "Auswahlmöglichkeiten",
+        "result": "Ergebnis",
+        "final_result": "Endgültiges Ergebnis",
+        "settings": "Einstellungen"
+      },
+      "result": {
+        "title": "Umfrageergebnis",
+        "votes_one": "{{count}} Stimme",
+        "votes_other": "{{count}} Stimmen",
+        "users_one": "von {{count}} Nutzer",
+        "users_other": "von {{count}} Nutzern"
+      },
+      "settings": {
+        "ends": "Endet {{- timestamp}}",
+        "ended": "Umfrage bereits beendet",
+        "closed": "Keine weiteren Stimmen erlaubt",
+        "anonymous": "Anonyme Umfrage",
+        "hidden": "Verdeckte Umfrage",
+        "maxchoices_one": "zulässige Auswahlmöglichkeit",
+        "maxchoices_other": "zulässige Auswahlmöglichkeiten",
+        "allowedroles": "Zugelassene Rollen"
+      },
+      "participants": {
+        "title": "Teilnehmer",
+        "votes": "Nutzer, die für diese Option abgestimmt haben:",
+        "no_votes": "Kein Nutzer hat für diese Option abgestimmt.",
+        "select": {
+          "placeholder": "Wähle eine Option, um die Teilnehmer zu sehen...",
+          "participants_one": "{{count}} Teilnehmer",
+          "participants_other": "{{count}} Teilnehmer"
+        }
+      },
+      "info": {
+        "title": "Umfrage Informationen",
+        "fields": {
+          "id": "ID",
+          "status": "Status",
+          "creator": "Ersteller",
+          "created_at": "Erstellt am",
+          "ends_at": "Endet am",
+          "closed_at": "Geschlossen am",
+          "question": "Frage",
+          "choices": "Auswahlmöglichkeiten",
+          "result": "Ergebnis",
+          "settings": "Einstellungen",
+          "message": "Nachricht"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Stimme hinzugefügt",
+        "description": "Du hast erfolgreich für die Option {{option}} abgestimmt.",
+        "description2_one": "Du hast noch **{{count}} Stimme übrig**.",
+        "description2_other": "Du hast noch **{{count}} Stimmen übrig**."
+      },
+      "added_selected": {
+        "title": "Stimmen hinzugefügt",
+        "description1": "Du hast erfolgreich für die folgenden Optionen abgestimmt:",
+        "description2_one": "Du hast noch **{{count}} Stimme übrig**.",
+        "description2_other": "Du hast noch **{{count}} Stimmen übrig**."
+      },
+      "removed": {
+        "title": "Stimme entfernt",
+        "description": "Du hast erfolgreich deine Stimme für die Option {{option}} entfernt."
+      },
+      "removed_selected": {
+        "title": "Stimmen entfernt",
+        "description": "Du hast erfolgreich deine Stimmen für die folgenden Optionen entfernt:"
+      },
+      "removed_all": {
+        "title": "Alle Stimmen entfernt",
+        "description": "Du hast erfolgreich alle deine Stimmen für diese Umfrage entfernt."
+      },
+      "manage": {
+        "title": "Verwalte deine Stimmen",
+        "description": "Du kannst deine Stimmen von der Umfrage entfernen, indem du die untenstehenden Optionen auswählst."
+      },
+      "select": {
+        "placeholder": "Wähle eine oder mehrere Optionen, um deine Stimmen zu entfernen..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Umfrage schließen",
+          "description1": "Bist du sicher, dass du diese Umfrage schließen willst?",
+          "description2": "Umfrage ID: {{id}}",
+          "description3": "Umfrage Frage: {{question}}"
+        },
+        "success": {
+          "title": "Umfrage geschlossen",
+          "description": "Die Umfrage wurde erfolgreich geschlossen.",
+          "error": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden.",
+          "error_missingaccess": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da der Bot nicht über die erforderlichen Berechtigungen für den Zugriff auf den Kanal verfügt.",
+          "error_unknownchannel": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da der Kanal nicht gefunden werden konnte.",
+          "error_unknownmessage": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da die Nachricht nicht gefunden wurde."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Umfrage löschen",
+          "description1": "Bist du sicher, dass du diese Umfrage endgültig löschen willst?",
+          "description2": "Umfrage ID: {{id}}",
+          "description3": "Umfrage Frage: {{question}}"
+        },
+        "success": {
+          "title": "Umfrage gelöscht",
+          "description": "Die Umfrage wurde erfolgreich gelöscht.",
+          "error": "Die ursprüngliche Nachricht konnte jedoch nicht gelöscht werden.",
+          "error_missingaccess": "Die ursprüngliche Nachricht konnte jedoch nicht gelöscht werden, da der Bot nicht über die erforderlichen Berechtigungen für den Zugriff auf den Kanal verfügt.",
+          "error_unknownchannel": "Die ursprüngliche Nachricht konnte jedoch nicht gelöscht werden, da der Kanal nicht gefunden werden konnte.",
+          "error_unknownmessage": "Die ursprüngliche Nachricht konnte jedoch nicht gelöscht werden, da die Nachricht nicht gefunden wurde."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Umfrage exportieren",
+          "description": "Du kannst die Umfrage in eine Datei exportieren und sie außerhalb des Bots verwenden.\nBitte wähle das Format, in dem du die Umfrage exportieren möchtest."
+        },
+        "success": {
+          "title": "Umfrage exportiert",
+          "description": "Der Umfrage wurde erfolgreich exportiert und ist an diese Nachricht angehängt.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Liste der Umfragen"
+        }
+      },
+      "select": {
+        "placeholder": "Wähle eine Umfrage zum Anzeigen aus..."
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Umfrageergebnis veröffentlicht",
+          "description": "Das Umfrageergebnis wurde erfolgreich in {{- channel}} veröffentlicht."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Umfrage wieder öffnen",
+          "description1": "Bist du sicher, dass du diese Umfrage wieder öffnen willst?",
+          "description2": "Umfrage ID: {{id}}",
+          "description3": "Umfrage Frage: {{question}}"
+        },
+        "success": {
+          "title": "Umfrage wieder geöffnet",
+          "description": "Die Umfrage wurde erfolgreich wieder geöffnet."
+        }
+      }
+    },
+    "debug": {
+      "content": "Wenn du Hilfe von unserem Support-Team benötigst, teile mit diesem bitte den folgenden Link:",
+      "embeds": {
+        "success": {
+          "title": "Debuggen",
+          "fields": {
+            "guild_information": {
+              "title": "Server-Informationen",
+              "guild_id": "Server ID",
+              "guild_name": "Server Name",
+              "guild_language": "Server Sprache",
+              "guild_preferred_locale": "Server Bevorzugte Sprache",
+              "channel_id": "Kanal ID",
+              "channel_name": "Kanal Name"
+            },
+            "user_information": {
+              "title": "Nutzer-Information",
+              "user_id": "Nutzer ID",
+              "user_name": "Nutzername",
+              "user_locale": "Nutzer Sprache",
+              "guild_owner": "Server Eigentümer",
+              "permissions": "Berechtigungen"
+            },
+            "bot_information": {
+              "title": "Bot-Information",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "App Server Berechtigungen"
+            },
+            "channel_permissions": {
+              "title": "Kanalberechtigungen ({{- channel}})"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "EasyPoll Hilfe",
+          "fields": {
+            "poll": "Umfrage Befehle",
+            "miscellaneous": "Sonstige Befehle",
+            "settings": "Einstellungen Befehle"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "Lade EasyPoll auf deinen Server ein!",
+          "description": "Klicke auf die Schaltfläche unten, um EasyPoll auf deinen Server einzuladen."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "Dieser Server hat kein Premium!",
+          "description": "Hol dir Premium, um mehr Funktionen freizuschalten!"
+        },
+        "premium": {
+          "title": "Dieser Server hat Premium!",
+          "fields": {
+            "premium_until": "Premium bis"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Sprache ändern",
+            "text": "Hier kannst du die Sprache des Bots auf diesem Server ändern.\n\nBitte wähle eine Sprache für den Bot auf diesem Server:",
+            "select": {
+              "placeholder": "Wähle eine Sprache..."
+            }
+          },
+          "changed": {
+            "title": "Sprache geändert",
+            "description": "Die Sprache des Bots auf diesem Server wurde auf {{- language}} geändert."
+          }
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "Umfrage ID: {{id}}",
+    "poll_type": "Art: {{type}} ({{votingType}})",
+    "error_id": "Fehler ID: {{id}}",
+    "pages": "Seite {{page}} von {{pages}}"
+  },
+  "errors": {
+    "default": {
+      "title": "Aufgabe erfolgreich fehlgeschlagen!",
+      "description": "Es ist ein Fehler aufgetreten, aber ich kann dir nicht sagen, warum.\nBitte wende dich an den Support für weitere Hilfe."
+    },
+    "guild_command": {
+      "title": "Server Befehl!",
+      "description": "Dieser Befehl kann nur auf Servern verwendet werden."
+    },
+    "missing_bot_permissions": {
+      "title": "Fehlende Berechtigungen!",
+      "description1": "Dem Bot fehlen die folgenden Berechtigungen:",
+      "description2": "Bitte stelle sicher, dass der Bot über alle erforderlichen Berechtigungen verfügt."
+    },
+    "missing_user_permissions": {
+      "title": "Fehlende Berechtigungen!",
+      "description1": "Dir fehlen die folgenden Berechtigungen:",
+      "description2": "Du kannst diese Aktion nicht durchführen, wenn du nicht über die erforderlichen Berechtigungen verfügst."
+    },
+    "premium_required": {
+      "title": "Premium erforderlich!",
+      "description": "Diese Funktion ist nur für Premium-Server verfügbar. Bitte erwerbe Premium, um diese Funktion zu nutzen."
+    },
+    "invalid_channel_type": {
+      "title": "Ungültiger Kanaltyp!",
+      "description": "Der ausgewählte Kanal ist kein zulässiger Kanaltyp für diese Aktion."
+    },
+    "invalid_color": {
+      "title": "Ungültige Farbe!",
+      "description": "Die eingegebene Farbe ist ungültig. Bitte stelle sicher, dass die Farbe im richtigen Format eingegeben wird."
+    },
+    "invalid_page": {
+      "title": "Ungültige Seite!",
+      "description": "Die eingegebene Seitenzahl ist ungültig. Bitte vergewissere dich, dass die Seitenzahl das richtige Format hat und innerhalb des gültigen Bereichs liegt."
+    },
+    "invalid_time": {
+      "title": "Ungültige Zeit!",
+      "description": "Die eingegebene Zeit ist ungültig. Bitte vergewissere dich, dass die Zeit im richtigen Format eingegeben wurde."
+    },
+    "max_time": {
+      "title": "Höchstdauer erreicht!",
+      "description": "Du hast die maximale Zeit von {{maxtime}} erreicht.\nBitte achte darauf, dass die eingegebene Zeit nicht länger als die maximal zulässige Zeit ist.",
+      "description_upgrade": "Du kannst die maximale Zeit auf {{maxtime}} erhöhen, indem du auf Premium upgradest."
+    },
+    "unknown_emoji": {
+      "title": "Unbekanntes Emoji!",
+      "description": "Du hast ein unbekanntes Emoji angegeben!\nDu kannst nur Emojis von Servern verwenden, zu denen EasyPoll eingeladen ist. Bitte stelle sicher, dass {{- emoji}} ein **offizielles Discord**-Emoji oder ein Emoji **von diesem Server** ist."
+    },
+    "restricted": {
+      "title": "Du kannst diese Aktion nicht durchführen!",
+      "description": "Du oder dieser Server ist nicht berechtigt, diese Aktion zu verwenden.",
+      "description_user": "Du darfst diese Aktion nicht verwenden.",
+      "description_guild": "Dieser Server darf diese Aktion nicht verwenden.",
+      "fields": {
+        "reason": "Grund",
+        "expires_at": "Läuft aus"
+      }
+    },
+    "already_voted": {
+      "title": "Bereits für diese Option gestimmt!",
+      "description": "Du hast bereits für diese Option abgestimmt und kannst nicht noch einmal für dieselbe Option stimmen."
+    },
+    "max_choices_reached": {
+      "title": "Die maximale Anzahl von Auswahlmöglichkeiten erreicht!",
+      "description": "Du hast die maximale Anzahl von Auswahlmöglichkeiten für diese Umfrage erreicht. Du kannst ein paar deiner Stimmen entfernen, um für andere Optionen zu stimmen."
+    },
+    "not_allowed_role": {
+      "title": "Nur bestimmte Rollen sind für diese Umfrage zugelassen!",
+      "description": "Du kannst bei dieser Umfrage nicht abstimmen, weil du keine der zugelassenen Rollen besitzt."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "Diese Umfrage ist bereits geschlossen!",
+        "description": "Du kannst nicht mit dieser Umfrage interagieren, weil sie bereits geschlossen ist."
+      },
+      "not_closed": {
+        "title": "Diese Umfrage ist nicht geschlossen!",
+        "description": "Die Umfrage konnte nicht wieder geöffnet werden, da sie nicht geschlossen ist."
+      },
+      "not_voted": {
+        "title": "Nicht für diese Option gestimmt!",
+        "description": "Du kannst deine Stimme für diese Option nicht entfernen, da du nicht für diese Option abgestimmt hast."
+      },
+      "no_votes": {
+        "title": "Keine Stimmen bei dieser Umfrage!",
+        "description": "Du hast für keine der Optionen in dieser Umfrage abgestimmt."
+      },
+      "invalid_poll": {
+        "title": "Das ist keine Umfrage!",
+        "description_input": "Die eingegebene ID ist keine Umfrage. Vergewissere dich, dass du die richtige Umfrage- oder Nachrichten-ID eingegeben hast.",
+        "description_select": "Die ausgewählte Nachricht ist keine Umfrage. Vergewissere dich, dass du die richtige Umfrage-Nachricht ausgewählt hast."
+      },
+      "participants_not_available": {
+        "title": "Teilnehmerliste nicht erlaubt!",
+        "description": "Die Teilnehmerliste ist für diese Umfrage nicht verfügbar."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Stimme entfernen nicht erlaubt!",
+        "description": "Du kannst deine Stimme für diese Umfrage nicht entfernen, da das Entfernen von Stimmen nicht erlaubt ist."
+      },
+      "no_polls_found": {
+        "title": "Keine Umfragen gefunden!",
+        "description": "Es wurden keine Umfragen auf diesem Server gefunden, die den gesuchten Kriterien entsprechen."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Webseite",
+    "invite": "Einladen",
+    "support": "Support",
+    "wiki": "Wiki",
+    "premium": "Premium holen",
+    "troubleshooting": "Fehlerbehebung",
+    "participants": "Teilnehmer",
+    "enable": "Einschalten",
+    "disable": "Ausschalten",
+    "delete": "Löschen",
+    "reopen": "Erneut öffnen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "cancel": "Nein, abbrechen",
+    "confirm_close": "Ja, die Umfrage schließen",
+    "confirm_delete": "Ja, die Umfrage löschen",
+    "confirm_reopen": "Ja, die Umfrage wieder öffnen",
+    "go_to_message": "Zur Nachricht gehen",
+    "go_to_page": "Gehe zu Seite",
+    "remove_all_votes": "Alle Stimmen entfernen",
+    "remove_vote": "Diese Stimme entfernen",
+    "manage_votes": "Stimmen verwalten",
+    "export_json": "Exportieren als JSON",
+    "export_csv": "Exportieren als CSV"
+  },
+  "permissions": {
+    "add_reactions": "Reaktionen hinzufügen",
+    "view_audit_log": "Audit-Log einsehen",
+    "view_channel": "Kanäle ansehen",
+    "send_messages": "Nachrichten senden",
+    "manage_messages": "Nachrichten verwalten",
+    "manage_guild": "Server verwalten",
+    "embed_links": "Links einbetten",
+    "attach_files": "Dateien anhängen",
+    "read_message_history": "Nachrichtenverlauf anzeigen",
+    "mention_everyone": "Alle erwähnen",
+    "use_external_emojis": "Externe Emojis verwenden",
+    "manage_webhooks": "Webhooks verwalten",
+    "manage_threads": "Threads verwalten",
+    "create_public_threads": "Öffentliche Threads erstellen",
+    "send_messages_in_threads": "Nachrichten in Threads senden"
+  }
+}

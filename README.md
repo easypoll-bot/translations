@@ -47,7 +47,7 @@ There is a `meta` section at the top of every translation file. This contains im
 - `locale` must always match the Discord Locale
 - `name` must always match the Discord Language Name
 - `name_native` must always match the Discord Native Name
-- `emoji_unicode` must match the correct flag of the locale and be specified as unicode.
+- `emoji_unicode` must match the correct flag of the locale and be specified as unicode
 
 Example:
 ```json
@@ -55,7 +55,7 @@ Example:
     "locale": "en-US",
     "name": "English, US",
     "name_native": "English, US",
-    "emoji_unicode": "🇺🇸",
+    "emoji_unicode": "🇺🇸"
 }
 ```
 
