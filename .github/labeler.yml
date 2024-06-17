@@ -8,128 +8,128 @@
 
 "lang: bg":
   - changed-files:
-      - any-glob-to-any-file: "**/bg.yml"
+      - any-glob-to-any-file: "**/bg.json"
 
 "lang: cs":
   - changed-files:
-      - any-glob-to-any-file: "**/cs.yml"
+      - any-glob-to-any-file: "**/cs.json"
 
 "lang: da":
   - changed-files:
-      - any-glob-to-any-file: "**/da.yml"
+      - any-glob-to-any-file: "**/da.json"
 
 "lang: de":
   - changed-files:
-      - any-glob-to-any-file: "**/de.yml"
+      - any-glob-to-any-file: "**/de.json"
 
 "lang: el":
   - changed-files:
-      - any-glob-to-any-file: "**/el.yml"
+      - any-glob-to-any-file: "**/el.json"
 
 "lang: en-GB":
   - changed-files:
-      - any-glob-to-any-file: "**/en-GB.yml"
+      - any-glob-to-any-file: "**/en-GB.json"
 
 "lang: en-US":
   - changed-files:
-      - any-glob-to-any-file: "**/en-US.yml"
+      - any-glob-to-any-file: "**/en-US.json"
 
 "lang: es-419":
   - changed-files:
-      - any-glob-to-any-file: "**/es-419.yml"
+      - any-glob-to-any-file: "**/es-419.json"
 
 "lang: es-ES":
   - changed-files:
-      - any-glob-to-any-file: "**/es-ES.yml"
+      - any-glob-to-any-file: "**/es-ES.json"
 
 "lang: fi":
   - changed-files:
-      - any-glob-to-any-file: "**/fi.yml"
+      - any-glob-to-any-file: "**/fi.json"
 
 "lang: fr":
   - changed-files:
-      - any-glob-to-any-file: "**/fr.yml"
+      - any-glob-to-any-file: "**/fr.json"
 
 "lang: hi":
   - changed-files:
-      - any-glob-to-any-file: "**/hi.yml"
+      - any-glob-to-any-file: "**/hi.json"
 
 "lang: hr":
   - changed-files:
-      - any-glob-to-any-file: "**/hr.yml"
+      - any-glob-to-any-file: "**/hr.json"
 
 "lang: hu":
   - changed-files:
-      - any-glob-to-any-file: "**/hu.yml"
+      - any-glob-to-any-file: "**/hu.json"
 
 "lang: id":
   - changed-files:
-      - any-glob-to-any-file: "**/id.yml"
+      - any-glob-to-any-file: "**/id.json"
 
 "lang: it":
   - changed-files:
-      - any-glob-to-any-file: "**/it.yml"
+      - any-glob-to-any-file: "**/it.json"
 
 "lang: ja":
   - changed-files:
-      - any-glob-to-any-file: "**/ja.yml"
+      - any-glob-to-any-file: "**/ja.json"
 
 "lang: ko":
   - changed-files:
-      - any-glob-to-any-file: "**/ko.yml"
+      - any-glob-to-any-file: "**/ko.json"
 
 "lang: lt":
   - changed-files:
-      - any-glob-to-any-file: "**/lt.yml"
+      - any-glob-to-any-file: "**/lt.json"
 
 "lang: nl":
   - changed-files:
-      - any-glob-to-any-file: "**/nl.yml"
+      - any-glob-to-any-file: "**/nl.json"
 
 "lang: no":
   - changed-files:
-      - any-glob-to-any-file: "**/no.yml"
+      - any-glob-to-any-file: "**/no.json"
 
 "lang: pl":
   - changed-files:
-      - any-glob-to-any-file: "**/pl.yml"
+      - any-glob-to-any-file: "**/pl.json"
 
 "lang: pt-BR":
   - changed-files:
-      - any-glob-to-any-file: "**/pt-BR.yml"
+      - any-glob-to-any-file: "**/pt-BR.json"
 
 "lang: ro":
   - changed-files:
-      - any-glob-to-any-file: "**/ro.yml"
+      - any-glob-to-any-file: "**/ro.json"
 
 "lang: ru":
   - changed-files:
-      - any-glob-to-any-file: "**/ru.yml"
+      - any-glob-to-any-file: "**/ru.json"
 
 "lang: sv-SE":
   - changed-files:
-      - any-glob-to-any-file: "**/sv-SE.yml"
+      - any-glob-to-any-file: "**/sv-SE.json"
 
 "lang: th":
   - changed-files:
-      - any-glob-to-any-file: "**/th.yml"
+      - any-glob-to-any-file: "**/th.json"
 
 "lang: tr":
   - changed-files:
-      - any-glob-to-any-file: "**/tr.yml"
+      - any-glob-to-any-file: "**/tr.json"
 
 "lang: uk":
   - changed-files:
-      - any-glob-to-any-file: "**/uk.yml"
+      - any-glob-to-any-file: "**/uk.json"
 
 "lang: vi":
   - changed-files:
-      - any-glob-to-any-file: "**/vi.yml"
+      - any-glob-to-any-file: "**/vi.json"
 
 "lang: zh-CN":
   - changed-files:
-      - any-glob-to-any-file: "**/zh-CN.yml"
+      - any-glob-to-any-file: "**/zh-CN.json"
 
 "lang: zh-TW":
   - changed-files:
-      - any-glob-to-any-file: "**/zh-TW.yml"
+      - any-glob-to-any-file: "**/zh-TW.json"
