@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "locale": "pl",
+    "name": "Polish",
+    "name_native": "Polski",
+    "emoji_unicode": "🇵🇱"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Zakończ ankietę.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać zakończona."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Skopiuj istniejącą ankietę.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać skopiowana."
+        },
+        "channel": {
+          "description": "Kanał, na który ankieta ma zostać skopiowana."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Całkowicie usuń ankietę.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać usunięta."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Edytuj istniejącą ankietę.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać zmodyfikowana."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Eksportuj wyniki ankiety.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, której wyniki mają zostać wyeksportowane."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Pokaż listę wszystkich ankiet na tym serwerze.",
+      "options": {
+        "status": {
+          "description": "Jakie ankiety wyświetlić?",
+          "choices": {
+            "all": "Wszystkie",
+            "open": "Otwarte",
+            "running": "Aktywne",
+            "closed": "Zamknięte"
+          }
+        },
+        "channel": {
+          "description": "Z którego kanału wyświetlić ankiety?"
+        },
+        "user": {
+          "description": "Którego użytkownika ankiety wyświetlić?"
+        }
+      }
+    },
+    "poll": {
+      "description": "Utwórz normalną ankietę.",
+      "options": {
+        "question": {
+          "description": "Jakie ma być pytanie ankiety?"
+        },
+        "type": {
+          "description": "Jakiego rodzaju ankieta powinna zostać utworzona?",
+          "choices": {
+            "normal-buttons": "Normalna (przyciski)",
+            "normal-selectmenu": "Normalna (wybór z listy)",
+            "anonymous-buttons": "Anonimowa (przyciski)",
+            "anonymous-selectmenu": "Anonimowa (wybór z listy)",
+            "hidden-buttons": "Ukryta (przyciski)",
+            "hidden-selectmenu": "Ukryta (wybór z listy)"
+          }
+        },
+        "maxchoices": {
+          "description": "Ile odpowiedzi może zaznaczyć każdy użytkownik? (Domyślnie: 1)"
+        },
+        "text": {
+          "description": "Jaki tekst ma się pojawić nad ankietą?"
+        },
+        "allowedrole": {
+          "description": "Która rola może głosować? (Domyślnie: everyone)"
+        },
+        "answer": {
+          "description": "Odpowiedź {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Utwórz bardziej złożoną ankietę za pomocą narzędzia do tworzenia ankiet."
+    },
+    "pollresult": {
+      "description": "Ponownie opublikuj wynik zamkniętej ankiety.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, której wynik ma zostać opublikowany."
+        },
+        "text": {
+          "description": "Jaki tekst powinien pojawić się nad opublikowanym wynikiem ankiety?"
+        },
+        "channel": {
+          "description": "Kanał, na którym ma zostać opublikowany wynik."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Otwórz ponownie zamkniętą ankietę.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać ponownie otwarta."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Powtarzaj ankietę co określony odstęp czasu.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma być powtarzana."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Pokaż daną ankietę ze wszystkimi informacjami i działaniami.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, której szczegóły mają zostać wyświetlone."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Utwórz czasową ankietę .",
+      "options": {
+        "question": {
+          "description": "Jakie jest pytanie ankiety?"
+        },
+        "time": {
+          "description": "Jak długo ma trwać ankieta?"
+        },
+        "type": {
+          "description": "Jakiego rodzaju ankieta powinna zostać utworzona?",
+          "choices": {
+            "normal-buttons": "Normalna (przyciski)",
+            "normal-selectmenu": "Normalna (wybór z listy)",
+            "anonymous-buttons": "Anonimowa (przyciski)",
+            "anonymous-selectmenu": "Anonimowa (wybór z listy)",
+            "hidden-buttons": "Ukryta (przyciski)",
+            "hidden-selectmenu": "Ukryta (wybór z listy)"
+          }
+        },
+        "maxchoices": {
+          "description": "Ile odpowiedzi może zaznaczyć każdy użytkownik? (Domyślnie: 1)"
+        },
+        "text": {
+          "description": "Jaki tekst ma się pojawić nad ankietą?"
+        },
+        "allowedrole": {
+          "description": "Która rola może głosować? (Domyślnie: everyone)"
+        },
+        "answer": {
+          "description": "Odpowiedź {{id}}"
+        }
+      }
+    },
+    "debug": {
+      "description": "Sprawdź uprawnienia serwera i popularne problemy.",
+      "options": {
+        "channel": {
+          "description": "Kanał do debugowania. (Domyślnie: obecny kanał)"
+        }
+      }
+    },
+    "help": {
+      "description": "Uzyskaj pomoc i informacje na temat dostępnych poleceń."
+    },
+    "invite": {
+      "description": "Uzyskaj link umożliwiający dodanie bota do własnego serwera."
+    },
+    "premium": {
+      "description": "Sprawdź aktualny status premium tego serwera."
+    },
+    "settings": {
+      "description": "Zmień ustawienia tego serwera.",
+      "subcommands": {
+        "colors": {
+          "description": "Zmień domyślne kolory tegi serwera.",
+          "subcommands": {
+            "embeds": {
+              "description": "Zmień domyślne kolory elementów embed.",
+              "options": {
+                "state": {
+                  "description": "Status elementu embed.",
+                  "choices": {
+                    "open": "Otwarty",
+                    "closed": "Zamknięty",
+                    "running": "Aktywny",
+                    "result": "Wyniki"
+                  }
+                },
+                "color": {
+                  "description": "Kolor elementu embed."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Zmień domyślne kolory przycisków.",
+              "options": {
+                "color": {
+                  "description": "Kolor przycisków.",
+                  "choices": {
+                    "primary": "Podstawowy (blurple)",
+                    "secondary": "Dodatkowy (szary)",
+                    "success": "Potwierdzenie (zielony)",
+                    "danger": "Negacja (czerwony)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Zmień ustawienia automatyzacji.",
+          "options": {
+            "setting": {
+              "description": "Które ustawienie chcesz zmienić?",
+              "choices": {
+                "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
+                "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
+                "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
+              }
+            },
+            "status": {
+              "description": "Na jaki stan zmienić ustawienie?",
+              "choices": {
+                "enable": "Włącz",
+                "disable": "Wyłącz"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "Zmień domyślne Emoji tego serwera."
+        },
+        "language": {
+          "description": "Zmień język tego serwera."
+        },
+        "threads": {
+          "description": "Zmień ustawienia wątków.",
+          "options": {
+            "setting": {
+              "description": "Które ustawienie chcesz zmienić?",
+              "choices": {
+                "create_thread_with_poll": "Utwórz wątek po utworzeniu nowej ankiety",
+                "lock_and_unlock_thread_with_poll": "Zablokuj/odblokuj wątek, gdy powiązana ankieta zostanie zamknięta/ponownie otwarta"
+              }
+            },
+            "status": {
+				"description": "Na jaki stan zmienić ustawienie?",
+				"choices": {
+				  "enable": "Włącz",
+				  "disable": "Wyłącz"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Zamknij"
+    },
+    "details": {
+      "name": "Szczegóły"
+    },
+    "edit": {
+      "name": "Edytuj"
+    },
+    "participants": {
+      "name": "Uczestnicy"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Idź do strony",
+      "components": {
+        "page_number": {
+          "label": "Numer strony",
+          "placeholder": "Podaj numer strony, do której chcesz przejść..."
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Ankieta została utworzona",
+        "description": "Ankieta została pomyślnie utworzona."
+      },
+      "status": {
+        "open": "Otwarta",
+        "running": "Aktywna",
+        "closed": "Zamknięta"
+      },
+      "reactions": {
+        "yes": "Tak",
+        "no": "Nie"
+      },
+      "select": {
+        "placeholder": "Wybierz opcję, aby zagłosować...",
+        "votes_one": "{{count}} głos",
+        "votes_other": "{{count}} głosy(-ów)"
+      },
+      "description": {
+        "question": "Pytanie",
+        "choices": "Głosy",
+        "result": "Wynik",
+        "final_result": "Ostateczny wynik",
+        "settings": "Ustawienia"
+      },
+      "result": {
+        "title": "Wynik ankiety",
+        "votes_one": "{{count}} głos",
+        "votes_other": "{{count}} głosy(-ów)",
+        "users_one": "od {{count}} użytkownika",
+        "users_other": "od {{count}} użytkowników"
+      },
+      "settings": {
+        "ends": "Kończy się {{- timestamp}}",
+        "ended": "Ankieta już się zakończyła",
+        "closed": "Nowe głosy nie są dozwolone",
+        "anonymous": "Ankieta anonimowa",
+        "hidden": "Ankieta ukryta",
+        "maxchoices_one": "dopuszczalna odpowiedź",
+        "maxchoices_other": "dopuszczalne(-ych) odpowiedzi",
+        "allowedroles": "Dozwolone role"
+      },
+      "participants": {
+        "title": "Uczestnicy",
+        "votes": "Użytkownicy, którzy zagłosowali na tę opcję:",
+        "no_votes": "Żaden użytkownik nie zagłosował na tę opcję.",
+        "select": {
+          "placeholder": "Wybierz opcję, aby zobaczyć głosujących...",
+          "participants_one": "{{count}} użytkownik",
+          "participants_other": "{{count}} użytkowników"
+        }
+      },
+      "info": {
+        "title": "Informacje o ankiecie",
+        "fields": {
+          "id": "ID",
+          "status": "Stan",
+          "creator": "Twórca",
+          "created_at": "Utworzenie",
+          "ends_at": "Zakończenie",
+          "closed_at": "Zamknięcie",
+          "question": "Pytanie",
+          "choices": "Opcje",
+          "result": "Wyniki",
+          "settings": "Ustawienia",
+          "message": "Wiadomość"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Policzono Twój głos",
+        "description": "Pomyślnie oddałeś głos na opcję {{option}}.",
+        "description2_one": "Pozostał Ci **{{count}} głos**.",
+        "description2_other": "Pozostały(-o) Ci **{{count}} głosy(-ów)**."
+      },
+      "added_selected": {
+        "title": "Policzono Twoje głosy",
+        "description1": "Pomyślnie oddałeś głos na następujące opcje:",
+        "description2_one": "Pozostał Ci **{{count}} głos**.",
+        "description2_other": "Pozostały(-o) Ci **{{count}} głosy(-ów)**."
+      },
+      "removed": {
+        "title": "Wycofano Twój głos",
+        "description": "Pomyślnie wycofałeś głos na opcję: {{option}}."
+      },
+      "removed_selected": {
+        "title": "Wycofano Twoje głosy",
+        "description": "Pomyślnie wycofałeś głosy na opcje:"
+      },
+      "removed_all": {
+        "title": "Wycofano wszystkie Twoje głosy",
+        "description": "Pomyślnie wycofałeś wszystkie głosy w tej ankiecie."
+      },
+      "manage": {
+        "title": "Zarządzaj swoimi głosami",
+        "description": "Możesz wycofać swoje głosy z ankiety, wybierając opcje poniżej."
+      },
+      "select": {
+        "placeholder": "Wybierz jedną lub więcej opcji, aby wycofać swoje głosy..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Zamknij ankietę",
+          "description1": "Czy na pewno chcesz zamknąć tę ankietę?",
+          "description2": "ID ankiety: {{id}}",
+          "description3": "Pytanie ankiety: {{question}}"
+        },
+        "success": {
+          "title": "Ankieta została zamknięta",
+          "description": "Ankieta została pomyślnie zamknięta.",
+          "error": "Jednak nie udało się zaktualizować oryginalnej wiadomości.",
+          "error_missingaccess": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ bot nie ma uprawnień dostępu do kanału.",
+          "error_unknownchannel": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ nie bot nie może odnaleźć kanału.",
+          "error_unknownmessage": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ nie można jej znaleźć."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Usuń ankietę",
+          "description1": "Czy na pewno chcesz trwale usunąć tę ankietę?",
+          "description2": "ID ankiety: {{id}}",
+          "description3": "Pytanie ankiety: {{question}}"
+        },
+        "success": {
+          "title": "Ankieta została usunięta",
+          "description": "Ankieta została pomyślnie usunięta.",
+          "error": "Jednak nie udało się usunąć oryginalnej wiadomości.",
+          "error_missingaccess": "Jednak oryginalna wiadomość nie mogła zostać usunięta, ponieważ bot nie ma uprawnień dostępu do kanału.",
+          "error_unknownchannel": "Jednak oryginalna wiadomość nie mogła zostać usunięta, ponieważ nie bot nie może odnaleźć kanału.",
+          "error_unknownmessage": "Jednak oryginalna wiadomość nie mogła zostać usunięta, ponieważ nie można jej znaleźć."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Eksportuj ankietę",
+          "description": "Możesz wyeksportować ankietę do pliku i używać jej poza botem.\nWybierz format, do jakiego chcesz wyeksportować ankietę."
+        },
+        "success": {
+          "title": "Ankieta została wyeksportowana",
+          "description": "Ankieta została pomyślnie wyeksportowana i jest dołączona do tej wiadomości.\nMożesz teraz pobrać załączony plik i używać go poza botem."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Lista ankiet"
+        }
+      },
+      "select": {
+        "placeholder": "Wybierz ankietę do wyświetlenia..."
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Wyniki ankiety zostały opublikowane",
+          "description": "Wyniki ankiety zostały pomyślnie opublikowane na kanale: {{- channel}}."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Ponownie otwórz ankietę",
+          "description1": "Czy na pewno chcesz ponownie otworzyć tę ankietę??",
+          "description2": "ID ankiety: {{id}}",
+          "description3": "Pytanie ankiety: {{question}}"
+        },
+        "success": {
+          "title": "Ankieta została ponownie otwarta",
+          "description": "Ankieta została pomyślnie ponownie otwarta."
+        }
+      }
+    },
+    "debug": {
+      "content": "Jeśli potrzebujesz pomocy naszego zespołu wsparcia, udostępnij im poniższy link:",
+      "embeds": {
+        "success": {
+          "title": "Debug",
+          "fields": {
+            "guild_information": {
+              "title": "Informacje o serwerze",
+              "guild_id": "ID serwera",
+              "guild_name": "Nazwa serwera",
+              "guild_language": "Język serwera",
+              "guild_preferred_locale": "Preferowane ustawienia regionu serwera",
+              "channel_id": "ID kanału",
+              "channel_name": "Nazwa kanału"
+            },
+            "user_information": {
+              "title": "Informacje o użytkowniku",
+              "user_id": "ID użytkownika",
+              "user_name": "Nazwa użytkownika",
+              "user_locale": "Język użytkownika",
+              "guild_owner": "Właściciel serwera",
+              "permissions": "Uprawnienia"
+            },
+            "bot_information": {
+              "title": "Informacje o bocie",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "Uprawnienia aplikacji"
+            },
+            "channel_permissions": {
+              "title": "Uprawnienia kanału ({{- channel}})"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "Pomoc EasyPoll",
+          "fields": {
+            "poll": "Polecenia ankiet",
+            "miscellaneous": "Różne polecenia",
+            "settings": "Polecenia ustawień"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "Zaproś EasyPoll na swój serwer!",
+          "description": "Kliknij poniższy przycisk, aby zaprosić EasyPoll na swój serwer."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "Ten serwer nie ma wersji premium!",
+          "description": "Uzyskaj wersję premium, aby odblokować więcej funkcji!"
+        },
+        "premium": {
+          "title": "Ten serwer ma wersję premium!",
+          "fields": {
+            "premium_until": "Wersja premium ważna do"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Wybierz język",
+            "text": "Tutaj możesz zmienić język bota na tym serwerze.\n\nWybierz język bota na tym serwerze:",
+            "select": {
+              "placeholder": "Wybierz język..."
+            }
+          },
+          "changed": {
+            "title": "Język został zmieniony",
+            "description": "Język bota na tym serwerze został zmieniony na {{- language}}."
+          }
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "ID ankiety: {{id}}",
+    "poll_type": "Typ: {{type}} ({{votingType}})",
+    "error_id": "Error ID: {{id}}",
+    "pages": "Strona {{page}} z {{pages}}"
+  },
+  "errors": {
+    "default": {
+      "title": "Zadanie nie powiodło się pomyślnie!",
+      "description": "Wystąpił błąd, ale nie jestem w stanie powiedzieć dlaczego.\nPoproś obsługę o dalszą pomoc."
+    },
+    "guild_command": {
+      "title": "Polecenie serwera!",
+      "description": "Tego polecenia można używać tylko na serwerach."
+    },
+    "missing_bot_permissions": {
+      "title": "Brak uprawnień!",
+      "description1": "Bot nie posiada następujących uprawnień:",
+      "description2": "Upewnij się, że bot ma wszystkie wymagane uprawnienia."
+    },
+    "missing_user_permissions": {
+      "title": "Brak uprawnień!",
+      "description1": "Brakuje Ci następujących uprawnień:",
+      "description2": "Nie możesz wykonać tej akcji bez wymaganych uprawnień."
+    },
+    "premium_required": {
+      "title": "Wymagana wersja premium!",
+      "description": "Ta funkcja jest dostępna tylko dla serwerów premium. Aby móc korzystać z tej funkcji, wykup wersję premium."
+    },
+    "invalid_channel_type": {
+      "title": "Nieprawidłowy typ kanału!",
+      "description": "Wybrany kanał nie jest dozwolonym typem kanału dla tej akcji."
+    },
+    "invalid_color": {
+      "title": "Nieprawidłowy kolor!",
+      "description": "Wprowadzony kolor jest nieprawidłowy. Upewnij się, że kolor jest w odpowiednim formacie."
+    },
+    "invalid_page": {
+      "title": "Nieprawidłowa strona!",
+      "description": "Wprowadzony numer strony jest nieprawidłowy. Upewnij się, że numer strony ma prawidłowy format i mieści się w prawidłowym zakresie."
+    },
+    "invalid_time": {
+      "title": "Nieprawidłowy czas!",
+      "description": "Wprowadzony czas jest nieprawidłowy. Upewnij się, że godzina jest w prawidłowym formacie."
+    },
+    "max_time": {
+      "title": "Przekroczono dopuszczalny czas!",
+      "description": "Przekroczyłeś dopuszczalny czas trwania ankiety.\nUpewnij się, że wprowadzony czas nie jest dłuższy niż {{maxtime}}.",
+      "description_upgrade": "Możesz zwiększyć maksymalny czas do {{maxtime}} wykupując wersję premium."
+    },
+    "unknown_emoji": {
+      "title": "Nieznane Emoji!",
+      "description": "Wybrałeś nieznane Emoji!\nMożesz używać Emoji wyłącznie z serwerów, na których jest EasyPoll. Upewnij się, że {{- emoji}} jest **oficjalnym Emoji Discorda** lub pochodzi **z tego serwera**."
+    },
+    "restricted": {
+      "title": "Nie możesz wykonać tej akcji!",
+      "description": "Ty lub ten serwer nie możecie korzystać z tej akcji.",
+      "description_user": "Nie możesz używać tej akcji.",
+      "description_guild": "Ten serwer nie może korzystać z tej akcji.",
+      "fields": {
+        "reason": "Powód",
+        "expires_at": "Wygasa"
+      }
+    },
+    "already_voted": {
+      "title": "Już zagłosowałeś na tę opcję!",
+      "description": "Zagłosowałeś już na tę opcję i nie możesz uczynić tego ponownie na tę samą opcję."
+    },
+    "max_choices_reached": {
+      "title": "Oddano maksymalną liczbę głosów!",
+      "description": "Oddałeś maksymalną liczbę głosów w tej ankiecie. Możesz wycofać część swoich głosów, aby zagłosować na inne opcje."
+    },
+    "not_allowed_role": {
+      "title": "Tylko niektóre role są dopuszczone do głosowania w tej ankiecie!",
+      "description": "Nie możesz głosować w tej ankiecie, ponieważ nie posiadasz żadnej z dopuszczonych ról."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "Ta ankieta jest już zamknięta!",
+        "description": "Nie możesz wchodzić w interakcję z tą ankietą, ponieważ została już zamknięta."
+      },
+      "not_closed": {
+        "title": "Ta ankieta nie jest zamknięta!",
+        "description": "Ankieta nie mogła zostać ponownie otwarta, ponieważ nie została jeszcze zamknięta."
+      },
+      "not_voted": {
+        "title": "Nie oddano głosu na tę opcję!",
+        "description": "Nie możesz wycofać swojego głosu na tę opcję, ponieważ nie zagłosowałeś na nią."
+      },
+      "no_votes": {
+        "title": "Brak oddanych głosów w tej ankiecie!",
+        "description": "Nie oddałeś głosu na żadną opcję w tej ankiecie."
+      },
+      "invalid_poll": {
+        "title": "To nie jest ankieta!",
+        "description_input": "Wprowadzone ID nie jest ankietą. Upewnij się, że wprowadziłeś poprawne ID ankiety lub wiadomości.",
+        "description_select": "Wybrana wiadomość nie jest ankietą. Upewnij się, że wybrałeś poprawną wiadomość z ankietą."
+      },
+      "participants_not_available": {
+        "title": "Lista uczestników nie jest dostępna!",
+        "description": "Lista uczestników tej ankiety nie jest dostępna."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Wycofanie głosu jest zabronione!",
+        "description": "Nie możesz wycofać swojego głosu w tej ankiecie, ponieważ jest to zabronione."
+      },
+      "no_polls_found": {
+        "title": "Nie znaleziono ankiet!",
+        "description": "Na tym serwerze nie znaleziono ankiet spełniających podane kryteria."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Strona internetowa",
+    "invite": "Zaproszenie",
+    "support": "Pomoc",
+    "wiki": "Wiki",
+    "premium": "Kup premium",
+    "troubleshooting": "Rozwiązywanie problemów",
+    "participants": "Uczestnicy",
+    "enable": "Włącz",
+    "disable": "Wyłącz",
+    "delete": "Usuń",
+    "reopen": "Otwórz ponownie",
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "cancel": "Nie, anuluj",
+    "confirm_close": "Tak, zamknij ankietę",
+    "confirm_delete": "Tak, usuń ankietę",
+    "confirm_reopen": "Tak, otwórz ponownie ankietę",
+    "go_to_message": "Idź do wiadomości",
+    "go_to_page": "Idź do strony",
+    "remove_all_votes": "Wycofaj wszystkie swoje głosy",
+    "remove_vote": "Wycofaj ten głos",
+    "manage_votes": "Zarządzaj swoimi głosami",
+    "export_json": "Eksportuj jako JSON",
+    "export_csv": "Eksportuj jako CSV"
+  },
+  "permissions": {
+    "add_reactions": "Dodawanie reakcji",
+    "view_audit_log": "Wyświetlanie dziennika zdarzeń",
+    "view_channel": "Wyświetlanie kanałów",
+    "send_messages": "Wysyłanie wiadomości",
+    "manage_messages": "Zarządzanie wiadomościami",
+    "manage_guild": "Zarządzanie serwerem",
+    "embed_links": "Wyświetlanie podglądu linku",
+    "attach_files": "Załączanie plików",
+    "read_message_history": "Czytanie historii czatu",
+    "mention_everyone": "Zamieść wzmiankę everyone, here oraz wszystkie role",
+    "use_external_emojis": "Używanie zewnętrznych emoji",
+    "manage_webhooks": "Zarządzanie webhookami",
+    "manage_threads": "Zarządzaj wątkami",
+    "create_public_threads": "Tworzenie publicznych wątków",
+    "send_messages_in_threads": "Wysyłanie wiadomości w wątkach"
+  }
+}
