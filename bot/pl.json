@@ -268,10 +268,10 @@
               }
             },
             "status": {
-				"description": "Na jaki stan zmienić ustawienie?",
-				"choices": {
-				  "enable": "Włącz",
-				  "disable": "Wyłącz"
+              "description": "Na jaki stan zmienić ustawienie?",
+              "choices": {
+                "enable": "Włącz",
+                "disable": "Wyłącz"
               }
             }
           }
