@@ -671,7 +671,7 @@
         "description": "You have not voted for any option on this poll."
       },
       "invalid_poll": {
-        "title": "This is not a poll!",
+        "title": "這不是投票！",
         "description_input": "The entered id is not a poll. Make sure you have entered the correct poll or message id.",
         "description_select": "The selected message is not a poll. Make sure you have selected the correct poll message."
       },
@@ -680,23 +680,23 @@
         "description": "The participants list is not available for this poll."
       },
       "vote_remove_not_allowed": {
-        "title": "Vote remove not allowed!",
+        "title": "禁止移除投票！",
         "description": "You cannot remove your vote for this poll because the remove votes is not allowed."
       },
       "no_polls_found": {
-        "title": "No polls found!",
+        "title": "找不到投票！",
         "description": "There are no polls found in this server that match the seached criteria."
       }
     }
   },
   "buttons": {
-    "website": "Website",
-    "invite": "Invite",
-    "support": "Support",
-    "wiki": "Wiki",
-    "premium": "Get Premium",
-    "troubleshooting": "Troubleshooting",
-    "participants": "Participants",
+    "website": "網站",
+    "invite": "邀請",
+    "support": "支援",
+    "wiki": "維基",
+    "premium": "獲取高級版",
+    "troubleshooting": "排錯",
+    "participants": "參與者",
     "enable": "啟用",
     "disable": "停用",
     "delete": "刪除",
