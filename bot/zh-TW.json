@@ -216,15 +216,15 @@
               }
             },
             "buttons": {
-              "description": "Change the default colors of buttons.",
+              "description": "更改按鈕的預設顏色",
               "options": {
                 "color": {
-                  "description": "The color of the buttons.",
+                  "description": "按鈕的顏色",
                   "choices": {
-                    "primary": "Primary (Blurple)",
-                    "secondary": "Secondary (Grey)",
-                    "success": "Success (Green)",
-                    "danger": "Danger (Red)"
+                    "primary": "主要(藍紫色)",
+                    "secondary": "次要(灰色)",
+                    "success": "成功(綠色)",
+                    "danger": "危險(紅色)"
                   }
                 }
               }
@@ -232,21 +232,21 @@
           }
         },
         "events": {
-          "description": "Change the settings of events.",
+          "description": "更改活動的顏色",
           "options": {
             "setting": {
-              "description": "Which setting should be changed?",
+              "description": "需要更改哪項設定？",
               "choices": {
-                "remove_votes_on_ban": "Remove active votes when a user is banned",
-                "remove_votes_on_kick": "Remove active votes when a user is kicked",
-                "remove_votes_on_leave": "Remove active votes when a user leaves"
+                "remove_votes_on_ban": "當使用者被封禁時移除其有效投票",
+                "remove_votes_on_kick": "當使用者被逐出時移除其有效投票",
+                "remove_votes_on_leave": "當使用者離開時移除其有效投票"
               }
             },
             "status": {
-              "description": "To which status should the setting be changed?",
+              "description": "應設定為哪種狀態？",
               "choices": {
-                "enable": "Enable",
-                "disable": "Disable"
+                "enable": "啟用",
+                "disable": "停用"
               }
             }
           }
