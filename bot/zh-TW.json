@@ -190,28 +190,28 @@
       "description": "獲取連結以將此機器人添加到你的伺服器"
     },
     "premium": {
-      "description": "Check the current premium status of this server."
+      "description": "檢查伺服器當前的加成狀態"
     },
     "settings": {
-      "description": "Change the settings of this server.",
+      "description": "更改伺服器設定",
       "subcommands": {
         "colors": {
-          "description": "Change the default colors of this server.",
+          "description": "更改伺服器的預設顏色",
           "subcommands": {
             "embeds": {
-              "description": "Change the default colors of embeds.",
+              "description": "更改嵌入訊息的預設顏色",
               "options": {
                 "state": {
-                  "description": "The state of the embeds.",
+                  "description": "嵌入訊息的狀態",
                   "choices": {
-                    "open": "Open",
-                    "closed": "Closed",
-                    "running": "Running",
-                    "result": "Result"
+                    "open": "開放",
+                    "closed": "停止",
+                    "running": "進行中",
+                    "result": "結果"
                   }
                 },
                 "color": {
-                  "description": "The color of the embeds."
+                  "description": "嵌入訊息的顏色"
                 }
               }
             },
