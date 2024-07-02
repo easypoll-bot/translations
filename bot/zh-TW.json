@@ -129,7 +129,7 @@
       "description": "在特定的時間間隔重複進行投票",
       "options": {
         "id": {
-          "description": “要重複的投票或消息的ID"
+          "description": "要重複的投票或消息的ID"
         }
       }
     },
@@ -187,7 +187,7 @@
       "description": "獲取幫助並了解可用的指令"
     },
     "invite": {
-      "description": "獲取連結以為你的伺服器添加此機器人"
+      "description": "獲取連結以將此機器人添加到你的伺服器"
     },
     "premium": {
       "description": "Check the current premium status of this server."
@@ -697,26 +697,26 @@
     "premium": "Get Premium",
     "troubleshooting": "Troubleshooting",
     "participants": "Participants",
-    "enable": "Enable",
-    "disable": "Disable",
-    "delete": "Delete",
-    "reopen": "Reopen",
-    "close": "Close",
-    "back": "Back",
-    "cancel": "No, cancel",
-    "confirm_close": "Yes, close the poll",
-    "confirm_delete": "Yes, delete the poll",
-    "confirm_reopen": "Yes, reopen the poll",
-    "go_to_message": "Go to the message",
-    "go_to_page": "Go to page",
-    "remove_all_votes": "Remove all your votes",
-    "remove_vote": "Remove this vote",
-    "manage_votes": "Manage your votes",
-    "export_json": "Export as JSON",
-    "export_csv": "Export as CSV"
+    "enable": "啟用",
+    "disable": "停用",
+    "delete": "刪除",
+    "reopen": "重啟",
+    "close": "停止",
+    "back": "返回",
+    "cancel": "否，取消",
+    "confirm_close": "是，停止投票",
+    "confirm_delete": "是，刪除投票",
+    "confirm_reopen": "是，重啟投票",
+    "go_to_message": "前往至消息",
+    "go_to_page": "前往頁面",
+    "remove_all_votes": "移除你的所有投票",
+    "remove_vote": "移除此投票",
+    "manage_votes": "管理你的投票",
+    "export_json": "以JSON格式導出",
+    "export_csv": "以CSV格式導出"
   },
   "permissions": {
-    "add_reactions": "Add Reactions",
+    "add_reactions": "添加表情",
     "view_audit_log": "View Audit Log",
     "view_channel": "View Channels",
     "send_messages": "Send Messages",
