@@ -252,26 +252,26 @@
           }
         },
         "emojis": {
-          "description": "Change the default emojis of this server."
+          "description": "更改伺服器的預設表情符號"
         },
         "language": {
-          "description": "Change the language of this server."
+          "description": "更改伺服器的預設語言"
         },
         "threads": {
-          "description": "Change the settings of threads.",
+          "description": "更改討論串的設定",
           "options": {
             "setting": {
-              "description": "Which setting should be changed?",
+              "description": "需要更改哪項設定？",
               "choices": {
-                "create_thread_with_poll": "Create a thread when a new poll is created",
-                "lock_and_unlock_thread_with_poll": "Lock/unlock a thread when the related poll is closed/reopened"
+                "create_thread_with_poll": "發起新的投票時創建討論串",
+                "lock_and_unlock_thread_with_poll": "當投票停止/重啟時鎖定/解鎖該討論串"
               }
             },
             "status": {
-              "description": "To which status should the setting be changed?",
+              "description": "應設定為哪種狀態？",
               "choices": {
-                "enable": "Enable",
-                "disable": "Disable"
+                "enable": "啟用",
+                "disable": "停用"
               }
             }
           }
@@ -281,25 +281,25 @@
   },
   "contextmenus": {
     "close": {
-      "name": "Close"
+      "name": "關閉"
     },
     "details": {
-      "name": "Details"
+      "name": "詳情"
     },
     "edit": {
-      "name": "Edit"
+      "name": "編輯"
     },
     "participants": {
-      "name": "Participants"
+      "name": "參與者"
     }
   },
   "modals": {
     "go_to_page": {
-      "title": "Go to page",
+      "title": "前往頁面",
       "components": {
         "page_number": {
-          "label": "Page number",
-          "placeholder": "Please enter the page number you want to go to..."
+          "label": "頁碼",
+          "placeholder": "請輸入你想前往的頁面頁碼"
         }
       }
     }
@@ -307,36 +307,36 @@
   "messages": {
     "poll": {
       "success": {
-        "title": "Poll created",
-        "description": "The poll has been successfully created."
+        "title": "已發起投票",
+        "description": "你已成功發起投票。"
       },
       "status": {
-        "open": "Open",
-        "running": "Running",
-        "closed": "Closed"
+        "open": "開啟",
+        "running": "進行中",
+        "closed": "已停止"
       },
       "reactions": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "是",
+        "no": "否"
       },
       "select": {
-        "placeholder": "Select an option to vote...",
-        "votes_one": "{{count}} vote",
-        "votes_other": "{{count}} votes"
+        "placeholder": "選取其中的選項以投票...",
+        "votes_one": "{{count}}票",
+        "votes_other": "{{count}}票"
       },
       "description": {
-        "question": "Question",
-        "choices": "Choices",
-        "result": "Result",
-        "final_result": "Final Result",
-        "settings": "Settings"
+        "question": "問題",
+        "choices": "選項",
+        "result": "結果",
+        "final_result": "最終結果",
+        "settings": "設定"
       },
       "result": {
-        "title": "Poll Result",
-        "votes_one": "{{count}} vote",
-        "votes_other": "{{count}} votes",
-        "users_one": "from {{count}} user",
-        "users_other": "from {{count}} users"
+        "title": "投票結果",
+        "votes_one": "{{count}}票",
+        "votes_other": "{{count}}票",
+        "users_one": "來自{{count}}位使用者",
+        "users_other": "來自{{count}}位使用者"
       },
       "settings": {
         "ends": "Ends {{- timestamp}}",
