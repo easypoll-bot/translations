@@ -70,7 +70,7 @@
       }
     },
     "poll": {
-      "description": "發起正常投票",
+      "description": "發起一般投票",
       "options": {
         "question": {
           "description": "你想發起的問題"
@@ -320,7 +320,7 @@
         "no": "否"
       },
       "select": {
-        "placeholder": "選取其中的選項以投票...",
+        "placeholder": "選取其中的選項以進行投票...",
         "votes_one": "{{count}}票",
         "votes_other": "{{count}}票"
       },
@@ -339,23 +339,23 @@
         "users_other": "來自{{count}}位使用者"
       },
       "settings": {
-        "ends": "Ends {{- timestamp}}",
-        "ended": "Poll already ended",
-        "closed": "No other votes allowed",
-        "anonymous": "Anonymous Poll",
-        "hidden": "Hidden Poll",
-        "maxchoices_one": "allowed choice",
-        "maxchoices_other": "allowed choices",
-        "allowedroles": "Allowed roles"
+        "ends": "{{- timestamp}}結束",
+        "ended": "投票已經結束",
+        "closed": "不接受其他投票",
+        "anonymous": "匿名投票",
+        "hidden": "隱藏投票",
+        "maxchoices_one": "允許的選項",
+        "maxchoices_other": "允許的選項",
+        "allowedroles": "允許的身份組"
       },
       "participants": {
-        "title": "Participants",
-        "votes": "Users who voted for this option:",
-        "no_votes": "No user has voted for this option.",
+        "title": "參與者",
+        "votes": "選擇了這選項的使用者：",
+        "no_votes": "沒有使用者選擇這選項。",
         "select": {
-          "placeholder": "Select an option to see the participants...",
-          "participants_one": "{{count}} participant",
-          "participants_other": "{{count}} participants"
+          "placeholder": "選擇一個選項來查看參與者...",
+          "participants_one": "{{count}}參與者",
+          "participants_other": "{{count}}參與者"
         }
       },
       "info": {
