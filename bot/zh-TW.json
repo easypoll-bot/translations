@@ -563,15 +563,15 @@
       "language": {
         "embeds": {
           "change": {
-            "title": "Change language",
-            "text": "Here you can change the language of the bot on this server.\n\nPlease select a language for the bot on this server:",
+            "title": "更改語言",
+            "text": "你可以在此更改此伺服器上機器人的語言。\n\n請為此伺服器上的機器人選擇一種語言：",
             "select": {
-              "placeholder": "Select a language..."
+              "placeholder": "選擇語言..."
             }
           },
           "changed": {
-            "title": "Language changed",
-            "description": "The language of the bot on this server has been changed to {{- language}}."
+            "title": "語言已更改",
+            "description": "在此伺服器上的機器人的語言已更改為{{- language}}。"
           }
         }
       }
@@ -667,7 +667,7 @@
         "description": "You cannot remove your vote for this option because you have not voted for this option."
       },
       "no_votes": {
-        "title": "No votes on this poll!",
+        "title": "這次投票沒有投票！",
         "description": "You have not voted for any option on this poll."
       },
       "invalid_poll": {
@@ -716,7 +716,7 @@
     "export_csv": "以CSV格式導出"
   },
   "permissions": {
-    "add_reactions": "添加表情",
+    "add_reactions": "添加回應",
     "view_audit_log": "View Audit Log",
     "view_channel": "View Channels",
     "send_messages": "Send Messages",
