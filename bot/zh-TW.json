@@ -359,19 +359,19 @@
         }
       },
       "info": {
-        "title": "Poll Information",
+        "title": "投票資訊",
         "fields": {
           "id": "ID",
-          "status": "Status",
-          "creator": "Creator",
-          "created_at": "Created at",
-          "ends_at": "Ends at",
-          "closed_at": "Closed at",
-          "question": "Question",
-          "choices": "Choices",
-          "result": "Result",
-          "settings": "Settings",
-          "message": "Message"
+          "status": "狀態",
+          "creator": "發起者",
+          "created_at": "發起於",
+          "ends_at": "結束於",
+          "closed_at": "停止於",
+          "question": "問題",
+          "choices": "選項",
+          "result": "結果",
+          "settings": "設定",
+          "message": "訊息"
         }
       }
     },
