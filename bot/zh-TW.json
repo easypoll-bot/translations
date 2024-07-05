@@ -7,10 +7,10 @@
   },
   "commands": {
     "closepoll": {
-      "description": "停止收集投票",
+      "description": "截止收集投票",
       "options": {
         "id": {
-          "description": "要停止的投票或消息的ID"
+          "description": "要截止的投票或消息的ID"
         }
       }
     },
@@ -58,7 +58,7 @@
             "all": "全部",
             "open": "開放",
             "running": "進行中",
-            "closed": "已停止"
+            "closed": "已截止"
           }
         },
         "channel": {
@@ -104,7 +104,7 @@
       "description": "使用投票生成器發起更複雜的投票"
     },
     "pollresult": {
-      "description": "重新發佈已停止的投票的結果",
+      "description": "重新發佈已截止的投票的結果",
       "options": {
         "id": {
           "description": "要發佈結果的投票或消息的ID"
@@ -118,7 +118,7 @@
       }
     },
     "reopenpoll": {
-      "description": "重啟已停止的投票",
+      "description": "重啟已截止的投票",
       "options": {
         "id": {
           "description": "要重啟的投票或消息的ID"
@@ -205,7 +205,7 @@
                   "description": "嵌入訊息的狀態",
                   "choices": {
                     "open": "開放",
-                    "closed": "停止",
+                    "closed": "截止",
                     "running": "進行中",
                     "result": "結果"
                   }
@@ -264,7 +264,7 @@
               "description": "需要更改哪項設定？",
               "choices": {
                 "create_thread_with_poll": "發起新的投票時創建討論串",
-                "lock_and_unlock_thread_with_poll": "當投票停止/重啟時鎖定/解鎖該討論串"
+                "lock_and_unlock_thread_with_poll": "當投票截止/重啟時鎖定/解鎖該討論串"
               }
             },
             "status": {
@@ -313,7 +313,7 @@
       "status": {
         "open": "開啟",
         "running": "進行中",
-        "closed": "已停止"
+        "closed": "已截止"
       },
       "reactions": {
         "yes": "是",
@@ -366,7 +366,7 @@
           "creator": "發起者",
           "created_at": "發起於",
           "ends_at": "結束於",
-          "closed_at": "停止於",
+          "closed_at": "截止於",
           "question": "問題",
           "choices": "選項",
           "result": "結果",
@@ -411,14 +411,14 @@
     "closepoll": {
       "embeds": {
         "confirm": {
-          "title": "停止投票",
+          "title": "截止投票",
           "description1": "您確定要終止本次投票嗎？",
           "description2": "投票ID：{{id}}",
           "description3": "投票問題：{{question}}"
         },
         "success": {
-          "title": "已停止投票",
-          "description": "已成功停止投票",
+          "title": "已截止投票",
+          "description": "已成功截止投票",
           "error": "很抱歉，原始消息更新失敗。",
           "error_missingaccess": "很抱歉，由於機器人缺少訪問該頻道的必要權限，原始消息更新失敗。",
           "error_unknownchannel": "很抱歉，由於系統無法定位到指定的頻道，原始消息更新失敗。",
@@ -554,7 +554,7 @@
         "premium": {
           "title": "這個伺服器已升級至高級版！",
           "fields": {
-            "premium_until": "Premium until"
+            "premium_until": "高級版有限至"
           }
         }
       }
@@ -581,12 +581,12 @@
     "poll_id": "投票ID: {{id}}",
     "poll_type": "類型: {{type}} ({{votingType}})",
     "error_id": "錯誤ID: {{id}}",
-    "pages": "Page {{page}} of {{pages}}"
+    "pages": "頁{{page}}，共{{pages}}頁"
   },
   "errors": {
     "default": {
-      "title": "Task failed successfully!",
-      "description": "An error has occured but I'm unable to tell you why.\nPlease ask the support for more help."
+      "title": "任務非常成功地失敗了！",
+      "description": "一個錯誤發生了，但我無法告訴您發生的原因。\n請向支持團隊尋求更多幫助。"
     },
     "guild_command": {
       "title": "伺服器指令！",
@@ -599,89 +599,88 @@
     },
     "missing_user_permissions": {
       "title": "缺失權限！",
-      "description1": "You are missing the following permissions:",
-      "description2": "You cannot perform this action without the required permissions."
+      "description1": "你缺失了以下的權限：",
+      "description2": "在缺失需要的權限下，你不能執行這個動作。"
     },
     "premium_required": {
-      "title": "Premium required!",
-      "description": "This feature is only available for premium servers. Please get premium to use this feature."
+      "title": "需要高級版！",
+      "description": "此功能僅適用於高級伺服器。請升級到高級版以使用此功能。"
     },
     "invalid_channel_type": {
-      "title": "Invalid channel type!",
-      "description": "The selected channel is not a allowed channel type for this action."
+      "title": "無效的頻道類型！",
+      "description": "您選擇的頻道不是此操作允許的頻道類型。"
     },
     "invalid_color": {
-      "title": "Invalid color!",
-      "description": "The entered color is invalid. Please make sure the color is in the correct format."
+      "title": "無效的顏色！",
+      "description": "輸入的顏色無效。請確保顏色格式正確。"
     },
     "invalid_page": {
-      "title": "Invalid page!",
-      "description": "The entered page number is invalid. Please make sure the page number is in the correct format and within the valid range."
+      "title": "無效的頁數!",
+      "description": "輸入的頁碼無效。請確保頁碼格式正確且在有效範圍內。"
     },
     "invalid_time": {
-      "title": "Invalid time!",
-      "description": "The entered time is invalid. Please make sure the time is in the correct format."
+      "title": "無效的時間！",
+      "description": "輸入的時間無效。請確保時間格式正確。"
     },
     "max_time": {
-      "title": "Maximum time reached!",
-      "description": "You have reached the maximum time of {{maxtime}}.\nPlease make sure the entered time is not longer than the maximum allowed time.",
-      "description_upgrade": "You can increase the maximum time to {{maxtime}} by upgrading to premium."
+      "title": "已達到最長時間！",
+      "description": "您已達到最長時間 {{maxtime}}。\n請確保輸入的時間不超過允許的最長時間。",
+      "description_upgrade": "通過升級到高級版，您可以延長最長時間至 {{maxtime}} 。"
     },
     "unknown_emoji": {
-      "title": "Unknown emoji!",
-      "description": "You have specified an unknown emoji!\nYou can only use emojis from servers where EasyPoll is invited. Please make sure {{- emoji}} is an **official Discord** emoji or an emoji **from this server**."
+      "title": "未知的表情符號！",
+      "description": "您指定了一個未知的表情符號！EasyPoll 僅支持使用其所在伺服器的表情符號。請確認 {{- emoji}} 是**Discord 官方**表情符號，或是**本伺服器**的自定義表情符號。"
     },
     "restricted": {
-      "title": "You cannot perform this action!",
-      "description": "You or this server is restricted from using this action.",
-      "description_user": "You are restricted from using this action.",
-      "description_guild": "This server is restricted from using this action.",
+      "title": "您不能執行這個動作！",
+      "description": "您或伺服器被限制禁止執行這個動作。",
+      "description_user": "您被限制禁止執行這個動作。",
+      "description_guild": "伺服器被限制禁止執行這個動作。",
       "fields": {
-        "reason": "Reason",
-        "expires_at": "Expires at"
+        "reason": "原因",
+        "expires_at": "截止時間為"
       }
     },
     "already_voted": {
-      "title": "Already voted for this option!",
-      "description": "You have already voted for this option and cannot vote again for the same option."
+      "title": "已為該選項投過票！",
+      "description": "您已經為該選項投過票，無法再次選擇相同選項。"
     },
     "max_choices_reached": {
-      "title": "Reached the maximum number of choices!",
-      "description": "You have reached the maximum number of choices for this poll. You can remove some of your votes to vote for other options."
+      "title": "已達到最大可選數量！",
+      "description": "您已達到本次投票的最大可選數量。如需投票給其他選項，請先取消部分已選擇的選項。"
     },
     "not_allowed_role": {
-      "title": "Only certain roles allowed for this poll!",
-      "description": "You cannot vote for this poll because you do not own any of the allowed roles."
+      "title": "只限定擁有指定身份組的使用者進行投票！",
+      "description": "由於您不擁有被允許投票的身份組，因此無法參與此次投票。"
     },
     "poll": {
       "already_closed": {
-        "title": "This poll is already closed!",
-        "description": "You cannot interact with this poll because it is already closed."
+        "title": "投票已經截止！",
+        "description": "本次投票已結束，無法進行任何操作。"
       },
       "not_closed": {
-        "title": "This poll is not closed!",
-        "description": "The poll could not be reopened because it is not closed."
+        "title": "投票並未截止！",
+        "description": "無法重啟投票，因為當前投票尚未關閉。"
       },
       "not_voted": {
-        "title": "Not voted for this option!",
-        "description": "You cannot remove your vote for this option because you have not voted for this option."
+        "title": "沒有為該選項投過票！",
+        "description": "無法取消該選項的投票，因為您尚未對此選項投過票。"
       },
       "no_votes": {
-        "title": "這次投票沒有投票！",
-        "description": "You have not voted for any option on this poll."
+        "title": "沒有在本次投票投過票！",
+        "description": "您尚未在此次投票中投給任何選項。"
       },
       "invalid_poll": {
-        "title": "這不是投票！",
-        "description_input": "The entered id is not a poll. Make sure you have entered the correct poll or message id.",
-        "description_select": "The selected message is not a poll. Make sure you have selected the correct poll message."
-      },
+        "title": "這不是有效的投票！",
+        "description_input": "您輸入的ID並非有效的投票。請確保您輸入了正確的投票或消息ID。",
+        "description_select": "您選擇的消息並非一個有效的投票。請確保您選擇了正確的投票消息。"
       "participants_not_available": {
-        "title": "Participants list not allowed!",
-        "description": "The participants list is not available for this poll."
+        "title": "本次投票不允許查看參與者名單！",
+        "description": "本次投票未開放參與者名單查看功能。"
       },
       "vote_remove_not_allowed": {
-        "title": "禁止移除投票！",
-          "description": "You cannot remove your vote for this poll because the remove votes is not allowed."
+        "title": "本次投票禁止移除投票！",
+          "description": "由於本次投票設置了禁止撤票，您無法移除已投的票。"
       },
       "no_polls_found": {
         "title": "找不到投票！",
@@ -701,10 +700,10 @@
     "disable": "停用",
     "delete": "刪除",
     "reopen": "重啟",
-    "close": "停止",
+    "close": "截止",
     "back": "返回",
     "cancel": "否，取消",
-    "confirm_close": "是，停止投票",
+    "confirm_close": "是，截止投票",
     "confirm_delete": "是，刪除投票",
     "confirm_reopen": "是，重啟投票",
     "go_to_message": "前往至消息",
@@ -717,10 +716,10 @@
   },
   "permissions": {
     "add_reactions": "添加回應",
-    "view_audit_log": "View Audit Log",
-    "view_channel": "View Channels",
-    "send_messages": "Send Messages",
-    "manage_messages": "Manage Messages",
+    "view_audit_log": "查看審核日誌",
+    "view_channel": "查看頻道",
+    "send_messages": "發送訊息",
+    "manage_messages": "管理訊息",
     "manage_guild": "Manage Server",
     "embed_links": "Embed Links",
     "attach_files": "Attach Files",
