@@ -720,15 +720,15 @@
     "view_channel": "查看頻道",
     "send_messages": "發送訊息",
     "manage_messages": "管理訊息",
-    "manage_guild": "Manage Server",
-    "embed_links": "Embed Links",
-    "attach_files": "Attach Files",
-    "read_message_history": "Read Message History",
-    "mention_everyone": "Mention Everyone",
-    "use_external_emojis": "Use External Emojis",
-    "manage_webhooks": "Manage Webhooks",
-    "manage_threads": "Manage Threads",
-    "create_public_threads": "Create Public Threads",
-    "send_messages_in_threads": "Send Messages in Threads"
+    "manage_guild": "管理伺服器",
+    "embed_links": "嵌入連結",
+    "attach_files": "附加文件",
+    "read_message_history": "讀取訊息歷史",
+    "mention_everyone": "提及所有人",
+    "use_external_emojis": "使用外部表情符號",
+    "manage_webhooks": "管理Webhooks",
+    "manage_threads": "管理討論串",
+    "create_public_threads": "創建公共討論串",
+    "send_messages_in_threads": "在討論串中發送訊息"
   }
 }
