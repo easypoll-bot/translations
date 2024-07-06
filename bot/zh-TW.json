@@ -378,15 +378,15 @@
     "votes": {
       "added": {
         "title": "已添加投票",
-        "description": "您已成功投給選項 {{option}} 。",
-        "description2_one": "您還剩餘 ** {{count}} 票**。",
-        "description2_other": "您還剩餘 ** {{count}} 票**。"
+        "description": "您已成功投給選項 {{option}}。",
+        "description2_one": "您還剩餘 **{{count}} 票**。",
+        "description2_other": "您還剩餘 **{{count}} 票**。"
       },
       "added_selected": {
         "title": "已添加投票",
         "description1": "您已成功投給以下的選項：",
-        "description2_one": "您還剩餘 ** {{count}} 票**。",
-        "description2_other": "您還剩餘 ** {{count}} 票**。"
+        "description2_one": "您還剩餘 **{{count}} 票**。",
+        "description2_other": "您還剩餘 **{{count}} 票**。"
       },
       "removed": {
         "title": "已移除投票",
@@ -629,7 +629,7 @@
     },
     "unknown_emoji": {
       "title": "未知的表情符號！",
-      "description": "您指定了一個未知的表情符號！EasyPoll 僅支持使用其所在伺服器的表情符號。請確認 {{- emoji}} 是**Discord 官方**表情符號，或是**本伺服器**的自定義表情符號。"
+      "description": "您指定了一個未知的表情符號！\nEasyPoll 僅支持使用其所在伺服器的表情符號。請確認 {{- emoji}} 是**Discord 官方**表情符號，或是**本伺服器**的自定義表情符號。"
     },
     "restricted": {
       "title": "您不能執行這個動作！",
@@ -674,13 +674,14 @@
         "title": "這不是有效的投票！",
         "description_input": "您輸入的ID並非有效的投票。請確保您輸入了正確的投票或消息ID。",
         "description_select": "您選擇的消息並非一個有效的投票。請確保您選擇了正確的投票消息。"
+      },
       "participants_not_available": {
         "title": "本次投票不允許查看參與者名單！",
         "description": "本次投票未開放參與者名單查看功能。"
       },
       "vote_remove_not_allowed": {
         "title": "本次投票禁止移除投票！",
-          "description": "由於本次投票設置了禁止撤票，您無法移除已投的票。"
+        "description": "由於本次投票設置了禁止撤票，您無法移除已投的票。"
       },
       "no_polls_found": {
         "title": "找不到投票！",
