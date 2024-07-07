@@ -64,7 +64,7 @@ https://discord.com/developers/docs/reference#locales
 
 
 ## How do I submit my translation?
-You can submit your translations via a pull request in this repostiory.  
+You can submit your translations via a pull request in this repository.  
 Please follow all instructions in this README file.  
 Your translations and changes will then be checked by our team.
 
