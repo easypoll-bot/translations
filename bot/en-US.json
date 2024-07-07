@@ -681,7 +681,7 @@
       },
       "vote_remove_not_allowed": {
         "title": "Vote remove not allowed!",
-        "description": "You cannot remove your vote for this poll because the remove votes is not allowed."
+        "description": "You cannot remove your vote for this poll because removing votes is not allowed."
       },
       "no_polls_found": {
         "title": "No polls found!",
