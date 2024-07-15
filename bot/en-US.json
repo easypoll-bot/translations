@@ -592,6 +592,10 @@
       "title": "Server command!",
       "description": "This command can only be used in servers."
     },
+    "guild_communication_disabled": {
+      "title": "Bot is timed out!",
+      "description": "The bot is timed out in this server and cannot communicate within this server.\nPlease remove the timeout to use the bot again."
+    },
     "missing_bot_permissions": {
       "title": "Missing permissions!",
       "description1": "The bot is missing the following permissions:",
@@ -696,6 +700,7 @@
     "wiki": "Wiki",
     "premium": "Get Premium",
     "troubleshooting": "Troubleshooting",
+    "discord_helpcenter": "Discord Help Center",
     "participants": "Participants",
     "enable": "Enable",
     "disable": "Disable",
