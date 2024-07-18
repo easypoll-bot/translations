@@ -7,7 +7,7 @@
   },
   "commands": {
     "closepoll": {
-      "description": "截止收集投票",
+      "description": "截止投票",
       "options": {
         "id": {
           "description": "要截止的投票或消息的ID"
@@ -83,7 +83,7 @@
             "anonymous-buttons": "匿名(按鈕)",
             "anonymous-selectmenu": "匿名(選單)",
             "hidden-buttons": "隱藏(按鈕)",
-            "hidden-selectmenu": "隱藏(按鈕)"
+            "hidden-selectmenu": "隱藏(選單)"
           }
         },
         "maxchoices": {
@@ -158,7 +158,7 @@
             "anonymous-buttons": "匿名(按鈕)",
             "anonymous-selectmenu": "匿名(選單)",
             "hidden-buttons": "隱藏(按鈕)",
-            "hidden-selectmenu": "隱藏(按鈕)"
+            "hidden-selectmenu": "隱藏(選單)"
           }
         },
         "maxchoices": {
@@ -190,7 +190,7 @@
       "description": "獲取連結以將此機器人添加到您的伺服器"
     },
     "premium": {
-      "description": "檢查伺服器當前的加成狀態"
+      "description": "檢查伺服器的機器人是否升級到高級版"
     },
     "settings": {
       "description": "更改伺服器設定",
@@ -237,9 +237,9 @@
             "setting": {
               "description": "需要更改哪項設定？",
               "choices": {
-                "remove_votes_on_ban": "當使用者被封禁時移除其有效投票",
-                "remove_votes_on_kick": "當使用者被逐出時移除其有效投票",
-                "remove_votes_on_leave": "當使用者離開時移除其有效投票"
+                "remove_votes_on_ban": "當使用者被封禁時移除其活躍投票",
+                "remove_votes_on_kick": "當使用者被逐出時移除其活躍投票",
+                "remove_votes_on_leave": "當使用者離開時移除其活躍投票"
               }
             },
             "status": {
@@ -452,7 +452,7 @@
         },
         "success": {
           "title": "已導出投票",
-          "description": "投票資料已成功導出，並已作為附件添加到本訊息中。\n您現在可以輕松下載這個附件，並在任何支持該格式的應用程式中使用它。"
+          "description": "投票資料已成功導出，並已作為附件添加到本訊息中。\n您現在可以輕易下載這個附件，並在任何支持該格式的應用程式中使用它。"
         }
       }
     },
@@ -699,7 +699,7 @@
     "support": "支援",
     "wiki": "維基",
     "premium": "獲取高級版",
-    "troubleshooting": "排錯",
+    "troubleshooting": "除錯",
     "discord_helpcenter": "Discord幫助中心",
     "participants": "參與者",
     "enable": "啟用",
