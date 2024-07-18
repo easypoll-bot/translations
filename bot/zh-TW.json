@@ -592,6 +592,10 @@
       "title": "伺服器指令！",
       "description": "這個指令只能在伺服器中使用。"
     },
+    "guild_communication_disabled": {
+      "title": "機器人被禁言！",
+      "description": "該機器人目前在此服務器中處於禁言狀態，無法進行任何通訊。\n如需繼續使用，請先解除對機器人的禁言。"
+    },
     "missing_bot_permissions": {
       "title": "缺失權限！",
       "description1": "機器人缺失了以下的權限：",
@@ -696,6 +700,7 @@
     "wiki": "維基",
     "premium": "獲取高級版",
     "troubleshooting": "排錯",
+    "discord_helpcenter": "Discord幫助中心",
     "participants": "參與者",
     "enable": "啟用",
     "disable": "停用",
