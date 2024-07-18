@@ -592,6 +592,10 @@
       "title": "Server Befehl!",
       "description": "Dieser Befehl kann nur auf Servern verwendet werden."
     },
+    "guild_communication_disabled": {
+      "title": "Bot hat Timeout!",
+      "description": "Der Bot hat eine Timeout auf diesem Server und kann nicht mit diesem Server kommunizieren.\nBitte entferne den Timeout, um den Bot wieder zu verwenden."
+    },
     "missing_bot_permissions": {
       "title": "Fehlende Berechtigungen!",
       "description1": "Dem Bot fehlen die folgenden Berechtigungen:",
@@ -696,6 +700,7 @@
     "wiki": "Wiki",
     "premium": "Premium holen",
     "troubleshooting": "Fehlerbehebung",
+    "discord_helpcenter": "Discord Hilfecenter",
     "participants": "Teilnehmer",
     "enable": "Einschalten",
     "disable": "Ausschalten",
