@@ -378,7 +378,7 @@
     "votes": {
       "added": {
         "title": "Policzono Twój głos",
-        "description": "Pomyślnie oddałeś głos na opcję {{option}}.",
+        "description": "Pomyślnie oddałeś głos na opcję {{- option}}.",
         "description2_one": "Pozostał Ci **{{count}} głos**.",
         "description2_other": "Pozostały(-o) Ci **{{count}} głosy(-ów)**."
       },
@@ -390,7 +390,7 @@
       },
       "removed": {
         "title": "Wycofano Twój głos",
-        "description": "Pomyślnie wycofałeś głos na opcję: {{option}}."
+        "description": "Pomyślnie wycofałeś głos na opcję: {{- option}}."
       },
       "removed_selected": {
         "title": "Wycofano Twoje głosy",

@@ -378,7 +378,7 @@
     "votes": {
       "added": {
         "title": "Stimme hinzugefügt",
-        "description": "Du hast erfolgreich für die Option {{option}} abgestimmt.",
+        "description": "Du hast erfolgreich für die Option {{- option}} abgestimmt.",
         "description2_one": "Du hast noch **{{count}} Stimme übrig**.",
         "description2_other": "Du hast noch **{{count}} Stimmen übrig**."
       },
@@ -390,7 +390,7 @@
       },
       "removed": {
         "title": "Stimme entfernt",
-        "description": "Du hast erfolgreich deine Stimme für die Option {{option}} entfernt."
+        "description": "Du hast erfolgreich deine Stimme für die Option {{- option}} entfernt."
       },
       "removed_selected": {
         "title": "Stimmen entfernt",

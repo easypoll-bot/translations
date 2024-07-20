@@ -378,7 +378,7 @@
     "votes": {
       "added": {
         "title": "Vote added",
-        "description": "You have successfully voted for the option {{option}}.",
+        "description": "You have successfully voted for the option {{- option}}.",
         "description2_one": "You have **{{count}} vote left**.",
         "description2_other": "You have **{{count}} votes left**."
       },
@@ -390,7 +390,7 @@
       },
       "removed": {
         "title": "Vote removed",
-        "description": "You have successfully removed your vote for the option {{option}}."
+        "description": "You have successfully removed your vote for the option {{- option}}."
       },
       "removed_selected": {
         "title": "Votes removed",
