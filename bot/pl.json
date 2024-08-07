@@ -633,9 +633,9 @@
     },
     "restricted": {
       "title": "Nie możesz wykonać tej akcji!",
-      "description": "Ty lub ten serwer nie możecie korzystać z tej akcji.",
-      "description_user": "Nie możesz używać tej akcji.",
-      "description_guild": "Ten serwer nie może korzystać z tej akcji.",
+      "description": {
+        "guild": "Ten serwer nie może korzystać z tej akcji."
+      },
       "fields": {
         "reason": "Powód",
         "expires_at": "Wygasa"

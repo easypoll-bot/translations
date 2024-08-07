@@ -175,6 +175,20 @@
         }
       }
     },
+    "block": {
+      "description": "Block a user from interacting with the bot on this server.",
+      "options": {
+        "user": {
+          "description": "The user to block."
+        },
+        "reason": {
+          "description": "The public reason for blocking the user."
+        },
+        "time": {
+          "description": "The time the user should be blocked for."
+        }
+      }
+    },
     "debug": {
       "description": "Check the server permissions and some common issues.",
       "options": {
@@ -188,6 +202,9 @@
     },
     "invite": {
       "description": "Get a link to add the bot to your own server."
+    },
+    "listblocks": {
+      "description": "Show a list of all blocked users on the current server."
     },
     "premium": {
       "description": "Check the current premium status of this server."
@@ -275,6 +292,14 @@
               }
             }
           }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Unblock a user from interacting with the bot on this server.",
+      "options": {
+        "user": {
+          "description": "The user to unblock."
         }
       }
     }
@@ -488,6 +513,14 @@
         }
       }
     },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "User blocked",
+          "description": "The user has been successfully blocked from interacting with the bot on this server."
+        }
+      }
+    },
     "debug": {
       "content": "If you need help from our support team, please share the following link with them:",
       "embeds": {
@@ -545,6 +578,14 @@
         }
       }
     },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Blocked Users List",
+          "no_votes": "No user is blocked on this server."
+        }
+      }
+    },
     "premium": {
       "embeds": {
         "no_premium": {
@@ -573,6 +614,14 @@
             "title": "Language changed",
             "description": "The language of the bot on this server has been changed to {{- language}}."
           }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "User unblocked",
+          "description": "The user has been successfully unblocked from interacting with the bot on this server."
         }
       }
     }
@@ -637,13 +686,19 @@
     },
     "restricted": {
       "title": "You cannot perform this action!",
-      "description": "You or this server is restricted from using this action.",
-      "description_user": "You are restricted from using this action.",
-      "description_guild": "This server is restricted from using this action.",
+      "description": {
+        "user_global": "You are globally restricted from using this action.",
+        "user_local": "You are restricted on this server from using this action.",
+        "guild": "This server is restricted from using this action."
+      },
       "fields": {
         "reason": "Reason",
         "expires_at": "Expires at"
       }
+    },
+    "already_restricted": {
+      "title": "Already restricted!",
+      "description": "The selected user is already restricted from using the bot."
     },
     "already_voted": {
       "title": "Already voted for this option!",
@@ -656,6 +711,14 @@
     "not_allowed_role": {
       "title": "Only certain roles allowed for this poll!",
       "description": "You cannot vote for this poll because you do not own any of the allowed roles."
+    },
+    "not_allowed_user": {
+      "title": "User not allowed!",
+      "description": "You cannot select this user because you are not permitted to do so."
+    },
+    "not_restricted": {
+      "title": "Not restricted!",
+      "description": "The selected user is not restricted from using the bot."
     },
     "poll": {
       "already_closed": {

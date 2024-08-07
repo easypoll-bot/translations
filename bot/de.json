@@ -175,6 +175,20 @@
         }
       }
     },
+    "block": {
+      "description": "Sperre einen Nutzer für die Interaktion mit dem Bot auf diesem Server.",
+      "options": {
+        "user": {
+          "description": "Der zu sperrende Nutzer."
+        },
+        "reason": {
+          "description": "Der öffentliche Grund für die Sperrung des Nutzers."
+        },
+        "time": {
+          "description": "Die Zeit, für die der Nutzer gesperrt werden soll."
+        }
+      }
+    },
     "debug": {
       "description": "Überprüfe die Serverberechtigungen und einige häufige Probleme.",
       "options": {
@@ -188,6 +202,9 @@
     },
     "invite": {
       "description": "Erhalte einen Link, um den Bot zu deinem eigenen Server hinzuzufügen."
+    },
+    "listblocks": {
+      "description": "Zeigt eine Liste aller gesperrten Nutzer auf dem aktuellen Server."
     },
     "premium": {
       "description": "Prüfe den aktuellen Premium-Status dieses Servers."
@@ -275,6 +292,14 @@
               }
             }
           }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Entsperre einen Nutzer für die Interaktion mit dem Bot auf diesem Server.",
+      "options": {
+        "user": {
+          "description": "Der zu entsperrende Nutzer."
         }
       }
     }
@@ -488,6 +513,14 @@
         }
       }
     },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Nutzer gesperrt",
+          "description": "Der Nutzer wurde erfolgreich für die Interaktion mit dem Bot auf diesem Server gesperrt."
+        }
+      }
+    },
     "debug": {
       "content": "Wenn du Hilfe von unserem Support-Team benötigst, teile mit diesem bitte den folgenden Link:",
       "embeds": {
@@ -545,6 +578,14 @@
         }
       }
     },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Liste gesperrter Nutzer",
+          "no_votes": "Kein Nutzer ist auf diesem Server gesperrt."
+        }
+      }
+    },
     "premium": {
       "embeds": {
         "no_premium": {
@@ -573,6 +614,14 @@
             "title": "Sprache geändert",
             "description": "Die Sprache des Bots auf diesem Server wurde auf {{- language}} geändert."
           }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Nutzer entsperrt",
+          "description": "Der Nutzer wurde erfolgreich für die Interaktion mit dem Bot auf diesem Server entsperrt."
         }
       }
     }
@@ -637,13 +686,19 @@
     },
     "restricted": {
       "title": "Du kannst diese Aktion nicht durchführen!",
-      "description": "Du oder dieser Server ist nicht berechtigt, diese Aktion zu verwenden.",
-      "description_user": "Du darfst diese Aktion nicht verwenden.",
-      "description_guild": "Dieser Server darf diese Aktion nicht verwenden.",
+      "description": {
+        "user_global": "Du bist global von der Nutzung dieser Aktion ausgeschlossen.",
+        "user_local": "Du bist auf diesem Server von der Nutzung dieser Aktion ausgeschlossen.",
+        "guild": "Dieser Server ist von der Nutzung dieser Aktion ausgeschlossen."
+      },
       "fields": {
         "reason": "Grund",
         "expires_at": "Läuft aus"
       }
+    },
+    "already_restricted": {
+      "title": "Bereits eingeschränkt!",
+      "description": "Der ausgewählte Nutzer ist bereits von der Nutzung des Bots ausgeschlossen."
     },
     "already_voted": {
       "title": "Bereits für diese Option gestimmt!",
@@ -656,6 +711,14 @@
     "not_allowed_role": {
       "title": "Nur bestimmte Rollen sind für diese Umfrage zugelassen!",
       "description": "Du kannst bei dieser Umfrage nicht abstimmen, weil du keine der zugelassenen Rollen besitzt."
+    },
+    "not_allowed_user": {
+      "title": "Nutzer nicht erlaubt!",
+      "description": "Du kannst diesen Nutzer nicht auswählen, weil du dazu nicht berechtigt bist."
+    },
+    "not_restricted": {
+      "title": "Nicht eingeschränkt!",
+      "description": "Der ausgewählte Nutzer ist nicht von der Nutzung des Bots ausgeschlossen."
     },
     "poll": {
       "already_closed": {
