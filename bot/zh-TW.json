@@ -1,0 +1,740 @@
+{
+  "meta": {
+    "locale": "zh-TW",
+    "name": "Chinese, Taiwan",
+    "name_native": "繁體中文",
+    "emoji_unicode": "🇹🇼"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "截止投票",
+      "options": {
+        "id": {
+          "description": "要截止的投票或消息的ID"
+        }
+      }
+    },
+    "copypoll": {
+      "description": "複製現存的投票",
+      "options": {
+        "id": {
+          "description": "要複製的投票或消息的ID"
+        },
+        "channel": {
+          "description": "將投票複製到的目標頻道"
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "完全刪除投票",
+      "options": {
+        "id": {
+          "description": "要刪除的投票或消息的ID"
+        }
+      }
+    },
+    "editpoll": {
+      "description": "修改現存的投票",
+      "options": {
+        "id": {
+          "description": "要修改的投票或消息的ID"
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "導出投票的結果",
+      "options": {
+        "id": {
+          "description": "要導出的投票或消息的ID"
+        }
+      }
+    },
+    "listpolls": {
+      "description": "以列表顯示在此伺服器的所有投票",
+      "options": {
+        "status": {
+          "description": "選擇該投票所處的狀態",
+          "choices": {
+            "all": "全部",
+            "open": "開放",
+            "running": "進行中",
+            "closed": "已截止"
+          }
+        },
+        "channel": {
+          "description": "選擇該投票所處的頻道"
+        },
+        "user": {
+          "description": "選擇投票應來自的使用者"
+        }
+      }
+    },
+    "poll": {
+      "description": "發起一般投票",
+      "options": {
+        "question": {
+          "description": "您想發起的問題"
+        },
+        "type": {
+          "description": "該投票的類型",
+          "choices": {
+            "normal-buttons": "正常(按鈕)",
+            "normal-selectmenu": "正常(選單)",
+            "anonymous-buttons": "匿名(按鈕)",
+            "anonymous-selectmenu": "匿名(選單)",
+            "hidden-buttons": "隱藏(按鈕)",
+            "hidden-selectmenu": "隱藏(選單)"
+          }
+        },
+        "maxchoices": {
+          "description": "每位使用者可選擇的選項(預設為1)"
+        },
+        "text": {
+          "description": "顯示在投票上方的說明"
+        },
+        "allowedrole": {
+          "description": "允許特定身分組的使用者投票(預設為所有人)"
+        },
+        "answer": {
+          "description": "選項 {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "使用投票生成器發起更複雜的投票"
+    },
+    "pollresult": {
+      "description": "重新發佈已截止的投票的結果",
+      "options": {
+        "id": {
+          "description": "要發佈結果的投票或消息的ID"
+        },
+        "text": {
+          "description": "顯示在投票結果上方的說明"
+        },
+        "channel": {
+          "description": "選擇該投票結果所處的頻道"
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "重啟已截止的投票",
+      "options": {
+        "id": {
+          "description": "要重啟的投票或消息的ID"
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "在特定的時間間隔重複進行投票",
+      "options": {
+        "id": {
+          "description": "要重複的投票或消息的ID"
+        }
+      }
+    },
+    "showpoll": {
+      "description": "顯示特定的投票及其資訊和操作",
+      "options": {
+        "id": {
+          "description": "要顯示的投票或消息的ID"
+        }
+      }
+    },
+    "timepoll": {
+      "description": "發起以時間為基準的投票",
+      "options": {
+        "question": {
+          "description": "您想發起的問題"
+        },
+        "time": {
+          "description": "限制投票進行的時長"
+        },
+        "type": {
+          "description": "該投票的類型",
+          "choices": {
+            "normal-buttons": "正常(按鈕)",
+            "normal-selectmenu": "正常(選單)",
+            "anonymous-buttons": "匿名(按鈕)",
+            "anonymous-selectmenu": "匿名(選單)",
+            "hidden-buttons": "隱藏(按鈕)",
+            "hidden-selectmenu": "隱藏(選單)"
+          }
+        },
+        "maxchoices": {
+          "description": "每位使用者可選擇的選項(預設為1)"
+        },
+        "text": {
+          "description": "顯示在投票上方的說明"
+        },
+        "allowedrole": {
+          "description": "允許特定身分組的使用者投票(預設為所有人)"
+        },
+        "answer": {
+          "description": "選項 {{id}}"
+        }
+      }
+    },
+    "debug": {
+      "description": "檢查擁有的權限和常見問題",
+      "options": {
+        "channel": {
+          "description": "要調試的頻道"
+        }
+      }
+    },
+    "help": {
+      "description": "獲取幫助並了解可用的指令"
+    },
+    "invite": {
+      "description": "獲取連結以將此機器人添加到您的伺服器"
+    },
+    "premium": {
+      "description": "檢查伺服器的機器人是否升級到高級版"
+    },
+    "settings": {
+      "description": "更改伺服器設定",
+      "subcommands": {
+        "colors": {
+          "description": "更改伺服器的預設顏色",
+          "subcommands": {
+            "embeds": {
+              "description": "更改嵌入訊息的預設顏色",
+              "options": {
+                "state": {
+                  "description": "嵌入訊息的狀態",
+                  "choices": {
+                    "open": "開放",
+                    "closed": "截止",
+                    "running": "進行中",
+                    "result": "結果"
+                  }
+                },
+                "color": {
+                  "description": "嵌入訊息的顏色"
+                }
+              }
+            },
+            "buttons": {
+              "description": "更改按鈕的預設顏色",
+              "options": {
+                "color": {
+                  "description": "按鈕的顏色",
+                  "choices": {
+                    "primary": "主要(藍紫色)",
+                    "secondary": "次要(灰色)",
+                    "success": "成功(綠色)",
+                    "danger": "危險(紅色)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "更改活動的顏色",
+          "options": {
+            "setting": {
+              "description": "需要更改哪項設定？",
+              "choices": {
+                "remove_votes_on_ban": "當使用者被封禁時移除其活躍投票",
+                "remove_votes_on_kick": "當使用者被逐出時移除其活躍投票",
+                "remove_votes_on_leave": "當使用者離開時移除其活躍投票"
+              }
+            },
+            "status": {
+              "description": "應設定為哪種狀態？",
+              "choices": {
+                "enable": "啟用",
+                "disable": "停用"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "更改伺服器的預設表情符號"
+        },
+        "language": {
+          "description": "更改伺服器的預設語言"
+        },
+        "threads": {
+          "description": "更改討論串的設定",
+          "options": {
+            "setting": {
+              "description": "需要更改哪項設定？",
+              "choices": {
+                "create_thread_with_poll": "發起新的投票時創建討論串",
+                "lock_and_unlock_thread_with_poll": "當投票截止/重啟時鎖定/解鎖該討論串"
+              }
+            },
+            "status": {
+              "description": "應設定為哪種狀態？",
+              "choices": {
+                "enable": "啟用",
+                "disable": "停用"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "關閉"
+    },
+    "details": {
+      "name": "詳情"
+    },
+    "edit": {
+      "name": "編輯"
+    },
+    "participants": {
+      "name": "參與者"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "前往頁面",
+      "components": {
+        "page_number": {
+          "label": "頁碼",
+          "placeholder": "請輸入您想前往的頁面頁碼"
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "已發起投票",
+        "description": "您已成功發起投票。"
+      },
+      "status": {
+        "open": "開啟",
+        "running": "進行中",
+        "closed": "已截止"
+      },
+      "reactions": {
+        "yes": "是",
+        "no": "否"
+      },
+      "select": {
+        "placeholder": "選取其中的選項以進行投票...",
+        "votes_one": "{{count}} 票",
+        "votes_other": "{{count}} 票"
+      },
+      "description": {
+        "question": "問題",
+        "choices": "選項",
+        "result": "結果",
+        "final_result": "最終結果",
+        "settings": "設定"
+      },
+      "result": {
+        "title": "投票結果",
+        "votes_one": "{{count}} 票",
+        "votes_other": "{{count}} 票",
+        "users_one": "來自 {{count}} 位使用者",
+        "users_other": "來自 {{count}} 位使用者"
+      },
+      "settings": {
+        "ends": "{{- timestamp}}結束",
+        "ended": "投票已經結束",
+        "closed": "不接受其他投票",
+        "anonymous": "匿名投票",
+        "hidden": "隱藏投票",
+        "maxchoices_one": "允許的選項",
+        "maxchoices_other": "允許的選項",
+        "allowedroles": "允許的身份組"
+      },
+      "participants": {
+        "title": "參與者",
+        "votes": "選擇了這選項的使用者：",
+        "no_votes": "沒有使用者選擇這選項。",
+        "select": {
+          "placeholder": "選擇一個選項來查看參與者...",
+          "participants_one": "{{count}} 參與者",
+          "participants_other": "{{count}} 參與者"
+        }
+      },
+      "info": {
+        "title": "投票資訊",
+        "fields": {
+          "id": "ID",
+          "status": "狀態",
+          "creator": "發起者",
+          "created_at": "發起於",
+          "ends_at": "結束於",
+          "closed_at": "截止於",
+          "question": "問題",
+          "choices": "選項",
+          "result": "結果",
+          "settings": "設定",
+          "message": "訊息"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "已添加投票",
+        "description": "您已成功投給選項 {{option}}。",
+        "description2_one": "您還剩餘 **{{count}} 票**。",
+        "description2_other": "您還剩餘 **{{count}} 票**。"
+      },
+      "added_selected": {
+        "title": "已添加投票",
+        "description1": "您已成功投給以下的選項：",
+        "description2_one": "您還剩餘 **{{count}} 票**。",
+        "description2_other": "您還剩餘 **{{count}} 票**。"
+      },
+      "removed": {
+        "title": "已移除投票",
+        "description": "您已成功移除對選項 {{option}} 的選擇。"
+      },
+      "removed_selected": {
+        "title": "已移除投票",
+        "description": "您已成功移除對以下選項的投票："
+      },
+      "removed_all": {
+        "title": "已移除所有投票",
+        "description": "您已成功移除在本次投票的所有選擇。"
+      },
+      "manage": {
+        "title": "管理您的投票",
+        "description": "您可以通過選擇以下選項來取消您在投票中的選擇。"
+      },
+      "select": {
+        "placeholder": "選擇一個或多個選項以取消您的投票..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "截止投票",
+          "description1": "您確定要終止本次投票嗎？",
+          "description2": "投票ID：{{id}}",
+          "description3": "投票問題：{{question}}"
+        },
+        "success": {
+          "title": "已截止投票",
+          "description": "已成功截止投票",
+          "error": "很抱歉，原始消息更新失敗。",
+          "error_missingaccess": "很抱歉，由於機器人缺少訪問該頻道的必要權限，原始消息更新失敗。",
+          "error_unknownchannel": "很抱歉，由於系統無法定位到指定的頻道，原始消息更新失敗。",
+          "error_unknownmessage": "很抱歉，由於系統無法找到指定的消息，原始消息更新失敗。"
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "刪除投票",
+          "description1": "您確定要永久刪除本次投票嗎？",
+          "description2": "投票ID：{{id}}",
+          "description3": "投票問題：{{question}}"
+        },
+        "success": {
+          "title": "已刪除投票",
+          "description": "已成功刪除投票",
+          "error": "很抱歉，原始消息無法被刪除。",
+          "error_missingaccess": "很抱歉，由於機器人缺少訪問該頻道的必要權限，原始消息無法被刪除。",
+          "error_unknownchannel": "很抱歉，由於系統無法定位到指定的頻道，原始消息無法被刪除。",
+          "error_unknownmessage": "很抱歉，由於系統無法找到指定的消息，原始消息無法被刪除。"
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "導出投票",
+          "description": "您可以將此投票資料導出為文件，以便在其他平台或應用程式中使用。\n請從下列選項中選擇您偏好的導出格式。"
+        },
+        "success": {
+          "title": "已導出投票",
+          "description": "投票資料已成功導出，並已作為附件添加到本訊息中。\n您現在可以輕易下載這個附件，並在任何支持該格式的應用程式中使用它。"
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "投票列表"
+        }
+      },
+      "select": {
+        "placeholder": "請選擇要顯示的投票..."
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "已發布投票結果",
+          "description": "投票結果已成功在 {{- channel}} 發布。"
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "重啟投票",
+          "description1": "您確定要重啟這個投票嗎？",
+          "description2": "投票ID：{{id}}",
+          "description3": "投票問題：{{question}}"
+        },
+        "success": {
+          "title": "已重啟投票",
+          "description": "已成功重啟投票"
+        }
+      }
+    },
+    "debug": {
+      "content": "如果您需要我們支持團隊的幫助，請與他們分享以下連結：",
+      "embeds": {
+        "success": {
+          "title": "除錯",
+          "fields": {
+            "guild_information": {
+              "title": "伺服器資訊",
+              "guild_id": "伺服器ID",
+              "guild_name": "伺服器名稱",
+              "guild_language": "伺服器語言",
+              "guild_preferred_locale": "伺服器偏好地域",
+              "channel_id": "頻道ID",
+              "channel_name": "頻道名稱"
+            },
+            "user_information": {
+              "title": "使用者資訊",
+              "user_id": "使用者ID",
+              "user_name": "使用者名稱",
+              "user_locale": "使用者偏好地域",
+              "guild_owner": "伺服器擁有者",
+              "permissions": "權限"
+            },
+            "bot_information": {
+              "title": "機器人資訊",
+              "premium": "高級版"
+            },
+            "app_permissions": {
+              "title": "應用程式伺服器權限"
+            },
+            "channel_permissions": {
+              "title": "頻道權限 ({{- channel}})"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "EasyPoll幫助",
+          "fields": {
+            "poll": "投票指令",
+            "miscellaneous": "其他指令",
+            "settings": "設定指令"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "邀請EasyPoll到您的伺服器吧！",
+          "description": "點擊下面的按鈕來邀請EasyPoll到您的伺服器。"
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "這個伺服器並未升級至高級版！",
+          "description": "升級至高級版以解鎖更多功能！"
+        },
+        "premium": {
+          "title": "這個伺服器已升級至高級版！",
+          "fields": {
+            "premium_until": "高級版有限至"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "更改語言",
+            "text": "您可以在此更改此伺服器上機器人的語言。\n\n請為此伺服器上的機器人選擇一種語言：",
+            "select": {
+              "placeholder": "選擇語言..."
+            }
+          },
+          "changed": {
+            "title": "語言已更改",
+            "description": "在此伺服器上的機器人的語言已更改為{{- language}}。"
+          }
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "投票ID: {{id}}",
+    "poll_type": "類型: {{type}} ({{votingType}})",
+    "error_id": "錯誤ID: {{id}}",
+    "pages": "頁{{page}}，共{{pages}}頁"
+  },
+  "errors": {
+    "default": {
+      "title": "任務非常成功地失敗了！",
+      "description": "一個錯誤發生了，但我無法告訴您發生的原因。\n請向支持團隊尋求更多幫助。"
+    },
+    "guild_command": {
+      "title": "伺服器指令！",
+      "description": "這個指令只能在伺服器中使用。"
+    },
+    "guild_communication_disabled": {
+      "title": "機器人被禁言！",
+      "description": "該機器人目前在此服務器中處於禁言狀態，無法進行任何通訊。\n如需繼續使用，請先解除對機器人的禁言。"
+    },
+    "missing_bot_permissions": {
+      "title": "缺失權限！",
+      "description1": "機器人缺失了以下的權限：",
+      "description2": "請確保權器人擁有所有必要的權限。"
+    },
+    "missing_user_permissions": {
+      "title": "缺失權限！",
+      "description1": "你缺失了以下的權限：",
+      "description2": "在缺失需要的權限下，你不能執行這個動作。"
+    },
+    "premium_required": {
+      "title": "需要高級版！",
+      "description": "此功能僅適用於高級伺服器。請升級到高級版以使用此功能。"
+    },
+    "invalid_channel_type": {
+      "title": "無效的頻道類型！",
+      "description": "您選擇的頻道不是此操作允許的頻道類型。"
+    },
+    "invalid_color": {
+      "title": "無效的顏色！",
+      "description": "輸入的顏色無效。請確保顏色格式正確。"
+    },
+    "invalid_page": {
+      "title": "無效的頁數!",
+      "description": "輸入的頁碼無效。請確保頁碼格式正確且在有效範圍內。"
+    },
+    "invalid_time": {
+      "title": "無效的時間！",
+      "description": "輸入的時間無效。請確保時間格式正確。"
+    },
+    "max_time": {
+      "title": "已達到最長時間！",
+      "description": "您已達到最長時間 {{maxtime}}。\n請確保輸入的時間不超過允許的最長時間。",
+      "description_upgrade": "通過升級到高級版，您可以延長最長時間至 {{maxtime}} 。"
+    },
+    "unknown_emoji": {
+      "title": "未知的表情符號！",
+      "description": "您指定了一個未知的表情符號！\nEasyPoll 僅支持使用其所在伺服器的表情符號。請確認 {{- emoji}} 是**Discord 官方**表情符號，或是**本伺服器**的自定義表情符號。"
+    },
+    "restricted": {
+      "title": "您不能執行這個動作！",
+      "description": "您或伺服器被限制禁止執行這個動作。",
+      "description_user": "您被限制禁止執行這個動作。",
+      "description_guild": "伺服器被限制禁止執行這個動作。",
+      "fields": {
+        "reason": "原因",
+        "expires_at": "截止時間為"
+      }
+    },
+    "already_voted": {
+      "title": "已為該選項投過票！",
+      "description": "您已經為該選項投過票，無法再次選擇相同選項。"
+    },
+    "max_choices_reached": {
+      "title": "已達到最大可選數量！",
+      "description": "您已達到本次投票的最大可選數量。如需投票給其他選項，請先取消部分已選擇的選項。"
+    },
+    "not_allowed_role": {
+      "title": "只限定擁有指定身份組的使用者進行投票！",
+      "description": "由於您不擁有被允許投票的身份組，因此無法參與此次投票。"
+    },
+    "poll": {
+      "already_closed": {
+        "title": "投票已經截止！",
+        "description": "本次投票已結束，無法進行任何操作。"
+      },
+      "not_closed": {
+        "title": "投票並未截止！",
+        "description": "無法重啟投票，因為當前投票尚未關閉。"
+      },
+      "not_voted": {
+        "title": "沒有為該選項投過票！",
+        "description": "無法取消該選項的投票，因為您尚未對此選項投過票。"
+      },
+      "no_votes": {
+        "title": "沒有在本次投票投過票！",
+        "description": "您尚未在此次投票中投給任何選項。"
+      },
+      "invalid_poll": {
+        "title": "這不是有效的投票！",
+        "description_input": "您輸入的ID並非有效的投票。請確保您輸入了正確的投票或消息ID。",
+        "description_select": "您選擇的消息並非一個有效的投票。請確保您選擇了正確的投票消息。"
+      },
+      "participants_not_available": {
+        "title": "本次投票不允許查看參與者名單！",
+        "description": "本次投票未開放參與者名單查看功能。"
+      },
+      "vote_remove_not_allowed": {
+        "title": "本次投票禁止移除投票！",
+        "description": "由於本次投票設置了禁止撤票，您無法移除已投的票。"
+      },
+      "no_polls_found": {
+        "title": "找不到投票！",
+        "description": "在此伺服器中未找到符合搜索條件的投票。"
+      }
+    }
+  },
+  "buttons": {
+    "website": "網站",
+    "invite": "邀請",
+    "support": "支援",
+    "wiki": "維基",
+    "premium": "獲取高級版",
+    "troubleshooting": "除錯",
+    "discord_helpcenter": "Discord幫助中心",
+    "participants": "參與者",
+    "enable": "啟用",
+    "disable": "停用",
+    "delete": "刪除",
+    "reopen": "重啟",
+    "close": "截止",
+    "back": "返回",
+    "cancel": "否，取消",
+    "confirm_close": "是，截止投票",
+    "confirm_delete": "是，刪除投票",
+    "confirm_reopen": "是，重啟投票",
+    "go_to_message": "前往至消息",
+    "go_to_page": "前往頁面",
+    "remove_all_votes": "移除您的所有投票",
+    "remove_vote": "移除此投票",
+    "manage_votes": "管理您的投票",
+    "export_json": "以JSON格式導出",
+    "export_csv": "以CSV格式導出"
+  },
+  "permissions": {
+    "add_reactions": "添加回應",
+    "view_audit_log": "查看審核日誌",
+    "view_channel": "查看頻道",
+    "send_messages": "發送訊息",
+    "manage_messages": "管理訊息",
+    "manage_guild": "管理伺服器",
+    "embed_links": "嵌入連結",
+    "attach_files": "附加文件",
+    "read_message_history": "讀取訊息歷史",
+    "mention_everyone": "提及所有人",
+    "use_external_emojis": "使用外部表情符號",
+    "manage_webhooks": "管理Webhooks",
+    "manage_threads": "管理討論串",
+    "create_public_threads": "創建公共討論串",
+    "send_messages_in_threads": "在討論串中發送訊息"
+  }
+}
