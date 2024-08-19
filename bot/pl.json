@@ -320,7 +320,7 @@
         "no": "Nie"
       },
       "select": {
-        "placeholder": "Wybierz opcję, aby zagłosować...",
+        "placeholder_one": "Wybierz opcję, aby zagłosować...",
         "votes_one": "{{count}} głos",
         "votes_other": "{{count}} głosy(-ów)"
       },

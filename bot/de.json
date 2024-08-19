@@ -345,7 +345,8 @@
         "no": "Nein"
       },
       "select": {
-        "placeholder": "Wähle eine Option um abzustimmen...",
+        "placeholder_one": "Wähle eine Option um abzustimmen...",
+        "placeholder_other": "Wähle eine oder mehrere Optionen um abzustimmen...",
         "votes_one": "{{count}} Stimme",
         "votes_other": "{{count}} Stimmen"
       },

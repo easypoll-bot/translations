@@ -345,7 +345,8 @@
         "no": "No"
       },
       "select": {
-        "placeholder": "Select an option to vote...",
+        "placeholder_one": "Select an option to vote...",
+        "placeholder_other": "Select one or more options to vote...",
         "votes_one": "{{count}} vote",
         "votes_other": "{{count}} votes"
       },
