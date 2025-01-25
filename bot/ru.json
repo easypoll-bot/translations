@@ -101,7 +101,12 @@
       }
     },
     "pollbuilder": {
-      "description": "Создать более сложный опрос с помощью конструктора опросов."
+      "description": "Создать более сложный опрос с помощью конструктора опросов.",
+      "options": {
+        "answer": {
+          "description": "Ответ {{id}}"
+        }
+      }
     },
     "pollresult": {
       "description": "Опубликовать результат закрытого опроса ещё раз.",
@@ -344,8 +349,8 @@
         "closed": "Другие голоса не разрешены",
         "anonymous": "Анонимный опрос",
         "hidden": "Скрытый опрос",
-        "maxchoices_one": "разрешённый выбор",
-        "maxchoices_other": "разрешённые выборы",
+        "maxchoices_one": "{{count}} разрешённый выбор",
+        "maxchoices_other": "{{count}} разрешённые выборы",
         "allowedroles": "Разрешённые роли"
       },
       "participants": {
@@ -355,7 +360,9 @@
         "select": {
           "placeholder": "Выберите вариант, чтобы увидеть участников...",
           "participants_one": "{{count}} участник",
-          "participants_other": "{{count}} участников"
+          "participants_other": "{{count}} участников",
+          "votes_one": "{{count}} голос",
+          "votes_other": "{{count}} голоса"
         }
       },
       "info": {
@@ -699,14 +706,14 @@
     "participants": "Участники",
     "enable": "Включить",
     "disable": "Выключить",
-    "delete": "Удалить",
-    "reopen": "Переоткрыть",
     "close": "Закрыть",
+    "reopen": "Переоткрыть",
+    "delete": "Удалить",
     "back": "Назад",
-    "cancel": "Нет, отменить",
+    "cancel": "Отменить",
     "confirm_close": "Да, закрыть опрос",
-    "confirm_delete": "Да, удалить опрос",
     "confirm_reopen": "Да, переоткрыть опрос",
+    "confirm_delete": "Да, удалить опрос",
     "go_to_message": "Перейти к сообщению",
     "go_to_page": "Перейти к странице",
     "remove_all_votes": "Удалить все ваши голоса",

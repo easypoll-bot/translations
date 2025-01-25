@@ -101,7 +101,12 @@
       }
     },
     "pollbuilder": {
-      "description": "Utwórz bardziej złożoną ankietę za pomocą narzędzia do tworzenia ankiet."
+      "description": "Utwórz bardziej złożoną ankietę za pomocą narzędzia do tworzenia ankiet.",
+      "options": {
+        "answer": {
+          "description": "Odpowiedź {{id}}"
+        }
+      }
     },
     "pollresult": {
       "description": "Ponownie opublikuj wynik zamkniętej ankiety.",
@@ -344,8 +349,8 @@
         "closed": "Nowe głosy nie są dozwolone",
         "anonymous": "Ankieta anonimowa",
         "hidden": "Ankieta ukryta",
-        "maxchoices_one": "dopuszczalna odpowiedź",
-        "maxchoices_other": "dopuszczalne(-ych) odpowiedzi",
+        "maxchoices_one": "{{count}} dopuszczalna odpowiedź",
+        "maxchoices_other": "{{count}} dopuszczalne(-ych) odpowiedzi",
         "allowedroles": "Dozwolone role"
       },
       "participants": {
@@ -355,7 +360,9 @@
         "select": {
           "placeholder": "Wybierz opcję, aby zobaczyć głosujących...",
           "participants_one": "{{count}} użytkownik",
-          "participants_other": "{{count}} użytkowników"
+          "participants_other": "{{count}} użytkowników",
+          "votes_one": "{{count}} głos",
+          "votes_other": "{{count}} głosy(-ów)"
         }
       },
       "info": {
@@ -699,14 +706,14 @@
     "participants": "Uczestnicy",
     "enable": "Włącz",
     "disable": "Wyłącz",
-    "delete": "Usuń",
-    "reopen": "Otwórz ponownie",
     "close": "Zamknij",
+    "reopen": "Otwórz ponownie",
+    "delete": "Usuń",
     "back": "Wstecz",
-    "cancel": "Nie, anuluj",
+    "cancel": "Anuluj",
     "confirm_close": "Tak, zamknij ankietę",
-    "confirm_delete": "Tak, usuń ankietę",
     "confirm_reopen": "Tak, otwórz ponownie ankietę",
+    "confirm_delete": "Tak, usuń ankietę",
     "go_to_message": "Idź do wiadomości",
     "go_to_page": "Idź do strony",
     "remove_all_votes": "Wycofaj wszystkie swoje głosy",

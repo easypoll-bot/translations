@@ -101,7 +101,12 @@
       }
     },
     "pollbuilder": {
-      "description": "Erstelle eine komplexere Umfrage mit dem Umfrage-Ersteller."
+      "description": "Erstelle eine komplexere Umfrage mit dem Umfrage-Ersteller.",
+      "options": {
+        "answer": {
+          "description": "Antwort {{id}}"
+        }
+      }
     },
     "pollresult": {
       "description": "Veröffentlich das Ergebnis einer geschlossenen Umfrage erneut.",
@@ -274,6 +279,17 @@
         "language": {
           "description": "Ändere die Sprache des Servers."
         },
+        "role-weight": {
+          "description": "Ändere die Abstimmungsgewichtung einer Rolle.",
+          "options": {
+            "role": {
+              "description": "Die Rolle, deren Gewicht geändert werden soll."
+            },
+            "weight": {
+              "description": "Die Gewichtung der Rolle."
+            }
+          }
+        },
         "threads": {
           "description": "Ändere die Einstellungen von Threads.",
           "options": {
@@ -327,6 +343,52 @@
           "placeholder": "Bitte gebe die Seitenzahl ein, zu der du wechseln möchtest..."
         }
       }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Umfrage erstellen",
+        "edit": "Umfrage bearbeiten"
+      },
+      "components": {
+        "question": {
+          "label": "Frage",
+          "placeholder": "Bitte gebe die Frage der Umfrage ein..."
+        },
+        "answer": {
+          "label": "Antwort Text",
+          "placeholder": "Bitte gebe den Text der Antwort ein..."
+        },
+        "description": {
+          "label": "Beschreibung",
+          "placeholder": "Bitte gebe eine Beschreibung der Umfrage ein..."
+        },
+        "time": {
+          "label": "Zeit",
+          "placeholder": "Bitte gebe die Zeitdauer der Umfrage ein... Leer lassen für unbegrenzt."
+        },
+        "image": {
+          "label": "Bild URL",
+          "placeholder": "Bitte gebe die URL des Bildes ein..."
+        },
+        "colors": {
+          "open": {
+            "label": "Farbe Offen",
+            "placeholder": "Bitte gebe den Namen oder den Hex-Code der Farbe für Offen ein..."
+          },
+          "closed": {
+            "label": "Farbe Geschlossen",
+            "placeholder": "Bitte gebe den Namen oder den Hex-Code der Farbe für Geschlossen ein..."
+          },
+          "running": {
+            "label": "Farbe Laufend",
+            "placeholder": "Bitte gebe den Namen oder den Hex-Code der Farbe für Laufend ein..."
+          },
+          "result": {
+            "label": "Farbe Ergebnis",
+            "placeholder": "Bitte gebe den Namen oder den Hex-Code der Farbe für Ergebnis ein..."
+          }
+        }
+      }
     }
   },
   "messages": {
@@ -361,6 +423,8 @@
         "title": "Umfrageergebnis",
         "votes_one": "{{count}} Stimme",
         "votes_other": "{{count}} Stimmen",
+        "votes_weighted_one": "{{count}} gewichtete Stimme",
+        "votes_weighted_other": "{{count}} gewichtete Stimmen",
         "users_one": "von {{count}} Nutzer",
         "users_other": "von {{count}} Nutzern"
       },
@@ -370,8 +434,9 @@
         "closed": "Keine weiteren Stimmen erlaubt",
         "anonymous": "Anonyme Umfrage",
         "hidden": "Verdeckte Umfrage",
-        "maxchoices_one": "zulässige Auswahlmöglichkeit",
-        "maxchoices_other": "zulässige Auswahlmöglichkeiten",
+        "maxchoices_one": "{{count}} zulässige Auswahlmöglichkeit",
+        "maxchoices_other": "{{count}} zulässige Auswahlmöglichkeiten",
+        "removevotesnotallowed": "Stimmen entfernen nicht erlaubt",
         "allowedroles": "Zugelassene Rollen"
       },
       "participants": {
@@ -381,7 +446,9 @@
         "select": {
           "placeholder": "Wähle eine Option, um die Teilnehmer zu sehen...",
           "participants_one": "{{count}} Teilnehmer",
-          "participants_other": "{{count}} Teilnehmer"
+          "participants_other": "{{count}} Teilnehmer",
+          "votes_one": "{{count}} Stimme",
+          "votes_other": "{{count}} Stimmen"
         }
       },
       "info": {
@@ -492,6 +559,74 @@
         "placeholder": "Wähle eine Umfrage zum Anzeigen aus..."
       }
     },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Antworten",
+          "description": "Wähle die Antwort aus, die du ändern möchtest oder füge eine neue hinzu:"
+        },
+        "answers_update": {
+          "title": "Antwort aktualisieren",
+          "description": "Wähle eine Aktion aus, um diese Antwort zu aktualisieren."
+        },
+        "type": {
+          "title": "Umfragetyp",
+          "description": "Wähle den Typ der Umfrage. In manchen Fällen kann der Umfragetyp nicht geändert werden."
+        },
+        "channel": {
+          "title": "Kanal",
+          "description": "Wähle den Kanal, in dem die Umfrage erstellt werden soll."
+        },
+        "buttoncolor": {
+          "title": "Schaltflächenfarbe",
+          "description": "Wähle die Farbe der Schaltflächen für die Umfrage."
+        },
+        "maxchoices": {
+          "title": "Maximale Auswahlmöglichkeiten",
+          "description": "Wähle die maximale Anzahl von Auswahlmöglichkeiten, die jeder Nutzer auswählen kann."
+        },
+        "allowedroles": {
+          "title": "Zugelassene Rollen",
+          "description": "Wähle die Rollen aus, die abstimmen dürfen.\nDie Auswahl überschreibt alle bereits zugelassenen Rollen, also wähle bereits zugelassene Rollen erneut aus, wenn du sie behalten möchtest."
+        },
+        "allowvoteremove": {
+          "title": "Stimmen entfernen erlauben",
+          "description": "Wähle aus, ob Nutzer ihre Stimmen entfernen dürfen.",
+          "select": {
+            "yes": "Ja",
+            "no": "Nein"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Umfrage erstellen",
+            "description": "Bist du sicher, dass du diese Umfrage erstellen willst?"
+          },
+          "success": {
+            "title": "Umfrage erstellt",
+            "description": "Die Umfrage wurde erfolgreich erstellt."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Umfrage speichern",
+            "description": "Bist du sicher, dass du diese Umfrage speichern willst?",
+            "description2": "Umfrage ID: {{id}}",
+            "description3": "Die folgenden Eigenschaften werden geändert:"
+          },
+          "success": {
+            "title": "Umfrage gespeichert",
+            "description": "Die Umfrage wurde erfolgreich gespeichert."
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Verlassen",
+            "description": "Bist du sicher, dass du das Menü verlassen und alle Änderungen verwerfen möchtest?"
+          }
+        }
+      }
+    },
     "pollresult": {
       "embeds": {
         "confirm": {
@@ -554,6 +689,9 @@
             },
             "channel_permissions": {
               "title": "Kanalberechtigungen ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Rollen Gewichtungen"
             }
           }
         }
@@ -631,7 +769,8 @@
     "poll_id": "Umfrage ID: {{id}}",
     "poll_type": "Art: {{type}} ({{votingType}})",
     "error_id": "Fehler ID: {{id}}",
-    "pages": "Seite {{page}} von {{pages}}"
+    "pages": "Seite {{page}} von {{pages}}",
+    "edited": "Bearbeitet"
   },
   "errors": {
     "default": {
@@ -667,6 +806,10 @@
     "invalid_color": {
       "title": "Ungültige Farbe!",
       "description": "Die eingegebene Farbe ist ungültig. Bitte stelle sicher, dass die Farbe im richtigen Format eingegeben wird."
+    },
+    "invalid_image": {
+      "title": "Ungültiges Bild!",
+      "description": "Die eingegebene Bild-URL ist ungültig. Bitte vergewissere dich, dass die Bild-URL gültig ist und das Bild im richtigen Format ist."
     },
     "invalid_page": {
       "title": "Ungültige Seite!",
@@ -755,6 +898,16 @@
         "title": "Keine Umfragen gefunden!",
         "description": "Es wurden keine Umfragen auf diesem Server gefunden, die den gesuchten Kriterien entsprechen."
       }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Umfrage gesperrt!",
+        "description": "Die Umfrage ist derzeit gesperrt und kann nicht geändert werden. Bitte versuche es in ein paar Sekunden erneut."
+      },
+      "validation": {
+        "title": "Validierung fehlgeschlagen!",
+        "description": "Die eingegebenen Werte sind ungültig. Bitte stelle sicher, dass alle Werte korrekt sind und versuche es erneut."
+      }
     }
   },
   "buttons": {
@@ -762,27 +915,50 @@
     "invite": "Einladen",
     "support": "Support",
     "wiki": "Wiki",
+    "learn_more": "Mehr erfahren",
     "premium": "Premium holen",
     "troubleshooting": "Fehlerbehebung",
     "discord_helpcenter": "Discord Hilfecenter",
+    "vote": "Abstimmen",
     "participants": "Teilnehmer",
     "enable": "Einschalten",
     "disable": "Ausschalten",
-    "delete": "Löschen",
-    "reopen": "Erneut öffnen",
     "close": "Schließen",
+    "reopen": "Erneut öffnen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
     "back": "Zurück",
-    "cancel": "Nein, abbrechen",
+    "save": "Speichern",
+    "create": "Erstellen",
+    "exit": "Verlassen",
+    "cancel": "Abbrechen",
     "confirm_close": "Ja, die Umfrage schließen",
-    "confirm_delete": "Ja, die Umfrage löschen",
     "confirm_reopen": "Ja, die Umfrage wieder öffnen",
+    "confirm_delete": "Ja, die Umfrage löschen",
+    "confirm_save": "Ja, die Umfrage speichern",
+    "confirm_create": "Ja, die Umfrage erstellen",
+    "confirm_exit": "Ja, verlassen",
     "go_to_message": "Zur Nachricht gehen",
     "go_to_page": "Gehe zu Seite",
     "remove_all_votes": "Alle Stimmen entfernen",
     "remove_vote": "Diese Stimme entfernen",
     "manage_votes": "Stimmen verwalten",
     "export_json": "Exportieren als JSON",
-    "export_csv": "Exportieren als CSV"
+    "export_csv": "Exportieren als CSV",
+    "question": "Frage",
+    "answers": "Antworten",
+    "description": "Beschreibung",
+    "type": "Typ",
+    "time": "Zeit",
+    "image": "Bild",
+    "channel": "Kanal",
+    "embed_colors": "Einbettungsfarben",
+    "button_color": "Schaltflächenfarbe",
+    "maxchoices": "Maximale Auswahlmöglichkeiten",
+    "allowedroles": "Zugelassene Rollen",
+    "allowedroles_clear": "Zugelassene Rollen löschen",
+    "allowvoteremove": "Stimmen entfernen erlauben",
+    "answer_new": "Neue Antwort hinzufügen"
   },
   "permissions": {
     "add_reactions": "Reaktionen hinzufügen",
