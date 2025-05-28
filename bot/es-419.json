@@ -109,7 +109,7 @@
       }
     },
     "pollresult": {
-      "description": "Publicar de nuevo el resultado de una encuesta cerrada",
+      "description": "Publicar de nuevo el resultado de una encuesta cerrada.",
       "options": {
         "id": {
           "description": "El ID de la encuesta o mensaje del resultado a publicar."
@@ -495,7 +495,7 @@
       },
       "manage": {
         "title": "Administra tus votos",
-        "description": "Puedes eliminar tus votos de la encuesta seleccionando las opciones de abajo."
+        "description": "Puedes eliminar tus votos de la encuesta seleccionando las opciones:"
       },
       "select": {
         "placeholder": "Selecciona una o más opciones para eliminar tus votos..."
@@ -729,7 +729,7 @@
       "embeds": {
         "no_premium": {
           "title": "¡Este servidor no tiene premium!",
-          "description": "¡Obtén premium para desbloquear más características"
+          "description": "¡Obtén premium para desbloquear más características."
         },
         "premium": {
           "title": "¡Este servidor tiene premium!",
@@ -932,12 +932,12 @@
     "create": "Crear",
     "exit": "Salir",
     "cancel": "Cancelar",
-    "confirm_close": "Si, cierra la encuesta",
-    "confirm_reopen": "Si, reabre la encuesta",
-    "confirm_delete": "Si, elimina la encuesta",
-    "confirm_save": "Si, guarda la encuesta",
-    "confirm_create": "Si, crea la encuesta",
-    "confirm_exit": "Si, abandona",
+    "confirm_close": "Sí, cierra la encuesta",
+    "confirm_reopen": "Sí, reabre la encuesta",
+    "confirm_delete": "Sí, elimina la encuesta",
+    "confirm_save": "Sí, guarda la encuesta",
+    "confirm_create": "Sí, crea la encuesta",
+    "confirm_exit": "Sí, abandona",
     "go_to_message": "Ir al mensaje",
     "go_to_page": "Ir a la página",
     "remove_all_votes": "Eliminar todos tus votos",
@@ -961,20 +961,20 @@
     "answer_new": "Agregar nueva respuesta"
   },
   "permissions": {
-    "add_reactions": "Agregar reacciones",
+    "add_reactions": "Añadir reacciones",
     "view_audit_log": "Ver registro de auditoría",
     "view_channel": "Ver canales",
-    "send_messages": "Mandar mensajes",
-    "manage_messages": "Administrar mensajes",
-    "manage_guild": "Administrar servidor",
-    "embed_links": "Enlaces insertados",
-    "attach_files": "Archivos adjuntos",
-    "read_message_history": "Leer registro de mensajes",
-    "mention_everyone": "Mencionar a todos",
+    "send_messages": "Enviar mensajes",
+    "manage_messages": "Gestionar mensajes",
+    "manage_guild": "Gestionar servidor",
+    "embed_links": "Insertar enlaces",
+    "attach_files": "Adjuntar archivos",
+    "read_message_history": "Leer el historial de mensajes",
+    "mention_everyone": "Mencionar a @everyone, @here y a todos los roles",
     "use_external_emojis": "Usar emojis externos",
-    "manage_webhooks": "Administrar webhooks",
-    "manage_threads": "Administrar hilos",
+    "manage_webhooks": "Gestionar webhooks",
+    "manage_threads": "Gestionar hilos",
     "create_public_threads": "Crear hilos públicos",
-    "send_messages_in_threads": "Mandar mensajes en hilos"
+    "send_messages_in_threads": "Enviar mensajes en hilos"
   }
 }
