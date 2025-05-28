@@ -409,7 +409,7 @@
       },
       "manage": {
         "title": "Zarządzaj swoimi głosami",
-        "description": "Możesz wycofać swoje głosy z ankiety, wybierając opcje poniżej."
+        "description": "Możesz wycofać swoje głosy z ankiety, wybierając opcje:"
       },
       "select": {
         "placeholder": "Wybierz jedną lub więcej opcji, aby wycofać swoje głosy..."

@@ -495,7 +495,7 @@
       },
       "manage": {
         "title": "Verwalte deine Stimmen",
-        "description": "Du kannst deine Stimmen von der Umfrage entfernen, indem du die untenstehenden Optionen auswählst."
+        "description": "Du kannst deine Stimmen von der Umfrage entfernen, indem du die Optionen auswählst:"
       },
       "select": {
         "placeholder": "Wähle eine oder mehrere Optionen, um deine Stimmen zu entfernen..."

@@ -495,7 +495,7 @@
       },
       "manage": {
         "title": "Manage your votes",
-        "description": "You can remove your votes from the poll by selecting the options below."
+        "description": "You can remove your votes from the poll by selecting the options:"
       },
       "select": {
         "placeholder": "Select one or more options to remove your votes..."
@@ -957,7 +957,7 @@
     "maxchoices": "Maximal choices",
     "allowedroles": "Allowed roles",
     "allowedroles_clear": "Clear allowed roles",
-    "allowvoteremove": "Allowed Vote Remove",
+    "allowvoteremove": "Allow Vote Remove",
     "answer_new": "Add new answer"
   },
   "permissions": {
