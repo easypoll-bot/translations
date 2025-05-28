@@ -259,6 +259,7 @@
             "setting": {
               "description": "Which setting should be changed?",
               "choices": {
+                "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
                 "remove_votes_on_ban": "Remove active votes when a user is banned",
                 "remove_votes_on_kick": "Remove active votes when a user is kicked",
                 "remove_votes_on_leave": "Remove active votes when a user leaves"

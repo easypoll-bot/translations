@@ -259,6 +259,7 @@
             "setting": {
               "description": "Welche Einstellung soll geändert werden?",
               "choices": {
+                "announce_winner_on_poll_auto_close": "Gewinner ankündigen, wenn eine Umfrage automatisch geschlossen wird",
                 "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
                 "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
                 "remove_votes_on_leave": "Aktive Stimmen entfernen, wenn ein Nutzer verlässt"
