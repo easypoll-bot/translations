@@ -101,7 +101,12 @@
       }
     },
     "pollbuilder": {
-      "description": "Utwórz bardziej złożoną ankietę za pomocą narzędzia do tworzenia ankiet."
+      "description": "Utwórz bardziej złożoną ankietę za pomocą narzędzia do tworzenia ankiet.",
+      "options": {
+        "answer": {
+          "description": "Odpowiedź {{id}}"
+        }
+      }
     },
     "pollresult": {
       "description": "Ponownie opublikuj wynik zamkniętej ankiety.",
@@ -320,7 +325,7 @@
         "no": "Nie"
       },
       "select": {
-        "placeholder": "Wybierz opcję, aby zagłosować...",
+        "placeholder_one": "Wybierz opcję, aby zagłosować...",
         "votes_one": "{{count}} głos",
         "votes_other": "{{count}} głosy(-ów)"
       },
@@ -344,8 +349,8 @@
         "closed": "Nowe głosy nie są dozwolone",
         "anonymous": "Ankieta anonimowa",
         "hidden": "Ankieta ukryta",
-        "maxchoices_one": "dopuszczalna odpowiedź",
-        "maxchoices_other": "dopuszczalne(-ych) odpowiedzi",
+        "maxchoices_one": "{{count}} dopuszczalna odpowiedź",
+        "maxchoices_other": "{{count}} dopuszczalne(-ych) odpowiedzi",
         "allowedroles": "Dozwolone role"
       },
       "participants": {
@@ -355,7 +360,9 @@
         "select": {
           "placeholder": "Wybierz opcję, aby zobaczyć głosujących...",
           "participants_one": "{{count}} użytkownik",
-          "participants_other": "{{count}} użytkowników"
+          "participants_other": "{{count}} użytkowników",
+          "votes_one": "{{count}} głos",
+          "votes_other": "{{count}} głosy(-ów)"
         }
       },
       "info": {
@@ -378,7 +385,7 @@
     "votes": {
       "added": {
         "title": "Policzono Twój głos",
-        "description": "Pomyślnie oddałeś głos na opcję {{option}}.",
+        "description": "Pomyślnie oddałeś głos na opcję {{- option}}.",
         "description2_one": "Pozostał Ci **{{count}} głos**.",
         "description2_other": "Pozostały(-o) Ci **{{count}} głosy(-ów)**."
       },
@@ -390,7 +397,7 @@
       },
       "removed": {
         "title": "Wycofano Twój głos",
-        "description": "Pomyślnie wycofałeś głos na opcję: {{option}}."
+        "description": "Pomyślnie wycofałeś głos na opcję: {{- option}}."
       },
       "removed_selected": {
         "title": "Wycofano Twoje głosy",
@@ -402,7 +409,7 @@
       },
       "manage": {
         "title": "Zarządzaj swoimi głosami",
-        "description": "Możesz wycofać swoje głosy z ankiety, wybierając opcje poniżej."
+        "description": "Możesz wycofać swoje głosy z ankiety, wybierając opcje:"
       },
       "select": {
         "placeholder": "Wybierz jedną lub więcej opcji, aby wycofać swoje głosy..."
@@ -633,9 +640,9 @@
     },
     "restricted": {
       "title": "Nie możesz wykonać tej akcji!",
-      "description": "Ty lub ten serwer nie możecie korzystać z tej akcji.",
-      "description_user": "Nie możesz używać tej akcji.",
-      "description_guild": "Ten serwer nie może korzystać z tej akcji.",
+      "description": {
+        "guild": "Ten serwer nie może korzystać z tej akcji."
+      },
       "fields": {
         "reason": "Powód",
         "expires_at": "Wygasa"
@@ -699,14 +706,14 @@
     "participants": "Uczestnicy",
     "enable": "Włącz",
     "disable": "Wyłącz",
-    "delete": "Usuń",
-    "reopen": "Otwórz ponownie",
     "close": "Zamknij",
+    "reopen": "Otwórz ponownie",
+    "delete": "Usuń",
     "back": "Wstecz",
-    "cancel": "Nie, anuluj",
+    "cancel": "Anuluj",
     "confirm_close": "Tak, zamknij ankietę",
-    "confirm_delete": "Tak, usuń ankietę",
     "confirm_reopen": "Tak, otwórz ponownie ankietę",
+    "confirm_delete": "Tak, usuń ankietę",
     "go_to_message": "Idź do wiadomości",
     "go_to_page": "Idź do strony",
     "remove_all_votes": "Wycofaj wszystkie swoje głosy",

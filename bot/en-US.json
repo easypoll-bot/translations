@@ -101,7 +101,12 @@
       }
     },
     "pollbuilder": {
-      "description": "Create a more complex poll with the poll builder."
+      "description": "Create a more complex poll with the poll builder.",
+      "options": {
+        "answer": {
+          "description": "Answer {{id}}"
+        }
+      }
     },
     "pollresult": {
       "description": "Publish the result of a closed poll again.",
@@ -175,6 +180,20 @@
         }
       }
     },
+    "block": {
+      "description": "Block a user from interacting with the bot on this server.",
+      "options": {
+        "user": {
+          "description": "The user to block."
+        },
+        "reason": {
+          "description": "The public reason for blocking the user."
+        },
+        "time": {
+          "description": "The time the user should be blocked for."
+        }
+      }
+    },
     "debug": {
       "description": "Check the server permissions and some common issues.",
       "options": {
@@ -188,6 +207,9 @@
     },
     "invite": {
       "description": "Get a link to add the bot to your own server."
+    },
+    "listblocks": {
+      "description": "Show a list of all blocked users on the current server."
     },
     "premium": {
       "description": "Check the current premium status of this server."
@@ -237,6 +259,7 @@
             "setting": {
               "description": "Which setting should be changed?",
               "choices": {
+                "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
                 "remove_votes_on_ban": "Remove active votes when a user is banned",
                 "remove_votes_on_kick": "Remove active votes when a user is kicked",
                 "remove_votes_on_leave": "Remove active votes when a user leaves"
@@ -257,6 +280,17 @@
         "language": {
           "description": "Change the language of this server."
         },
+        "role-weight": {
+          "description": "Change the voting weight of a role.",
+          "options": {
+            "role": {
+              "description": "The role to change the weight for."
+            },
+            "weight": {
+              "description": "The weight of the role."
+            }
+          }
+        },
         "threads": {
           "description": "Change the settings of threads.",
           "options": {
@@ -275,6 +309,14 @@
               }
             }
           }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Unblock a user from interacting with the bot on this server.",
+      "options": {
+        "user": {
+          "description": "The user to unblock."
         }
       }
     }
@@ -302,6 +344,52 @@
           "placeholder": "Please enter the page number you want to go to..."
         }
       }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Create Poll",
+        "edit": "Edit Poll"
+      },
+      "components": {
+        "question": {
+          "label": "Question",
+          "placeholder": "Please enter the question of the poll..."
+        },
+        "answer": {
+          "label": "Answer Text",
+          "placeholder": "Please enter the text of the answer..."
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Please enter the description of the poll..."
+        },
+        "time": {
+          "label": "Time",
+          "placeholder": "Please enter the time the poll should run... Leave empty for unlimited time."
+        },
+        "image": {
+          "label": "Image URL",
+          "placeholder": "Please enter the image url of the poll..."
+        },
+        "colors": {
+          "open": {
+            "label": "Open Color",
+            "placeholder": "Please enter the name or hex code of the open color..."
+          },
+          "closed": {
+            "label": "Closed Color",
+            "placeholder": "Please enter the name or hex code of the closed color..."
+          },
+          "running": {
+            "label": "Running Color",
+            "placeholder": "Please enter the name or hex code of the running color..."
+          },
+          "result": {
+            "label": "Result Color",
+            "placeholder": "Please enter the name or hex code of the result color..."
+          }
+        }
+      }
     }
   },
   "messages": {
@@ -320,7 +408,8 @@
         "no": "No"
       },
       "select": {
-        "placeholder": "Select an option to vote...",
+        "placeholder_one": "Select an option to vote...",
+        "placeholder_other": "Select one or more options to vote...",
         "votes_one": "{{count}} vote",
         "votes_other": "{{count}} votes"
       },
@@ -335,6 +424,8 @@
         "title": "Poll Result",
         "votes_one": "{{count}} vote",
         "votes_other": "{{count}} votes",
+        "votes_weighted_one": "{{count}} weighted vote",
+        "votes_weighted_other": "{{count}} weighted votes",
         "users_one": "from {{count}} user",
         "users_other": "from {{count}} users"
       },
@@ -344,8 +435,9 @@
         "closed": "No other votes allowed",
         "anonymous": "Anonymous Poll",
         "hidden": "Hidden Poll",
-        "maxchoices_one": "allowed choice",
-        "maxchoices_other": "allowed choices",
+        "maxchoices_one": "{{count}} allowed choice",
+        "maxchoices_other": "{{count}} allowed choices",
+        "removevotesnotallowed": "Removing votes not allowed",
         "allowedroles": "Allowed roles"
       },
       "participants": {
@@ -355,7 +447,9 @@
         "select": {
           "placeholder": "Select an option to see the participants...",
           "participants_one": "{{count}} participant",
-          "participants_other": "{{count}} participants"
+          "participants_other": "{{count}} participants",
+          "votes_one": "{{count}} vote",
+          "votes_other": "{{count}} votes"
         }
       },
       "info": {
@@ -378,7 +472,7 @@
     "votes": {
       "added": {
         "title": "Vote added",
-        "description": "You have successfully voted for the option {{option}}.",
+        "description": "You have successfully voted for the option {{- option}}.",
         "description2_one": "You have **{{count}} vote left**.",
         "description2_other": "You have **{{count}} votes left**."
       },
@@ -390,7 +484,7 @@
       },
       "removed": {
         "title": "Vote removed",
-        "description": "You have successfully removed your vote for the option {{option}}."
+        "description": "You have successfully removed your vote for the option {{- option}}."
       },
       "removed_selected": {
         "title": "Votes removed",
@@ -402,7 +496,7 @@
       },
       "manage": {
         "title": "Manage your votes",
-        "description": "You can remove your votes from the poll by selecting the options below."
+        "description": "You can remove your votes from the poll by selecting the options:"
       },
       "select": {
         "placeholder": "Select one or more options to remove your votes..."
@@ -466,6 +560,74 @@
         "placeholder": "Select a poll to show..."
       }
     },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Answers",
+          "description": "Select the answer you want to modify or add a new one:"
+        },
+        "answers_update": {
+          "title": "Update Answer",
+          "description": "Select an action to update this answer."
+        },
+        "type": {
+          "title": "Poll Type",
+          "description": "Select the type of the poll. In some cases, the poll type cannot be changed."
+        },
+        "channel": {
+          "title": "Channel",
+          "description": "Select the channel where the poll should be posted."
+        },
+        "buttoncolor": {
+          "title": "Button Color",
+          "description": "Select the color of the buttons for the poll."
+        },
+        "maxchoices": {
+          "title": "Max Choices",
+          "description": "Select the maximum number of choices each user can choose."
+        },
+        "allowedroles": {
+          "title": "Allowed Roles",
+          "description": "Select the roles that are allowed to vote.\nThe selection overwrites all already allowed roles, so select already allowed roles again if you want to keep them."
+        },
+        "allowvoteremove": {
+          "title": "Allow Vote Remove",
+          "description": "Select if users are allowed to remove their votes.",
+          "select": {
+            "yes": "Yes",
+            "no": "No"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Create poll",
+            "description": "Are you sure you want to create this poll?"
+          },
+          "success": {
+            "title": "Poll created",
+            "description": "The poll has been successfully created."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Save poll",
+            "description": "Are you sure you want to save this poll?",
+            "description2": "Poll ID: {{id}}",
+            "description3": "The following properties will be changed:"
+          },
+          "success": {
+            "title": "Poll saved",
+            "description": "The poll has been successfully saved."
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Exit",
+            "description": "Are you sure you want to exit the menu and discard all changes?"
+          }
+        }
+      }
+    },
     "pollresult": {
       "embeds": {
         "confirm": {
@@ -485,6 +647,14 @@
         "success": {
           "title": "Poll reopened",
           "description": "The poll has been successfully reopened."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "User blocked",
+          "description": "The user has been successfully blocked from interacting with the bot on this server."
         }
       }
     },
@@ -520,6 +690,9 @@
             },
             "channel_permissions": {
               "title": "Channel Permissions ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Role Weights"
             }
           }
         }
@@ -542,6 +715,14 @@
         "success": {
           "title": "Invite EasyPoll to your server!",
           "description": "Click the button below to invite EasyPoll to your server."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Blocked Users List",
+          "no_votes": "No user is blocked on this server."
         }
       }
     },
@@ -575,13 +756,22 @@
           }
         }
       }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "User unblocked",
+          "description": "The user has been successfully unblocked from interacting with the bot on this server."
+        }
+      }
     }
   },
   "footers": {
     "poll_id": "Poll ID: {{id}}",
     "poll_type": "Type: {{type}} ({{votingType}})",
     "error_id": "Error ID: {{id}}",
-    "pages": "Page {{page}} of {{pages}}"
+    "pages": "Page {{page}} of {{pages}}",
+    "edited": "Edited"
   },
   "errors": {
     "default": {
@@ -618,6 +808,10 @@
       "title": "Invalid color!",
       "description": "The entered color is invalid. Please make sure the color is in the correct format."
     },
+    "invalid_image": {
+      "title": "Invalid image!",
+      "description": "The entered image url is invalid. Please make sure the image url is valid and the image is in the correct format."
+    },
     "invalid_page": {
       "title": "Invalid page!",
       "description": "The entered page number is invalid. Please make sure the page number is in the correct format and within the valid range."
@@ -637,13 +831,19 @@
     },
     "restricted": {
       "title": "You cannot perform this action!",
-      "description": "You or this server is restricted from using this action.",
-      "description_user": "You are restricted from using this action.",
-      "description_guild": "This server is restricted from using this action.",
+      "description": {
+        "user_global": "You are globally restricted from using this action.",
+        "user_local": "You are restricted on this server from using this action.",
+        "guild": "This server is restricted from using this action."
+      },
       "fields": {
         "reason": "Reason",
         "expires_at": "Expires at"
       }
+    },
+    "already_restricted": {
+      "title": "Already restricted!",
+      "description": "The selected user is already restricted from using the bot."
     },
     "already_voted": {
       "title": "Already voted for this option!",
@@ -656,6 +856,14 @@
     "not_allowed_role": {
       "title": "Only certain roles allowed for this poll!",
       "description": "You cannot vote for this poll because you do not own any of the allowed roles."
+    },
+    "not_allowed_user": {
+      "title": "User not allowed!",
+      "description": "You cannot select this user because you are not permitted to do so."
+    },
+    "not_restricted": {
+      "title": "Not restricted!",
+      "description": "The selected user is not restricted from using the bot."
     },
     "poll": {
       "already_closed": {
@@ -691,6 +899,16 @@
         "title": "No polls found!",
         "description": "There are no polls found in this server that match the seached criteria."
       }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Poll locked!",
+        "description": "The poll is currently locked and cannot be modified. Please try again in a few seconds."
+      },
+      "validation": {
+        "title": "Validation failed!",
+        "description": "The entered values are invalid. Please make sure all values are correct and try again."
+      }
     }
   },
   "buttons": {
@@ -698,27 +916,50 @@
     "invite": "Invite",
     "support": "Support",
     "wiki": "Wiki",
+    "learn_more": "Learn More",
     "premium": "Get Premium",
     "troubleshooting": "Troubleshooting",
     "discord_helpcenter": "Discord Help Center",
+    "vote": "Vote",
     "participants": "Participants",
     "enable": "Enable",
     "disable": "Disable",
-    "delete": "Delete",
-    "reopen": "Reopen",
     "close": "Close",
+    "reopen": "Reopen",
+    "delete": "Delete",
+    "edit": "Edit",
     "back": "Back",
-    "cancel": "No, cancel",
+    "save": "Save",
+    "create": "Create",
+    "exit": "Exit",
+    "cancel": "Cancel",
     "confirm_close": "Yes, close the poll",
-    "confirm_delete": "Yes, delete the poll",
     "confirm_reopen": "Yes, reopen the poll",
+    "confirm_delete": "Yes, delete the poll",
+    "confirm_save": "Yes, save the poll",
+    "confirm_create": "Yes, create the poll",
+    "confirm_exit": "Yes, leave",
     "go_to_message": "Go to the message",
     "go_to_page": "Go to page",
     "remove_all_votes": "Remove all your votes",
     "remove_vote": "Remove this vote",
     "manage_votes": "Manage your votes",
     "export_json": "Export as JSON",
-    "export_csv": "Export as CSV"
+    "export_csv": "Export as CSV",
+    "question": "Question",
+    "answers": "Answers",
+    "description": "Description",
+    "type": "Type",
+    "time": "Time",
+    "image": "Image",
+    "channel": "Channel",
+    "embed_colors": "Embed Colors",
+    "button_color": "Button Color",
+    "maxchoices": "Maximal choices",
+    "allowedroles": "Allowed roles",
+    "allowedroles_clear": "Clear allowed roles",
+    "allowvoteremove": "Allow Vote Remove",
+    "answer_new": "Add new answer"
   },
   "permissions": {
     "add_reactions": "Add Reactions",
