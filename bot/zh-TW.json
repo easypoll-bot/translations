@@ -320,7 +320,6 @@
         "no": "否"
       },
       "select": {
-        "placeholder": "選取其中的選項以進行投票...",
         "votes_one": "{{count}} 票",
         "votes_other": "{{count}} 票"
       },
@@ -344,8 +343,8 @@
         "closed": "不接受其他投票",
         "anonymous": "匿名投票",
         "hidden": "隱藏投票",
-        "maxchoices_one": "允許的選項",
-        "maxchoices_other": "允許的選項",
+        "maxchoices_one": "{{count}} 允許的選項",
+        "maxchoices_other": "{{count}} 允許的選項",
         "allowedroles": "允許的身份組"
       },
       "participants": {
@@ -378,7 +377,7 @@
     "votes": {
       "added": {
         "title": "已添加投票",
-        "description": "您已成功投給選項 {{option}}。",
+        "description": "您已成功投給選項 {{- option}}。",
         "description2_one": "您還剩餘 **{{count}} 票**。",
         "description2_other": "您還剩餘 **{{count}} 票**。"
       },
@@ -637,9 +636,6 @@
     },
     "restricted": {
       "title": "您不能執行這個動作！",
-      "description": "您或伺服器被限制禁止執行這個動作。",
-      "description_user": "您被限制禁止執行這個動作。",
-      "description_guild": "伺服器被限制禁止執行這個動作。",
       "fields": {
         "reason": "原因",
         "expires_at": "截止時間為"
