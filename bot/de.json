@@ -429,6 +429,14 @@
         "users_one": "von {{count}} Nutzer",
         "users_other": "von {{count}} Nutzern"
       },
+      "winner": {
+        "content": "Die Umfrage **{{- question}}** von {{- user}} wurde geschlossen.",
+        "text": {
+          "no_winner": "Es gab keinen Gewinner",
+          "tied": "Es gab ein Unentschieden",
+          "winner": "Gewinnende Antwort"
+        }
+      },
       "settings": {
         "ends": "Endet {{- timestamp}}",
         "ended": "Umfrage bereits beendet",
@@ -444,12 +452,19 @@
         "title": "Teilnehmer",
         "votes": "Nutzer, die für diese Option abgestimmt haben:",
         "no_votes": "Kein Nutzer hat für diese Option abgestimmt.",
+        "weight": "Gewichtung: {{weight}}",
         "select": {
           "placeholder": "Wähle eine Option, um die Teilnehmer zu sehen...",
           "participants_one": "{{count}} Teilnehmer",
           "participants_other": "{{count}} Teilnehmer",
           "votes_one": "{{count}} Stimme",
-          "votes_other": "{{count}} Stimmen"
+          "votes_other": "{{count}} Stimmen",
+          "username_asc": "Nutzername (Aufsteigend)",
+          "username_desc": "Nutzername (Absteigend)",
+          "voted_at_asc": "Abgestimmt am (Aufsteigend)",
+          "voted_at_desc": "Abgestimmt am (Absteigend)",
+          "weight_asc": "Gewicht (Aufsteigend)",
+          "weight_desc": "Gewicht (Absteigend)"
         }
       },
       "info": {
@@ -517,6 +532,14 @@
           "error_missingaccess": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da der Bot nicht über die erforderlichen Berechtigungen für den Zugriff auf den Kanal verfügt.",
           "error_unknownchannel": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da der Kanal nicht gefunden werden konnte.",
           "error_unknownmessage": "Die ursprüngliche Nachricht konnte jedoch nicht aktualisiert werden, da die Nachricht nicht gefunden wurde."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Umfrage kopieren",
+          "description": "Kopiere den folgenden Befehl und füge ihn in den Chat ein, um eine neue Umfrage mit denselben Einstellungen zu erstellen:"
         }
       }
     },
@@ -618,6 +641,11 @@
           "success": {
             "title": "Umfrage gespeichert",
             "description": "Die Umfrage wurde erfolgreich gespeichert."
+          },
+          "changes": {
+            "added": "Hinzugefügt",
+            "changed": "Geändert",
+            "removed": "Entfernt"
           }
         },
         "exit": {
@@ -913,6 +941,7 @@
   },
   "buttons": {
     "website": "Webseite",
+    "dashboard": "Dashboard",
     "invite": "Einladen",
     "support": "Support",
     "wiki": "Wiki",
@@ -941,6 +970,8 @@
     "confirm_exit": "Ja, verlassen",
     "go_to_message": "Zur Nachricht gehen",
     "go_to_page": "Gehe zu Seite",
+    "view_on_dashboard": "Auf dem Dashboard anzeigen",
+    "view_poll": "Umfrage anzeigen",
     "remove_all_votes": "Alle Stimmen entfernen",
     "remove_vote": "Diese Stimme entfernen",
     "manage_votes": "Stimmen verwalten",

@@ -429,6 +429,14 @@
         "users_one": "from {{count}} user",
         "users_other": "from {{count}} users"
       },
+      "winner": {
+        "content": "{{- user}}'s poll **{{- question}}** has closed.",
+        "text": {
+          "no_winner": "There was no winner",
+          "tied": "The results were tied",
+          "winner": "Winning answer"
+        }
+      },
       "settings": {
         "ends": "Ends {{- timestamp}}",
         "ended": "Poll already ended",
@@ -444,12 +452,19 @@
         "title": "Participants",
         "votes": "Users who voted for this option:",
         "no_votes": "No user has voted for this option.",
+        "weight": "Weight: {{weight}}",
         "select": {
           "placeholder": "Select an option to see the participants...",
           "participants_one": "{{count}} participant",
           "participants_other": "{{count}} participants",
           "votes_one": "{{count}} vote",
-          "votes_other": "{{count}} votes"
+          "votes_other": "{{count}} votes",
+          "username_asc": "Username (Ascending)",
+          "username_desc": "Username (Descending)",
+          "voted_at_asc": "Voted at (Ascending)",
+          "voted_at_desc": "Voted at (Descending)",
+          "weight_asc": "Weight (Ascending)",
+          "weight_desc": "Weight (Descending)"
         }
       },
       "info": {
@@ -517,6 +532,14 @@
           "error_missingaccess": "However, the original message could not be updated because the bot does not have the permissions to access the channel.",
           "error_unknownchannel": "However, the original message could not be updated because the channel could not be found.",
           "error_unknownmessage": "However, the original message could not be updated because the message could not be found."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Copy Poll",
+          "description": "Copy the command below and paste it in the chat to create a new poll with the same settings."
         }
       }
     },
@@ -618,6 +641,11 @@
           "success": {
             "title": "Poll saved",
             "description": "The poll has been successfully saved."
+          },
+          "changes": {
+            "added": "Added",
+            "changed": "Changed",
+            "removed": "Removed"
           }
         },
         "exit": {
@@ -913,6 +941,7 @@
   },
   "buttons": {
     "website": "Website",
+    "dashboard": "Dashboard",
     "invite": "Invite",
     "support": "Support",
     "wiki": "Wiki",
@@ -941,6 +970,8 @@
     "confirm_exit": "Yes, leave",
     "go_to_message": "Go to the message",
     "go_to_page": "Go to page",
+    "view_on_dashboard": "View on Dashboard",
+    "view_poll": "View Poll",
     "remove_all_votes": "Remove all your votes",
     "remove_vote": "Remove this vote",
     "manage_votes": "Manage your votes",
