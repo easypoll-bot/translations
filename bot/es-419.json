@@ -429,13 +429,13 @@
         "users_one": "de {{count}} usuario",
         "users_other": "de {{count}} usuarios"
       },
-        "winner": {
-          "content": "La encuesta de {{- user}}: **{{- question}}** a cerrado.",
-          "text": {
-            "no_winner": "No hubo ganador",
-            "tied": "Los resultados estuvieron empatados",
-            "winner": "Respuesta ganadora"
-          }
+      "winner": {
+        "content": "La encuesta de {{- user}}, **{{- question}}**, ha terminado.",
+        "text": {
+          "no_winner": "No hubo un ganador",
+          "tied": "El resultado fue un empate",
+          "winner": "Respuesta ganadora"
+        }
       },
       "settings": {
         "ends": "Termina {{- timestamp}}",
@@ -941,7 +941,7 @@
   },
   "buttons": {
     "website": "Sitio web",
-    "dashboard": "Panel de ajustes",
+    "dashboard": "Panel de Control",
     "invite": "Invitar",
     "support": "Soporte",
     "wiki": "Wiki",
@@ -970,7 +970,7 @@
     "confirm_exit": "Sí, abandona",
     "go_to_message": "Ir al mensaje",
     "go_to_page": "Ir a la página",
-    "view_on_dashboard": "Ver en el Panel de ajustes",
+    "view_on_dashboard": "Ver en el Panel de Control",
     "view_poll": "Ver encuesta",
     "remove_all_votes": "Eliminar todos tus votos",
     "remove_vote": "Eliminar este voto",
