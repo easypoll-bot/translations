@@ -259,6 +259,7 @@
             "setting": {
               "description": "¿Cuál ajuste debería cambiarse?",
               "choices": {
+                "announce_winner_on_poll_auto_close": "Anunciar el ganador cuando una encuesta está automáticamente cerrada",
                 "remove_votes_on_ban": "Eliminar los votos activos cuando el usuario está bloqueado",
                 "remove_votes_on_kick": "Eliminar los votos activos cuando el usuario es expulsado",
                 "remove_votes_on_leave": "Eliminar los votos activos cuando un usuario abandona"
@@ -428,6 +429,14 @@
         "users_one": "de {{count}} usuario",
         "users_other": "de {{count}} usuarios"
       },
+      "winner": {
+        "content": "La encuesta de {{- user}}, **{{- question}}**, ha terminado.",
+        "text": {
+          "no_winner": "No hubo un ganador",
+          "tied": "El resultado fue un empate",
+          "winner": "Respuesta ganadora"
+        }
+      },
       "settings": {
         "ends": "Termina {{- timestamp}}",
         "ended": "Encuesta ya finalizada",
@@ -443,12 +452,19 @@
         "title": "Participantes",
         "votes": "Usuarios que votaron por esta opción:",
         "no_votes": "Ningún usuario a votado por esta opción.",
+        "weight": "Peso: {{weight}}",
         "select": {
           "placeholder": "Selecciona una opción para ver los participantes...",
           "participants_one": "{{count}} participantes",
           "participants_other": "{{count}} participantes",
           "votes_one": "{{count}} voto",
-          "votes_other": "{{count}} votos"
+          "votes_other": "{{count}} votos",
+          "username_asc": "Nombre de usuario (Ascendente)",
+          "username_desc": "Nombre de usuario (Descendente)",
+          "voted_at_asc": "Votado hace (Ascendente)",
+          "voted_at_desc": "Votado hace (Descendente)",
+          "weight_asc": "Peso (Ascendente)",
+          "weight_desc": "Peso (Descendente)"
         }
       },
       "info": {
@@ -516,6 +532,14 @@
           "error_missingaccess": "Sin embargo, el mensaje original no pudo ser actualizado porque el bot no tiene los permisos para acceder a este canal.",
           "error_unknownchannel": "Sin embargo, el mensaje original no pudo ser actualizado porque el canal no ha sido encontrado.",
           "error_unknownmessage": "Sin embargo, el mensaje original no pudo ser actualizado porque el mensaje no pudo ser encontrado."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Copiar encuesta",
+          "description": "Copia el comando de abajo y pégalo en el chat para crear una encuesta con las mismas configuraciones."
         }
       }
     },
@@ -617,6 +641,11 @@
           "success": {
             "title": "Encuesta guardada",
             "description": "La encuesta ha sido guardada satisfactoriamente."
+          },
+          "changes": {
+            "added": "Agregada",
+            "changed": "Cambiada",
+            "removed": "Eliminada"
           }
         },
         "exit": {
@@ -912,6 +941,7 @@
   },
   "buttons": {
     "website": "Sitio web",
+    "dashboard": "Panel de Control",
     "invite": "Invitar",
     "support": "Soporte",
     "wiki": "Wiki",
@@ -940,6 +970,8 @@
     "confirm_exit": "Sí, abandona",
     "go_to_message": "Ir al mensaje",
     "go_to_page": "Ir a la página",
+    "view_on_dashboard": "Ver en el Panel de Control",
+    "view_poll": "Ver encuesta",
     "remove_all_votes": "Eliminar todos tus votos",
     "remove_vote": "Eliminar este voto",
     "manage_votes": "Administrar tus votos",
