@@ -101,7 +101,7 @@
       }
     },
     "pollbuilder": {
-      "description": "Создать более сложный опрос с помощью конструктора опросов.",
+      "description": "Создать более усложнённый опрос с помощью конструктора опросов.",
       "options": {
         "answer": {
           "description": "Ответ {{id}}"
@@ -181,16 +181,16 @@
       }
     },
     "block": {
-      "description": "Block a user from interacting with the bot on this server.",
+      "description": "Заблокировать участнику возможность взаимодействовать с ботом на сервере.",
       "options": {
         "user": {
-          "description": "The user to block."
+          "description": "Участник для блокировки."
         },
         "reason": {
-          "description": "The public reason for blocking the user."
+          "description": "Публичная причина для блокировки участника."
         },
         "time": {
-          "description": "The time the user should be blocked for."
+          "description": "Время, на которое участник должен быть заблокирован."
         }
       }
     },
@@ -209,7 +209,7 @@
       "description": "Получить ссылку для добавления бота на ваш сервер."
     },
     "listblocks": {
-      "description": "Show a list of all blocked users on the current server."
+      "description": "Показать список всех заблокированных участников на данном сервере."
     },
     "premium": {
       "description": "Проверить текущий премиум статус этого сервера."
@@ -259,7 +259,7 @@
             "setting": {
               "description": "Какая настройка должна быть изменена?",
               "choices": {
-                "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
+                "announce_winner_on_poll_auto_close": "Объявить победителя, когда опрос автоматически завершится",
                 "remove_votes_on_ban": "Удалить активные голоса, когда пользователь забанен",
                 "remove_votes_on_kick": "Удалить активные голоса, когда пользователь кикнут",
                 "remove_votes_on_leave": "Удалить активные голоса, когда пользователь покидает"
@@ -281,13 +281,13 @@
           "description": "Изменить язык этого сервера."
         },
         "role-weight": {
-          "description": "Change the voting weight of a role.",
+          "description": "Изменить вес голоса роли.",
           "options": {
             "role": {
-              "description": "The role to change the weight for."
+              "description": "Роль, которой нужно изменить вес."
             },
             "weight": {
-              "description": "The weight of the role."
+              "description": "Вес роли."
             }
           }
         },
@@ -313,10 +313,10 @@
       }
     },
     "unblock": {
-      "description": "Unblock a user from interacting with the bot on this server.",
+      "description": "Разблокировать участника от взаимодействия с ботом на этом сервере.",
       "options": {
         "user": {
-          "description": "The user to unblock."
+          "description": "Участник для разблокировки."
         }
       }
     }
@@ -347,46 +347,46 @@
     },
     "pollbuilder": {
       "title": {
-        "create": "Create Poll",
-        "edit": "Edit Poll"
+        "create": "Создать Опрос",
+        "edit": "Изменить Опрос"
       },
       "components": {
         "question": {
-          "label": "Question",
-          "placeholder": "Please enter the question of the poll..."
+          "label": "Вопрос",
+          "placeholder": "Пожалуйста укажите вопрос опроса..."
         },
         "answer": {
-          "label": "Answer Text",
-          "placeholder": "Please enter the text of the answer..."
+          "label": "Текст Ответа",
+          "placeholder": "Пожалуйста, укажите текст ответа..."
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Please enter the description of the poll..."
+          "label": "Описание",
+          "placeholder": "Пожалуйста, укажите описание опроса..."
         },
         "time": {
-          "label": "Time",
-          "placeholder": "Please enter the time the poll should run... Leave empty for unlimited time."
+          "label": "Время",
+          "placeholder": "Пожалуйста, укажите какое время опрос должен длиться... Оставьте пустым для неограниченного времени."
         },
         "image": {
-          "label": "Image URL",
-          "placeholder": "Please enter the image url of the poll..."
+          "label": "Ссылка Изображения",
+          "placeholder": "Пожалуйста, укажите ссылку изображения опроса..."
         },
         "colors": {
           "open": {
-            "label": "Open Color",
-            "placeholder": "Please enter the name or hex code of the open color..."
+            "label": "Цвет Открытого",
+            "placeholder": "Пожалуйста, укажите имя или hex код открытого цвета..."
           },
           "closed": {
-            "label": "Closed Color",
-            "placeholder": "Please enter the name or hex code of the closed color..."
+            "label": "Цвет Закрытого",
+            "placeholder": "Пожалуйста, укажите имя или hex код закрытого цвета..."
           },
           "running": {
-            "label": "Running Color",
-            "placeholder": "Please enter the name or hex code of the running color..."
+            "label": "Цвет Запущенного",
+            "placeholder": "Пожалуйста, укажите имя или hex код запущенного цвета..."
           },
           "result": {
-            "label": "Result Color",
-            "placeholder": "Please enter the name or hex code of the result color..."
+            "label": "Цвет Результата",
+            "placeholder": "Пожалуйста, укажите имя или hex код цвета результата..."
           }
         }
       }
@@ -409,7 +409,7 @@
       },
       "select": {
         "placeholder_one": "Выберите вариант для голосования...",
-        "placeholder_other": "Select one or more options to vote...",
+        "placeholder_other": "Выберите один или больше вариантов для голосования...",
         "votes_one": "{{count}} голос",
         "votes_other": "{{count}} голоса"
       },
@@ -424,17 +424,17 @@
         "title": "Результаты опроса",
         "votes_one": "{{count}} голос",
         "votes_other": "{{count}} голоса",
-        "votes_weighted_one": "{{count}} weighted vote",
-        "votes_weighted_other": "{{count}} weighted votes",
+        "votes_weighted_one": "{{count}} увесистый голос",
+        "votes_weighted_other": "{{count}} увесистых голосов",
         "users_one": "от {{count}} участника",
         "users_other": "от {{count}} участников"
       },
       "winner": {
-        "content": "{{- user}}'s poll **{{- question}}** has closed.",
+        "content": "Опрос {{- user}} **{{- question}}** закрылся.",
         "text": {
-          "no_winner": "There was no winner",
-          "tied": "The results were tied",
-          "winner": "Winning answer"
+          "no_winner": "Нету победителя",
+          "tied": "Результаты были уравновешены",
+          "winner": "Победный ответ"
         }
       },
       "settings": {
@@ -445,26 +445,26 @@
         "hidden": "Скрытый опрос",
         "maxchoices_one": "{{count}} разрешённый выбор",
         "maxchoices_other": "{{count}} разрешённые выборы",
-        "removevotesnotallowed": "Removing votes not allowed",
+        "removevotesnotallowed": "Удаление голосов не разрешено",
         "allowedroles": "Разрешённые роли"
       },
       "participants": {
         "title": "Участники",
         "votes": "Пользователи, которые проголосовали за этот вариант:",
         "no_votes": "Ни один пользователь не проголосовал за этот вариант.",
-        "weight": "Weight: {{weight}}",
+        "weight": "Вес: {{weight}}",
         "select": {
           "placeholder": "Выберите вариант, чтобы увидеть участников...",
           "participants_one": "{{count}} участник",
           "participants_other": "{{count}} участников",
           "votes_one": "{{count}} голос",
           "votes_other": "{{count}} голоса",
-          "username_asc": "Username (Ascending)",
-          "username_desc": "Username (Descending)",
-          "voted_at_asc": "Voted at (Ascending)",
-          "voted_at_desc": "Voted at (Descending)",
-          "weight_asc": "Weight (Ascending)",
-          "weight_desc": "Weight (Descending)"
+          "username_asc": "Имя пользователя (По возрастанию)",
+          "username_desc": "Имя пользователя (По убыванию)",
+          "voted_at_asc": "Проголосовано в (По возрастанию)",
+          "voted_at_desc": "Проголосовано в (По убыванию)",
+          "weight_asc": "Вес (По возрастанию)",
+          "weight_desc": "Вес (По убыванию)"
         }
       },
       "info": {
@@ -538,8 +538,8 @@
     "copypoll": {
       "embeds": {
         "success": {
-          "title": "Copy Poll",
-          "description": "Copy the command below and paste it in the chat to create a new poll with the same settings."
+          "title": "Скопировать Опрос",
+          "description": "Скопируйте команду ниже и вставьте её в чат, чтобы создать новый опрос с такими же настройками."
         }
       }
     },
@@ -586,72 +586,72 @@
     "pollbuilder": {
       "embeds": {
         "answers": {
-          "title": "Answers",
-          "description": "Select the answer you want to modify or add a new one:"
+          "title": "Ответы",
+          "description": "Выберите ответ, который вы хотите изменить, или добавьте новый:"
         },
-        "answers_update": {
-          "title": "Update Answer",
-          "description": "Select an action to update this answer."
+         "answers_update": {
+          "title": "Обновить Ответ",
+          "description": "Выберите действие, чтобы обновить этот ответ."
         },
         "type": {
-          "title": "Poll Type",
-          "description": "Select the type of the poll. In some cases, the poll type cannot be changed."
+          "title": "Тип Опроса",
+          "description": "Выберите тип опроса. В некоторых случаях тип опроса изменить нельзя."
         },
         "channel": {
-          "title": "Channel",
-          "description": "Select the channel where the poll should be posted."
+          "title": "Канал",
+          "description": "Выберите канал, куда опрос должен быть опубликован."
         },
         "buttoncolor": {
-          "title": "Button Color",
-          "description": "Select the color of the buttons for the poll."
+          "title": "Цвет Кнопки",
+          "description": "Выберите цвет кнопок для опроса."
         },
         "maxchoices": {
-          "title": "Max Choices",
-          "description": "Select the maximum number of choices each user can choose."
+          "title": "Максимально Голосов",
+          "description": "Выберите максимальное число голосов, которые каждый участник может выбрать"
         },
         "allowedroles": {
-          "title": "Allowed Roles",
-          "description": "Select the roles that are allowed to vote.\nThe selection overwrites all already allowed roles, so select already allowed roles again if you want to keep them."
+          "title": "Разрешённые Роли",
+          "description": "Выберите роли, которым разрешено голосовать.\nВыбор перезаписывает все уже разрешённые роли, поэтому выберите уже разрешённые роли снова, если вы хотите оставить их."
         },
         "allowvoteremove": {
-          "title": "Allow Vote Remove",
-          "description": "Select if users are allowed to remove their votes.",
+          "title": "Разрешить Удаление Голоса",
+          "description": "Выберите, если участникам разрешено удалять их голоса.",
           "select": {
-            "yes": "Yes",
-            "no": "No"
+            "yes": "Да",
+            "no": "Нет"
           }
         },
         "create": {
           "confirm": {
-            "title": "Create poll",
-            "description": "Are you sure you want to create this poll?"
+            "title": "Создать Опрос",
+            "description": "Вы уверены, что хотите создать этот опрос?"
           },
           "success": {
-            "title": "Poll created",
-            "description": "The poll has been successfully created."
+            "title": "Опрос создан",
+            "description": "Опрос был успешно создан."
           }
         },
         "save": {
           "confirm": {
-            "title": "Save poll",
-            "description": "Are you sure you want to save this poll?",
-            "description2": "Poll ID: {{id}}",
-            "description3": "The following properties will be changed:"
+            "title": "Сохранить опрос",
+            "description": "Вы уверены, что хотите сохранить этот опрос?",
+            "description2": "ID Опроса: {{id}}",
+            "description3": "Следующие свойства будут изменены:"
           },
           "success": {
-            "title": "Poll saved",
-            "description": "The poll has been successfully saved."
+            "title": "Опрос сохранён",
+            "description": "Опрос был успешно сохранён."
           },
           "changes": {
-            "added": "Added",
-            "changed": "Changed",
-            "removed": "Removed"
+            "added": "Добавлено",
+            "changed": "Изменено",
+            "removed": "Удалено"
           }
         },
         "exit": {
           "confirm": {
-            "title": "Exit",
-            "description": "Are you sure you want to exit the menu and discard all changes?"
+            "title": "Выйти",
+            "description": "Вы уверены, что хотите выйти из меню и отменить все изменения?"
           }
         }
       }
@@ -681,8 +681,8 @@
     "block": {
       "embeds": {
         "success": {
-          "title": "User blocked",
-          "description": "The user has been successfully blocked from interacting with the bot on this server."
+          "title": "Участник заблокирован",
+          "description": "Участник был успешно заблокирован от взаимодействия с ботом на этом сервере."
         }
       }
     },
@@ -720,7 +720,7 @@
               "title": "Права Канала ({{- channel}})"
             },
             "role_weights": {
-              "title": "Role Weights"
+              "title": "Вес Роли"
             }
           }
         }
@@ -749,8 +749,8 @@
     "listblocks": {
       "embeds": {
         "list": {
-          "title": "Blocked Users List",
-          "no_votes": "No user is blocked on this server."
+          "title": "Список Заблокированных Участников",
+          "no_votes": "Ни один участник не заблокирован на этом сервере."
         }
       }
     },
@@ -788,8 +788,8 @@
     "unblock": {
       "embeds": {
         "success": {
-          "title": "User unblocked",
-          "description": "The user has been successfully unblocked from interacting with the bot on this server."
+          "title": "Участник разблокирован",
+          "description": "Участник был успешно разблокирован от взаимодействия с ботом на этом сервере."
         }
       }
     }
@@ -799,7 +799,7 @@
     "poll_type": "Тип: {{type}} ({{votingType}})",
     "error_id": "Ошибочный ID: {{id}}",
     "pages": "Страница {{page}} из {{pages}}",
-    "edited": "Edited"
+    "edited": "Изменено"
   },
   "errors": {
     "default": {
@@ -811,8 +811,8 @@
       "description": "Эта команда может быть использована только на серверах."
     },
     "guild_communication_disabled": {
-      "title": "Bot is timed out!",
-      "description": "The bot is timed out in this server and cannot communicate within this server.\nPlease remove the timeout to use the bot again."
+      "title": "Время ожидания бота истекло!",
+      "description": "Время ожидания бота на этом сервере истекло, и не может взаимодействовать с этим сервером.\nПожалуйста, удалите таймаут, чтобы использовать бота снова."
     },
     "missing_bot_permissions": {
       "title": "Недостаточно прав!",
@@ -837,8 +837,8 @@
       "description": " Введённый цвет неверный. Пожалуйста, убедитесь что цвет в верном формате."
     },
     "invalid_image": {
-      "title": "Invalid image!",
-      "description": "The entered image url is invalid. Please make sure the image url is valid and the image is in the correct format."
+      "title": "Неверное Изображение!",
+      "description": "Введённая ссылка изображения недействительна. Пожалуйста убедитесь, что ссылка изображения действительна, и изображение в верном формате."
     },
     "invalid_page": {
       "title": "Неверная страница!",
@@ -860,9 +860,9 @@
     "restricted": {
       "title": "Вы не можете совершить это действие!",
       "description": {
-        "user_global": "You are globally restricted from using this action.",
-        "user_local": "You are restricted on this server from using this action.",
-        "guild": "Этот сервер ограничен в использовании этого действия."
+        "user_global": "Вы глобально ограничены от использования этого действия.",
+        "user_local": "Вы ограничены от использования этого действия на этом сервере.",
+        "guild": "На этом сервере запрещено использовать это действие."
       },
       "fields": {
         "reason": "Причина",
@@ -870,8 +870,8 @@
       }
     },
     "already_restricted": {
-      "title": "Already restricted!",
-      "description": "The selected user is already restricted from using the bot."
+      "title": "Уже ограничено!",
+      "description": "Выбранный участник уже ограничен в использовании бота."
     },
     "already_voted": {
       "title": "Уже проголосовано за этот вариант!",
@@ -886,12 +886,12 @@
       "description": "Вы не можете голосовать в этом опросе, поскольку у вас нет ни одной разрешённой роли."
     },
     "not_allowed_user": {
-      "title": "User not allowed!",
-      "description": "You cannot select this user because you are not permitted to do so."
+      "title": "Участник не разрешён!",
+      "description": "Вы не можете выбрать этого участника, поскольку у вас нет прав на это."
     },
     "not_restricted": {
-      "title": "Not restricted!",
-      "description": "The selected user is not restricted from using the bot."
+      "title": "Не ограничен!",
+      "description": "Выбранный участник не ограничен в использовании бота."
     },
     "poll": {
       "already_closed": {
@@ -930,67 +930,67 @@
     },
     "pollbuilder": {
       "locked": {
-        "title": "Poll locked!",
-        "description": "The poll is currently locked and cannot be modified. Please try again in a few seconds."
+        "title": "Опрос закрыт!",
+        "description": "В данный момент опрос закрыт, и не может быть изменён. Пожалуйста, попробуйте снова через несколько секунд."
       },
       "validation": {
-        "title": "Validation failed!",
-        "description": "The entered values are invalid. Please make sure all values are correct and try again."
+        "title": "Проверка не удалась!",
+        "description": "Введённые значения недействительны. Пожалуйста убедитесь, что все значения верны, и попробуйте снова."
       }
     }
   },
   "buttons": {
     "website": "Вебсайт",
-    "dashboard": "Dashboard",
+    "dashboard": "Панель Управления",
     "invite": "Приглашение",
     "support": "Поддержка",
     "wiki": "Вики",
-    "learn_more": "Learn More",
+    "learn_more": "Узнать Больше",
     "premium": "Получить Премиум",
     "troubleshooting": "Устранение неисправностей",
-    "discord_helpcenter": "Discord Help Center",
-    "vote": "Vote",
+    "discord_helpcenter": "Центр помощи Discord",
+    "vote": "Голос",
     "participants": "Участники",
     "enable": "Включить",
     "disable": "Выключить",
     "close": "Закрыть",
     "reopen": "Переоткрыть",
     "delete": "Удалить",
-    "edit": "Edit",
+    "edit": "Изменить",
     "back": "Назад",
-    "save": "Save",
-    "create": "Create",
-    "exit": "Exit",
+    "save": "Сохранить",
+    "create": "Создать",
+    "exit": "Выйти",
     "cancel": "Отменить",
     "confirm_close": "Да, закрыть опрос",
     "confirm_reopen": "Да, переоткрыть опрос",
     "confirm_delete": "Да, удалить опрос",
-    "confirm_save": "Yes, save the poll",
-    "confirm_create": "Yes, create the poll",
-    "confirm_exit": "Yes, leave",
+    "confirm_save": "Да, сохранить опрос",
+    "confirm_create": "Да, создать опрос",
+    "confirm_exit": "Да, выйти",
     "go_to_message": "Перейти к сообщению",
     "go_to_page": "Перейти к странице",
-    "view_on_dashboard": "View on Dashboard",
-    "view_poll": "View Poll",
+    "view_on_dashboard": "Посмотреть на Панели Управления",
+    "view_poll": "Посмотреть Опрос",
     "remove_all_votes": "Удалить все ваши голоса",
     "remove_vote": "Удалить этот голос",
     "manage_votes": "Управлять вашими голосами",
     "export_json": "Экспортировать как JSON",
     "export_csv": "Экспортировать как CSV",
-    "question": "Question",
-    "answers": "Answers",
-    "description": "Description",
-    "type": "Type",
-    "time": "Time",
-    "image": "Image",
-    "channel": "Channel",
-    "embed_colors": "Embed Colors",
-    "button_color": "Button Color",
-    "maxchoices": "Maximal choices",
-    "allowedroles": "Allowed roles",
-    "allowedroles_clear": "Clear allowed roles",
-    "allowvoteremove": "Allow Vote Remove",
-    "answer_new": "Add new answer"
+    "question": "Вопрос",
+    "answers": "Ответы",
+    "description": "Описание",
+    "type": "Тип",
+    "time": "Время",
+    "image": "Изображение",
+    "channel": "Канал",
+    "embed_colors": "Встроенные Цвета",
+    "button_color": "Цвет Кнопки",
+    "maxchoices": "Максимальные выборы",
+    "allowedroles": "Разрешённые роли",
+    "allowedroles_clear": "Очистить разрешённые роли",
+    "allowvoteremove": "Разрешить удаление Голоса",
+    "answer_new": "Добавить новый ответ"
   },
   "permissions": {
     "add_reactions": "Добавить Реакции",
