@@ -180,6 +180,20 @@
         }
       }
     },
+    "block": {
+      "description": "Zablokuj użytkownikowi możliwość interakcji z botem na tym serwerze.",
+      "options": {
+        "user": {
+          "description": "Użytkownik mający zostać zablokowany."
+        },
+        "reason": {
+          "description": "Publiczny powód blokady użytkownika."
+        },
+        "time": {
+          "description": "Czas na jaki ma być zablokowany."
+        }
+      }
+    },
     "debug": {
       "description": "Sprawdź uprawnienia serwera i popularne problemy.",
       "options": {
@@ -193,6 +207,9 @@
     },
     "invite": {
       "description": "Uzyskaj link umożliwiający dodanie bota do własnego serwera."
+    },
+    "listblocks": {
+      "description": "Pokaż listę wszystkich zablokowanych użytkowników na tym serwerze."
     },
     "premium": {
       "description": "Sprawdź aktualny status premium tego serwera."
@@ -242,6 +259,7 @@
             "setting": {
               "description": "Które ustawienie chcesz zmienić?",
               "choices": {
+                "announce_winner_on_poll_auto_close": "Ogłoś wyniki, kiedy ankieta zostanie automatycznie zamknięta",
                 "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
                 "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
                 "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
@@ -262,6 +280,17 @@
         "language": {
           "description": "Zmień język tego serwera."
         },
+        "role-weight": {
+          "description": "Zmień wagę głosu dla danej roli.",
+          "options": {
+            "role": {
+              "description": "Rola, dla której ma być zmieniona waga głosu."
+            },
+            "weight": {
+              "description": "Waga głosu dla tej roli."
+            }
+          }
+        },
         "threads": {
           "description": "Zmień ustawienia wątków.",
           "options": {
@@ -280,6 +309,14 @@
               }
             }
           }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Odblokuj użytkownikowi możliwośc interakcji z botem na tym serwerze.",
+      "options": {
+        "user": {
+          "description": "Użytkownik mający być odblokowany."
         }
       }
     }
@@ -307,6 +344,52 @@
           "placeholder": "Podaj numer strony, do której chcesz przejść..."
         }
       }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Utwórz ankietę",
+        "edit": "Edytuj ankietę"
+      },
+      "components": {
+        "question": {
+          "label": "Pytanie",
+          "placeholder": "Proszę, wprowadź pytanie ankiety..."
+        },
+        "answer": {
+          "label": "Tekst odpowiedzi",
+          "placeholder": "Proszę, wprowadź tekst odpowiedzi..."
+        },
+        "description": {
+          "label": "Opis",
+          "placeholder": "Proszę, wprowadź opis ankiety..."
+        },
+        "time": {
+          "label": "Czas",
+          "placeholder": "Proszę, wprowadź czas, przez jaki ankieta powinna przyjmować odpowiedzi... Pozostaw puste dla nieograniczonego czasu."
+        },
+        "image": {
+          "label": "Adres URL zdjęcia",
+          "placeholder": "Proszę, wprowadź adres URL zdjęcia ankiety..."
+        },
+        "colors": {
+          "open": {
+            "label": "Kolor otwartej ankiety",
+            "placeholder": "Proszę, wprowadź nazwę lub HEX koloru otwartej ankiety..."
+          },
+          "closed": {
+            "label": "Kolor zamknietej ankiety",
+            "placeholder": "Proszę, wprowadź nazwę lub HEX koloru zamknietej ankiety..."
+          },
+          "running": {
+            "label": "Kolor aktywnej ankiety",
+            "placeholder": "Proszę, wprowadź nazwę lub HEX koloru aktywnej ankiety..."
+          },
+          "result": {
+            "label": "Kolor wyników ankiety",
+            "placeholder": "Proszę, wprowadź nazwę lub HEX koloru wyników ankiety..."
+          }
+        }
+      }
     }
   },
   "messages": {
@@ -326,6 +409,7 @@
       },
       "select": {
         "placeholder_one": "Wybierz opcję, aby zagłosować...",
+        "placeholder_other": "Wybierz co najmniej jedną opcję, aby zagłosować...",
         "votes_one": "{{count}} głos",
         "votes_other": "{{count}} głosy(-ów)"
       },
@@ -340,8 +424,18 @@
         "title": "Wynik ankiety",
         "votes_one": "{{count}} głos",
         "votes_other": "{{count}} głosy(-ów)",
+        "votes_weighted_one": "{{count}} ważony głos",
+        "votes_weighted_other": "{{count}} ważone(-ych) głosy(-ów)",
         "users_one": "od {{count}} użytkownika",
         "users_other": "od {{count}} użytkowników"
+      },
+      "winner": {
+        "content": "Ankieta użytkownika {{- user}} **{{- question}}** została zamknięta.",
+        "text": {
+          "no_winner": "Nie wyłoniono zwycięskiej opcji",
+          "tied": "Remis",
+          "winner": "Zwycięska opcja"
+        }
       },
       "settings": {
         "ends": "Kończy się {{- timestamp}}",
@@ -349,20 +443,28 @@
         "closed": "Nowe głosy nie są dozwolone",
         "anonymous": "Ankieta anonimowa",
         "hidden": "Ankieta ukryta",
-        "maxchoices_one": "{{count}} dopuszczalna odpowiedź",
-        "maxchoices_other": "{{count}} dopuszczalne(-ych) odpowiedzi",
+        "maxchoices_one": "{{count}} dozwolona odpowiedź",
+        "maxchoices_other": "{{count}} dozwolone(-ych) odpowiedzi",
+        "removevotesnotallowed": "Wycofywanie głosów jest zabronione",
         "allowedroles": "Dozwolone role"
       },
       "participants": {
         "title": "Uczestnicy",
         "votes": "Użytkownicy, którzy zagłosowali na tę opcję:",
         "no_votes": "Żaden użytkownik nie zagłosował na tę opcję.",
+        "weight": "Waga: {{weight}}",
         "select": {
           "placeholder": "Wybierz opcję, aby zobaczyć głosujących...",
           "participants_one": "{{count}} użytkownik",
           "participants_other": "{{count}} użytkowników",
           "votes_one": "{{count}} głos",
           "votes_other": "{{count}} głosy(-ów)"
+          "username_asc": "Nazwa użytkownika (rosnąco)",
+          "username_desc": "Nazwa użytkownika (malejąco)",
+          "voted_at_asc": "Zagłosowano na (rosnąco)",
+          "voted_at_desc": "Zagłosowano na (malejąco)",
+          "weight_asc": "Waga (rosnąco)",
+          "weight_desc": "Waga (malejąco)"
         }
       },
       "info": {
@@ -433,6 +535,14 @@
         }
       }
     },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Skopiuj ankietę",
+          "description": "Skopiuj poniższą komendę i wklej ją w czacie, aby stworzyć nową ankietę z tymi samymi ustawieniami."
+        }
+      }
+    },
     "deletepoll": {
       "embeds": {
         "confirm": {
@@ -473,6 +583,79 @@
         "placeholder": "Wybierz ankietę do wyświetlenia..."
       }
     },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Opcje",
+          "description": "Wybierz opcję, którą chcesz zmodyfikować lub dodaj nową:"
+        },
+        "answers_update": {
+          "title": "Aktualizuj opcję",
+          "description": "Wybierz czynność, aby zmodyfikować tę opcję."
+        },
+        "type": {
+          "title": "Rodzaj ankiety",
+          "description": "Wybierz rodzaj ankiety. W niektórych przypadkach rodzaj ankiety nie może być zmieniony."
+        },
+        "channel": {
+          "title": "Kanał",
+          "description": "Wybierz kanał, na którym ankieta powinna zostać opublikowana."
+        },
+        "buttoncolor": {
+          "title": "Kolor przycisków",
+          "description": "Wybierz kolor przycisków dla ankiety."
+        },
+        "maxchoices": {
+          "title": "Dozwolonych odpowiedzi",
+          "description": "Wybierz maksymalną liczbę dozwolonych odpowiedzi na uczestnika."
+        },
+        "allowedroles": {
+          "title": "Dozwolone role",
+          "description": "Wybierz role, które mogą wziąć udział w ankiecie.\nNiniejszy wybór nadpisuje wszystkie dotychczas dozwolone role, więc zaznacz ponownie już dozwolone roles, jeśli chcesz wciąż je zachować."
+        },
+        "allowvoteremove": {
+          "title": "Dozwolone wycofywanie głosów",
+          "description": "Zaznacz, czy wycofywanie głosów ma być dozwolone.",
+          "select": {
+            "yes": "Tak",
+            "no": "Nie"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Stwórz ankietę",
+            "description": "Jesteś pewien(-na), że chcesz utworzyć tę ankietę?"
+          },
+          "success": {
+            "title": "Ankieta utworzona",
+            "description": "Ankieta została pomyślnie utworzona."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Zapis ankietę",
+            "description": "Jesteś pewien(-na), że chcesz zapisać tę ankietę?",
+            "description2": "ID ankiety: {{id}}",
+            "description3": "Poniższe właściwości zostaną zmodyfikowane:"
+          },
+          "success": {
+            "title": "Ankieta zapisana",
+            "description": "Ankieta została pomyślnie zapisana."
+          },
+          "changes": {
+            "added": "Dodano",
+            "changed": "Zmodyfikowano",
+            "removed": "Usunięto"
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Wyjście",
+            "description": "Jesteś pewien(-na), że chcesz opuścić menu i porzucić wszystkie zmiany?"
+          }
+        }
+      }
+    },
     "pollresult": {
       "embeds": {
         "confirm": {
@@ -492,6 +675,14 @@
         "success": {
           "title": "Ankieta została ponownie otwarta",
           "description": "Ankieta została pomyślnie ponownie otwarta."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Zablokowano użytkownika",
+          "description": "Ten użytkownik został pomyślnie zablokowany i nie może podejmować interakcji z botem na tym serwerze."
         }
       }
     },
@@ -527,6 +718,9 @@
             },
             "channel_permissions": {
               "title": "Uprawnienia kanału ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Wagi ról"
             }
           }
         }
@@ -549,6 +743,14 @@
         "success": {
           "title": "Zaproś EasyPoll na swój serwer!",
           "description": "Kliknij poniższy przycisk, aby zaprosić EasyPoll na swój serwer."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Lista zablokowanych użytkowników",
+          "no_votes": "Brak zablokowanych użytkowników na tym serwerze."
         }
       }
     },
@@ -582,6 +784,14 @@
           }
         }
       }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Użytkownik odblokowany",
+          "description": "Ten użytkownik został pomyślnie odblokowany i może podejmować interakcję z botem na tym serwerze."
+        }
+      }
     }
   },
   "footers": {
@@ -589,6 +799,7 @@
     "poll_type": "Typ: {{type}} ({{votingType}})",
     "error_id": "Error ID: {{id}}",
     "pages": "Strona {{page}} z {{pages}}"
+    "edited": "Edytowano"
   },
   "errors": {
     "default": {
@@ -598,6 +809,10 @@
     "guild_command": {
       "title": "Polecenie serwera!",
       "description": "Tego polecenia można używać tylko na serwerach."
+    },
+    "guild_communication_disabled": {
+      "title": "Bot jest wysłany na przerwę!",
+      "description": "Bot jest wysłany na przerwę na tym serwerze i nie może się na nim komunikować.\nAby ponownie użyć bota, zdejmij z niego przerwę."
     },
     "missing_bot_permissions": {
       "title": "Brak uprawnień!",
@@ -621,6 +836,10 @@
       "title": "Nieprawidłowy kolor!",
       "description": "Wprowadzony kolor jest nieprawidłowy. Upewnij się, że kolor jest w odpowiednim formacie."
     },
+    "invalid_image": {
+      "title": "Nieprawidłowe zdjęcie!",
+      "description": "Wprowadzony adres URL zdjęcia jest nieprawidłowy. Upewnij się, że adres URL zdjęcia jest prawidłowy i zdjęcie jest w odpowiednim formacie."
+    },
     "invalid_page": {
       "title": "Nieprawidłowa strona!",
       "description": "Wprowadzony numer strony jest nieprawidłowy. Upewnij się, że numer strony ma prawidłowy format i mieści się w prawidłowym zakresie."
@@ -641,12 +860,18 @@
     "restricted": {
       "title": "Nie możesz wykonać tej akcji!",
       "description": {
+        "user_global": "Nie możesz korzystać z tej funkcji globalnie.",
+        "user_local": "Nie możesz korzystać z tej funkcji na tym serwerze.",
         "guild": "Ten serwer nie może korzystać z tej akcji."
       },
       "fields": {
         "reason": "Powód",
         "expires_at": "Wygasa"
       }
+    },
+    "already_restricted": {
+      "title": "Już zablokowany!",
+      "description": "Wybrany użytkownik jest już zablokowany przed interakcją z botem."
     },
     "already_voted": {
       "title": "Już zagłosowałeś na tę opcję!",
@@ -659,6 +884,14 @@
     "not_allowed_role": {
       "title": "Tylko niektóre role są dopuszczone do głosowania w tej ankiecie!",
       "description": "Nie możesz głosować w tej ankiecie, ponieważ nie posiadasz żadnej z dopuszczonych ról."
+    },
+    "not_allowed_user": {
+      "title": "Użytkownik nieuprawniony!",
+      "description": "Nie możesz wybrać tego użytkownika, ponieważ nie masz do tego uprawnień."
+    },
+    "not_restricted": {
+      "title": "Brak ograniczeń!",
+      "description": "Wybrany użytnikownik może podejmować interakcję z botem."
     },
     "poll": {
       "already_closed": {
@@ -694,33 +927,70 @@
         "title": "Nie znaleziono ankiet!",
         "description": "Na tym serwerze nie znaleziono ankiet spełniających podane kryteria."
       }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Ankieta zablokowana!",
+        "description": "Ta ankieta jest obecnie zablokowana i nie może być modyfikowana. Proszę, spróbuj ponownie później."
+      },
+      "validation": {
+        "title": "Weryfikacja nieprawidłowa!",
+        "description": "Podane dane są nieprawidłowe. Proszę, upewnij się, że wszystkie dane są poprawne i spróbuj ponownie."
+      }
     }
   },
   "buttons": {
     "website": "Strona internetowa",
+    "dashboard": "Panel sterowania",
     "invite": "Zaproszenie",
     "support": "Pomoc",
     "wiki": "Wiki",
+    "learn_more": "Dowiedz się więcej",
     "premium": "Kup premium",
     "troubleshooting": "Rozwiązywanie problemów",
+    "discord_helpcenter": "Centrum Pomocy Discord",
+    "vote": "Podbij",
     "participants": "Uczestnicy",
     "enable": "Włącz",
     "disable": "Wyłącz",
     "close": "Zamknij",
     "reopen": "Otwórz ponownie",
     "delete": "Usuń",
+    "edit": "Edytuj",
     "back": "Wstecz",
+    "save": "Zapisz",
+    "create": "Utwórz",
+    "exit": "Wyjdź",
     "cancel": "Anuluj",
     "confirm_close": "Tak, zamknij ankietę",
     "confirm_reopen": "Tak, otwórz ponownie ankietę",
     "confirm_delete": "Tak, usuń ankietę",
+    "confirm_save": "Tak, zapisz ankietę",
+    "confirm_create": "Tak, utwórz ankietę",
+    "confirm_exit": "Tak, wyjdź",
     "go_to_message": "Idź do wiadomości",
     "go_to_page": "Idź do strony",
+    "view_on_dashboard": "Zobacz w panelu sterowania",
+    "view_poll": "Wyświetl ankietę",
     "remove_all_votes": "Wycofaj wszystkie swoje głosy",
     "remove_vote": "Wycofaj ten głos",
     "manage_votes": "Zarządzaj swoimi głosami",
     "export_json": "Eksportuj jako JSON",
-    "export_csv": "Eksportuj jako CSV"
+    "export_csv": "Eksportuj jako CSV",
+    "question": "Pytanie",
+    "answers": "Opcje",
+    "description": "Opis",
+    "type": "Typ",
+    "time": "Czas",
+    "image": "Zdjęcie",
+    "channel": "Kanał",
+    "embed_colors": "Kolory Embed",
+    "button_color": "Kolory przycisków",
+    "maxchoices": "Dozwolonych głosów",
+    "allowedroles": "Dozwolone role",
+    "allowedroles_clear": "Wyczyść dozwolone role",
+    "allowvoteremove": "Dopuść wycofywanie głosów",
+    "answer_new": "Dodaj nową opcję"
   },
   "permissions": {
     "add_reactions": "Dodawanie reakcji",
