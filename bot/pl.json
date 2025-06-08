@@ -430,10 +430,10 @@
         "users_other": "od {{count}} użytkowników"
       },
       "winner": {
-        "content": "Ankieta użytkownika {{- user}} **{{- question}}** została zamknięta.",
+        "content": "Ankieta **{{- question}}** użytkownika {{- user}} została zamknięta.",
         "text": {
-          "no_winner": "Nie wyłoniono zwycięskiej opcji",
-          "tied": "Remis",
+          "no_winner": "Nie oddano żadnych głosów",
+          "tied": "Zakończyła się remisem",
           "winner": "Zwycięska opcja"
         }
       },
@@ -458,7 +458,7 @@
           "participants_one": "{{count}} użytkownik",
           "participants_other": "{{count}} użytkowników",
           "votes_one": "{{count}} głos",
-          "votes_other": "{{count}} głosy(-ów)"
+          "votes_other": "{{count}} głosy(-ów)",
           "username_asc": "Nazwa użytkownika (rosnąco)",
           "username_desc": "Nazwa użytkownika (malejąco)",
           "voted_at_asc": "Zagłosowano na (rosnąco)",
@@ -798,7 +798,7 @@
     "poll_id": "ID ankiety: {{id}}",
     "poll_type": "Typ: {{type}} ({{votingType}})",
     "error_id": "Error ID: {{id}}",
-    "pages": "Strona {{page}} z {{pages}}"
+    "pages": "Strona {{page}} z {{pages}}",
     "edited": "Edytowano"
   },
   "errors": {
