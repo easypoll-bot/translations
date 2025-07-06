@@ -313,7 +313,7 @@
       }
     },
     "unblock": {
-      "description": "Bir kullanıcının bu sunucuda botla etkileşimini kaldır.",
+      "description": "Bu sunucuda bot ile etkileşim kurması engellenen bir kullanıcının engelini kaldır.",
       "options": {
         "user": {
           "description": "Engeli kaldırılacak kullanıcı."
