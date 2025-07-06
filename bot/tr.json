@@ -1,7 +1,7 @@
 {
   "meta": {
     "locale": "tr",
-    "name": "Türkçe",
+    "name": "Turkish",
     "name_native": "Türkçe",
     "emoji_unicode": "🇹🇷"
   },
@@ -798,7 +798,7 @@
     "poll_id": "Anket Kimliği: {{id}}",
     "poll_type": "Tür: {{type}} ({{votingType}})",
     "error_id": "Hata Kimliği: {{id}}",
-    "pages": "Sayfa {{page}} / {{pages}}",
+    "pages": "Sayfa {{page}}/{{pages}}",
     "edited": "Düzenlendi"
   },
   "errors": {
@@ -994,19 +994,19 @@
   },
   "permissions": {
     "add_reactions": "Tepki Ekle",
-    "view_audit_log": "Denetim Günlüğünü Görüntüle",
+    "view_audit_log": "Denetim Kaydını Görüntüle",
     "view_channel": "Kanalları Görüntüle",
     "send_messages": "Mesaj Gönder",
     "manage_messages": "Mesajları Yönet",
     "manage_guild": "Sunucuyu Yönet",
-    "embed_links": "Bağlantıları Göm",
+    "embed_links": "Bağlantı Yerleştir",
     "attach_files": "Dosya Ekle",
     "read_message_history": "Mesaj Geçmişini Oku",
     "mention_everyone": "Herkese Bahset",
-    "use_external_emojis": "Harici Emojileri Kullan",
-    "manage_webhooks": "Webhookları Yönet",
-    "manage_threads": "Konuları Yönet",
-    "create_public_threads": "Herkese Açık Konular Oluştur",
-    "send_messages_in_threads": "Konularda Mesaj Gönder"
+    "use_external_emojis": "Harici Emoji Kullan",
+    "manage_webhooks": "Webhook'ları Yönet",
+    "manage_threads": "Alt Başlıkları Yönet",
+    "create_public_threads": "Herkese Açık Alt Başlıklar Oluştur",
+    "send_messages_in_threads": "Alt Başlıklarda Mesajlar Gönder"
   }
 }
