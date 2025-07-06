@@ -1,0 +1,1012 @@
+{
+  "meta": {
+    "locale": "tr",
+    "name": "Turkish",
+    "name_native": "Türkçe",
+    "emoji_unicode": "🇹🇷"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Bir anketi kapat.",
+      "options": {
+        "id": {
+          "description": "Kapatılacak anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Mevcut bir anketi kopyala.",
+      "options": {
+        "id": {
+          "description": "Kopyalanacak anketin veya mesajın kimliği."
+        },
+        "channel": {
+          "description": "Anketin kopyalanacağı kanal."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Bir anketi tamamen sil.",
+      "options": {
+        "id": {
+          "description": "Silinecek anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Mevcut bir anketi değiştir.",
+      "options": {
+        "id": {
+          "description": "Değiştirilecek anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Bir anketin sonuçlarını dışa aktar.",
+      "options": {
+        "id": {
+          "description": "Dışa aktarılacak anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Mevcut sunucudaki tüm anketlerin bir listesini göster.",
+      "options": {
+        "status": {
+          "description": "Anketler hangi durumda olmalı?",
+          "choices": {
+            "all": "Tümü",
+            "open": "Açık",
+            "running": "Devam Ediyor",
+            "closed": "Kapalı"
+          }
+        },
+        "channel": {
+          "description": "Anketler hangi kanalda olmalı?"
+        },
+        "user": {
+          "description": "Anketler hangi kullanıcıdan olmalı?"
+        }
+      }
+    },
+    "poll": {
+      "description": "Normal bir anket oluştur.",
+      "options": {
+        "question": {
+          "description": "Anketin sorusu nedir?"
+        },
+        "type": {
+          "description": "Ne tür bir anket oluşturulmalı?",
+          "choices": {
+            "normal-buttons": "Normal (Butonlar)",
+            "normal-selectmenu": "Normal (Seçim Menüsü)",
+            "anonymous-buttons": "Anonim (Butonlar)",
+            "anonymous-selectmenu": "Anonim (Seçim Menüsü)",
+            "hidden-buttons": "Gizli (Butonlar)",
+            "hidden-selectmenu": "Gizli (Seçim Menüsü)"
+          }
+        },
+        "maxchoices": {
+          "description": "Her kullanıcı kaç cevap seçebilir? (Varsayılan: 1)"
+        },
+        "text": {
+          "description": "Anketin üzerinde hangi metin görünmeli?"
+        },
+        "allowedrole": {
+          "description": "Hangi rolün oy kullanmasına izin veriliyor? (Varsayılan: Herkes)"
+        },
+        "answer": {
+          "description": "Cevap {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Anket oluşturucu ile daha karmaşık bir anket oluştur.",
+      "options": {
+        "answer": {
+          "description": "Cevap {{id}}"
+        }
+      }
+    },
+    "pollresult": {
+      "description": "Kapanmış bir anketin sonucunu tekrar yayınla.",
+      "options": {
+        "id": {
+          "description": "Sonucu yayınlanacak anketin veya mesajın kimliği."
+        },
+        "text": {
+          "description": "Yayınlanan anket sonucunun üzerinde hangi metin görünmeli?"
+        },
+        "channel": {
+          "description": "Sonucun yayınlanacağı kanal."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Halihazırda kapanmış bir anketi tekrar aç.",
+      "options": {
+        "id": {
+          "description": "Tekrar açılacak anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Bir anketi belirli aralıklarla tekrarla.",
+      "options": {
+        "id": {
+          "description": "Tekrarlanacak anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Tüm bilgi ve eylemleriyle belirli bir anketi göster.",
+      "options": {
+        "id": {
+          "description": "Gösterilecek anketin veya mesajın kimliği."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Zaman tabanlı bir anket oluştur.",
+      "options": {
+        "question": {
+          "description": "Anketin sorusu nedir?"
+        },
+        "time": {
+          "description": "Anket ne kadar süreyle çalışmalı?"
+        },
+        "type": {
+          "description": "Ne tür bir anket oluşturulmalı?",
+          "choices": {
+            "normal-buttons": "Normal (Butonlar)",
+            "normal-selectmenu": "Normal (Seçim Menüsü)",
+            "anonymous-buttons": "Anonim (Butonlar)",
+            "anonymous-selectmenu": "Anonim (Seçim Menüsü)",
+            "hidden-buttons": "Gizli (Butonlar)",
+            "hidden-selectmenu": "Gizli (Seçim Menüsü)"
+          }
+        },
+        "maxchoices": {
+          "description": "Her kullanıcı kaç cevap seçebilir? (Varsayılan: 1)"
+        },
+        "text": {
+          "description": "Anketin üzerinde hangi metin görünmeli?"
+        },
+        "allowedrole": {
+          "description": "Hangi rolün oy kullanmasına izin veriliyor? (Varsayılan: Herkes)"
+        },
+        "answer": {
+          "description": "Cevap {{id}}"
+        }
+      }
+    },
+    "block": {
+      "description": "Bir kullanıcının bu sunucuda botla etkileşimini engelle.",
+      "options": {
+        "user": {
+          "description": "Engellenecek kullanıcı."
+        },
+        "reason": {
+          "description": "Kullanıcıyı engellemek için herkese açık neden."
+        },
+        "time": {
+          "description": "Kullanıcının engellenmesi gereken süre."
+        }
+      }
+    },
+    "debug": {
+      "description": "Sunucu izinlerini ve bazı yaygın sorunları kontrol et.",
+      "options": {
+        "channel": {
+          "description": "Hata ayıklanacak kanal. (Varsayılan: Mevcut kanal)"
+        }
+      }
+    },
+    "help": {
+      "description": "Mevcut komutlar hakkında yardım ve bilgi al."
+    },
+    "invite": {
+      "description": "Botu kendi sunucunuza eklemek için bir bağlantı alın."
+    },
+    "listblocks": {
+      "description": "Mevcut sunucudaki tüm engellenen kullanıcıların bir listesini göster."
+    },
+    "premium": {
+      "description": "Bu sunucunun mevcut premium durumunu kontrol et."
+    },
+    "settings": {
+      "description": "Bu sunucunun ayarlarını değiştir.",
+      "subcommands": {
+        "colors": {
+          "description": "Bu sunucunun varsayılan renklerini değiştir.",
+          "subcommands": {
+            "embeds": {
+              "description": "Gömülü mesajların varsayılan renklerini değiştir.",
+              "options": {
+                "state": {
+                  "description": "Gömülü mesajların durumu.",
+                  "choices": {
+                    "open": "Açık",
+                    "closed": "Kapalı",
+                    "running": "Devam Ediyor",
+                    "result": "Sonuç"
+                  }
+                },
+                "color": {
+                  "description": "Gömülü mesajların rengi."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Butonların varsayılan renklerini değiştir.",
+              "options": {
+                "color": {
+                  "description": "Butonların rengi.",
+                  "choices": {
+                    "primary": "Birincil (Mor-Mavi)",
+                    "secondary": "İkincil (Gri)",
+                    "success": "Başarılı (Yeşil)",
+                    "danger": "Tehlikeli (Kırmızı)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Etkinliklerin ayarlarını değiştir.",
+          "options": {
+            "setting": {
+              "description": "Hangi ayar değiştirilmeli?",
+              "choices": {
+                "announce_winner_on_poll_auto_close": "Anket otomatik kapatıldığında kazananı duyur",
+                "remove_votes_on_ban": "Bir kullanıcı yasaklandığında aktif oyları kaldır",
+                "remove_votes_on_kick": "Bir kullanıcı atıldığında aktif oyları kaldır",
+                "remove_votes_on_leave": "Bir kullanıcı ayrıldığında aktif oyları kaldır"
+              }
+            },
+            "status": {
+              "description": "Ayar hangi duruma değiştirilmeli?",
+              "choices": {
+                "enable": "Etkinleştir",
+                "disable": "Devre Dışı Bırak"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "Bu sunucunun varsayılan emojilerini değiştir."
+        },
+        "language": {
+          "description": "Bu sunucunun dilini değiştir."
+        },
+        "role-weight": {
+          "description": "Bir rolün oy ağırlığını değiştir.",
+          "options": {
+            "role": {
+              "description": "Ağırlığı değiştirilecek rol."
+            },
+            "weight": {
+              "description": "Rolün ağırlığı."
+            }
+          }
+        },
+        "threads": {
+          "description": "Konuların ayarlarını değiştir.",
+          "options": {
+            "setting": {
+              "description": "Hangi ayar değiştirilmeli?",
+              "choices": {
+                "create_thread_with_poll": "Yeni bir anket oluşturulduğunda bir konu oluştur",
+                "lock_and_unlock_thread_with_poll": "İlgili anket kapatıldığında/tekrar açıldığında bir konuyu kilitle/kilidi aç"
+              }
+            },
+            "status": {
+              "description": "Ayar hangi duruma değiştirilmeli?",
+              "choices": {
+                "enable": "Etkinleştir",
+                "disable": "Devre Dışı Bırak"
+              }
+            }
+          }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Bu sunucuda bot ile etkileşim kurması engellenen bir kullanıcının engelini kaldır.",
+      "options": {
+        "user": {
+          "description": "Engeli kaldırılacak kullanıcı."
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Kapat"
+    },
+    "details": {
+      "name": "Detaylar"
+    },
+    "edit": {
+      "name": "Düzenle"
+    },
+    "participants": {
+      "name": "Katılımcılar"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Sayfaya Git",
+      "components": {
+        "page_number": {
+          "label": "Sayfa Numarası",
+          "placeholder": "Gitmek istediğiniz sayfa numarasını giriniz..."
+        }
+      }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Anket Oluştur",
+        "edit": "Anketi Düzenle"
+      },
+      "components": {
+        "question": {
+          "label": "Soru",
+          "placeholder": "Anketin sorusunu giriniz..."
+        },
+        "answer": {
+          "label": "Cevap Metni",
+          "placeholder": "Cevabın metnini giriniz..."
+        },
+        "description": {
+          "label": "Açıklama",
+          "placeholder": "Anketin açıklamasını giriniz..."
+        },
+        "time": {
+          "label": "Süre",
+          "placeholder": "Anketin ne kadar süreyle çalışması gerektiğini giriniz... Sınırsız süre için boş bırakın."
+        },
+        "image": {
+          "label": "Görsel URL'si",
+          "placeholder": "Anketin görsel URL'sini giriniz..."
+        },
+        "colors": {
+          "open": {
+            "label": "Açık Renk",
+            "placeholder": "Açık rengin adını veya hex kodunu giriniz..."
+          },
+          "closed": {
+            "label": "Kapalı Renk",
+            "placeholder": "Kapalı rengin adını veya hex kodunu giriniz..."
+          },
+          "running": {
+            "label": "Devam Eden Renk",
+            "placeholder": "Devam eden rengin adını veya hex kodunu giriniz..."
+          },
+          "result": {
+            "label": "Sonuç Rengi",
+            "placeholder": "Sonuç renginin adını veya hex kodunu giriniz..."
+          }
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Anket oluşturuldu",
+        "description": "Anket başarıyla oluşturuldu."
+      },
+      "status": {
+        "open": "Açık",
+        "running": "Devam Ediyor",
+        "closed": "Kapalı"
+      },
+      "reactions": {
+        "yes": "Evet",
+        "no": "Hayır"
+      },
+      "select": {
+        "placeholder_one": "Oy vermek için bir seçenek seçin...",
+        "placeholder_other": "Oy vermek için bir veya daha fazla seçenek seçin...",
+        "votes_one": "{{count}} oy",
+        "votes_other": "{{count}} oy"
+      },
+      "description": {
+        "question": "Soru",
+        "choices": "Seçenekler",
+        "result": "Sonuç",
+        "final_result": "Nihai Sonuç",
+        "settings": "Ayarlar"
+      },
+      "result": {
+        "title": "Anket Sonucu",
+        "votes_one": "{{count}} oy",
+        "votes_other": "{{count}} oy",
+        "votes_weighted_one": "{{count}} ağırlıklı oy",
+        "votes_weighted_other": "{{count}} ağırlıklı oy",
+        "users_one": "{{count}} kullanıcıdan",
+        "users_other": "{{count}} kullanıcıdan"
+      },
+      "winner": {
+        "content": "{{- user}}'ın anketi **{{- question}}** kapandı.",
+        "text": {
+          "no_winner": "Kazanan yoktu",
+          "tied": "Sonuçlar berabere kaldı",
+          "winner": "Kazanan cevap"
+        }
+      },
+      "settings": {
+        "ends": "Şu tarihte sona eriyor: {{- timestamp}}",
+        "ended": "Anket zaten sona erdi",
+        "closed": "Başka oy kullanılmasına izin verilmiyor",
+        "anonymous": "Anonim Anket",
+        "hidden": "Gizli Anket",
+        "maxchoices_one": "{{count}} seçeneğe izin verildi",
+        "maxchoices_other": "{{count}} seçeneğe izin verildi",
+        "removevotesnotallowed": "Oyların kaldırılmasına izin verilmiyor",
+        "allowedroles": "İzin verilen roller"
+      },
+      "participants": {
+        "title": "Katılımcılar",
+        "votes": "Bu seçenek için oy veren kullanıcılar:",
+        "no_votes": "Bu seçenek için hiçbir kullanıcı oy vermedi.",
+        "weight": "Ağırlık: {{weight}}",
+        "select": {
+          "placeholder": "Katılımcıları görmek için bir seçenek seçin...",
+          "participants_one": "{{count}} katılımcı",
+          "participants_other": "{{count}} katılımcı",
+          "votes_one": "{{count}} oy",
+          "votes_other": "{{count}} oy",
+          "username_asc": "Kullanıcı Adı (Artan)",
+          "username_desc": "Kullanıcı Adı (Azalan)",
+          "voted_at_asc": "Oy Kullanma Zamanı (Artan)",
+          "voted_at_desc": "Oy Kullanma Zamanı (Azalan)",
+          "weight_asc": "Ağırlık (Artan)",
+          "weight_desc": "Ağırlık (Azalan)"
+        }
+      },
+      "info": {
+        "title": "Anket Bilgisi",
+        "fields": {
+          "id": "Kimlik",
+          "status": "Durum",
+          "creator": "Oluşturan",
+          "created_at": "Oluşturulma Tarihi",
+          "ends_at": "Bitiş Tarihi",
+          "closed_at": "Kapanış Tarihi",
+          "question": "Soru",
+          "choices": "Seçenekler",
+          "result": "Sonuç",
+          "settings": "Ayarlar",
+          "message": "Mesaj"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Oy eklendi",
+        "description": "{{- option}} seçeneğine başarıyla oy verdiniz.",
+        "description2_one": "**{{count}} oyunuz kaldı**.",
+        "description2_other": "**{{count}} oyunuz kaldı**."
+      },
+      "added_selected": {
+        "title": "Oylar eklendi",
+        "description1": "Aşağıdaki seçeneklere başarıyla oy verdiniz:",
+        "description2_one": "**{{count}} oyunuz kaldı**.",
+        "description2_other": "**{{count}} oyunuz kaldı**."
+      },
+      "removed": {
+        "title": "Oy kaldırıldı",
+        "description": "{{- option}} seçeneği için oyunuzu başarıyla kaldırdınız."
+      },
+      "removed_selected": {
+        "title": "Oylar kaldırıldı",
+        "description": "Aşağıdaki seçenekler için oylarınızı başarıyla kaldırdınız:"
+      },
+      "removed_all": {
+        "title": "Tüm oylar kaldırıldı",
+        "description": "Bu anket için tüm oylarınızı başarıyla kaldırdınız."
+      },
+      "manage": {
+        "title": "Oylarınızı yönetin",
+        "description": "Oylarınızı anketten kaldırmak için seçenekleri seçebilirsiniz:"
+      },
+      "select": {
+        "placeholder": "Oylarınızı kaldırmak için bir veya daha fazla seçenek seçin..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Anketi kapat",
+          "description1": "Bu anketi kapatmak istediğinizden emin misiniz?",
+          "description2": "Anket Kimliği: {{id}}",
+          "description3": "Anket Sorusu: {{question}}"
+        },
+        "success": {
+          "title": "Anket kapatıldı",
+          "description": "Anket başarıyla kapatıldı.",
+          "error": "Ancak orijinal mesaj güncellenemedi.",
+          "error_missingaccess": "Ancak orijinal mesaj güncellenemedi çünkü botun kanala erişim izinleri yok.",
+          "error_unknownchannel": "Ancak orijinal mesaj güncellenemedi çünkü kanal bulunamadı.",
+          "error_unknownmessage": "Ancak orijinal mesaj güncellenemedi çünkü mesaj bulunamadı."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Anketi Kopyala",
+          "description": "Aynı ayarlarla yeni bir anket oluşturmak için aşağıdaki komutu kopyalayın ve sohbete yapıştırın."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Anketi sil",
+          "description1": "Bu anketi kalıcı olarak silmek istediğinizden emin misiniz?",
+          "description2": "Anket Kimliği: {{id}}",
+          "description3": "Anket Sorusu: {{question}}"
+        },
+        "success": {
+          "title": "Anket silindi",
+          "description": "Anket başarıyla silindi.",
+          "error": "Ancak orijinal mesaj silinemedi.",
+          "error_missingaccess": "Ancak orijinal mesaj silinemedi çünkü botun kanala erişim izinleri yok.",
+          "error_unknownchannel": "Ancak orijinal mesaj silinemedi çünkü kanal bulunamadı.",
+          "error_unknownmessage": "Ancak orijinal mesaj silinemedi çünkü mesaj bulunamadı."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Anketi dışa aktar",
+          "description": "Anketi bir dosyaya dışa aktarabilir ve botun dışında kullanabilirsiniz.\nLütfen anketi dışa aktarmak istediğiniz formatı seçin."
+        },
+        "success": {
+          "title": "Anket dışa aktarıldı",
+          "description": "Anket başarıyla dışa aktarıldı ve bu mesaja eklendi.\nŞimdi ekli dosyayı indirebilir ve botun dışında kullanabilirsiniz."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Anketler Listesi"
+        }
+      },
+      "select": {
+        "placeholder": "Gösterilecek bir anket seçin..."
+      }
+    },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Cevaplar",
+          "description": "Değiştirmek istediğiniz cevabı seçin veya yeni bir tane ekleyin:"
+        },
+        "answers_update": {
+          "title": "Cevabı Güncelle",
+          "description": "Bu cevabı güncellemek için bir eylem seçin."
+        },
+        "type": {
+          "title": "Anket Türü",
+          "description": "Anketin türünü seçin. Bazı durumlarda anket türü değiştirilemez."
+        },
+        "channel": {
+          "title": "Kanal",
+          "description": "Anketin yayınlanacağı kanalı seçin."
+        },
+        "buttoncolor": {
+          "title": "Buton Rengi",
+          "description": "Anket için butonların rengini seçin."
+        },
+        "maxchoices": {
+          "title": "Maksimum Seçenek",
+          "description": "Her kullanıcının seçebileceği maksimum seçenek sayısını seçin."
+        },
+        "allowedroles": {
+          "title": "İzin Verilen Roller",
+          "description": "Oy kullanmasına izin verilen rolleri seçin.\nBu seçim, halihazırda izin verilen tüm rollerin üzerine yazılacaktır, bu nedenle onları tutmak istiyorsanız halihazırda izin verilen rolleri tekrar seçin."
+        },
+        "allowvoteremove": {
+          "title": "Oy Kaldırmaya İzin Ver",
+          "description": "Kullanıcıların oylarını kaldırmasına izin verilip verilmeyeceğini seçin.",
+          "select": {
+            "yes": "Evet",
+            "no": "Hayır"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Anket oluştur",
+            "description": "Bu anketi oluşturmak istediğinizden emin misiniz?"
+          },
+          "success": {
+            "title": "Anket oluşturuldu",
+            "description": "Anket başarıyla oluşturuldu."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Anketi kaydet",
+            "description": "Bu anketi kaydetmek istediğinizden emin misiniz?",
+            "description2": "Anket Kimliği: {{id}}",
+            "description3": "Aşağıdaki özellikler değiştirilecektir:"
+          },
+          "success": {
+            "title": "Anket kaydedildi",
+            "description": "Anket başarıyla kaydedildi."
+          },
+          "changes": {
+            "added": "Eklendi",
+            "changed": "Değiştirildi",
+            "removed": "Kaldırıldı"
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Çıkış",
+            "description": "Menüden çıkmak ve tüm değişiklikleri atmak istediğinizden emin misiniz?"
+          }
+        }
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Anket sonucu yayınlandı",
+          "description": "Anket sonucu {{- channel}} kanalında başarıyla yayınlandı."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Anketi tekrar aç",
+          "description1": "Bu anketi tekrar açmak istediğinizden emin misiniz?",
+          "description2": "Anket Kimliği: {{id}}",
+          "description3": "Anket Sorusu: {{question}}"
+        },
+        "success": {
+          "title": "Anket tekrar açıldı",
+          "description": "Anket başarıyla tekrar açıldı."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Kullanıcı engellendi",
+          "description": "Kullanıcı, bu sunucuda botla etkileşimden başarıyla engellendi."
+        }
+      }
+    },
+    "debug": {
+      "content": "Destek ekibimizden yardıma ihtiyacınız olursa, lütfen aşağıdaki bağlantıyı onlarla paylaşın:",
+      "embeds": {
+        "success": {
+          "title": "Hata Ayıklama",
+          "fields": {
+            "guild_information": {
+              "title": "Sunucu Bilgileri",
+              "guild_id": "Sunucu Kimliği",
+              "guild_name": "Sunucu Adı",
+              "guild_language": "Sunucu Dili",
+              "guild_preferred_locale": "Sunucu Tercih Edilen Yerel Ayar",
+              "channel_id": "Kanal Kimliği",
+              "channel_name": "Kanal Adı"
+            },
+            "user_information": {
+              "title": "Kullanıcı Bilgileri",
+              "user_id": "Kullanıcı Kimliği",
+              "user_name": "Kullanıcı Adı",
+              "user_locale": "Kullanıcı Yerel Ayarı",
+              "guild_owner": "Sunucu Sahibi",
+              "permissions": "İzinler"
+            },
+            "bot_information": {
+              "title": "Bot Bilgileri",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "Uygulama Sunucu İzinleri"
+            },
+            "channel_permissions": {
+              "title": "Kanal İzinleri ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Rol Ağırlıkları"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "EasyPoll Yardım",
+          "fields": {
+            "poll": "Anket Komutları",
+            "miscellaneous": "Çeşitli Komutlar",
+            "settings": "Ayarlar Komutları"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "EasyPoll'u sunucunuza davet edin!",
+          "description": "EasyPoll'u sunucunuza davet etmek için aşağıdaki düğmeye tıklayın."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Engellenen Kullanıcılar Listesi",
+          "no_votes": "Bu sunucuda engellenen kullanıcı yok."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "Bu sunucuda premium yok!",
+          "description": "Daha fazla özelliğin kilidini açmak için premium alın!"
+        },
+        "premium": {
+          "title": "Bu sunucuda premium var!",
+          "fields": {
+            "premium_until": "Premium bitiş tarihi"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Dili değiştir",
+            "text": "Burada botun bu sunucudaki dilini değiştirebilirsiniz.\n\nLütfen bot için bu sunucuda bir dil seçin:",
+            "select": {
+              "placeholder": "Bir dil seçin..."
+            }
+          },
+          "changed": {
+            "title": "Dil değiştirildi",
+            "description": "Botun bu sunucudaki dili {{- language}} olarak değiştirildi."
+          }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Kullanıcının engeli kaldırıldı",
+          "description": "Kullanıcının bu sunucuda botla etkileşimi başarıyla kaldırıldı."
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "Anket Kimliği: {{id}}",
+    "poll_type": "Tür: {{type}} ({{votingType}})",
+    "error_id": "Hata Kimliği: {{id}}",
+    "pages": "Sayfa {{page}}/{{pages}}",
+    "edited": "Düzenlendi"
+  },
+  "errors": {
+    "default": {
+      "title": "İşlem başarısız oldu!",
+      "description": "Bir hata oluştu ama nedenini size söyleyemiyorum.\nDaha fazla yardım için lütfen destek ekibine başvurun."
+    },
+    "guild_command": {
+      "title": "Sunucu komutu!",
+      "description": "Bu komut sadece sunucularda kullanılabilir."
+    },
+    "guild_communication_disabled": {
+      "title": "Bot zaman aşımına uğradı!",
+      "description": "Bot bu sunucuda zaman aşımına uğradı ve bu sunucuda iletişim kuramıyor.\nBotu tekrar kullanmak için zaman aşımını kaldırın."
+    },
+    "missing_bot_permissions": {
+      "title": "Eksik izinler!",
+      "description1": "Botun aşağıdaki izinleri eksik:",
+      "description2": "Lütfen botun gerekli tüm izinlere sahip olduğundan emin olun."
+    },
+    "missing_user_permissions": {
+      "title": "Eksik izinler!",
+      "description1": "Aşağıdaki izinler sizde eksik:",
+      "description2": "Gerekli izinler olmadan bu eylemi gerçekleştiremezsiniz."
+    },
+    "premium_required": {
+      "title": "Premium gerekli!",
+      "description": "Bu özellik sadece premium sunucular için mevcuttur. Bu özelliği kullanmak için lütfen premium alın."
+    },
+    "invalid_channel_type": {
+      "title": "Geçersiz kanal türü!",
+      "description": "Seçilen kanal bu eylem için izin verilen bir kanal türü değil."
+    },
+    "invalid_color": {
+      "title": "Geçersiz renk!",
+      "description": "Girilen renk geçersiz. Lütfen rengin doğru formatta olduğundan emin olun."
+    },
+    "invalid_image": {
+      "title": "Geçersiz görsel!",
+      "description": "Girilen görsel URL'si geçersiz. Lütfen görsel URL'sinin geçerli olduğundan ve görselin doğru formatta olduğundan emin olun."
+    },
+    "invalid_page": {
+      "title": "Geçersiz sayfa!",
+      "description": "Girilen sayfa numarası geçersiz. Lütfen sayfa numarasının doğru formatta ve geçerli aralıkta olduğundan emin olun."
+    },
+    "invalid_time": {
+      "title": "Geçersiz süre!",
+      "description": "Girilen süre geçersiz. Lütfen sürenin doğru formatta olduğundan emin olun."
+    },
+    "max_time": {
+      "title": "Maksimum süreye ulaşıldı!",
+      "description": "Maksimum süre olan {{maxtime}}'a ulaştınız.\nLütfen girilen sürenin izin verilen maksimum süreden uzun olmadığından emin olun.",
+      "description_upgrade": "Premium'a yükselterek maksimum süreyi {{maxtime}}'a çıkarabilirsiniz."
+    },
+    "unknown_emoji": {
+      "title": "Bilinmeyen emoji!",
+      "description": "Bilinmeyen bir emoji belirttiniz!\nSadece EasyPoll'un davet edildiği sunuculardaki emojileri kullanabilirsiniz. Lütfen {{- emoji}}'nin **resmi bir Discord** emojisi veya **bu sunucudan** bir emoji olduğundan emin olun."
+    },
+    "restricted": {
+      "title": "Bu eylemi gerçekleştiremezsiniz!",
+      "description": {
+        "user_global": "Bu eylemi kullanmanız küresel olarak kısıtlanmıştır.",
+        "user_local": "Bu sunucuda bu eylemi kullanmanız kısıtlanmıştır.",
+        "guild": "Bu sunucunun bu eylemi kullanması kısıtlanmıştır."
+      },
+      "fields": {
+        "reason": "Neden",
+        "expires_at": "Şu tarihte sona eriyor"
+      }
+    },
+    "already_restricted": {
+      "title": "Zaten kısıtlı!",
+      "description": "Seçilen kullanıcı zaten botu kullanmaktan kısıtlandı."
+    },
+    "already_voted": {
+      "title": "Bu seçenek için zaten oy kullandınız!",
+      "description": "Bu seçenek için zaten oy kullandınız ve aynı seçenek için tekrar oy kullanamazsınız."
+    },
+    "max_choices_reached": {
+      "title": "Maksimum seçenek sayısına ulaşıldı!",
+      "description": "Bu anket için maksimum seçenek sayısına ulaştınız. Diğer seçeneklere oy vermek için bazı oylarınızı kaldırabilirsiniz."
+    },
+    "not_allowed_role": {
+      "title": "Bu anket için sadece belirli rollere izin verildi!",
+      "description": "İzin verilen rollerden hiçbirine sahip olmadığınız için bu anket için oy kullanamazsınız."
+    },
+    "not_allowed_user": {
+      "title": "Kullanıcıya izin verilmiyor!",
+      "description": "Bu kullanıcıyı seçemezsiniz çünkü bunu yapmanıza izin verilmiyor."
+    },
+    "not_restricted": {
+      "title": "Kısıtlı değil!",
+      "description": "Seçilen kullanıcı botu kullanmaktan kısıtlı değil."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "Bu anket zaten kapatıldı!",
+        "description": "Bu anket zaten kapatıldığı için onunla etkileşim kuramazsınız."
+      },
+      "not_closed": {
+        "title": "Bu anket kapatılmadı!",
+        "description": "Anket kapatılmadığı için tekrar açılamadı."
+      },
+      "not_voted": {
+        "title": "Bu seçenek için oy kullanılmadı!",
+        "description": "Bu seçenek için oy kullanmadığınız için oyunuzu kaldıramazsınız."
+      },
+      "no_votes": {
+        "title": "Bu ankette hiç oy yok!",
+        "description": "Bu ankette herhangi bir seçenek için oy kullanmadınız."
+      },
+      "invalid_poll": {
+        "title": "Bu bir anket değil!",
+        "description_input": "Girilen kimlik bir anket değil. Lütfen doğru anket veya mesaj kimliğini girdiğinizden emin olun.",
+        "description_select": "Seçilen mesaj bir anket değil. Lütfen doğru anket mesajını seçtiğinizden emin olun."
+      },
+      "participants_not_available": {
+        "title": "Katılımcılar listesi mevcut değil!",
+        "description": "Katılımcılar listesi bu anket için mevcut değil."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Oy kaldırmaya izin verilmiyor!",
+        "description": "Oyları kaldırmaya izin verilmediği için bu anket için oyunuzu kaldıramazsınız."
+      },
+      "no_polls_found": {
+        "title": "Anket bulunamadı!",
+        "description": "Bu sunucuda aranan kriterlere uyan anket bulunamadı."
+      }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Anket kilitli!",
+        "description": "Anket şu anda kilitli ve değiştirilemez. Lütfen birkaç saniye sonra tekrar deneyin."
+      },
+      "validation": {
+        "title": "Doğrulama başarısız!",
+        "description": "Girilen değerler geçersiz. Lütfen tüm değerlerin doğru olduğundan emin olun ve tekrar deneyin."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Web Sitesi",
+    "dashboard": "Kontrol Paneli",
+    "invite": "Davet Et",
+    "support": "Destek",
+    "wiki": "Wiki",
+    "learn_more": "Daha Fazla Bilgi Edinin",
+    "premium": "Premium Al",
+    "troubleshooting": "Sorun Giderme",
+    "discord_helpcenter": "Discord Yardım Merkezi",
+    "vote": "Oy Ver",
+    "participants": "Katılımcılar",
+    "enable": "Etkinleştir",
+    "disable": "Devre Dışı Bırak",
+    "close": "Kapat",
+    "reopen": "Tekrar Aç",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "back": "Geri",
+    "save": "Kaydet",
+    "create": "Oluştur",
+    "exit": "Çıkış",
+    "cancel": "İptal",
+    "confirm_close": "Evet, anketi kapat",
+    "confirm_reopen": "Evet, anketi tekrar aç",
+    "confirm_delete": "Evet, anketi sil",
+    "confirm_save": "Evet, anketi kaydet",
+    "confirm_create": "Evet, anketi oluştur",
+    "confirm_exit": "Evet, ayrıl",
+    "go_to_message": "Mesaja git",
+    "go_to_page": "Sayfaya git",
+    "view_on_dashboard": "Kontrol Panelinde Görüntüle",
+    "view_poll": "Anketi Görüntüle",
+    "remove_all_votes": "Tüm oylarınızı kaldırın",
+    "remove_vote": "Bu oyu kaldır",
+    "manage_votes": "Oylarınızı yönetin",
+    "export_json": "JSON olarak dışa aktar",
+    "export_csv": "CSV olarak dışa aktar",
+    "question": "Soru",
+    "answers": "Cevaplar",
+    "description": "Açıklama",
+    "type": "Tür",
+    "time": "Süre",
+    "image": "Görsel",
+    "channel": "Kanal",
+    "embed_colors": "Gömülü Mesaj Renkleri",
+    "button_color": "Buton Rengi",
+    "maxchoices": "Maksimum Seçenek",
+    "allowedroles": "İzin verilen roller",
+    "allowedroles_clear": "İzin verilen rolleri temizle",
+    "allowvoteremove": "Oy Kaldırmaya İzin Ver",
+    "answer_new": "Yeni cevap ekle"
+  },
+  "permissions": {
+    "add_reactions": "Tepki Ekle",
+    "view_audit_log": "Denetim Kaydını Görüntüle",
+    "view_channel": "Kanalları Görüntüle",
+    "send_messages": "Mesaj Gönder",
+    "manage_messages": "Mesajları Yönet",
+    "manage_guild": "Sunucuyu Yönet",
+    "embed_links": "Bağlantı Yerleştir",
+    "attach_files": "Dosya Ekle",
+    "read_message_history": "Mesaj Geçmişini Oku",
+    "mention_everyone": "Herkesten Bahset",
+    "use_external_emojis": "Harici Emojileri Kullan",
+    "manage_webhooks": "Webhook'ları Yönet",
+    "manage_threads": "Alt Başlıkları Yönet",
+    "create_public_threads": "Herkese Açık Alt Başlıklar Oluştur",
+    "send_messages_in_threads": "Alt Başlıklarda Mesajlar Gönder"
+  }
+}
