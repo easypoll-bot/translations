@@ -750,7 +750,7 @@
       "embeds": {
         "list": {
           "title": "Lista zablokowanych użytkowników",
-          "no_votes": "Brak zablokowanych użytkowników na tym serwerze."
+          "no_blocks": "Brak zablokowanych użytkowników na tym serwerze."
         }
       }
     },
@@ -993,6 +993,7 @@
     "answer_new": "Dodaj nową opcję"
   },
   "permissions": {
+    "administrator": "Administrator",
     "add_reactions": "Dodawanie reakcji",
     "view_audit_log": "Wyświetlanie dziennika zdarzeń",
     "view_channel": "Wyświetlanie kanałów",

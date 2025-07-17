@@ -750,7 +750,7 @@
       "embeds": {
         "list": {
           "title": "Lista de usuarios bloqueados",
-          "no_votes": "Ningún usuario está bloqueado en este servidor."
+          "no_blocks": "Ningún usuario está bloqueado en este servidor."
         }
       }
     },
@@ -993,6 +993,7 @@
     "answer_new": "Agregar nueva respuesta"
   },
   "permissions": {
+    "administrator": "Administrador",
     "add_reactions": "Añadir reacciones",
     "view_audit_log": "Ver registro de auditoría",
     "view_channel": "Ver canales",

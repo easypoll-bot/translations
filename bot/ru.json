@@ -723,6 +723,7 @@
     "export_csv": "Экспортировать как CSV"
   },
   "permissions": {
+    "administrator": "Администратор",
     "add_reactions": "Добавить Реакции",
     "view_audit_log": "Посмотреть Журнал Аудита",
     "view_channel": "Посмотреть Каналы",

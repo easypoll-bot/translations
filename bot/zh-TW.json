@@ -717,6 +717,7 @@
     "export_csv": "以CSV格式導出"
   },
   "permissions": {
+    "administrator": "管理者",
     "add_reactions": "添加回應",
     "view_audit_log": "查看審核日誌",
     "view_channel": "查看頻道",

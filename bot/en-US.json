@@ -750,7 +750,7 @@
       "embeds": {
         "list": {
           "title": "Blocked Users List",
-          "no_votes": "No user is blocked on this server."
+          "no_blocks": "No user is blocked on this server."
         }
       }
     },
@@ -993,6 +993,7 @@
     "answer_new": "Add new answer"
   },
   "permissions": {
+    "administrator": "Administrator",
     "add_reactions": "Add Reactions",
     "view_audit_log": "View Audit Log",
     "view_channel": "View Channels",

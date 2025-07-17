@@ -750,7 +750,7 @@
       "embeds": {
         "list": {
           "title": "Engellenen Kullanıcılar Listesi",
-          "no_votes": "Bu sunucuda engellenen kullanıcı yok."
+          "no_blocks": "Bu sunucuda engellenen kullanıcı yok."
         }
       }
     },
@@ -993,6 +993,7 @@
     "answer_new": "Yeni cevap ekle"
   },
   "permissions": {
+    "administrator": "Yönetici",
     "add_reactions": "Tepki Ekle",
     "view_audit_log": "Denetim Kaydını Görüntüle",
     "view_channel": "Kanalları Görüntüle",

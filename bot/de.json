@@ -750,7 +750,7 @@
       "embeds": {
         "list": {
           "title": "Liste gesperrter Nutzer",
-          "no_votes": "Kein Nutzer ist auf diesem Server gesperrt."
+          "no_blocks": "Kein Nutzer ist auf diesem Server gesperrt."
         }
       }
     },
@@ -993,6 +993,7 @@
     "answer_new": "Neue Antwort hinzufügen"
   },
   "permissions": {
+    "administrator": "Administrator",
     "add_reactions": "Reaktionen hinzufügen",
     "view_audit_log": "Audit-Log einsehen",
     "view_channel": "Kanäle ansehen",
