@@ -153,7 +153,7 @@
           "description": "Qual è la domanda del sondaggio?"
         },
         "time": {
-          "description": "Quanto dovrebbe durare il sondaggio?"
+          "description": "Quanto deve durare il sondaggio?"
         },
         "type": {
           "description": "Che tipo di sondaggio deve essere creato?",
@@ -599,7 +599,7 @@
         },
         "channel": {
           "title": "Canale",
-          "description": "Seleziona il canale in cui il sondaggio dovrebbe essere pubblicato."
+          "description": "Seleziona il canale in cui il sondaggio deve essere pubblicato."
         },
         "buttoncolor": {
           "title": "Colore del pulsante",
@@ -607,7 +607,7 @@
         },
         "maxchoices": {
           "title": "Scelte massime",
-          "description": "Seleziona il numero massimo di scelte che ogni utente può scegliere."
+          "description": "Seleziona il numero massimo di scelte che ogni utente può selezionare."
         },
         "allowedroles": {
           "title": "Ruoli consentiti",
