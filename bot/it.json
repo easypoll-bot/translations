@@ -374,19 +374,19 @@
         "colors": {
           "open": {
             "label": "Colore: Aperto",
-            "placeholder": "Inserisci il nome o il codice hex del colore quando il sondaggio è aperto..."
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio aperto..."
           },
           "closed": {
-            "label": "Closed Color",
-            "placeholder": "Inserisci il nome o il codice hex del colore quando il sondaggio è chiuso..."
+            "label": "Colore: Chiuso",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio chiuso..."
           },
           "running": {
-            "label": "Running Color",
-            "placeholder": "Inserisci il nome o il codice hex del colore quando il sondaggio è in esecuzione..."
+            "label": "Colore: In Corso",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio in esecuzione..."
           },
           "result": {
-            "label": "Result Color",
-            "placeholder": "Inserisci il nome o il codice hex del colore per il risultato..."
+            "label": "Colore: Risultato",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un risultato..."
           }
         }
       }
@@ -682,7 +682,7 @@
       "embeds": {
         "success": {
           "title": "Utente bloccato",
-          "description": "L'utente è stato bloccato correttamente dall'interazione con il bot su questo server."
+          "description": "All'utente è stata bloccata correttamente la possibilità di interagire con il bot su questo server."
         }
       }
     },
@@ -789,7 +789,7 @@
       "embeds": {
         "success": {
           "title": "Utente sbloccato",
-          "description": "L'utente è stato sbloccato con successo dall'interazione con il bot su questo server."
+          "description": "All'utente è stata sbloccata correttamente la possibilità di interagire con il bot su questo server."
         }
       }
     }
@@ -862,7 +862,7 @@
       "description": {
         "user_global": "Sei limitato a livello globale per l'uso di questa azione.",
         "user_local": "Sei limitato su questo server per l'uso di questa azione.",
-        "guild": "Questo server è limitato all'utilizzo di questa azione."
+        "guild": "Questo server limita l'uso di questa azione."
       },
       "fields": {
         "reason": "Motivo",
@@ -874,7 +874,7 @@
       "description": "L'utente selezionato è già limitato per l'uso del bot."
     },
     "already_voted": {
-      "title": "Già votato per questa opzione!",
+      "title": "Hai già votato per questa opzione!",
       "description": "Hai già votato per questa opzione e non puoi votare di nuovo per la stessa opzione."
     },
     "max_choices_reached": {
@@ -903,7 +903,7 @@
         "description": "Il sondaggio non può essere riaperto perché non è chiuso."
       },
       "not_voted": {
-        "title": "Non votato per questa opzione!",
+        "title": "Non hai votato per questa opzione!",
         "description": "Non puoi rimuovere il tuo voto per questa opzione perché non hai votato per questa opzione."
       },
       "no_votes": {
@@ -920,7 +920,7 @@
         "description": "L'elenco dei partecipanti non è disponibile per questo sondaggio."
       },
       "vote_remove_not_allowed": {
-        "title": "Rimuovi voto non consentito!",
+        "title": "Rimozione voto non consentita!",
         "description": "Non è possibile rimuovere il tuo voto per questo sondaggio perché non è consentito rimuovere i voti."
       },
       "no_polls_found": {
