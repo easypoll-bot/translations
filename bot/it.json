@@ -1,0 +1,1013 @@
+{
+  "meta": {
+    "locale": "it",
+    "name": "Italian",
+    "name_native": "Italiano",
+    "emoji_unicode": "🇮🇹"
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Chiudi un sondaggio.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da chiudere."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Copia un sondaggio esistente.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da copiare."
+        },
+        "channel": {
+          "description": "Il canale su cui copiare il sondaggio."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Cancella completamente un sondaggio.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da cancellare."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Modifica un sondaggio esistente.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da modificare."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Esporta i risultati del sondaggio.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da esportare."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Mostra una lista di tutti i sondaggi sul server corrente.",
+      "options": {
+        "status": {
+          "description": "Quale stato devono avere i sondaggi?",
+          "choices": {
+            "all": "Tutti",
+            "open": "Aperti",
+            "running": "In corso",
+            "closed": "Chiusi"
+          }
+        },
+        "channel": {
+          "description": "Su quale canale devono essere i sondaggi?"
+        },
+        "user": {
+          "description": "Quale utente deve aver creato i sondaggi?"
+        }
+      }
+    },
+    "poll": {
+      "description": "Crea un sondaggio normale.",
+      "options": {
+        "question": {
+          "description": "Qual è la domanda del sondaggio?"
+        },
+        "type": {
+          "description": "Che tipo di sondaggio deve essere creato?",
+          "choices": {
+            "normal-buttons": "Normale (Bottoni)",
+            "normal-selectmenu": "Normale (Menu a tendina)",
+            "anonymous-buttons": "Anonimo (Bottoni)",
+            "anonymous-selectmenu": "Anonimo (Menu a tendina)",
+            "hidden-buttons": "Nascosto (Bottoni)",
+            "hidden-selectmenu": "Nascosto (Menu a tendina)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quante risposte può scegliere ogni utente? (Predefinito: 1)"
+        },
+        "text": {
+          "description": "Quale testo deve apparire sopra il sondaggio?"
+        },
+        "allowedrole": {
+          "description": "Quali ruoli possono votare? (Predefinito: Tutti)"
+        },
+        "answer": {
+          "description": "Risposta {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Crea un sondaggio più complesso con il Poll-Builder.",
+      "options": {
+        "answer": {
+          "description": "Risposta {{id}}"
+        }
+      }
+    },
+    "pollresult": {
+      "description": "Pubblica ancora il risultato di un sondaggio chiuso.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio di cui pubblicare i risultati."
+        },
+        "text": {
+          "description": "Quale testo deve apparire sopra i risultati del sondaggio?"
+        },
+        "channel": {
+          "description": "Il canale su cui pubblicare i risultati."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Riapri un sondaggio già chiuso.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da riaprire."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Ripeti un sondaggio ogni certo intervallo di tempo.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da ripetere."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Mostra uno specifico sondaggio con tutte le sue informazioni ed azioni.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da mostrare."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Crea un sondaggio temporizzato.",
+      "options": {
+        "question": {
+          "description": "Qual è la domanda del sondaggio?"
+        },
+        "time": {
+          "description": "Quanto deve durare il sondaggio?"
+        },
+        "type": {
+          "description": "Che tipo di sondaggio deve essere creato?",
+          "choices": {
+            "normal-buttons": "Normale (Bottoni)",
+            "normal-selectmenu": "Normale (Menu a tendina)",
+            "anonymous-buttons": "Anonimo (Bottoni)",
+            "anonymous-selectmenu": "Anonimo (Menu a tendina)",
+            "hidden-buttons": "Nascosto (Bottoni)",
+            "hidden-selectmenu": "Nascosto (Menu a tendina)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quante risposte può scegliere ogni utente? (Predefinito: 1)"
+        },
+        "text": {
+          "description": "Quale testo deve apparire sopra il sondaggio?"
+        },
+        "allowedrole": {
+          "description": "Quali ruoli possono votare? (Predefinito: Tutti)"
+        },
+        "answer": {
+          "description": "Risposta {{id}}"
+        }
+      }
+    },
+    "block": {
+      "description": "Blocca la possibilita di interagire con il bot ad un utente.",
+      "options": {
+        "user": {
+          "description": "L'utente da bloccare."
+        },
+        "reason": {
+          "description": "La ragione pubblica per bloccare l'utente."
+        },
+        "time": {
+          "description": "Il tempo per il quale l'utente deve essere bloccato."
+        }
+      }
+    },
+    "debug": {
+      "description": "Controlla i permessi del server ed i problemi comuni.",
+      "options": {
+        "channel": {
+          "description": "Canale su cui debuggare. (Predefinito: Canale corrente)"
+        }
+      }
+    },
+    "help": {
+      "description": "Ricevi assistenza ed informazioni sui comandi disponibili."
+    },
+    "invite": {
+      "description": "Ricevi un link per aggiungere il bot al tuo server."
+    },
+    "listblocks": {
+      "description": "Mostra una lista degli utenti bloccati sul server corrente."
+    },
+    "premium": {
+      "description": "Controlla l'attuale stato premium di questo server."
+    },
+    "settings": {
+      "description": "Cambia le impostazioni di questo server.",
+      "subcommands": {
+        "colors": {
+          "description": "Cambia i colori predefiniti di questo server.",
+          "subcommands": {
+            "embeds": {
+              "description": "Cambia i colori predefiniti degli embeds.",
+              "options": {
+                "state": {
+                  "description": "Lo stato degli embeds.",
+                  "choices": {
+                    "open": "Aperto",
+                    "closed": "Chiuso",
+                    "running": "In corso",
+                    "result": "Risultato"
+                  }
+                },
+                "color": {
+                  "description": "Il colore degli embeds."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Cambia i colori predefiniti dei bottoni.",
+              "options": {
+                "color": {
+                  "description": "Il colore dei bottoni.",
+                  "choices": {
+                    "primary": "Primario (Blurple)",
+                    "secondary": "Secondario (Grigio)",
+                    "success": "Successo (Verde)",
+                    "danger": "Pericolo (Rosso)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Modifica le impostazioni degli eventi.",
+          "options": {
+            "setting": {
+              "description": "Che impostazioni devono essere cambiate?",
+              "choices": {
+                "announce_winner_on_poll_auto_close": "Annuncia il vincitore quando un sondaggio viene automaticamente chiuso",
+                "remove_votes_on_ban": "Rimuovi i voti attivi quando un utente viene bloccato",
+                "remove_votes_on_kick": "Rimuovi i voti attivi quando un utente viene espulso",
+                "remove_votes_on_leave": "Rimuovi i voti attivi quando un utente abbandona"
+              }
+            },
+            "status": {
+              "description": "Come devono essere cambiate le impostazioni?",
+              "choices": {
+                "enable": "Attiva",
+                "disable": "Disattiva"
+              }
+            }
+          }
+        },
+        "emojis": {
+          "description": "Cambia le emoji predefinite su questo server."
+        },
+        "language": {
+          "description": "Cambia la lingua su questo server."
+        },
+        "role-weight": {
+          "description": "Cambia il peso del voto di un ruolo.",
+          "options": {
+            "role": {
+              "description": "Il ruolo il cui peso viene cambiato."
+            },
+            "weight": {
+              "description": "Il peso del ruolo."
+            }
+          }
+        },
+        "threads": {
+          "description": "Cambia le impostazioni dei thread.",
+          "options": {
+            "setting": {
+              "description": "Che impostazioni devono essere cambiate?",
+              "choices": {
+                "create_thread_with_poll": "Crea un thread quando viene creato un nuovo sondaggio",
+                "lock_and_unlock_thread_with_poll": "Blocca/sblocca un thread quando il sondaggio correlato è chiuso/riaperto"
+              }
+            },
+            "status": {
+              "description": "Come devono essere cambiate le impostazioni?",
+              "choices": {
+                "enable": "Attiva",
+                "disable": "Disattiva"
+              }
+            }
+          }
+        }
+      }
+    },
+    "unblock": {
+      "description": "Sblocca la possibilita di interagire con il bot ad un utente.",
+      "options": {
+        "user": {
+          "description": "L'utente da sbloccare."
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Chiudi"
+    },
+    "details": {
+      "name": "Dettagli"
+    },
+    "edit": {
+      "name": "Modifica"
+    },
+    "participants": {
+      "name": "Partecipanti"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Vai alla pagina",
+      "components": {
+        "page_number": {
+          "label": "Numero di pagina",
+          "placeholder": "Inserisci il numero di pagina a cui desideri andare..."
+        }
+      }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Crea sondaggio",
+        "edit": "Modifica sondaggio"
+      },
+      "components": {
+        "question": {
+          "label": "Domanda",
+          "placeholder": "Inserisci la domanda del sondaggio..."
+        },
+        "answer": {
+          "label": "Testo della risposta",
+          "placeholder": "Inserisci il testo della risposta..."
+        },
+        "description": {
+          "label": "Descrizione",
+          "placeholder": "Inserisci la descrizione del sondaggio..."
+        },
+        "time": {
+          "label": "Tempo",
+          "placeholder": "Inserisci per quanto tempo il sondaggio deve rimanere attivo... Lascia vuoto per tempo illimitato."
+        },
+        "image": {
+          "label": "URL dell'immagine",
+          "placeholder": "Inserisci l'URL dell'immagine per il sondaggio..."
+        },
+        "colors": {
+          "open": {
+            "label": "Colore: Aperto",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio aperto..."
+          },
+          "closed": {
+            "label": "Colore: Chiuso",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio chiuso..."
+          },
+          "running": {
+            "label": "Colore: In Corso",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un sondaggio in esecuzione..."
+          },
+          "result": {
+            "label": "Colore: Risultato",
+            "placeholder": "Inserisci il nome o il codice hex del colore per un risultato..."
+          }
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Sondaggio creato",
+        "description": "Il sondaggio è stato creato con successo."
+      },
+      "status": {
+        "open": "Aperto",
+        "running": "In corso",
+        "closed": "Chiuso"
+      },
+      "reactions": {
+        "yes": "Si",
+        "no": "No"
+      },
+      "select": {
+        "placeholder_one": "Seleziona un`opzione da votare...",
+        "placeholder_other": "Seleziona una o più opzioni da votare...",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} voti"
+      },
+      "description": {
+        "question": "Domanda",
+        "choices": "Scelte",
+        "result": "Risultato",
+        "final_result": "Risultato finale",
+        "settings": "Impostazioni"
+      },
+      "result": {
+        "title": "Risultati del sondaggio",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} voti",
+        "votes_weighted_one": "{{count}} voto ponderato",
+        "votes_weighted_other": "{{count}} voti ponderati",
+        "users_one": "da {{count}} utente",
+        "users_other": "da {{count}} utenti"
+      },
+      "winner": {
+        "content": "Il sondaggio **{{- question}}** di {{- user}} è terminato.",
+        "text": {
+          "no_winner": "Non c'è stato alcun vincitore",
+          "tied": "I risultati erano pari",
+          "winner": "Risposta vincente"
+        }
+      },
+      "settings": {
+        "ends": "Termina {{- timestamp}}",
+        "ended": "Il sondaggio è già terminato",
+        "closed": "Non sono ammessi altri voti",
+        "anonymous": "Sondaggio anonimo",
+        "hidden": "Sondaggio nascosto",
+        "maxchoices_one": "{{count}} scelta consentita",
+        "maxchoices_other": "{{count}} scelte consentite",
+        "removevotesnotallowed": "Non è consentito rimuovere i voti",
+        "allowedroles": "Ruoli consentiti"
+      },
+      "participants": {
+        "title": "Partecipanti",
+        "votes": "Utenti che hanno votato per questa opzione:",
+        "no_votes": "Nessun utente ha votato questa opzione.",
+        "weight": "Peso: {{weight}}",
+        "select": {
+          "placeholder": "Seleziona un opzione per vedere i partecipanti...",
+          "participants_one": "{{count}} partecipante",
+          "participants_other": "{{count}} partecipanti",
+          "votes_one": "{{count}} voto",
+          "votes_other": "{{count}} voti",
+          "username_asc": "Nome utente (Ascendente)",
+          "username_desc": "Nome utente (Discendente)",
+          "voted_at_asc": "Votato per (Ascendente)",
+          "voted_at_desc": "Votato per (Discendente)",
+          "weight_asc": "Peso (Ascendente)",
+          "weight_desc": "Peso (Discendente)"
+        }
+      },
+      "info": {
+        "title": "Informazioni del sondaggio",
+        "fields": {
+          "id": "ID",
+          "status": "Stato",
+          "creator": "Creatore",
+          "created_at": "Creato il",
+          "ends_at": "Termina il",
+          "closed_at": "Chiude il",
+          "question": "Domanda",
+          "choices": "Opzioni",
+          "result": "Risultato",
+          "settings": "Impostazioni",
+          "message": "Messaggio"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Voto aggiunto",
+        "description": "Hai votato con successo per l'opzione {{- option}}.",
+        "description2_one": "Hai **{{count}} voto rimasto**.",
+        "description2_other": "Hai **{{count}} voti rimasti**."
+      },
+      "added_selected": {
+        "title": "Voti aggiunti",
+        "description1": "Hai votato con successo per le seguenti opzioni:",
+        "description2_one": "Hai **{{count}} voto rimasto**.",
+        "description2_other": "Hai **{{count}} voti rimasti**."
+      },
+      "removed": {
+        "title": "Voto rimosso",
+        "description": "Hai rimosso con successo il tuo voto per l'opzione {{- option}}."
+      },
+      "removed_selected": {
+        "title": "Voti rimossi",
+        "description": "Hai rimosso con successo i tuoi voti per le seguenti opzioni:"
+      },
+      "removed_all": {
+        "title": "Tutti i voti rimossi",
+        "description": "Hai rimosso con successo tutti i tuoi voti per questo sondaggio."
+      },
+      "manage": {
+        "title": "Gestisci i tuoi voti",
+        "description": "Puoi rimuovere i tuoi voti dal sondaggio selezionando le opzioni:"
+      },
+      "select": {
+        "placeholder": "Seleziona una o più opzioni per rimuovere i voti ..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Sondaggio chiuso",
+          "description1": "Sei sicuro di voler chiudere questo sondaggio?",
+          "description2": "ID sondaggio: {{id}}",
+          "description3": "Domanda del sondaggio: {{question}}"
+        },
+        "success": {
+          "title": "Sondaggio chiuso",
+          "description": "Il sondaggio è stato chiuso con successo.",
+          "error": "Tuttavia, il messaggio originale non può essere aggiornato.",
+          "error_missingaccess": "Tuttavia, il messaggio originale non può essere aggiornato perché il bot non ha le autorizzazioni per accedere al canale.",
+          "error_unknownchannel": "Tuttavia, il messaggio originale non può essere aggiornato perché non è stato possibile trovare il canale.",
+          "error_unknownmessage": "Tuttavia, il messaggio originale non può essere aggiornato perché non è stato possibile trovare il messaggio."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Copia il sondaggio",
+          "description": "Copia il comando in basso e incollalo nella chat per creare un nuovo sondaggio con le stesse impostazioni."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Elimina il sondaggio",
+          "description1": "Sei sicuro di voler eliminare permanentemente questo sondaggio?",
+          "description2": "ID sondaggio: {{id}}",
+          "description3": "Domanda del sondaggio: {{question}}"
+        },
+        "success": {
+          "title": "Sondaggio cancellato",
+          "description": "Il sondaggio è stato eliminato con successo.",
+          "error": "Tuttavia, il messaggio originale non può essere eliminato.",
+          "error_missingaccess": "Tuttavia, il messaggio originale non può essere eliminato perché il bot non ha le autorizzazioni per accedere al canale.",
+          "error_unknownchannel": "Tuttavia, il messaggio originale non può essere eliminato perché non è stato possibile trovare il canale.",
+          "error_unknownmessage": "Tuttavia, il messaggio originale non può essere eliminato perché non è stato possibile trovare il messaggio."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Esporta sondaggio",
+          "description": "Puoi esportare il sondaggio in un file ed utilizzarlo al di fuori del bot.\nSeleziona il formato in cui vuoi esportare il sondaggio."
+        },
+        "success": {
+          "title": "Sondaggio esportato",
+          "description": "Il sondaggio è stato esportato con successo ed è allegato a questo messaggio.\n Puoi ora scaricare il file allegato e usarlo al di fuori del bot"
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Lista dei sondaggi"
+        }
+      },
+      "select": {
+        "placeholder": "Scegli un sondaggio da mostrare..."
+      }
+    },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Risposte",
+          "description": "Seleziona la risposta che desideri modificare o aggiungerne una nuova:"
+        },
+        "answers_update": {
+          "title": "Aggiorna risposta",
+          "description": "Seleziona un'azione per aggiornare questa risposta."
+        },
+        "type": {
+          "title": "Tipo di sondaggio",
+          "description": "Seleziona il tipo di sondaggio. "
+        },
+        "channel": {
+          "title": "Canale",
+          "description": "Seleziona il canale in cui il sondaggio deve essere pubblicato."
+        },
+        "buttoncolor": {
+          "title": "Colore del pulsante",
+          "description": "Seleziona il colore dei pulsanti per il sondaggio."
+        },
+        "maxchoices": {
+          "title": "Scelte massime",
+          "description": "Seleziona il numero massimo di scelte che ogni utente può selezionare."
+        },
+        "allowedroles": {
+          "title": "Ruoli consentiti",
+          "description": "Seleziona i ruoli che possono votare.\n"
+        },
+        "allowvoteremove": {
+          "title": "Consenti di rimuovere il voto",
+          "description": "Seleziona se gli utenti sono autorizzati a rimuovere i loro voti.",
+          "select": {
+            "yes": "Sì",
+            "no": "No"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Crea il sondaggio",
+            "description": "Sei sicuro di voler creare questo sondaggio?"
+          },
+          "success": {
+            "title": "Sondaggio creato",
+            "description": "Il sondaggio è stato creato con successo."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Salva il sondaggio",
+            "description": "Sei sicuro di voler salvare questo sondaggio?",
+            "description2": "ID sondaggio: {{id}}",
+            "description3": "Le seguenti proprietà verranno modificate:"
+          },
+          "success": {
+            "title": "Sondaggio salvato",
+            "description": "Il sondaggio è stato salvato con successo."
+          },
+          "changes": {
+            "added": "Aggiunto",
+            "changed": "Cambiato",
+            "removed": "Rimosso"
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Uscita",
+            "description": "Sei sicuro di voler uscire dal menu e scartare tutte le modifiche?"
+          }
+        }
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Risultato del sondaggio pubblicato",
+          "description": "Il risultato del sondaggio è stato pubblicato con successo in {{- channel}}."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Riapri il sondaggio",
+          "description1": "Sei sicuro di voler riaprire questo sondaggio?",
+          "description2": "ID sondaggio: {{id}}",
+          "description3": "Domanda del sondaggio: {{question}}"
+        },
+        "success": {
+          "title": "Il sondaggio è stato riaperto",
+          "description": "Il sondaggio è stato riaperto con successo."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Utente bloccato",
+          "description": "All'utente è stata bloccata correttamente la possibilità di interagire con il bot su questo server."
+        }
+      }
+    },
+    "debug": {
+      "content": "Se hai bisogno di aiuto dal nostro team di supporto, per favore condividi il seguente link con loro:",
+      "embeds": {
+        "success": {
+          "title": "Debug",
+          "fields": {
+            "guild_information": {
+              "title": "Informazioni sul server",
+              "guild_id": "ID server",
+              "guild_name": "Nome server",
+              "guild_language": "Lingua del server",
+              "guild_preferred_locale": "Server Locale preferito",
+              "channel_id": "ID canale",
+              "channel_name": "Nome del canale"
+            },
+            "user_information": {
+              "title": "Informazioni sull'utente",
+              "user_id": "ID utente",
+              "user_name": "Nome utente",
+              "user_locale": "Località utente",
+              "guild_owner": "Proprietario del server",
+              "permissions": "Autorizzazioni"
+            },
+            "bot_information": {
+              "title": "Informazioni sul bot",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "Autorizzazioni dell'applicazione del server"
+            },
+            "channel_permissions": {
+              "title": "Autorizzazioni del canale ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Pesi dei ruoli"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "Aiuto EasyPoll",
+          "fields": {
+            "poll": "Comandi dei sondaggi",
+            "miscellaneous": "Comandi vari",
+            "settings": "Comandi di impostazioni"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "Invita EasyPoll al tuo server!",
+          "description": "Fai clic sul pulsante in basso per invitare EasyPoll al tuo server."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Elenco degli utenti bloccati",
+          "no_blocks": "Nessun utente è bloccato su questo server."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "Questo server non ha Premium!",
+          "description": "Ottieni Premium per sbloccare più funzionalità!"
+        },
+        "premium": {
+          "title": "Questo server ha Premium!",
+          "fields": {
+            "premium_until": "Premium fino a"
+          }
+        }
+      }
+    },
+    "settings": {
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Cambia lingua",
+            "text": "Qui puoi cambiare la lingua del bot su questo server.\n\nSeleziona una lingua per il bot su questo server:",
+            "select": {
+              "placeholder": "Seleziona una lingua..."
+            }
+          },
+          "changed": {
+            "title": "La lingua è cambiata",
+            "description": "La lingua del bot su questo server è stata modificata ad {{- language}}."
+          }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Utente sbloccato",
+          "description": "All'utente è stata sbloccata correttamente la possibilità di interagire con il bot su questo server."
+        }
+      }
+    }
+  },
+  "footers": {
+    "poll_id": "ID sondaggio: {{id}}",
+    "poll_type": "Tipo: {{type}} ({{votingType}})",
+    "error_id": "ID errore: {{id}}",
+    "pages": "Pagina {{page}} di {{pages}}",
+    "edited": "Modificato"
+  },
+  "errors": {
+    "default": {
+      "title": "L'attività è fallita con successo!",
+      "description": "Si è verificato un errore ma non sono in grado di dirti perché.\nContatta il supporto per ricevere ulteriore assistenza."
+    },
+    "guild_command": {
+      "title": "Comando server!",
+      "description": "Questo comando può essere utilizzato solo nei server."
+    },
+    "guild_communication_disabled": {
+      "title": "Il bot è andato in time-out!",
+      "description": "Il bot è andato in time-out in questo server e non può comunicare all'interno di questo server.\nPer favore rimuovi il time-out per usare ancora il bot"
+    },
+    "missing_bot_permissions": {
+      "title": "Autorizzazioni mancanti!",
+      "description1": "Il bot mancano le seguenti autorizzazioni:",
+      "description2": "Assicurati che il bot abbia tutte le autorizzazioni richieste."
+    },
+    "missing_user_permissions": {
+      "title": "Autorizzazioni mancanti!",
+      "description1": "Ti mancano le seguenti autorizzazioni:",
+      "description2": "Non è possibile eseguire questa azione senza le autorizzazioni richieste."
+    },
+    "premium_required": {
+      "title": "Premium richiesto!",
+      "description": "Questa funzione è disponibile solo per server premium. Diventa premium per usare questa funzione."
+    },
+    "invalid_channel_type": {
+      "title": "Tipo di canale non valido!",
+      "description": "Il canale selezionato non è un tipo di canale che consente questa azione."
+    },
+    "invalid_color": {
+      "title": "Colore non valido!",
+      "description": "Il colore immesso non è valido. Controlla che il colore sia nel formato corretto."
+    },
+    "invalid_image": {
+      "title": "Immagine non valida!",
+      "description": "L'URL immagine immesso non è valido. Controlla che l'URL sia valido e che l'immagine sia nel formato corretto."
+    },
+    "invalid_page": {
+      "title": "Pagina non valida!",
+      "description": "Il numero di pagina inserito non è valido. Controlla che il numero di pagina sia nel formato corretto e nel range consentito."
+    },
+    "invalid_time": {
+      "title": "Tempo non valido!",
+      "description": "Il tempo inserito non è valido. Controlla che il tempo specificato sia nel formato corretto."
+    },
+    "max_time": {
+      "title": "Tempo massimo raggiunto!",
+      "description": "Hai raggiunto il tempo massimo di {{maxtime}}.\nControlla che il tempo specificato non sia più lungo del tempo massimo consentito.",
+      "description_upgrade": "Puoi aumentare il tempo massimo {{maxtime}} aggiornandoti a premium."
+    },
+    "unknown_emoji": {
+      "title": "Emoji sconosciuta!",
+      "description": "Hai specificato un'emoji sconosciuta!\nPuoi usare solo emoji provenienti da server in cui EasyPoll è invitato. Assicurati che {{- emoji}} sia un'emoji **ufficiale Discord** o un'emoji **di questo server**."
+    },
+    "restricted": {
+      "title": "Non puoi eseguire questa azione!",
+      "description": {
+        "user_global": "Sei limitato a livello globale per l'uso di questa azione.",
+        "user_local": "Sei limitato su questo server per l'uso di questa azione.",
+        "guild": "Questo server è limitato per l'uso di questa azione."
+      },
+      "fields": {
+        "reason": "Motivo",
+        "expires_at": "Scade in"
+      }
+    },
+    "already_restricted": {
+      "title": "Già limitato!",
+      "description": "L'utente selezionato è già limitato per l'uso del bot."
+    },
+    "already_voted": {
+      "title": "Hai già votato per questa opzione!",
+      "description": "Hai già votato per questa opzione e non puoi votare di nuovo per la stessa opzione."
+    },
+    "max_choices_reached": {
+      "title": "Ha raggiunto il numero massimo di scelte!",
+      "description": "Hai raggiunto il numero massimo di scelte per questo sondaggio. Puoi rimuovere alcuni dei tuoi voti per votare altre opzioni."
+    },
+    "not_allowed_role": {
+      "title": "Solo alcuni ruoli hanno il permesso di votare per questo sondaggio!",
+      "description": "Non puoi votare per questo sondaggio perché non possiedi nessuno dei ruoli consentiti."
+    },
+    "not_allowed_user": {
+      "title": "Utente non consentito!",
+      "description": "Non è possibile selezionare questo utente perché non ti è permesso farlo."
+    },
+    "not_restricted": {
+      "title": "Non limitato!",
+      "description": "L'utente selezionato non è limitato dall'uso del bot."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "Questo sondaggio è già chiuso!",
+        "description": "Non puoi interagire con questo sondaggio perché è già chiuso."
+      },
+      "not_closed": {
+        "title": "Questo sondaggio non è chiuso!",
+        "description": "Il sondaggio non può essere riaperto perché non è chiuso."
+      },
+      "not_voted": {
+        "title": "Non hai votato per questa opzione!",
+        "description": "Non puoi rimuovere il tuo voto per questa opzione perché non hai votato per questa opzione."
+      },
+      "no_votes": {
+        "title": "Nessun voto su questo sondaggio!",
+        "description": "Non hai votato per nessuna opzione su questo sondaggio."
+      },
+      "invalid_poll": {
+        "title": "Questo non è un sondaggio!",
+        "description_input": "L'ID inserito non è un sondaggio. Controlla di aver inserito l'ID corretto del sondaggio o del messaggio.",
+        "description_select": "Il messaggio selezionato non è un sondaggio. Controlla che il messaggio selezionato sia un sondaggio."
+      },
+      "participants_not_available": {
+        "title": "Elenco dei partecipanti non consentito!",
+        "description": "L'elenco dei partecipanti non è disponibile per questo sondaggio."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Rimozione voto non consentita!",
+        "description": "Non è possibile rimuovere il tuo voto per questo sondaggio perché non è consentito rimuovere i voti."
+      },
+      "no_polls_found": {
+        "title": "Nessun sondaggio trovato!",
+        "description": "Non ci sono sondaggi trovati in questo server che corrispondano ai criteri cercati."
+      }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Sondaggio bloccato!",
+        "description": "Il sondaggio è attualmente bloccato e non può essere modificato. Riprova tra qualche secondo."
+      },
+      "validation": {
+        "title": "La convalida non è riuscita!",
+        "description": "I valori immessi non sono validi. Controlla che tutti i valori siano corretti e riprova."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Sito web",
+    "dashboard": "Dashboard",
+    "invite": "Invita",
+    "support": "Supporto",
+    "wiki": "Wiki",
+    "learn_more": "Saperne di più",
+    "premium": "Ottieni premium",
+    "troubleshooting": "Risoluzione dei problemi",
+    "discord_helpcenter": "Discord Help Center",
+    "vote": "Vota",
+    "participants": "Partecipanti",
+    "enable": "Abilita",
+    "disable": "Disabilita",
+    "close": "Chiudi",
+    "reopen": "Riapri",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "back": "Indietro",
+    "save": "Salva",
+    "create": "Crea",
+    "exit": "Esci",
+    "cancel": "Cancella",
+    "confirm_close": "Sì, chiudi il sondaggio",
+    "confirm_reopen": "Sì, riapri il sondaggio",
+    "confirm_delete": "Sì, elimina il sondaggio",
+    "confirm_save": "Sì, salva il sondaggio",
+    "confirm_create": "Sì, crea il sondaggio",
+    "confirm_exit": "Sì, esci",
+    "go_to_message": "Vai al messaggio",
+    "go_to_page": "Vai alla pagina",
+    "view_on_dashboard": "Visualizza su dashboard",
+    "view_poll": "Visualizza il sondaggio",
+    "remove_all_votes": "Rimuovi tutti i tuoi voti",
+    "remove_vote": "Rimuovi questo voto",
+    "manage_votes": "Gestisci i tuoi voti",
+    "export_json": "Esporta come JSON",
+    "export_csv": "Esporta come CSV",
+    "question": "Domanda",
+    "answers": "Risposte",
+    "description": "Descrizione",
+    "type": "Tipo",
+    "time": "Tempo",
+    "image": "Immagine",
+    "channel": "Canale",
+    "embed_colors": "Colori degli embeds",
+    "button_color": "Colore del pulsante",
+    "maxchoices": "Scelte massime",
+    "allowedroles": "Ruoli consentiti",
+    "allowedroles_clear": "Cancella ruoli consentiti",
+    "allowvoteremove": "Consenti di rimuovere il voto",
+    "answer_new": "Aggiungi nuova risposta"
+  },
+  "permissions": {
+    "administrator": "Amministratore",
+    "add_reactions": "Aggiungere reazioni",
+    "view_audit_log": "Visualizzare il registro attività",
+    "view_channel": "Visualizzare i canali",
+    "send_messages": "Inviare i messaggi",
+    "manage_messages": "Gestire messaggi",
+    "manage_guild": "Gestire Server",
+    "embed_links": "Incorporare i link",
+    "attach_files": "Allegare i file",
+    "read_message_history": "Leggere la cronologia dei messaggi",
+    "mention_everyone": "Menziona tutti",
+    "use_external_emojis": "Usare emoji esterne",
+    "manage_webhooks": "Gestire i webhook",
+    "manage_threads": "Gestire i thread",
+    "create_public_threads": "Crea thread pubblici",
+    "send_messages_in_threads": "Invia messaggi nei thread"
+  }
+}
