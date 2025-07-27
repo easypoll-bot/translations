@@ -432,8 +432,8 @@
       "winner": {
         "content": "Il sondaggio **{{- question}}** di {{- user}} è terminato.",
         "text": {
-          "no_winner": "Non ci sono stati vincitori",
-          "tied": "C'è stato un pareggio",
+          "no_winner": "Non c'è stato alcun vincitore",
+          "tied": "I risultati erano pari",
           "winner": "Risposta vincente"
         }
       },
@@ -804,7 +804,7 @@
   "errors": {
     "default": {
       "title": "L'attività è fallita con successo!",
-      "description": "Si è verificato un errore ma non sono in grado di dirti perché.\n"
+      "description": "Si è verificato un errore ma non sono in grado di dirti perché.\nContatta il supporto per ricevere ulteriore assistenza."
     },
     "guild_command": {
       "title": "Comando server!",
@@ -862,7 +862,7 @@
       "description": {
         "user_global": "Sei limitato a livello globale per l'uso di questa azione.",
         "user_local": "Sei limitato su questo server per l'uso di questa azione.",
-        "guild": "Questo server limita l'uso di questa azione."
+        "guild": "Questo server è limitato per l'uso di questa azione."
       },
       "fields": {
         "reason": "Motivo",
@@ -994,19 +994,19 @@
   },
   "permissions": {
     "administrator": "Amministratore",
-    "add_reactions": "Aggiungi reazioni",
-    "view_audit_log": "Visualizza il registro di audit",
-    "view_channel": "Visualizza canali",
-    "send_messages": "Invia messaggi",
-    "manage_messages": "Gestisci i messaggi",
-    "manage_guild": "Gestisci il server",
-    "embed_links": "Link agli embeds",
-    "attach_files": "Allega file",
-    "read_message_history": "Leggi la cronologia dei messaggi",
+    "add_reactions": "Aggiungere reazioni",
+    "view_audit_log": "Visualizzare il registro attività",
+    "view_channel": "Visualizzare i canali",
+    "send_messages": "Inviare i messaggi",
+    "manage_messages": "Gestire messaggi",
+    "manage_guild": "Gestire Server",
+    "embed_links": "Incorporare i link",
+    "attach_files": "Allegare i file",
+    "read_message_history": "Leggere la cronologia dei messaggi",
     "mention_everyone": "Menziona tutti",
-    "use_external_emojis": "Usa le emoji esterne",
-    "manage_webhooks": "Gestisci Webhooks",
-    "manage_threads": "Gestisci i thread",
+    "use_external_emojis": "Usare emoji esterne",
+    "manage_webhooks": "Gestire i webhook",
+    "manage_threads": "Gestire i thread",
     "create_public_threads": "Crea thread pubblici",
     "send_messages_in_threads": "Invia messaggi nei thread"
   }
