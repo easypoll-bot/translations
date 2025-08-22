@@ -1008,6 +1008,7 @@
     "manage_webhooks": "Manage Webhooks",
     "manage_threads": "Manage Threads",
     "create_public_threads": "Create Public Threads",
-    "send_messages_in_threads": "Send Messages in Threads"
+    "send_messages_in_threads": "Send Messages in Threads",
+    "pin_messages": "Pin Messages"
   }
 }
