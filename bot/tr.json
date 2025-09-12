@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Süre",
-          "placeholder": "Anketin ne kadar süreyle çalışması gerektiğini giriniz... Sınırsız süre için boş bırakın."
+          "description": "Anketin ne kadar süreyle çalışması gerektiğini giriniz (ör. 3d 12h)... Sınırsız süre için boş bırakın.",
+          "placeholder": "Anketin ne kadar süreyle çalışması gerektiğini giriniz..."
         },
         "image": {
           "label": "Görsel URL'si",
+          "description": "Görselin URL'si geçerli bir doğrudan bağlantı olmalıdır (png, jpeg, gif).",
           "placeholder": "Anketin görsel URL'sini giriniz..."
         },
         "colors": {

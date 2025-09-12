@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Tiempo",
-          "placeholder": "Por favor, ingresa el tiempo en que la encuesta debería funcionar... Dejar espacio vacío para tiempo ilimitado."
+          "description": "Por favor, ingresa el tiempo en que la encuesta debería funcionar (ej. 3d 12h). Dejar espacio vacío para tiempo ilimitado.",
+          "placeholder": "Por favor, ingresa el tiempo en que la encuesta debería funcionar..."
         },
         "image": {
           "label": "Enlace de imagen",
+          "description": "El enlace de la imagen debe ser un enlace directo válido a una imagen (png, jpeg, gif).",
           "placeholder": "Por favor, ingresa el enlace de la imagen de la encuesta..."
         },
         "colors": {

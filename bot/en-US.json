@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Time",
-          "placeholder": "Please enter the time the poll should run... Leave empty for unlimited time."
+          "description": "Please enter the time the poll should run (e.g. 3d 12h). Leave empty for unlimited time.",
+          "placeholder": "Please enter the time the poll should run..."
         },
         "image": {
           "label": "Image URL",
+          "description": "The image url must be a valid direct link to an image (png, jpeg, gif).",
           "placeholder": "Please enter the image url of the poll..."
         },
         "colors": {

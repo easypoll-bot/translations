@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Czas",
-          "placeholder": "Proszę, wprowadź czas, przez jaki ankieta powinna przyjmować odpowiedzi... Pozostaw puste dla nieograniczonego czasu."
+          "description": "Proszę, wprowadź czas, przez jaki ankieta powinna przyjmować odpowiedzi (np. 3d 12h)... Pozostaw puste dla nieograniczonego czasu.",
+          "placeholder": "Proszę, wprowadź czas, przez jaki ankieta powinna przyjmować odpowiedzi..."
         },
         "image": {
           "label": "Adres URL zdjęcia",
+          "description": "Adres URL zdjęcia musi być ważnym bezpośrednim linkiem do obrazu (png, jpeg, gif).",
           "placeholder": "Proszę, wprowadź adres URL zdjęcia ankiety..."
         },
         "colors": {

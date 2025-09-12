@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Zeit",
-          "placeholder": "Bitte gebe die Zeitdauer der Umfrage ein... Leer lassen für unbegrenzt."
+          "description": "Bitte gebe die Zeitdauer der Umfrage ein (z. B. 3d 12h). Leer lassen für unbegrenzt.",
+          "placeholder": "Bitte gebe die Zeitdauer der Umfrage ein..."
         },
         "image": {
           "label": "Bild URL",
+          "description": "Die Bild-URL muss ein gültiger direkter Link zu einem Bild (png, jpeg, gif) sein.",
           "placeholder": "Bitte gebe die URL des Bildes ein..."
         },
         "colors": {

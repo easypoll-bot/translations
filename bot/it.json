@@ -365,10 +365,12 @@
         },
         "time": {
           "label": "Tempo",
-          "placeholder": "Inserisci per quanto tempo il sondaggio deve rimanere attivo... Lascia vuoto per tempo illimitato."
+          "description": "Inserisci per quanto tempo il sondaggio deve rimanere attivo (es. 3d 12h). Lascia vuoto per tempo illimitato.",
+          "placeholder": "Inserisci per quanto tempo il sondaggio deve rimanere attivo..."
         },
         "image": {
           "label": "URL dell'immagine",
+          "description": "L'URL dell'immagine deve essere un link diretto valido a un'immagine (png, jpeg, gif).",
           "placeholder": "Inserisci l'URL dell'immagine per il sondaggio..."
         },
         "colors": {
