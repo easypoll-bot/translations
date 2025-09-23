@@ -58,7 +58,10 @@
             "all": "Alle",
             "open": "Offen",
             "running": "Laufend",
-            "closed": "Geschlossen"
+            "closed": "Geschlossen",
+            "failed": "Fehlgeschlagen",
+            "scheduled": "Geplant",
+            "unpublished": "Unveröffentlicht"
           }
         },
         "channel": {
@@ -403,7 +406,10 @@
       "status": {
         "open": "Offen",
         "running": "Laufend",
-        "closed": "Geschlossen"
+        "closed": "Geschlossen",
+        "failed": "Fehlgeschlagen",
+        "scheduled": "Geplant",
+        "unpublished": "Unveröffentlicht"
       },
       "reactions": {
         "yes": "Ja",
