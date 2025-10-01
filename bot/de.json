@@ -453,6 +453,8 @@
         "hidden": "Verdeckte Umfrage",
         "maxchoices_one": "{{count}} zulässige Auswahlmöglichkeit",
         "maxchoices_other": "{{count}} zulässige Auswahlmöglichkeiten",
+        "maxtotalvotes_one": "{{count}} Gesamtstimme erlaubt",
+        "maxtotalvotes_other": "{{count}} Gesamtstimmen erlaubt",
         "removevotesnotallowed": "Stimmen entfernen nicht erlaubt",
         "allowedroles": "Zugelassene Rollen"
       },

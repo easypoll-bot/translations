@@ -453,6 +453,8 @@
         "hidden": "Hidden Poll",
         "maxchoices_one": "{{count}} allowed choice",
         "maxchoices_other": "{{count}} allowed choices",
+        "maxtotalvotes_one": "{{count}} total vote allowed",
+        "maxtotalvotes_other": "{{count}} total votes allowed",
         "removevotesnotallowed": "Removing votes not allowed",
         "allowedroles": "Allowed roles"
       },
