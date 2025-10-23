@@ -521,7 +521,7 @@
       },
       "manage": {
         "title": "Verwalte deine Stimmen",
-        "description": "Du kannst deine Stimmen von der Umfrage entfernen, indem du die Optionen auswählst:"
+        "description": "Du kannst deine Stimmen aus der Umfrage entfernen, indem du die Optionen auswählst:"
       },
       "select": {
         "placeholder": "Wähle eine oder mehrere Optionen, um deine Stimmen zu entfernen..."
@@ -533,7 +533,7 @@
           "title": "Umfrage schließen",
           "description1": "Bist du sicher, dass du diese Umfrage schließen willst?",
           "description2": "Umfrage ID: {{id}}",
-          "description3": "Umfrage Frage: {{question}}"
+          "description3": "Frage der Umfrage: {{question}}"
         },
         "success": {
           "title": "Umfrage geschlossen",
@@ -559,7 +559,7 @@
           "title": "Umfrage löschen",
           "description1": "Bist du sicher, dass du diese Umfrage endgültig löschen willst?",
           "description2": "Umfrage ID: {{id}}",
-          "description3": "Umfrage Frage: {{question}}"
+          "description3": "Frage der Umfrage: {{question}}"
         },
         "success": {
           "title": "Umfrage gelöscht",
@@ -579,7 +579,7 @@
         },
         "success": {
           "title": "Umfrage exportiert",
-          "description": "Der Umfrage wurde erfolgreich exportiert und ist an diese Nachricht angehängt.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
+          "description": "Die Umfrage wurde erfolgreich exportiert.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
         }
       }
     },
@@ -679,8 +679,8 @@
         "confirm": {
           "title": "Umfrage wieder öffnen",
           "description1": "Bist du sicher, dass du diese Umfrage wieder öffnen willst?",
-          "description2": "Umfrage ID: {{id}}",
-          "description3": "Umfrage Frage: {{question}}"
+          "description2": "Umfrage-ID: {{id}}",
+          "description3": "Frage der Umfrage: {{question}}"
         },
         "success": {
           "title": "Umfrage wieder geöffnet",
@@ -704,19 +704,19 @@
           "fields": {
             "guild_information": {
               "title": "Server-Informationen",
-              "guild_id": "Server ID",
+              "guild_id": "Server-ID",
               "guild_name": "Server Name",
               "guild_language": "Server Sprache",
               "guild_preferred_locale": "Server Bevorzugte Sprache",
-              "channel_id": "Kanal ID",
+              "channel_id": "Kanal-ID",
               "channel_name": "Kanal Name"
             },
             "user_information": {
-              "title": "Nutzer-Information",
-              "user_id": "Nutzer ID",
+              "title": "Nutzerinformation",
+              "user_id": "Nutzer-ID",
               "user_name": "Nutzername",
               "user_locale": "Nutzer Sprache",
-              "guild_owner": "Server Eigentümer",
+              "guild_owner": "Servereigentümer",
               "permissions": "Berechtigungen"
             },
             "bot_information": {
@@ -724,13 +724,13 @@
               "premium": "Premium"
             },
             "app_permissions": {
-              "title": "App Server Berechtigungen"
+              "title": "App-Berechtigungen"
             },
             "channel_permissions": {
               "title": "Kanalberechtigungen ({{- channel}})"
             },
             "role_weights": {
-              "title": "Rollen Gewichtungen"
+              "title": "Rollengewichtungen"
             }
           }
         }
@@ -741,9 +741,9 @@
         "success": {
           "title": "EasyPoll Hilfe",
           "fields": {
-            "poll": "Umfrage Befehle",
+            "poll": "Umfragebefehle",
             "miscellaneous": "Sonstige Befehle",
-            "settings": "Einstellungen Befehle"
+            "settings": "Einstellungsbefehle"
           }
         }
       }
@@ -805,9 +805,9 @@
     }
   },
   "footers": {
-    "poll_id": "Umfrage ID: {{id}}",
+    "poll_id": "Umfrage-ID: {{id}}",
     "poll_type": "Art: {{type}} ({{votingType}})",
-    "error_id": "Fehler ID: {{id}}",
+    "error_id": "Fehler-ID: {{id}}",
     "pages": "Seite {{page}} von {{pages}}",
     "edited": "Bearbeitet"
   },
@@ -817,12 +817,12 @@
       "description": "Es ist ein Fehler aufgetreten, aber ich kann dir nicht sagen, warum.\nBitte wende dich an den Support für weitere Hilfe."
     },
     "guild_command": {
-      "title": "Server Befehl!",
-      "description": "Dieser Befehl kann nur auf Servern verwendet werden."
+      "title": "Serverbefehl!",
+      "description": "Dieser Befehl kann nur in einem Server verwendet werden."
     },
     "guild_communication_disabled": {
-      "title": "Bot hat Timeout!",
-      "description": "Der Bot hat eine Timeout auf diesem Server und kann nicht mit diesem Server kommunizieren.\nBitte entferne den Timeout, um den Bot wieder zu verwenden."
+      "title": "Bot hat ein Timeout!",
+      "description": "Der Bot hat ein Timeout auf diesem Server, und kann keine Nachrichten verschicken.\nBitte entferne das Timeout, um den Bot wieder zu verwenden."
     },
     "missing_bot_permissions": {
       "title": "Fehlende Berechtigungen!",
@@ -926,7 +926,7 @@
         "description_select": "Die ausgewählte Nachricht ist keine Umfrage. Vergewissere dich, dass du die richtige Umfrage-Nachricht ausgewählt hast."
       },
       "participants_not_available": {
-        "title": "Teilnehmerliste nicht erlaubt!",
+        "title": "Teilnehmerliste nicht verfügbar!",
         "description": "Die Teilnehmerliste ist für diese Umfrage nicht verfügbar."
       },
       "vote_remove_not_allowed": {
@@ -958,7 +958,7 @@
     "learn_more": "Mehr erfahren",
     "premium": "Premium holen",
     "troubleshooting": "Fehlerbehebung",
-    "discord_helpcenter": "Discord Hilfecenter",
+    "discord_helpcenter": "Discord-Hilfecenter",
     "vote": "Abstimmen",
     "participants": "Teilnehmer",
     "enable": "Einschalten",
@@ -994,8 +994,8 @@
     "time": "Zeit",
     "image": "Bild",
     "channel": "Kanal",
-    "embed_colors": "Einbettungsfarben",
-    "button_color": "Schaltflächenfarbe",
+    "embed_colors": "Embed-Farben",
+    "button_color": "Button-Farbe",
     "maxchoices": "Maximale Auswahlmöglichkeiten",
     "allowedroles": "Zugelassene Rollen",
     "allowedroles_clear": "Zugelassene Rollen löschen",
