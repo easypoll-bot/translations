@@ -262,6 +262,7 @@
             "setting": {
               "description": "Welche Einstellung soll geändert werden?",
               "choices": {
+                "pin_poll_message_while_running": "Umfrage-Nachricht während die Umfrage läuft anpinnen",
                 "announce_winner_on_poll_auto_close": "Gewinner ankündigen, wenn eine Umfrage automatisch geschlossen wird",
                 "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
                 "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
@@ -533,7 +534,7 @@
           "title": "Umfrage schließen",
           "description1": "Bist du sicher, dass du diese Umfrage schließen willst?",
           "description2": "Umfrage ID: {{id}}",
-          "description3": "Frage der Umfrage: {{question}}"
+          "description3": "Umfrage Frage: {{question}}"
         },
         "success": {
           "title": "Umfrage geschlossen",
@@ -559,7 +560,7 @@
           "title": "Umfrage löschen",
           "description1": "Bist du sicher, dass du diese Umfrage endgültig löschen willst?",
           "description2": "Umfrage ID: {{id}}",
-          "description3": "Frage der Umfrage: {{question}}"
+          "description3": "Umfrage Frage: {{question}}"
         },
         "success": {
           "title": "Umfrage gelöscht",
@@ -579,7 +580,7 @@
         },
         "success": {
           "title": "Umfrage exportiert",
-          "description": "Die Umfrage wurde erfolgreich exportiert.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
+          "description": "Die Umfrage wurde erfolgreich exportiert und ist an diese Nachricht angehängt.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
         }
       }
     },
@@ -679,8 +680,8 @@
         "confirm": {
           "title": "Umfrage wieder öffnen",
           "description1": "Bist du sicher, dass du diese Umfrage wieder öffnen willst?",
-          "description2": "Umfrage-ID: {{id}}",
-          "description3": "Frage der Umfrage: {{question}}"
+          "description2": "Umfrage ID: {{id}}",
+          "description3": "Umfrage Frage: {{question}}"
         },
         "success": {
           "title": "Umfrage wieder geöffnet",
@@ -704,16 +705,16 @@
           "fields": {
             "guild_information": {
               "title": "Server-Informationen",
-              "guild_id": "Server-ID",
+              "guild_id": "Server ID",
               "guild_name": "Server Name",
               "guild_language": "Server Sprache",
               "guild_preferred_locale": "Server Bevorzugte Sprache",
-              "channel_id": "Kanal-ID",
+              "channel_id": "Kanal ID",
               "channel_name": "Kanal Name"
             },
             "user_information": {
               "title": "Nutzerinformation",
-              "user_id": "Nutzer-ID",
+              "user_id": "Nutzer ID",
               "user_name": "Nutzername",
               "user_locale": "Nutzer Sprache",
               "guild_owner": "Servereigentümer",
@@ -724,7 +725,7 @@
               "premium": "Premium"
             },
             "app_permissions": {
-              "title": "App-Berechtigungen"
+              "title": "App Server Berechtigungen"
             },
             "channel_permissions": {
               "title": "Kanalberechtigungen ({{- channel}})"
@@ -805,9 +806,9 @@
     }
   },
   "footers": {
-    "poll_id": "Umfrage-ID: {{id}}",
+    "poll_id": "Umfrage ID: {{id}}",
     "poll_type": "Art: {{type}} ({{votingType}})",
-    "error_id": "Fehler-ID: {{id}}",
+    "error_id": "Fehler ID: {{id}}",
     "pages": "Seite {{page}} von {{pages}}",
     "edited": "Bearbeitet"
   },
@@ -891,6 +892,10 @@
       "title": "Die maximale Anzahl von Auswahlmöglichkeiten erreicht!",
       "description": "Du hast die maximale Anzahl von Auswahlmöglichkeiten für diese Umfrage erreicht. Du kannst ein paar deiner Stimmen entfernen, um für andere Optionen zu stimmen."
     },
+    "max_total_votes_reached": {
+      "title": "Die maximale Gesamtstimmenanzahl erreicht!",
+      "description": "Die Umfrage hat die maximal zulässige Anzahl von Stimmen erreicht und du kannst nicht mehr abstimmen."
+    },
     "not_allowed_role": {
       "title": "Nur bestimmte Rollen sind für diese Umfrage zugelassen!",
       "description": "Du kannst bei dieser Umfrage nicht abstimmen, weil du keine der zugelassenen Rollen besitzt."
@@ -926,7 +931,7 @@
         "description_select": "Die ausgewählte Nachricht ist keine Umfrage. Vergewissere dich, dass du die richtige Umfrage-Nachricht ausgewählt hast."
       },
       "participants_not_available": {
-        "title": "Teilnehmerliste nicht verfügbar!",
+        "title": "Teilnehmerliste nicht erlaubt!",
         "description": "Die Teilnehmerliste ist für diese Umfrage nicht verfügbar."
       },
       "vote_remove_not_allowed": {
@@ -958,7 +963,7 @@
     "learn_more": "Mehr erfahren",
     "premium": "Premium holen",
     "troubleshooting": "Fehlerbehebung",
-    "discord_helpcenter": "Discord-Hilfecenter",
+    "discord_helpcenter": "Discord Hilfecenter",
     "vote": "Abstimmen",
     "participants": "Teilnehmer",
     "enable": "Einschalten",
