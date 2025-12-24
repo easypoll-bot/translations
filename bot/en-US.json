@@ -262,6 +262,7 @@
             "setting": {
               "description": "Which setting should be changed?",
               "choices": {
+                "pin_poll_message_while_running": "Pin the poll message while the poll is running",
                 "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
                 "remove_votes_on_ban": "Remove active votes when a user is banned",
                 "remove_votes_on_kick": "Remove active votes when a user is kicked",
@@ -890,6 +891,10 @@
     "max_choices_reached": {
       "title": "Reached the maximum number of choices!",
       "description": "You have reached the maximum number of choices for this poll. You can remove some of your votes to vote for other options."
+    },
+    "max_total_votes_reached": {
+      "title": "Reached the maximum number of votes!",
+      "description": "The poll has reached the maximum number of votes allowed and you cannot vote anymore."
     },
     "not_allowed_role": {
       "title": "Only certain roles allowed for this poll!",

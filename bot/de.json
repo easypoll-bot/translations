@@ -262,6 +262,7 @@
             "setting": {
               "description": "Welche Einstellung soll geändert werden?",
               "choices": {
+                "pin_poll_message_while_running": "Umfrage-Nachricht während die Umfrage läuft anpinnen",
                 "announce_winner_on_poll_auto_close": "Gewinner ankündigen, wenn eine Umfrage automatisch geschlossen wird",
                 "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
                 "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
