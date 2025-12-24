@@ -58,7 +58,10 @@
             "all": "Wszystkie",
             "open": "Otwarte",
             "running": "Aktywne",
-            "closed": "Zamknięte"
+            "closed": "Zamknięte",
+            "failed": "Nieudane",
+            "scheduled": "Zaplanowane",
+            "unpublished": "Nieopublikowane"
           }
         },
         "channel": {
@@ -403,7 +406,10 @@
       "status": {
         "open": "Otwarta",
         "running": "Aktywna",
-        "closed": "Zamknięta"
+        "closed": "Zamknięta",
+        "failed": "Nieudana",
+        "scheduled": "Zaplanowana",
+        "unpublished": "Nieopublikowana"
       },
       "reactions": {
         "yes": "Tak",
@@ -445,8 +451,10 @@
         "closed": "Nowe głosy nie są dozwolone",
         "anonymous": "Ankieta anonimowa",
         "hidden": "Ankieta ukryta",
-        "maxchoices_one": "{{count}} dozwolona odpowiedź",
-        "maxchoices_other": "{{count}} dozwolone(-ych) odpowiedzi",
+        "maxchoices_one": "{{count}} dozwolona odpowiedź na osobę",
+        "maxchoices_other": "{{count}} dozwolone(-ych) odpowiedzi na osobę",
+        "maxtotalvotes_one": "{{count}} dozwolona odpowiedź ogółem",
+        "maxtotalvotes_other": "{{count}} dozwolone(-ych) odpowiedzi ogółem",
         "removevotesnotallowed": "Wycofywanie głosów jest zabronione",
         "allowedroles": "Dozwolone role"
       },
@@ -1010,6 +1018,7 @@
     "manage_webhooks": "Zarządzanie webhookami",
     "manage_threads": "Zarządzaj wątkami",
     "create_public_threads": "Tworzenie publicznych wątków",
-    "send_messages_in_threads": "Wysyłanie wiadomości w wątkach"
+    "send_messages_in_threads": "Wysyłanie wiadomości w wątkach",
+    "pin_messages": "Przypięte wiadomości"
   }
 }
