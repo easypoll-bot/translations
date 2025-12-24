@@ -522,7 +522,7 @@
       },
       "manage": {
         "title": "Verwalte deine Stimmen",
-        "description": "Du kannst deine Stimmen von der Umfrage entfernen, indem du die Optionen auswählst:"
+        "description": "Du kannst deine Stimmen aus der Umfrage entfernen, indem du die Optionen auswählst:"
       },
       "select": {
         "placeholder": "Wähle eine oder mehrere Optionen, um deine Stimmen zu entfernen..."
@@ -580,7 +580,7 @@
         },
         "success": {
           "title": "Umfrage exportiert",
-          "description": "Der Umfrage wurde erfolgreich exportiert und ist an diese Nachricht angehängt.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
+          "description": "Die Umfrage wurde erfolgreich exportiert und ist an diese Nachricht angehängt.\nDu kannst nun die angehängte Datei herunterladen und außerhalb des Bots verwenden."
         }
       }
     },
@@ -713,11 +713,11 @@
               "channel_name": "Kanal Name"
             },
             "user_information": {
-              "title": "Nutzer-Information",
+              "title": "Nutzerinformation",
               "user_id": "Nutzer ID",
               "user_name": "Nutzername",
               "user_locale": "Nutzer Sprache",
-              "guild_owner": "Server Eigentümer",
+              "guild_owner": "Servereigentümer",
               "permissions": "Berechtigungen"
             },
             "bot_information": {
@@ -731,7 +731,7 @@
               "title": "Kanalberechtigungen ({{- channel}})"
             },
             "role_weights": {
-              "title": "Rollen Gewichtungen"
+              "title": "Rollengewichtungen"
             }
           }
         }
@@ -742,9 +742,9 @@
         "success": {
           "title": "EasyPoll Hilfe",
           "fields": {
-            "poll": "Umfrage Befehle",
+            "poll": "Umfragebefehle",
             "miscellaneous": "Sonstige Befehle",
-            "settings": "Einstellungen Befehle"
+            "settings": "Einstellungsbefehle"
           }
         }
       }
@@ -818,12 +818,12 @@
       "description": "Es ist ein Fehler aufgetreten, aber ich kann dir nicht sagen, warum.\nBitte wende dich an den Support für weitere Hilfe."
     },
     "guild_command": {
-      "title": "Server Befehl!",
-      "description": "Dieser Befehl kann nur auf Servern verwendet werden."
+      "title": "Serverbefehl!",
+      "description": "Dieser Befehl kann nur in einem Server verwendet werden."
     },
     "guild_communication_disabled": {
-      "title": "Bot hat Timeout!",
-      "description": "Der Bot hat eine Timeout auf diesem Server und kann nicht mit diesem Server kommunizieren.\nBitte entferne den Timeout, um den Bot wieder zu verwenden."
+      "title": "Bot hat ein Timeout!",
+      "description": "Der Bot hat ein Timeout auf diesem Server, und kann keine Nachrichten verschicken.\nBitte entferne das Timeout, um den Bot wieder zu verwenden."
     },
     "missing_bot_permissions": {
       "title": "Fehlende Berechtigungen!",
@@ -891,6 +891,10 @@
     "max_choices_reached": {
       "title": "Die maximale Anzahl von Auswahlmöglichkeiten erreicht!",
       "description": "Du hast die maximale Anzahl von Auswahlmöglichkeiten für diese Umfrage erreicht. Du kannst ein paar deiner Stimmen entfernen, um für andere Optionen zu stimmen."
+    },
+    "max_total_votes_reached": {
+      "title": "Die maximale Gesamtstimmenanzahl erreicht!",
+      "description": "Die Umfrage hat die maximal zulässige Anzahl von Stimmen erreicht und du kannst nicht mehr abstimmen."
     },
     "not_allowed_role": {
       "title": "Nur bestimmte Rollen sind für diese Umfrage zugelassen!",
@@ -995,8 +999,8 @@
     "time": "Zeit",
     "image": "Bild",
     "channel": "Kanal",
-    "embed_colors": "Einbettungsfarben",
-    "button_color": "Schaltflächenfarbe",
+    "embed_colors": "Embed-Farben",
+    "button_color": "Button-Farbe",
     "maxchoices": "Maximale Auswahlmöglichkeiten",
     "allowedroles": "Zugelassene Rollen",
     "allowedroles_clear": "Zugelassene Rollen löschen",
