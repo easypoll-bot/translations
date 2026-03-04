@@ -72,6 +72,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Verschiebe eine Umfrage in einen anderen Kanal.",
+      "options": {
+        "id": {
+          "description": "Die ID der Umfrage oder Nachricht, die verschoben werden soll."
+        },
+        "channel": {
+          "description": "Der Kanal, in den die Umfrage verschoben werden soll."
+        }
+      }
+    },
     "poll": {
       "description": "Erstelle eine normale Umfrage.",
       "options": {
@@ -183,6 +194,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Erstelle eine geplante Umfrage.",
+      "options": {
+        "question": {
+          "description": "Was ist die Frage der Umfrage?"
+        },
+        "scheduled-time": {
+          "description": "Wann soll die Umfrage veröffentlicht werden?"
+        },
+        "time": {
+          "description": "Wie lange soll die Umfrage laufen?"
+        },
+        "type": {
+          "description": "Welche Art von Umfrage soll erstellt werden?",
+          "choices": {
+            "normal-buttons": "Normal (Schaltflächen)",
+            "normal-selectmenu": "Normal (Menü Auswahl)",
+            "anonymous-buttons": "Anonym (Schaltflächen)",
+            "anonymous-selectmenu": "Anonym (Menü Auswahl)",
+            "hidden-buttons": "Verdeckt (Schaltflächen)",
+            "hidden-selectmenu": "Verdeckt (Menü Auswahl)"
+          }
+        },
+        "maxchoices": {
+          "description": "Wie viele Antworten kann jeder Nutzer auswählen? (Standard: 1)"
+        },
+        "text": {
+          "description": "Welcher Text soll über der Umfrage stehen?"
+        },
+        "allowedrole": {
+          "description": "Welche Rolle darf abstimmen? (Standard: Jeder)"
+        },
+        "answer": {
+          "description": "Antwort {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Sperre einen Nutzer für die Interaktion mit dem Bot auf diesem Server.",
       "options": {
@@ -210,6 +258,9 @@
     },
     "invite": {
       "description": "Erhalte einen Link, um den Bot zu deinem eigenen Server hinzuzufügen."
+    },
+    "dashboard": {
+      "description": "Erhalte einen Link zum Dashboard für diesen Server."
     },
     "listblocks": {
       "description": "Zeigt eine Liste aller gesperrten Nutzer auf dem aktuellen Server."
@@ -257,26 +308,7 @@
           }
         },
         "events": {
-          "description": "Ändere die Einstellungen von Ereignissen.",
-          "options": {
-            "setting": {
-              "description": "Welche Einstellung soll geändert werden?",
-              "choices": {
-                "pin_poll_message_while_running": "Umfrage-Nachricht während die Umfrage läuft anpinnen",
-                "announce_winner_on_poll_auto_close": "Gewinner ankündigen, wenn eine Umfrage automatisch geschlossen wird",
-                "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
-                "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
-                "remove_votes_on_leave": "Aktive Stimmen entfernen, wenn ein Nutzer verlässt"
-              }
-            },
-            "status": {
-              "description": "Zu welchem Status soll die Einstellung geändert werden?",
-              "choices": {
-                "enable": "Aktiviert",
-                "disable": "Deaktiviert"
-              }
-            }
-          }
+          "description": "Ändere die Einstellungen von Ereignissen."
         },
         "emojis": {
           "description": "Ändere die Standard-Emojis dieses Servers."
@@ -296,23 +328,7 @@
           }
         },
         "threads": {
-          "description": "Ändere die Einstellungen von Threads.",
-          "options": {
-            "setting": {
-              "description": "Welche Einstellung soll geändert werden?",
-              "choices": {
-                "create_thread_with_poll": "Einen Thread erstellen, wenn eine neue Umfrage erstellt wird",
-                "lock_and_unlock_thread_with_poll": "Sperren/Entsperren von Threads, wenn die zugehörige Umfrage geschlossen/geöffnet wird"
-              }
-            },
-            "status": {
-              "description": "Zu welchem Status soll die Einstellung geändert werden?",
-              "choices": {
-                "enable": "Aktiviert",
-                "disable": "Deaktiviert"
-              }
-            }
-          }
+          "description": "Ändere die Einstellungen von Threads."
         }
       }
     },
@@ -337,6 +353,12 @@
     },
     "participants": {
       "name": "Teilnehmer"
+    },
+    "delete": {
+      "name": "Löschen"
+    },
+    "export": {
+      "name": "Exportieren"
     }
   },
   "modals": {
@@ -393,6 +415,37 @@
           "result": {
             "label": "Farbe Ergebnis",
             "placeholder": "Bitte gebe den Namen oder den Hex-Code der Farbe für Ergebnis ein..."
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Event-Einstellungen",
+        "components": {
+          "settings": {
+            "label": "Auswählen zum Aktivieren/Deaktivieren",
+            "description": "Ausgewählte Einstellungen sind aktiviert. Nicht ausgewählte Einstellungen sind deaktiviert.",
+            "options": {
+              "pin_poll_message_while_running": "Umfrage-Nachricht während die Umfrage läuft anpinnen",
+              "announce_winner_on_poll_auto_close": "Gewinner ankündigen, wenn eine Umfrage automatisch geschlossen wird",
+              "remove_votes_on_ban": "Aktive Stimmen entfernen, wenn ein Nutzer gesperrt wird",
+              "remove_votes_on_kick": "Aktive Stimmen entfernen, wenn ein Nutzer gekickt wird",
+              "remove_votes_on_leave": "Aktive Stimmen entfernen, wenn ein Nutzer verlässt"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Thread-Einstellungen",
+        "components": {
+          "settings": {
+            "label": "Auswählen zum Aktivieren/Deaktivieren",
+            "description": "Ausgewählte Einstellungen sind aktiviert. Nicht ausgewählte Einstellungen sind deaktiviert.",
+            "options": {
+              "create_thread_with_poll": "Einen Thread erstellen, wenn eine neue Umfrage erstellt wird",
+              "lock_and_unlock_thread_with_poll": "Sperren/Entsperren von Threads, wenn die zugehörige Umfrage geschlossen/geöffnet wird"
+            }
           }
         }
       }
@@ -551,6 +604,14 @@
         "success": {
           "title": "Umfrage kopieren",
           "description": "Kopiere den folgenden Befehl und füge ihn in den Chat ein, um eine neue Umfrage mit denselben Einstellungen zu erstellen:"
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Umfrage geplant",
+          "description": "Umfrage `{{pollId}}` wurde für {{- scheduledAt}} geplant."
         }
       }
     },
@@ -757,6 +818,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Dashboard öffnen",
+          "description": "Klicke auf die Schaltfläche unten, um das Dashboard für diesen Server zu öffnen."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -780,6 +849,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Event-Einstellungen wurden erfolgreich aktualisiert."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Thread-Einstellungen wurden erfolgreich aktualisiert."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -864,6 +943,11 @@
       "description": "Du hast die maximale Zeit von {{maxtime}} erreicht.\nBitte achte darauf, dass die eingegebene Zeit nicht länger als die maximal zulässige Zeit ist.",
       "description_upgrade": "Du kannst die maximale Zeit auf {{maxtime}} erhöhen, indem du auf Premium upgradest."
     },
+    "scheduled_poll_limit": {
+      "title": "Limit für geplante Umfragen erreicht!",
+      "max_unpublished": "Maximal {{max}} unveröffentlichte geplante Umfragen sind erlaubt.",
+      "max_per_minute": "Maximal {{max}} Umfragen dürfen in derselben Minute geplant werden."
+    },
     "unknown_emoji": {
       "title": "Unbekanntes Emoji!",
       "description": "Du hast ein unbekanntes Emoji angegeben!\nDu kannst nur Emojis von Servern verwenden, zu denen EasyPoll eingeladen ist. Bitte stelle sicher, dass {{- emoji}} ein **offizielles Discord**-Emoji oder ein Emoji **von diesem Server** ist."
@@ -941,6 +1025,16 @@
       "no_polls_found": {
         "title": "Keine Umfragen gefunden!",
         "description": "Es wurden keine Umfragen auf diesem Server gefunden, die den gesuchten Kriterien entsprechen."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Umfrage mit Thread kann nicht verschoben werden!",
+          "description": "Diese Umfrage hat einen verknüpften Thread und kann nicht in einen anderen Kanal verschoben werden."
+        },
+        "already_in_channel": {
+          "title": "Umfrage ist bereits in diesem Kanal!",
+          "description": "Bitte wähle einen anderen Kanal aus, um diese Umfrage zu verschieben."
+        }
       }
     },
     "pollbuilder": {

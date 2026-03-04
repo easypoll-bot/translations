@@ -69,6 +69,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Sposta un sondaggio in un altro canale.",
+      "options": {
+        "id": {
+          "description": "L'ID del sondaggio o del messaggio da spostare."
+        },
+        "channel": {
+          "description": "Il canale in cui spostare il sondaggio."
+        }
+      }
+    },
     "poll": {
       "description": "Crea un sondaggio normale.",
       "options": {
@@ -180,6 +191,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Crea un sondaggio programmato.",
+      "options": {
+        "question": {
+          "description": "Qual è la domanda del sondaggio?"
+        },
+        "scheduled-time": {
+          "description": "Quando deve essere pubblicato il sondaggio?"
+        },
+        "time": {
+          "description": "Quanto deve durare il sondaggio?"
+        },
+        "type": {
+          "description": "Che tipo di sondaggio deve essere creato?",
+          "choices": {
+            "normal-buttons": "Normale (Bottoni)",
+            "normal-selectmenu": "Normale (Menu a tendina)",
+            "anonymous-buttons": "Anonimo (Bottoni)",
+            "anonymous-selectmenu": "Anonimo (Menu a tendina)",
+            "hidden-buttons": "Nascosto (Bottoni)",
+            "hidden-selectmenu": "Nascosto (Menu a tendina)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quante risposte può scegliere ogni utente? (Predefinito: 1)"
+        },
+        "text": {
+          "description": "Quale testo deve apparire sopra il sondaggio?"
+        },
+        "allowedrole": {
+          "description": "Quali ruoli possono votare? (Predefinito: Tutti)"
+        },
+        "answer": {
+          "description": "Risposta {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Blocca la possibilita di interagire con il bot ad un utente.",
       "options": {
@@ -207,6 +255,9 @@
     },
     "invite": {
       "description": "Ricevi un link per aggiungere il bot al tuo server."
+    },
+    "dashboard": {
+      "description": "Ricevi un link al pannello di controllo per questo server."
     },
     "listblocks": {
       "description": "Mostra una lista degli utenti bloccati sul server corrente."
@@ -254,25 +305,7 @@
           }
         },
         "events": {
-          "description": "Modifica le impostazioni degli eventi.",
-          "options": {
-            "setting": {
-              "description": "Che impostazioni devono essere cambiate?",
-              "choices": {
-                "announce_winner_on_poll_auto_close": "Annuncia il vincitore quando un sondaggio viene automaticamente chiuso",
-                "remove_votes_on_ban": "Rimuovi i voti attivi quando un utente viene bloccato",
-                "remove_votes_on_kick": "Rimuovi i voti attivi quando un utente viene espulso",
-                "remove_votes_on_leave": "Rimuovi i voti attivi quando un utente abbandona"
-              }
-            },
-            "status": {
-              "description": "Come devono essere cambiate le impostazioni?",
-              "choices": {
-                "enable": "Attiva",
-                "disable": "Disattiva"
-              }
-            }
-          }
+          "description": "Modifica le impostazioni degli eventi."
         },
         "emojis": {
           "description": "Cambia le emoji predefinite su questo server."
@@ -292,23 +325,7 @@
           }
         },
         "threads": {
-          "description": "Cambia le impostazioni dei thread.",
-          "options": {
-            "setting": {
-              "description": "Che impostazioni devono essere cambiate?",
-              "choices": {
-                "create_thread_with_poll": "Crea un thread quando viene creato un nuovo sondaggio",
-                "lock_and_unlock_thread_with_poll": "Blocca/sblocca un thread quando il sondaggio correlato è chiuso/riaperto"
-              }
-            },
-            "status": {
-              "description": "Come devono essere cambiate le impostazioni?",
-              "choices": {
-                "enable": "Attiva",
-                "disable": "Disattiva"
-              }
-            }
-          }
+          "description": "Cambia le impostazioni dei thread."
         }
       }
     },
@@ -333,6 +350,12 @@
     },
     "participants": {
       "name": "Partecipanti"
+    },
+    "delete": {
+      "name": "Elimina"
+    },
+    "export": {
+      "name": "Esporta"
     }
   },
   "modals": {
@@ -342,6 +365,37 @@
         "page_number": {
           "label": "Numero di pagina",
           "placeholder": "Inserisci il numero di pagina a cui desideri andare..."
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Impostazioni eventi",
+        "components": {
+          "settings": {
+            "label": "Seleziona per attivare/disattivare",
+            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
+            "options": {
+              "pin_poll_message_while_running": "Fissa il messaggio del sondaggio mentre è in corso",
+              "announce_winner_on_poll_auto_close": "Annuncia il vincitore quando un sondaggio viene chiuso automaticamente",
+              "remove_votes_on_ban": "Rimuovi i voti attivi quando un utente viene bannato",
+              "remove_votes_on_kick": "Rimuovi i voti attivi quando un utente viene espulso",
+              "remove_votes_on_leave": "Rimuovi i voti attivi quando un utente lascia"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Impostazioni thread",
+        "components": {
+          "settings": {
+            "label": "Seleziona per attivare/disattivare",
+            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
+            "options": {
+              "create_thread_with_poll": "Crea un thread quando viene creato un nuovo sondaggio",
+              "lock_and_unlock_thread_with_poll": "Blocca/sblocca un thread quando il sondaggio correlato viene chiuso/riaperto"
+            }
+          }
         }
       }
     },
@@ -542,6 +596,14 @@
         "success": {
           "title": "Copia il sondaggio",
           "description": "Copia il comando in basso e incollalo nella chat per creare un nuovo sondaggio con le stesse impostazioni."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Sondaggio programmato",
+          "description": "Il sondaggio `{{pollId}}` è stato programmato per {{- scheduledAt}}."
         }
       }
     },
@@ -748,6 +810,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Apri il pannello di controllo",
+          "description": "Fai clic sul pulsante in basso per aprire il pannello di controllo per questo server."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -771,6 +841,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Le impostazioni eventi sono state aggiornate con successo."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Le impostazioni dei thread sono state aggiornate con successo."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -855,6 +935,11 @@
       "description": "Hai raggiunto il tempo massimo di {{maxtime}}.\nControlla che il tempo specificato non sia più lungo del tempo massimo consentito.",
       "description_upgrade": "Puoi aumentare il tempo massimo {{maxtime}} aggiornandoti a premium."
     },
+    "scheduled_poll_limit": {
+      "title": "Limite dei sondaggi programmati raggiunto!",
+      "max_unpublished": "Sono consentiti al massimo {{max}} sondaggi programmati non pubblicati.",
+      "max_per_minute": "Sono consentiti al massimo {{max}} sondaggi programmati nello stesso minuto."
+    },
     "unknown_emoji": {
       "title": "Emoji sconosciuta!",
       "description": "Hai specificato un'emoji sconosciuta!\nPuoi usare solo emoji provenienti da server in cui EasyPoll è invitato. Assicurati che {{- emoji}} sia un'emoji **ufficiale Discord** o un'emoji **di questo server**."
@@ -928,6 +1013,16 @@
       "no_polls_found": {
         "title": "Nessun sondaggio trovato!",
         "description": "Non ci sono sondaggi trovati in questo server che corrispondano ai criteri cercati."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Impossibile spostare un sondaggio con thread!",
+          "description": "Questo sondaggio ha un thread collegato e non può essere spostato in un altro canale."
+        },
+        "already_in_channel": {
+          "title": "Il sondaggio è già in questo canale!",
+          "description": "Seleziona un canale diverso per spostare questo sondaggio."
+        }
       }
     },
     "pollbuilder": {

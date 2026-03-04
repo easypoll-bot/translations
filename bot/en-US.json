@@ -72,6 +72,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Move a poll to another channel.",
+      "options": {
+        "id": {
+          "description": "The ID of the poll or message to move."
+        },
+        "channel": {
+          "description": "The channel to move the poll to."
+        }
+      }
+    },
     "poll": {
       "description": "Create a normal poll.",
       "options": {
@@ -183,6 +194,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Create a scheduled poll.",
+      "options": {
+        "question": {
+          "description": "What is the question of the poll?"
+        },
+        "scheduled-time": {
+          "description": "When should the poll be published?"
+        },
+        "time": {
+          "description": "How long should the poll run?"
+        },
+        "type": {
+          "description": "What type of poll should be created?",
+          "choices": {
+            "normal-buttons": "Normal (Buttons)",
+            "normal-selectmenu": "Normal (Select Menu)",
+            "anonymous-buttons": "Anonymous (Buttons)",
+            "anonymous-selectmenu": "Anonymous (Select Menu)",
+            "hidden-buttons": "Hidden (Buttons)",
+            "hidden-selectmenu": "Hidden (Select Menu)"
+          }
+        },
+        "maxchoices": {
+          "description": "How many answers can each user choose? (Default: 1)"
+        },
+        "text": {
+          "description": "Which text should be appear above the poll?"
+        },
+        "allowedrole": {
+          "description": "Which role is allowed to vote? (Default: Everyone)"
+        },
+        "answer": {
+          "description": "Answer {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Block a user from interacting with the bot on this server.",
       "options": {
@@ -210,6 +258,9 @@
     },
     "invite": {
       "description": "Get a link to add the bot to your own server."
+    },
+    "dashboard": {
+      "description": "Get a link to the dashboard for this server."
     },
     "listblocks": {
       "description": "Show a list of all blocked users on the current server."
@@ -257,26 +308,7 @@
           }
         },
         "events": {
-          "description": "Change the settings of events.",
-          "options": {
-            "setting": {
-              "description": "Which setting should be changed?",
-              "choices": {
-                "pin_poll_message_while_running": "Pin the poll message while the poll is running",
-                "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
-                "remove_votes_on_ban": "Remove active votes when a user is banned",
-                "remove_votes_on_kick": "Remove active votes when a user is kicked",
-                "remove_votes_on_leave": "Remove active votes when a user leaves"
-              }
-            },
-            "status": {
-              "description": "To which status should the setting be changed?",
-              "choices": {
-                "enable": "Enable",
-                "disable": "Disable"
-              }
-            }
-          }
+          "description": "Change the settings of events."
         },
         "emojis": {
           "description": "Change the default emojis of this server."
@@ -296,23 +328,7 @@
           }
         },
         "threads": {
-          "description": "Change the settings of threads.",
-          "options": {
-            "setting": {
-              "description": "Which setting should be changed?",
-              "choices": {
-                "create_thread_with_poll": "Create a thread when a new poll is created",
-                "lock_and_unlock_thread_with_poll": "Lock/unlock a thread when the related poll is closed/reopened"
-              }
-            },
-            "status": {
-              "description": "To which status should the setting be changed?",
-              "choices": {
-                "enable": "Enable",
-                "disable": "Disable"
-              }
-            }
-          }
+          "description": "Change the settings of threads."
         }
       }
     },
@@ -337,6 +353,12 @@
     },
     "participants": {
       "name": "Participants"
+    },
+    "delete": {
+      "name": "Delete"
+    },
+    "export": {
+      "name": "Export"
     }
   },
   "modals": {
@@ -393,6 +415,37 @@
           "result": {
             "label": "Result Color",
             "placeholder": "Please enter the name or hex code of the result color..."
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Events Settings",
+        "components": {
+          "settings": {
+            "label": "Select to enable/disable",
+            "description": "Selected settings are enabled. Unselected settings are disabled.",
+            "options": {
+              "pin_poll_message_while_running": "Pin the poll message while the poll is running",
+              "announce_winner_on_poll_auto_close": "Announce the winner when a poll is automatically closed",
+              "remove_votes_on_ban": "Remove active votes when a user is banned",
+              "remove_votes_on_kick": "Remove active votes when a user is kicked",
+              "remove_votes_on_leave": "Remove active votes when a user leaves"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Threads Settings",
+        "components": {
+          "settings": {
+            "label": "Select to enable/disable",
+            "description": "Selected settings are enabled. Unselected settings are disabled.",
+            "options": {
+              "create_thread_with_poll": "Create a thread when a new poll is created",
+              "lock_and_unlock_thread_with_poll": "Lock/unlock a thread when the related poll is closed/reopened"
+            }
           }
         }
       }
@@ -546,11 +599,27 @@
         }
       }
     },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Poll moved",
+          "description": "The poll has been successfully moved to {{- channel}}."
+        }
+      }
+    },
     "copypoll": {
       "embeds": {
         "success": {
           "title": "Copy Poll",
           "description": "Copy the command below and paste it in the chat to create a new poll with the same settings."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Poll scheduled",
+          "description": "Poll `{{pollId}}` has been scheduled for {{- scheduledAt}}."
         }
       }
     },
@@ -757,6 +826,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Open the Dashboard",
+          "description": "Click the button below to open the dashboard for this server."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -780,6 +857,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Events settings updated successfully."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Threads settings updated successfully."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -864,6 +951,11 @@
       "description": "You have reached the maximum time of {{maxtime}}.\nPlease make sure the entered time is not longer than the maximum allowed time.",
       "description_upgrade": "You can increase the maximum time to {{maxtime}} by upgrading to premium."
     },
+    "scheduled_poll_limit": {
+      "title": "Scheduled poll limit reached!",
+      "max_unpublished": "Maximum {{max}} unpublished scheduled polls are allowed.",
+      "max_per_minute": "Maximum {{max}} polls are allowed to be scheduled in the same minute."
+    },
     "unknown_emoji": {
       "title": "Unknown emoji!",
       "description": "You have specified an unknown emoji!\nYou can only use emojis from servers where EasyPoll is invited. Please make sure {{- emoji}} is an **official Discord** emoji or an emoji **from this server**."
@@ -941,6 +1033,16 @@
       "no_polls_found": {
         "title": "No polls found!",
         "description": "There are no polls found in this server that match the seached criteria."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Cannot move poll with thread!",
+          "description": "This poll has a linked thread and cannot be moved to another channel."
+        },
+        "already_in_channel": {
+          "title": "Poll is already in this channel!",
+          "description": "Please select a different channel to move this poll."
+        }
       }
     },
     "pollbuilder": {

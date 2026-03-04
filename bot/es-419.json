@@ -69,6 +69,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Mover una encuesta a otro canal.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o mensaje a mover."
+        },
+        "channel": {
+          "description": "El canal al que deseas mover la encuesta."
+        }
+      }
+    },
     "poll": {
       "description": "Crear una encuesta normal.",
       "options": {
@@ -180,6 +191,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Crear una encuesta programada.",
+      "options": {
+        "question": {
+          "description": "¿Cuál es la pregunta de la encuesta?"
+        },
+        "scheduled-time": {
+          "description": "¿Cuándo se debe publicar la encuesta?"
+        },
+        "time": {
+          "description": "¿Por cuánto tiempo la encuesta debe durar?"
+        },
+        "type": {
+          "description": "¿Qué tipo de encuesta debería ser creada?",
+          "choices": {
+            "normal-buttons": "Normal (Botones)",
+            "normal-selectmenu": "Normal (Menú de selección)",
+            "anonymous-buttons": "Anónimo (Botones)",
+            "anonymous-selectmenu": "Anónimo (Menú de selección)",
+            "hidden-buttons": "Oculto (Botones)",
+            "hidden-selectmenu": "Oculto (Menú de selección)"
+          }
+        },
+        "maxchoices": {
+          "description": "¿Cuántas respuestas puede seleccionar cada usuario? (Por defecto: 1)"
+        },
+        "text": {
+          "description": "¿Qué texto debería aparecer por encima de la encuesta?"
+        },
+        "allowedrole": {
+          "description": "¿Qué rol está permitido votar? (Por defecto: Todos)"
+        },
+        "answer": {
+          "description": "Respuesta {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Bloquear un usuario para interactuar con el bot en este servidor.",
       "options": {
@@ -207,6 +255,9 @@
     },
     "invite": {
       "description": "Obtener un enlace para agregar el bot a tu propio servidor."
+    },
+    "dashboard": {
+      "description": "Obtener un enlace al panel de control para este servidor."
     },
     "listblocks": {
       "description": "Mostrar una lista de todos los usuarios bloqueados en el servidor actual."
@@ -254,25 +305,7 @@
           }
         },
         "events": {
-          "description": "Cambia los ajustes de los eventos.",
-          "options": {
-            "setting": {
-              "description": "¿Cuál ajuste debería cambiarse?",
-              "choices": {
-                "announce_winner_on_poll_auto_close": "Anunciar el ganador cuando una encuesta está automáticamente cerrada",
-                "remove_votes_on_ban": "Eliminar los votos activos cuando el usuario está bloqueado",
-                "remove_votes_on_kick": "Eliminar los votos activos cuando el usuario es expulsado",
-                "remove_votes_on_leave": "Eliminar los votos activos cuando un usuario abandona"
-              }
-            },
-            "status": {
-              "description": "¿A qué estado debería cambiarse este ajuste?",
-              "choices": {
-                "enable": "Habilitar",
-                "disable": "Deshabilitar"
-              }
-            }
-          }
+          "description": "Cambia los ajustes de los eventos."
         },
         "emojis": {
           "description": "Cambia los emojis por defecto de este servidor."
@@ -292,23 +325,7 @@
           }
         },
         "threads": {
-          "description": "Cambia los ajustes de los hilos.",
-          "options": {
-            "setting": {
-              "description": "¿Cuál ajuste debería cambiarse?",
-              "choices": {
-                "create_thread_with_poll": "Crear un hilo cuando una nueva encuesta es creada",
-                "lock_and_unlock_thread_with_poll": "Cerrar/abrir un hilo cuando la encuesta relacionada está cerrada/reabierta"
-              }
-            },
-            "status": {
-              "description": "¿A qué estado debería cambiarse este ajuste?",
-              "choices": {
-                "enable": "Habilitar",
-                "disable": "Deshabilitar"
-              }
-            }
-          }
+          "description": "Cambia los ajustes de los hilos."
         }
       }
     },
@@ -333,6 +350,12 @@
     },
     "participants": {
       "name": "Participantes"
+    },
+    "delete": {
+      "name": "Eliminar"
+    },
+    "export": {
+      "name": "Exportar"
     }
   },
   "modals": {
@@ -342,6 +365,37 @@
         "page_number": {
           "label": "Número de página",
           "placeholder": "Por favor, ingresa el número de página que deseas ir..."
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Ajustes de eventos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
+            "options": {
+              "pin_poll_message_while_running": "Fijar el mensaje de la encuesta mientras está en curso",
+              "announce_winner_on_poll_auto_close": "Anunciar al ganador cuando una encuesta se cierre automáticamente",
+              "remove_votes_on_ban": "Eliminar votos activos cuando un usuario sea bloqueado",
+              "remove_votes_on_kick": "Eliminar votos activos cuando un usuario sea expulsado",
+              "remove_votes_on_leave": "Eliminar votos activos cuando un usuario abandone"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Ajustes de hilos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
+            "options": {
+              "create_thread_with_poll": "Crear un hilo cuando se cree una nueva encuesta",
+              "lock_and_unlock_thread_with_poll": "Bloquear/desbloquear un hilo cuando la encuesta relacionada se cierre/reabra"
+            }
+          }
         }
       }
     },
@@ -542,6 +596,14 @@
         "success": {
           "title": "Copiar encuesta",
           "description": "Copia el comando de abajo y pégalo en el chat para crear una encuesta con las mismas configuraciones."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Encuesta programada",
+          "description": "La encuesta `{{pollId}}` ha sido programada para {{- scheduledAt}}."
         }
       }
     },
@@ -748,6 +810,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Abrir el panel de control",
+          "description": "Has clic en el botón de abajo para abrir el panel de control de este servidor."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -771,6 +841,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Los ajustes de eventos se actualizaron correctamente."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Los ajustes de hilos se actualizaron correctamente."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -855,6 +935,11 @@
       "description": "Has alcanzado la duración máxima de {{maxtime}}.\nPor favor, asegúrate que la duración ingresada no sobrepase el límite permitido.",
       "description_upgrade": "Puedes aumentar la duración máxima a {{maxtime}} mejorando a premium."
     },
+    "scheduled_poll_limit": {
+      "title": "¡Límite de encuestas programadas alcanzado!",
+      "max_unpublished": "Se permiten como máximo {{max}} encuestas programadas sin publicar.",
+      "max_per_minute": "Se permiten como máximo {{max}} encuestas programadas en el mismo minuto."
+    },
     "unknown_emoji": {
       "title": "¡Emoji desconocido!",
       "description": "¡Has especificado un emoji desconocido!\nSolo puedes usar emojis de servidores donde EasyPoll está invitado. Por favor, asegúrate que {{- emoji}} es un emoji **oficial de discord** o un emoji **de este servidor**."
@@ -928,6 +1013,16 @@
       "no_polls_found": {
         "title": "¡No se encontraron encuestas!",
         "description": "No hay encuestas encontradas en este servidor que coincidan con el criterio de búsqueda."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "¡No se puede mover una encuesta con hilo!",
+          "description": "Esta encuesta tiene un hilo vinculado y no se puede mover a otro canal."
+        },
+        "already_in_channel": {
+          "title": "¡La encuesta ya está en este canal!",
+          "description": "Por favor, selecciona otro canal para mover esta encuesta."
+        }
       }
     },
     "pollbuilder": {

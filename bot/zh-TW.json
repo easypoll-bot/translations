@@ -69,6 +69,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "將投票移動至其他頻道",
+      "options": {
+        "id": {
+          "description": "要移動的投票或消息的ID"
+        },
+        "channel": {
+          "description": "要將投票移動到的目標頻道"
+        }
+      }
+    },
     "poll": {
       "description": "發起一般投票",
       "options": {
@@ -175,6 +186,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "建立排程投票",
+      "options": {
+        "question": {
+          "description": "您想發起的問題"
+        },
+        "scheduled-time": {
+          "description": "投票要在何時發布"
+        },
+        "time": {
+          "description": "限制投票進行的時長"
+        },
+        "type": {
+          "description": "該投票的類型",
+          "choices": {
+            "normal-buttons": "正常(按鈕)",
+            "normal-selectmenu": "正常(選單)",
+            "anonymous-buttons": "匿名(按鈕)",
+            "anonymous-selectmenu": "匿名(選單)",
+            "hidden-buttons": "隱藏(按鈕)",
+            "hidden-selectmenu": "隱藏(選單)"
+          }
+        },
+        "maxchoices": {
+          "description": "每位使用者可選擇的選項(預設為1)"
+        },
+        "text": {
+          "description": "顯示在投票上方的說明"
+        },
+        "allowedrole": {
+          "description": "允許特定身分組的使用者投票(預設為所有人)"
+        },
+        "answer": {
+          "description": "選項 {{id}}"
+        }
+      }
+    },
     "debug": {
       "description": "檢查擁有的權限和常見問題",
       "options": {
@@ -188,6 +236,9 @@
     },
     "invite": {
       "description": "獲取連結以將此機器人添加到您的伺服器"
+    },
+    "dashboard": {
+      "description": "獲取此伺服器控制面板的連結"
     },
     "premium": {
       "description": "檢查伺服器的機器人是否升級到高級版"
@@ -232,24 +283,7 @@
           }
         },
         "events": {
-          "description": "更改活動的顏色",
-          "options": {
-            "setting": {
-              "description": "需要更改哪項設定？",
-              "choices": {
-                "remove_votes_on_ban": "當使用者被封禁時移除其活躍投票",
-                "remove_votes_on_kick": "當使用者被逐出時移除其活躍投票",
-                "remove_votes_on_leave": "當使用者離開時移除其活躍投票"
-              }
-            },
-            "status": {
-              "description": "應設定為哪種狀態？",
-              "choices": {
-                "enable": "啟用",
-                "disable": "停用"
-              }
-            }
-          }
+          "description": "更改活動的顏色"
         },
         "emojis": {
           "description": "更改伺服器的預設表情符號"
@@ -258,23 +292,7 @@
           "description": "更改伺服器的預設語言"
         },
         "threads": {
-          "description": "更改討論串的設定",
-          "options": {
-            "setting": {
-              "description": "需要更改哪項設定？",
-              "choices": {
-                "create_thread_with_poll": "發起新的投票時創建討論串",
-                "lock_and_unlock_thread_with_poll": "當投票截止/重啟時鎖定/解鎖該討論串"
-              }
-            },
-            "status": {
-              "description": "應設定為哪種狀態？",
-              "choices": {
-                "enable": "啟用",
-                "disable": "停用"
-              }
-            }
-          }
+          "description": "更改討論串的設定"
         }
       }
     }
@@ -291,6 +309,12 @@
     },
     "participants": {
       "name": "參與者"
+    },
+    "delete": {
+      "name": "刪除"
+    },
+    "export": {
+      "name": "匯出"
     }
   },
   "modals": {
@@ -300,6 +324,37 @@
         "page_number": {
           "label": "頁碼",
           "placeholder": "請輸入您想前往的頁面頁碼"
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "活動設定",
+        "components": {
+          "settings": {
+            "label": "選擇以啟用/停用",
+            "description": "已選擇的設定會啟用，未選擇的設定會停用。",
+            "options": {
+              "pin_poll_message_while_running": "在投票進行中固定投票訊息",
+              "announce_winner_on_poll_auto_close": "投票自動關閉時公告獲勝者",
+              "remove_votes_on_ban": "使用者被封禁時移除其有效投票",
+              "remove_votes_on_kick": "使用者被踢出時移除其有效投票",
+              "remove_votes_on_leave": "使用者離開時移除其有效投票"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "討論串設定",
+        "components": {
+          "settings": {
+            "label": "選擇以啟用/停用",
+            "description": "已選擇的設定會啟用，未選擇的設定會停用。",
+            "options": {
+              "create_thread_with_poll": "建立新投票時建立討論串",
+              "lock_and_unlock_thread_with_poll": "相關投票關閉/重開時鎖定/解鎖討論串"
+            }
+          }
         }
       }
     }
@@ -487,6 +542,14 @@
         }
       }
     },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "已排程投票",
+          "description": "投票 `{{pollId}}` 已排程在 {{- scheduledAt}} 發布。"
+        }
+      }
+    },
     "debug": {
       "content": "如果您需要我們支持團隊的幫助，請與他們分享以下連結：",
       "embeds": {
@@ -544,6 +607,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "打開控制面板",
+          "description": "點擊下面的按鈕打開此伺服器的控制面板。"
+        }
+      }
+    },
     "premium": {
       "embeds": {
         "no_premium": {
@@ -559,6 +630,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "活動設定已成功更新。"
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "討論串設定已成功更新。"
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -630,6 +711,11 @@
       "description": "您已達到最長時間 {{maxtime}}。\n請確保輸入的時間不超過允許的最長時間。",
       "description_upgrade": "通過升級到高級版，您可以延長最長時間至 {{maxtime}} 。"
     },
+    "scheduled_poll_limit": {
+      "title": "已達到排程投票上限！",
+      "max_unpublished": "最多只允許 {{max}} 個尚未發布的排程投票。",
+      "max_per_minute": "同一分鐘內最多只能排程 {{max}} 個投票。"
+    },
     "unknown_emoji": {
       "title": "未知的表情符號！",
       "description": "您指定了一個未知的表情符號！\nEasyPoll 僅支持使用其所在伺服器的表情符號。請確認 {{- emoji}} 是**Discord 官方**表情符號，或是**本伺服器**的自定義表情符號。"
@@ -686,6 +772,16 @@
       "no_polls_found": {
         "title": "找不到投票！",
         "description": "在此伺服器中未找到符合搜索條件的投票。"
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "無法移動含有討論串的投票！",
+          "description": "此投票已綁定討論串，無法移動到其他頻道。"
+        },
+        "already_in_channel": {
+          "title": "投票已在此頻道中！",
+          "description": "請選擇其他頻道來移動此投票。"
+        }
       }
     }
   },
@@ -710,6 +806,7 @@
     "confirm_reopen": "是，重啟投票",
     "go_to_message": "前往至消息",
     "go_to_page": "前往頁面",
+    "view_poll": "查看投票",
     "remove_all_votes": "移除您的所有投票",
     "remove_vote": "移除此投票",
     "manage_votes": "管理您的投票",

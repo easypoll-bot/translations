@@ -69,6 +69,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Bir anketi başka bir kanala taşı.",
+      "options": {
+        "id": {
+          "description": "Taşınacak anketin veya mesajın kimliği."
+        },
+        "channel": {
+          "description": "Anketin taşınacağı kanal."
+        }
+      }
+    },
     "poll": {
       "description": "Normal bir anket oluştur.",
       "options": {
@@ -180,6 +191,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Zamanlanmış bir anket oluştur.",
+      "options": {
+        "question": {
+          "description": "Anketin sorusu nedir?"
+        },
+        "scheduled-time": {
+          "description": "Anket ne zaman yayınlansın?"
+        },
+        "time": {
+          "description": "Anket ne kadar süreyle çalışmalı?"
+        },
+        "type": {
+          "description": "Ne tür bir anket oluşturulmalı?",
+          "choices": {
+            "normal-buttons": "Normal (Butonlar)",
+            "normal-selectmenu": "Normal (Seçim Menüsü)",
+            "anonymous-buttons": "Anonim (Butonlar)",
+            "anonymous-selectmenu": "Anonim (Seçim Menüsü)",
+            "hidden-buttons": "Gizli (Butonlar)",
+            "hidden-selectmenu": "Gizli (Seçim Menüsü)"
+          }
+        },
+        "maxchoices": {
+          "description": "Her kullanıcı kaç cevap seçebilir? (Varsayılan: 1)"
+        },
+        "text": {
+          "description": "Anketin üzerinde hangi metin görünmeli?"
+        },
+        "allowedrole": {
+          "description": "Hangi rolün oy kullanmasına izin veriliyor? (Varsayılan: Herkes)"
+        },
+        "answer": {
+          "description": "Cevap {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Bir kullanıcının bu sunucuda botla etkileşimini engelle.",
       "options": {
@@ -207,6 +255,9 @@
     },
     "invite": {
       "description": "Botu kendi sunucunuza eklemek için bir bağlantı alın."
+    },
+    "dashboard": {
+      "description": "Bu sunucu için kontrol paneline bir bağlantı alın."
     },
     "listblocks": {
       "description": "Mevcut sunucudaki tüm engellenen kullanıcıların bir listesini göster."
@@ -254,25 +305,7 @@
           }
         },
         "events": {
-          "description": "Etkinliklerin ayarlarını değiştir.",
-          "options": {
-            "setting": {
-              "description": "Hangi ayar değiştirilmeli?",
-              "choices": {
-                "announce_winner_on_poll_auto_close": "Anket otomatik kapatıldığında kazananı duyur",
-                "remove_votes_on_ban": "Bir kullanıcı yasaklandığında aktif oyları kaldır",
-                "remove_votes_on_kick": "Bir kullanıcı atıldığında aktif oyları kaldır",
-                "remove_votes_on_leave": "Bir kullanıcı ayrıldığında aktif oyları kaldır"
-              }
-            },
-            "status": {
-              "description": "Ayar hangi duruma değiştirilmeli?",
-              "choices": {
-                "enable": "Etkinleştir",
-                "disable": "Devre Dışı Bırak"
-              }
-            }
-          }
+          "description": "Etkinliklerin ayarlarını değiştir."
         },
         "emojis": {
           "description": "Bu sunucunun varsayılan emojilerini değiştir."
@@ -292,23 +325,7 @@
           }
         },
         "threads": {
-          "description": "Konuların ayarlarını değiştir.",
-          "options": {
-            "setting": {
-              "description": "Hangi ayar değiştirilmeli?",
-              "choices": {
-                "create_thread_with_poll": "Yeni bir anket oluşturulduğunda bir konu oluştur",
-                "lock_and_unlock_thread_with_poll": "İlgili anket kapatıldığında/tekrar açıldığında bir konuyu kilitle/kilidi aç"
-              }
-            },
-            "status": {
-              "description": "Ayar hangi duruma değiştirilmeli?",
-              "choices": {
-                "enable": "Etkinleştir",
-                "disable": "Devre Dışı Bırak"
-              }
-            }
-          }
+          "description": "Konuların ayarlarını değiştir."
         }
       }
     },
@@ -333,6 +350,12 @@
     },
     "participants": {
       "name": "Katılımcılar"
+    },
+    "delete": {
+      "name": "Sil"
+    },
+    "export": {
+      "name": "Dışa Aktar"
     }
   },
   "modals": {
@@ -342,6 +365,37 @@
         "page_number": {
           "label": "Sayfa Numarası",
           "placeholder": "Gitmek istediğiniz sayfa numarasını giriniz..."
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Etkinlik ayarları",
+        "components": {
+          "settings": {
+            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
+            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
+            "options": {
+              "pin_poll_message_while_running": "Anket sürerken anket mesajını sabitle",
+              "announce_winner_on_poll_auto_close": "Anket otomatik kapanınca kazananı duyur",
+              "remove_votes_on_ban": "Kullanıcı yasaklanınca aktif oyları kaldır",
+              "remove_votes_on_kick": "Kullanıcı atılınca aktif oyları kaldır",
+              "remove_votes_on_leave": "Kullanıcı ayrılınca aktif oyları kaldır"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Konu ayarları",
+        "components": {
+          "settings": {
+            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
+            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
+            "options": {
+              "create_thread_with_poll": "Yeni anket oluşturulunca bir konu oluştur",
+              "lock_and_unlock_thread_with_poll": "İlgili anket kapanınca/açılınca konuyu kilitle/kilidi aç"
+            }
+          }
         }
       }
     },
@@ -542,6 +596,14 @@
         "success": {
           "title": "Anketi Kopyala",
           "description": "Aynı ayarlarla yeni bir anket oluşturmak için aşağıdaki komutu kopyalayın ve sohbete yapıştırın."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Anket zamanlandı",
+          "description": "Anket `{{pollId}}` {{- scheduledAt}} için zamanlandı."
         }
       }
     },
@@ -748,6 +810,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Kontrol panelini aç",
+          "description": "Bu sunucu için kontrol panelini açmak için aşağıdaki düğmeye tıklayın."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -771,6 +841,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Etkinlik ayarları başarıyla güncellendi."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Konu ayarları başarıyla güncellendi."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -855,6 +935,11 @@
       "description": "Maksimum süre olan {{maxtime}}'a ulaştınız.\nLütfen girilen sürenin izin verilen maksimum süreden uzun olmadığından emin olun.",
       "description_upgrade": "Premium'a yükselterek maksimum süreyi {{maxtime}}'a çıkarabilirsiniz."
     },
+    "scheduled_poll_limit": {
+      "title": "Planlanmış anket sınırına ulaşıldı!",
+      "max_unpublished": "En fazla {{max}} yayımlanmamış planlanmış ankete izin verilir.",
+      "max_per_minute": "Aynı dakikaya en fazla {{max}} anket planlanabilir."
+    },
     "unknown_emoji": {
       "title": "Bilinmeyen emoji!",
       "description": "Bilinmeyen bir emoji belirttiniz!\nSadece EasyPoll'un davet edildiği sunuculardaki emojileri kullanabilirsiniz. Lütfen {{- emoji}}'nin **resmi bir Discord** emojisi veya **bu sunucudan** bir emoji olduğundan emin olun."
@@ -928,6 +1013,16 @@
       "no_polls_found": {
         "title": "Anket bulunamadı!",
         "description": "Bu sunucuda aranan kriterlere uyan anket bulunamadı."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Bir iş parçacığına bağlı anket taşınamaz!",
+          "description": "Bu anketin bağlı bir iş parçacığı var ve başka bir kanala taşınamaz."
+        },
+        "already_in_channel": {
+          "title": "Anket zaten bu kanalda!",
+          "description": "Bu anketi taşımak için lütfen farklı bir kanal seçin."
+        }
       }
     },
     "pollbuilder": {

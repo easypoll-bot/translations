@@ -72,6 +72,17 @@
         }
       }
     },
+    "movepoll": {
+      "description": "Przenieś ankietę do innego kanału.",
+      "options": {
+        "id": {
+          "description": "ID ankiety lub wiadomości, która ma zostać przeniesiona."
+        },
+        "channel": {
+          "description": "Kanał, do którego ankieta ma zostać przeniesiona."
+        }
+      }
+    },
     "poll": {
       "description": "Utwórz normalną ankietę.",
       "options": {
@@ -183,6 +194,43 @@
         }
       }
     },
+    "schedulepoll": {
+      "description": "Utwórz zaplanowaną ankietę.",
+      "options": {
+        "question": {
+          "description": "Jakie jest pytanie ankiety?"
+        },
+        "scheduled-time": {
+          "description": "Kiedy ankieta ma zostać opublikowana?"
+        },
+        "time": {
+          "description": "Jak długo ma trwać ankieta?"
+        },
+        "type": {
+          "description": "Jakiego rodzaju ankieta powinna zostać utworzona?",
+          "choices": {
+            "normal-buttons": "Normalna (przyciski)",
+            "normal-selectmenu": "Normalna (wybór z listy)",
+            "anonymous-buttons": "Anonimowa (przyciski)",
+            "anonymous-selectmenu": "Anonimowa (wybór z listy)",
+            "hidden-buttons": "Ukryta (przyciski)",
+            "hidden-selectmenu": "Ukryta (wybór z listy)"
+          }
+        },
+        "maxchoices": {
+          "description": "Ile odpowiedzi może zaznaczyć każdy użytkownik? (Domyślnie: 1)"
+        },
+        "text": {
+          "description": "Jaki tekst ma się pojawić nad ankietą?"
+        },
+        "allowedrole": {
+          "description": "Która rola może głosować? (Domyślnie: everyone)"
+        },
+        "answer": {
+          "description": "Odpowiedź {{id}}"
+        }
+      }
+    },
     "block": {
       "description": "Zablokuj użytkownikowi możliwość interakcji z botem na tym serwerze.",
       "options": {
@@ -210,6 +258,9 @@
     },
     "invite": {
       "description": "Uzyskaj link umożliwiający dodanie bota do własnego serwera."
+    },
+    "dashboard": {
+      "description": "Uzyskaj link do panelu kontrolnego dla tego serwera."
     },
     "listblocks": {
       "description": "Pokaż listę wszystkich zablokowanych użytkowników na tym serwerze."
@@ -257,25 +308,7 @@
           }
         },
         "events": {
-          "description": "Zmień ustawienia automatyzacji.",
-          "options": {
-            "setting": {
-              "description": "Które ustawienie chcesz zmienić?",
-              "choices": {
-                "announce_winner_on_poll_auto_close": "Ogłoś wyniki, kiedy ankieta zostanie automatycznie zamknięta",
-                "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
-                "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
-                "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
-              }
-            },
-            "status": {
-              "description": "Na jaki stan zmienić ustawienie?",
-              "choices": {
-                "enable": "Włącz",
-                "disable": "Wyłącz"
-              }
-            }
-          }
+          "description": "Zmień ustawienia automatyzacji."
         },
         "emojis": {
           "description": "Zmień domyślne Emoji tego serwera."
@@ -295,23 +328,7 @@
           }
         },
         "threads": {
-          "description": "Zmień ustawienia wątków.",
-          "options": {
-            "setting": {
-              "description": "Które ustawienie chcesz zmienić?",
-              "choices": {
-                "create_thread_with_poll": "Utwórz wątek po utworzeniu nowej ankiety",
-                "lock_and_unlock_thread_with_poll": "Zablokuj/odblokuj wątek, gdy powiązana ankieta zostanie zamknięta/ponownie otwarta"
-              }
-            },
-            "status": {
-              "description": "Na jaki stan zmienić ustawienie?",
-              "choices": {
-                "enable": "Włącz",
-                "disable": "Wyłącz"
-              }
-            }
-          }
+          "description": "Zmień ustawienia wątków."
         }
       }
     },
@@ -336,6 +353,12 @@
     },
     "participants": {
       "name": "Uczestnicy"
+    },
+    "delete": {
+      "name": "Usuń"
+    },
+    "export": {
+      "name": "Eksportuj"
     }
   },
   "modals": {
@@ -345,6 +368,37 @@
         "page_number": {
           "label": "Numer strony",
           "placeholder": "Podaj numer strony, do której chcesz przejść..."
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Ustawienia zdarzeń",
+        "components": {
+          "settings": {
+            "label": "Wybierz, aby włączyć/wyłączyć",
+            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
+            "options": {
+              "pin_poll_message_while_running": "Przypnij wiadomość ankiety, gdy ankieta trwa",
+              "announce_winner_on_poll_auto_close": "Ogłoś zwycięzcę, gdy ankieta zamknie się automatycznie",
+              "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
+              "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
+              "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Ustawienia wątków",
+        "components": {
+          "settings": {
+            "label": "Wybierz, aby włączyć/wyłączyć",
+            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
+            "options": {
+              "create_thread_with_poll": "Utwórz wątek po utworzeniu nowej ankiety",
+              "lock_and_unlock_thread_with_poll": "Zablokuj/odblokuj wątek, gdy powiązana ankieta zostanie zamknięta/otwarta"
+            }
+          }
         }
       }
     },
@@ -553,6 +607,14 @@
         }
       }
     },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Ankieta zaplanowana",
+          "description": "Ankieta `{{pollId}}` została zaplanowana na {{- scheduledAt}}."
+        }
+      }
+    },
     "deletepoll": {
       "embeds": {
         "confirm": {
@@ -756,6 +818,14 @@
         }
       }
     },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Otwórz panel kontrolny",
+          "description": "Kliknij poniższy przycisk, aby otworzyć panel kontrolny dla tego serwera."
+        }
+      }
+    },
     "listblocks": {
       "embeds": {
         "list": {
@@ -779,6 +849,16 @@
       }
     },
     "settings": {
+      "events": {
+        "changed": {
+          "description": "Ustawienia zdarzeń zostały pomyślnie zaktualizowane."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Ustawienia wątków zostały pomyślnie zaktualizowane."
+        }
+      },
       "language": {
         "embeds": {
           "change": {
@@ -863,6 +943,11 @@
       "description": "Przekroczyłeś dopuszczalny czas trwania ankiety.\nUpewnij się, że wprowadzony czas nie jest dłuższy niż {{maxtime}}.",
       "description_upgrade": "Możesz zwiększyć maksymalny czas do {{maxtime}} wykupując wersję premium."
     },
+    "scheduled_poll_limit": {
+      "title": "Osiągnięto limit zaplanowanych ankiet!",
+      "max_unpublished": "Dozwolone jest maksymalnie {{max}} nieopublikowanych zaplanowanych ankiet.",
+      "max_per_minute": "Dozwolone są maksymalnie {{max}} ankiety zaplanowane w tej samej minucie."
+    },
     "unknown_emoji": {
       "title": "Nieznane Emoji!",
       "description": "Wybrałeś nieznane Emoji!\nMożesz używać Emoji wyłącznie z serwerów, na których jest EasyPoll. Upewnij się, że {{- emoji}} jest **oficjalnym Emoji Discorda** lub pochodzi **z tego serwera**."
@@ -936,6 +1021,16 @@
       "no_polls_found": {
         "title": "Nie znaleziono ankiet!",
         "description": "Na tym serwerze nie znaleziono ankiet spełniających podane kryteria."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Nie można przenieść ankiety z wątkiem!",
+          "description": "Ta ankieta ma powiązany wątek i nie można jej przenieść do innego kanału."
+        },
+        "already_in_channel": {
+          "title": "Ankieta jest już w tym kanale!",
+          "description": "Wybierz inny kanał, aby przenieść tę ankietę."
+        }
       }
     },
     "pollbuilder": {
