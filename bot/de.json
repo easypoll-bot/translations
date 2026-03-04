@@ -359,6 +359,15 @@
     },
     "export": {
       "name": "Exportieren"
+    },
+    "reopen": {
+      "name": "Erneut öffnen"
+    },
+    "block": {
+      "name": "Sperren"
+    },
+    "unblock": {
+      "name": "Entsperren"
     }
   },
   "modals": {
@@ -447,6 +456,19 @@
               "lock_and_unlock_thread_with_poll": "Sperren/Entsperren von Threads, wenn die zugehörige Umfrage geschlossen/geöffnet wird"
             }
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Nutzer sperren",
+      "components": {
+        "reason": {
+          "label": "Grund",
+          "placeholder": "Gebe einen Grund für die Sperrung dieses Nutzers ein..."
+        },
+        "time": {
+          "label": "Dauer",
+          "placeholder": "z.B. 1d, 1w, 1h..."
         }
       }
     }
@@ -946,7 +968,7 @@
     "scheduled_poll_limit": {
       "title": "Limit für geplante Umfragen erreicht!",
       "max_unpublished": "Maximal {{max}} unveröffentlichte geplante Umfragen sind erlaubt.",
-      "max_per_minute": "Maximal {{max}} Umfragen dürfen in derselben Minute geplant werden."
+      "min_interval": "Zwischen geplanten Umfragen müssen mindestens {{seconds}} Sekunden liegen. Bitte wähle einen anderen Zeitpunkt."
     },
     "unknown_emoji": {
       "title": "Unbekanntes Emoji!",

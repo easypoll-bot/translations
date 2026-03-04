@@ -315,6 +315,15 @@
     },
     "export": {
       "name": "匯出"
+    },
+    "reopen": {
+      "name": "重新開啟"
+    },
+    "block": {
+      "name": "封鎖"
+    },
+    "unblock": {
+      "name": "解除封鎖"
     }
   },
   "modals": {
@@ -355,6 +364,19 @@
               "lock_and_unlock_thread_with_poll": "相關投票關閉/重開時鎖定/解鎖討論串"
             }
           }
+        }
+      }
+    },
+    "block": {
+      "title": "封鎖使用者",
+      "components": {
+        "reason": {
+          "label": "原因",
+          "placeholder": "請輸入封鎖此使用者的原因..."
+        },
+        "time": {
+          "label": "期限",
+          "placeholder": "例如 1d、1w、1h..."
         }
       }
     }
@@ -714,7 +736,7 @@
     "scheduled_poll_limit": {
       "title": "已達到排程投票上限！",
       "max_unpublished": "最多只允許 {{max}} 個尚未發布的排程投票。",
-      "max_per_minute": "同一分鐘內最多只能排程 {{max}} 個投票。"
+      "min_interval": "排程投票之間必須至少間隔 {{seconds}} 秒。請選擇不同的時間。"
     },
     "unknown_emoji": {
       "title": "未知的表情符號！",

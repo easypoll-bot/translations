@@ -356,6 +356,15 @@
     },
     "export": {
       "name": "Esporta"
+    },
+    "reopen": {
+      "name": "Riapri"
+    },
+    "block": {
+      "name": "Blocca"
+    },
+    "unblock": {
+      "name": "Sblocca"
     }
   },
   "modals": {
@@ -444,6 +453,19 @@
             "label": "Colore: Risultato",
             "placeholder": "Inserisci il nome o il codice hex del colore per un risultato..."
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Blocca utente",
+      "components": {
+        "reason": {
+          "label": "Motivo",
+          "placeholder": "Inserisci un motivo per il blocco di questo utente..."
+        },
+        "time": {
+          "label": "Durata",
+          "placeholder": "es. 1d, 1w, 1h..."
         }
       }
     }
@@ -938,7 +960,7 @@
     "scheduled_poll_limit": {
       "title": "Limite dei sondaggi programmati raggiunto!",
       "max_unpublished": "Sono consentiti al massimo {{max}} sondaggi programmati non pubblicati.",
-      "max_per_minute": "Sono consentiti al massimo {{max}} sondaggi programmati nello stesso minuto."
+      "min_interval": "I sondaggi programmati devono essere distanziati di almeno {{seconds}} secondi. Scegli un orario diverso."
     },
     "unknown_emoji": {
       "title": "Emoji sconosciuta!",

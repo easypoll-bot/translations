@@ -359,6 +359,15 @@
     },
     "export": {
       "name": "Eksportuj"
+    },
+    "reopen": {
+      "name": "Otwórz ponownie"
+    },
+    "block": {
+      "name": "Zablokuj"
+    },
+    "unblock": {
+      "name": "Odblokuj"
     }
   },
   "modals": {
@@ -447,6 +456,19 @@
             "label": "Kolor wyników ankiety",
             "placeholder": "Proszę, wprowadź nazwę lub HEX koloru wyników ankiety..."
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Zablokuj użytkownika",
+      "components": {
+        "reason": {
+          "label": "Powód",
+          "placeholder": "Podaj powód zablokowania tego użytkownika..."
+        },
+        "time": {
+          "label": "Czas trwania",
+          "placeholder": "np. 1d, 1w, 1h..."
         }
       }
     }
@@ -946,7 +968,7 @@
     "scheduled_poll_limit": {
       "title": "Osiągnięto limit zaplanowanych ankiet!",
       "max_unpublished": "Dozwolone jest maksymalnie {{max}} nieopublikowanych zaplanowanych ankiet.",
-      "max_per_minute": "Dozwolone są maksymalnie {{max}} ankiety zaplanowane w tej samej minucie."
+      "min_interval": "Między zaplanowanymi ankietami musi być co najmniej {{seconds}} sekund. Wybierz inny czas."
     },
     "unknown_emoji": {
       "title": "Nieznane Emoji!",

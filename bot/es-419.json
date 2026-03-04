@@ -356,6 +356,15 @@
     },
     "export": {
       "name": "Exportar"
+    },
+    "reopen": {
+      "name": "Reabrir"
+    },
+    "block": {
+      "name": "Bloquear"
+    },
+    "unblock": {
+      "name": "Desbloquear"
     }
   },
   "modals": {
@@ -444,6 +453,19 @@
             "label": "Color: Resultado",
             "placeholder": "Por favor, ingresa el nombre o el código hex del color del resultado..."
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Bloquear usuario",
+      "components": {
+        "reason": {
+          "label": "Razón",
+          "placeholder": "Ingresa una razón para bloquear a este usuario..."
+        },
+        "time": {
+          "label": "Duración",
+          "placeholder": "ej. 1d, 1w, 1h..."
         }
       }
     }
@@ -938,7 +960,7 @@
     "scheduled_poll_limit": {
       "title": "¡Límite de encuestas programadas alcanzado!",
       "max_unpublished": "Se permiten como máximo {{max}} encuestas programadas sin publicar.",
-      "max_per_minute": "Se permiten como máximo {{max}} encuestas programadas en el mismo minuto."
+      "min_interval": "Las encuestas programadas deben tener al menos {{seconds}} segundos de diferencia. Por favor, elige otro horario."
     },
     "unknown_emoji": {
       "title": "¡Emoji desconocido!",

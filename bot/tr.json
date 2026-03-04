@@ -356,6 +356,15 @@
     },
     "export": {
       "name": "Dışa Aktar"
+    },
+    "reopen": {
+      "name": "Yeniden Aç"
+    },
+    "block": {
+      "name": "Engelle"
+    },
+    "unblock": {
+      "name": "Engeli Kaldır"
     }
   },
   "modals": {
@@ -444,6 +453,19 @@
             "label": "Sonuç Rengi",
             "placeholder": "Sonuç renginin adını veya hex kodunu giriniz..."
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Kullanıcıyı Engelle",
+      "components": {
+        "reason": {
+          "label": "Sebep",
+          "placeholder": "Bu kullanıcıyı engelleme sebebini giriniz..."
+        },
+        "time": {
+          "label": "Süre",
+          "placeholder": "örn. 1d, 1w, 1h..."
         }
       }
     }
@@ -938,7 +960,7 @@
     "scheduled_poll_limit": {
       "title": "Planlanmış anket sınırına ulaşıldı!",
       "max_unpublished": "En fazla {{max}} yayımlanmamış planlanmış ankete izin verilir.",
-      "max_per_minute": "Aynı dakikaya en fazla {{max}} anket planlanabilir."
+      "min_interval": "Planlanan anketler arasında en az {{seconds}} saniye olmalıdır. Lütfen farklı bir zaman seçin."
     },
     "unknown_emoji": {
       "title": "Bilinmeyen emoji!",

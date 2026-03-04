@@ -359,6 +359,15 @@
     },
     "export": {
       "name": "Export"
+    },
+    "reopen": {
+      "name": "Reopen"
+    },
+    "block": {
+      "name": "Block"
+    },
+    "unblock": {
+      "name": "Unblock"
     }
   },
   "modals": {
@@ -447,6 +456,19 @@
               "lock_and_unlock_thread_with_poll": "Lock/unlock a thread when the related poll is closed/reopened"
             }
           }
+        }
+      }
+    },
+    "block": {
+      "title": "Block User",
+      "components": {
+        "reason": {
+          "label": "Reason",
+          "placeholder": "Enter a reason for blocking this user..."
+        },
+        "time": {
+          "label": "Duration",
+          "placeholder": "e.g. 1d, 1w, 1h..."
         }
       }
     }
@@ -954,7 +976,7 @@
     "scheduled_poll_limit": {
       "title": "Scheduled poll limit reached!",
       "max_unpublished": "Maximum {{max}} unpublished scheduled polls are allowed.",
-      "max_per_minute": "Maximum {{max}} polls are allowed to be scheduled in the same minute."
+      "min_interval": "Scheduled polls must be at least {{seconds}} seconds apart. Please choose a different time."
     },
     "unknown_emoji": {
       "title": "Unknown emoji!",
