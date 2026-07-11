@@ -316,6 +316,9 @@
         "language": {
           "description": "Change the language of this server."
         },
+        "logging": {
+          "description": "Set up a logging channel for audit log messages."
+        },
         "role-weight": {
           "description": "Change the voting weight of a role.",
           "options": {
@@ -560,6 +563,8 @@
           "status": "Status",
           "creator": "Creator",
           "created_at": "Created at",
+          "scheduled_at": "Scheduled at",
+          "published_at": "Published at",
           "ends_at": "Ends at",
           "closed_at": "Closed at",
           "question": "Question",
@@ -633,7 +638,7 @@
       "embeds": {
         "success": {
           "title": "Copy Poll",
-          "description": "Copy the command below and paste it in the chat to create a new poll with the same settings."
+          "description": "Click the button below to copy this poll into the dashboard and create a new one with the same settings."
         }
       }
     },
@@ -903,6 +908,29 @@
             "description": "The language of the bot on this server has been changed to {{- language}}."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Logging",
+            "text_enabled": "Audit log messages are currently sent to {{- channel}}.\n\nSelect a channel below to change the logging channel, or click the button to disable logging.",
+            "text_disabled": "Logging is currently disabled on this server.\n\nSelect a channel below to receive audit log messages:",
+            "select": {
+              "placeholder": "Select a logging channel..."
+            },
+            "buttons": {
+              "remove": "Disable logging"
+            }
+          },
+          "changed": {
+            "title": "Logging Channel Set",
+            "description": "Audit log messages will now be sent to {{- channel}}."
+          },
+          "removed": {
+            "title": "Logging Disabled",
+            "description": "Audit log messages will no longer be sent and the logging webhook has been removed."
+          }
+        }
       }
     },
     "unblock": {
@@ -912,6 +940,56 @@
           "description": "The user has been successfully unblocked from interacting with the bot on this server."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Example: {{example}}",
+      "invalid": "Couldn't recognize this date — try e.g. 'tomorrow 9am' or 'in 2 hours'"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} via {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Changes",
+        "data": "Data",
+        "pollId": "Poll",
+        "reason": "Reason",
+        "restrictedUserId": "User",
+        "channelId": "Channel",
+        "userId": "User",
+        "roleId": "Role",
+        "restrictionId": "Restriction ID",
+        "oldChannelId": "Old Channel",
+        "newChannelId": "New Channel",
+        "oldMessageId": "Old Message",
+        "newMessageId": "New Message",
+        "expiresAt": "Expires At"
+      },
+      "buttons": {
+        "view_poll": "View Poll"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Poll Created",
+      "poll_publish": "Poll Published",
+      "poll_update": "Poll Updated",
+      "poll_close": "Poll Closed",
+      "poll_reopen": "Poll Reopened",
+      "poll_delete": "Poll Deleted",
+      "poll_move": "Poll Moved",
+      "poll_export": "Poll Exported",
+      "poll_answer_update": "Poll Answer Updated",
+      "poll_answer_bulk_update": "Poll Answers Updated",
+      "poll_answer_delete": "Poll Answer Deleted",
+      "poll_vote_delete": "Vote Removed",
+      "guild_update": "Server Settings Updated",
+      "guild_role_update": "Role Settings Updated",
+      "guild_complete_onboarding": "Onboarding Completed",
+      "guild_logging_disable": "Logging Disabled",
+      "restriction_create": "User Blocked",
+      "restriction_delete": "User Unblocked"
     }
   },
   "footers": {
@@ -1031,6 +1109,10 @@
         "title": "This poll is not closed!",
         "description": "The poll could not be reopened because it is not closed."
       },
+      "not_published": {
+        "title": "This poll is not published yet!",
+        "description": "This action cannot be performed because the poll has not been published yet."
+      },
       "not_voted": {
         "title": "Not voted for this option!",
         "description": "You cannot remove your vote for this option because you have not voted for this option."
@@ -1110,6 +1192,7 @@
     "go_to_message": "Go to the message",
     "go_to_page": "Go to page",
     "view_on_dashboard": "View on Dashboard",
+    "edit_on_dashboard": "Edit on Dashboard",
     "view_poll": "View Poll",
     "remove_all_votes": "Remove all your votes",
     "remove_vote": "Remove this vote",

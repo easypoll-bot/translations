@@ -313,6 +313,9 @@
         "language": {
           "description": "Cambia el idioma de este servidor."
         },
+        "logging": {
+          "description": "Configura un canal de registro para los mensajes del registro de auditoría."
+        },
         "role-weight": {
           "description": "Cambia el peso del voto de un rol.",
           "options": {
@@ -552,6 +555,8 @@
           "status": "Estado",
           "creator": "Creador",
           "created_at": "Creado el",
+          "scheduled_at": "Programado el",
+          "published_at": "Publicado el",
           "ends_at": "Termina el",
           "closed_at": "Cerrada el",
           "question": "Pregunta",
@@ -617,7 +622,7 @@
       "embeds": {
         "success": {
           "title": "Copiar encuesta",
-          "description": "Copia el comando de abajo y pégalo en el chat para crear una encuesta con las mismas configuraciones."
+          "description": "Haz clic en el botón de abajo para copiar esta encuesta en el panel y crear una nueva con las mismas configuraciones."
         }
       }
     },
@@ -887,6 +892,29 @@
             "description": "El idioma del bot en este servidor ha sido cambiado a {{- language}}."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Registro",
+            "text_enabled": "Los mensajes del registro de auditoría se envían actualmente a {{- channel}}.\n\nSelecciona un canal abajo para cambiar el canal de registro, o haz clic en el botón para desactivar el registro.",
+            "text_disabled": "El registro está desactivado actualmente en este servidor.\n\nSelecciona un canal abajo para recibir los mensajes del registro de auditoría:",
+            "select": {
+              "placeholder": "Selecciona un canal de registro..."
+            },
+            "buttons": {
+              "remove": "Desactivar registro"
+            }
+          },
+          "changed": {
+            "title": "Canal de registro establecido",
+            "description": "Los mensajes del registro de auditoría ahora se enviarán a {{- channel}}."
+          },
+          "removed": {
+            "title": "Registro desactivado",
+            "description": "Los mensajes del registro de auditoría ya no se enviarán y el webhook de registro fue eliminado."
+          }
+        }
       }
     },
     "unblock": {
@@ -896,6 +924,56 @@
           "description": "El usuario ha sido desbloqueado satisfactoriamente para interactuar con el bot en este servidor."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Ejemplo: {{example}}",
+      "invalid": "No se reconoció la fecha — p. ej. «mañana 9am» o «en 2 horas»"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} vía {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Cambios",
+        "data": "Datos",
+        "pollId": "Encuesta",
+        "reason": "Motivo",
+        "restrictedUserId": "Usuario",
+        "channelId": "Canal",
+        "userId": "Usuario",
+        "roleId": "Rol",
+        "restrictionId": "ID de restricción",
+        "oldChannelId": "Canal anterior",
+        "newChannelId": "Canal nuevo",
+        "oldMessageId": "Mensaje anterior",
+        "newMessageId": "Mensaje nuevo",
+        "expiresAt": "Expira el"
+      },
+      "buttons": {
+        "view_poll": "Ver encuesta"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Encuesta creada",
+      "poll_publish": "Encuesta publicada",
+      "poll_update": "Encuesta actualizada",
+      "poll_close": "Encuesta cerrada",
+      "poll_reopen": "Encuesta reabierta",
+      "poll_delete": "Encuesta eliminada",
+      "poll_move": "Encuesta movida",
+      "poll_export": "Encuesta exportada",
+      "poll_answer_update": "Respuesta actualizada",
+      "poll_answer_bulk_update": "Respuestas actualizadas",
+      "poll_answer_delete": "Respuesta eliminada",
+      "poll_vote_delete": "Voto eliminado",
+      "guild_update": "Configuración del servidor actualizada",
+      "guild_role_update": "Configuración de roles actualizada",
+      "guild_complete_onboarding": "Incorporación completada",
+      "guild_logging_disable": "Registro desactivado",
+      "restriction_create": "Usuario bloqueado",
+      "restriction_delete": "Usuario desbloqueado"
     }
   },
   "footers": {
@@ -1011,6 +1089,10 @@
         "title": "¡Esta encuesta no está cerrada!",
         "description": "La encuesta no puede ser reabierta porque no está cerrada."
       },
+      "not_published": {
+        "title": "¡Esta encuesta aún no ha sido publicada!",
+        "description": "No se puede realizar esta acción porque la encuesta aún no ha sido publicada."
+      },
       "not_voted": {
         "title": "¡No votaste por esta opción!",
         "description": "No puedes eliminar tu voto para esta opción porque no has votado por esta opción."
@@ -1090,6 +1172,7 @@
     "go_to_message": "Ir al mensaje",
     "go_to_page": "Ir a la página",
     "view_on_dashboard": "Ver en el Panel de Control",
+    "edit_on_dashboard": "Editar en el Panel de Control",
     "view_poll": "Ver encuesta",
     "remove_all_votes": "Eliminar todos tus votos",
     "remove_vote": "Eliminar este voto",

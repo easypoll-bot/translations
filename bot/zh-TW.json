@@ -291,6 +291,9 @@
         "language": {
           "description": "更改伺服器的預設語言"
         },
+        "logging": {
+          "description": "設定用於稽核日誌訊息的日誌頻道。"
+        },
         "threads": {
           "description": "更改討論串的設定"
         }
@@ -441,6 +444,8 @@
           "status": "狀態",
           "creator": "發起者",
           "created_at": "發起於",
+          "scheduled_at": "排程於",
+          "published_at": "發布於",
           "ends_at": "結束於",
           "closed_at": "截止於",
           "question": "問題",
@@ -676,7 +681,80 @@
             "description": "在此伺服器上的機器人的語言已更改為{{- language}}。"
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "日誌",
+            "text_enabled": "稽核日誌訊息目前會傳送至 {{- channel}}。\n\n請在下方選擇一個頻道以變更日誌頻道，或點擊按鈕以停用日誌功能。",
+            "text_disabled": "此伺服器目前已停用日誌功能。\n\n請在下方選擇一個頻道以接收稽核日誌訊息：",
+            "select": {
+              "placeholder": "選擇一個日誌頻道..."
+            },
+            "buttons": {
+              "remove": "停用日誌"
+            }
+          },
+          "changed": {
+            "title": "已設定日誌頻道",
+            "description": "稽核日誌訊息現在將傳送至 {{- channel}}。"
+          },
+          "removed": {
+            "title": "已停用日誌",
+            "description": "稽核日誌訊息將不再傳送，且日誌 Webhook 已被移除。"
+          }
+        }
       }
+    },
+    "timeAutocomplete": {
+      "example": "範例：{{example}}",
+      "invalid": "無法辨識日期 — 例如「明天 9am」或「2 小時後」"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} 透過 {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "變更",
+        "data": "資料",
+        "pollId": "投票",
+        "reason": "原因",
+        "restrictedUserId": "使用者",
+        "channelId": "頻道",
+        "userId": "使用者",
+        "roleId": "身分組",
+        "restrictionId": "限制 ID",
+        "oldChannelId": "舊頻道",
+        "newChannelId": "新頻道",
+        "oldMessageId": "舊訊息",
+        "newMessageId": "新訊息",
+        "expiresAt": "到期時間"
+      },
+      "buttons": {
+        "view_poll": "查看投票"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "已建立投票",
+      "poll_publish": "已發布投票",
+      "poll_update": "已更新投票",
+      "poll_close": "已截止投票",
+      "poll_reopen": "已重新開啟投票",
+      "poll_delete": "已刪除投票",
+      "poll_move": "已移動投票",
+      "poll_export": "已匯出投票",
+      "poll_answer_update": "已更新選項",
+      "poll_answer_bulk_update": "已更新選項",
+      "poll_answer_delete": "已刪除選項",
+      "poll_vote_delete": "已移除票數",
+      "guild_update": "已更新伺服器設定",
+      "guild_role_update": "已更新身分組設定",
+      "guild_complete_onboarding": "已完成初始設定",
+      "guild_logging_disable": "已停用日誌",
+      "restriction_create": "已封鎖使用者",
+      "restriction_delete": "已解除封鎖使用者"
     }
   },
   "footers": {
@@ -770,6 +848,10 @@
         "title": "投票並未截止！",
         "description": "無法重啟投票，因為當前投票尚未關閉。"
       },
+      "not_published": {
+        "title": "此投票尚未發布！",
+        "description": "無法執行此操作，因為投票尚未發布。"
+      },
       "not_voted": {
         "title": "沒有為該選項投過票！",
         "description": "無法取消該選項的投票，因為您尚未對此選項投過票。"
@@ -828,6 +910,8 @@
     "confirm_reopen": "是，重啟投票",
     "go_to_message": "前往至消息",
     "go_to_page": "前往頁面",
+    "view_on_dashboard": "在儀表板上查看",
+    "edit_on_dashboard": "在儀表板上編輯",
     "view_poll": "查看投票",
     "remove_all_votes": "移除您的所有投票",
     "remove_vote": "移除此投票",

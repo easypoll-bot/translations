@@ -316,6 +316,9 @@
         "language": {
           "description": "Ändere die Sprache des Servers."
         },
+        "logging": {
+          "description": "Richte einen Logging-Kanal für Audit-Log-Nachrichten ein."
+        },
         "role-weight": {
           "description": "Ändere die Abstimmungsgewichtung einer Rolle.",
           "options": {
@@ -560,6 +563,8 @@
           "status": "Status",
           "creator": "Ersteller",
           "created_at": "Erstellt am",
+          "scheduled_at": "Geplant am",
+          "published_at": "Veröffentlicht am",
           "ends_at": "Endet am",
           "closed_at": "Geschlossen am",
           "question": "Frage",
@@ -625,7 +630,7 @@
       "embeds": {
         "success": {
           "title": "Umfrage kopieren",
-          "description": "Kopiere den folgenden Befehl und füge ihn in den Chat ein, um eine neue Umfrage mit denselben Einstellungen zu erstellen:"
+          "description": "Klicke auf den Button unten, um diese Umfrage im Dashboard zu kopieren und eine neue mit denselben Einstellungen zu erstellen."
         }
       }
     },
@@ -895,6 +900,29 @@
             "description": "Die Sprache des Bots auf diesem Server wurde auf {{- language}} geändert."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Logging",
+            "text_enabled": "Audit-Log-Nachrichten werden derzeit an {{- channel}} gesendet.\n\nWähle unten einen Kanal, um den Logging-Kanal zu ändern, oder klicke auf den Button, um das Logging zu deaktivieren.",
+            "text_disabled": "Logging ist auf diesem Server derzeit deaktiviert.\n\nWähle unten einen Kanal, um Audit-Log-Nachrichten zu erhalten:",
+            "select": {
+              "placeholder": "Wähle einen Logging-Kanal..."
+            },
+            "buttons": {
+              "remove": "Logging deaktivieren"
+            }
+          },
+          "changed": {
+            "title": "Logging-Kanal festgelegt",
+            "description": "Audit-Log-Nachrichten werden nun an {{- channel}} gesendet."
+          },
+          "removed": {
+            "title": "Logging deaktiviert",
+            "description": "Audit-Log-Nachrichten werden nicht mehr gesendet und der Logging-Webhook wurde entfernt."
+          }
+        }
       }
     },
     "unblock": {
@@ -904,6 +932,56 @@
           "description": "Der Nutzer wurde erfolgreich für die Interaktion mit dem Bot auf diesem Server entsperrt."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Beispiel: {{example}}",
+      "invalid": "Datum nicht erkannt — z. B. \"morgen 9 Uhr\" oder \"in 2 Stunden\""
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} über {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Änderungen",
+        "data": "Daten",
+        "pollId": "Umfrage",
+        "reason": "Grund",
+        "restrictedUserId": "Nutzer",
+        "channelId": "Kanal",
+        "userId": "Nutzer",
+        "roleId": "Rolle",
+        "restrictionId": "Sperr-ID",
+        "oldChannelId": "Alter Kanal",
+        "newChannelId": "Neuer Kanal",
+        "oldMessageId": "Alte Nachricht",
+        "newMessageId": "Neue Nachricht",
+        "expiresAt": "Läuft ab am"
+      },
+      "buttons": {
+        "view_poll": "Umfrage anzeigen"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Umfrage erstellt",
+      "poll_publish": "Umfrage veröffentlicht",
+      "poll_update": "Umfrage aktualisiert",
+      "poll_close": "Umfrage geschlossen",
+      "poll_reopen": "Umfrage wieder geöffnet",
+      "poll_delete": "Umfrage gelöscht",
+      "poll_move": "Umfrage verschoben",
+      "poll_export": "Umfrage exportiert",
+      "poll_answer_update": "Antwort aktualisiert",
+      "poll_answer_bulk_update": "Antworten aktualisiert",
+      "poll_answer_delete": "Antwort gelöscht",
+      "poll_vote_delete": "Stimme entfernt",
+      "guild_update": "Servereinstellungen aktualisiert",
+      "guild_role_update": "Rolleneinstellungen aktualisiert",
+      "guild_complete_onboarding": "Onboarding abgeschlossen",
+      "guild_logging_disable": "Logging deaktiviert",
+      "restriction_create": "Nutzer gesperrt",
+      "restriction_delete": "Nutzer entsperrt"
     }
   },
   "footers": {
@@ -1023,6 +1101,10 @@
         "title": "Diese Umfrage ist nicht geschlossen!",
         "description": "Die Umfrage konnte nicht wieder geöffnet werden, da sie nicht geschlossen ist."
       },
+      "not_published": {
+        "title": "Diese Umfrage ist noch nicht veröffentlicht!",
+        "description": "Diese Aktion kann nicht ausgeführt werden, da die Umfrage noch nicht veröffentlicht wurde."
+      },
       "not_voted": {
         "title": "Nicht für diese Option gestimmt!",
         "description": "Du kannst deine Stimme für diese Option nicht entfernen, da du nicht für diese Option abgestimmt hast."
@@ -1102,6 +1184,7 @@
     "go_to_message": "Zur Nachricht gehen",
     "go_to_page": "Gehe zu Seite",
     "view_on_dashboard": "Auf dem Dashboard anzeigen",
+    "edit_on_dashboard": "Auf dem Dashboard bearbeiten",
     "view_poll": "Umfrage anzeigen",
     "remove_all_votes": "Alle Stimmen entfernen",
     "remove_vote": "Diese Stimme entfernen",

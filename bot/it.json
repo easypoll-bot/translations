@@ -313,6 +313,9 @@
         "language": {
           "description": "Cambia la lingua su questo server."
         },
+        "logging": {
+          "description": "Imposta un canale di log per i messaggi del registro di controllo."
+        },
         "role-weight": {
           "description": "Cambia il peso del voto di un ruolo.",
           "options": {
@@ -552,6 +555,8 @@
           "status": "Stato",
           "creator": "Creatore",
           "created_at": "Creato il",
+          "scheduled_at": "Programmato il",
+          "published_at": "Pubblicato il",
           "ends_at": "Termina il",
           "closed_at": "Chiude il",
           "question": "Domanda",
@@ -617,7 +622,7 @@
       "embeds": {
         "success": {
           "title": "Copia il sondaggio",
-          "description": "Copia il comando in basso e incollalo nella chat per creare un nuovo sondaggio con le stesse impostazioni."
+          "description": "Clicca il pulsante qui sotto per copiare questo sondaggio nella dashboard e crearne uno nuovo con le stesse impostazioni."
         }
       }
     },
@@ -887,6 +892,29 @@
             "description": "La lingua del bot su questo server è stata modificata ad {{- language}}."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Log",
+            "text_enabled": "I messaggi del registro di controllo vengono attualmente inviati a {{- channel}}.\n\nSeleziona un canale qui sotto per cambiare il canale di log, oppure clicca il pulsante per disattivare il log.",
+            "text_disabled": "Il log è attualmente disattivato su questo server.\n\nSeleziona un canale qui sotto per ricevere i messaggi del registro di controllo:",
+            "select": {
+              "placeholder": "Seleziona un canale di log..."
+            },
+            "buttons": {
+              "remove": "Disattiva log"
+            }
+          },
+          "changed": {
+            "title": "Canale di log impostato",
+            "description": "I messaggi del registro di controllo verranno ora inviati a {{- channel}}."
+          },
+          "removed": {
+            "title": "Log disattivato",
+            "description": "I messaggi del registro di controllo non verranno più inviati e il webhook di log è stato rimosso."
+          }
+        }
       }
     },
     "unblock": {
@@ -896,6 +924,56 @@
           "description": "All'utente è stata sbloccata correttamente la possibilità di interagire con il bot su questo server."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Esempio: {{example}}",
+      "invalid": "Data non riconosciuta — es. «domani 9am» o «tra 2 ore»"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} tramite {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Modifiche",
+        "data": "Dati",
+        "pollId": "Sondaggio",
+        "reason": "Motivo",
+        "restrictedUserId": "Utente",
+        "channelId": "Canale",
+        "userId": "Utente",
+        "roleId": "Ruolo",
+        "restrictionId": "ID restrizione",
+        "oldChannelId": "Canale precedente",
+        "newChannelId": "Nuovo canale",
+        "oldMessageId": "Messaggio precedente",
+        "newMessageId": "Nuovo messaggio",
+        "expiresAt": "Scade il"
+      },
+      "buttons": {
+        "view_poll": "Mostra sondaggio"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Sondaggio creato",
+      "poll_publish": "Sondaggio pubblicato",
+      "poll_update": "Sondaggio aggiornato",
+      "poll_close": "Sondaggio chiuso",
+      "poll_reopen": "Sondaggio riaperto",
+      "poll_delete": "Sondaggio eliminato",
+      "poll_move": "Sondaggio spostato",
+      "poll_export": "Sondaggio esportato",
+      "poll_answer_update": "Risposta aggiornata",
+      "poll_answer_bulk_update": "Risposte aggiornate",
+      "poll_answer_delete": "Risposta eliminata",
+      "poll_vote_delete": "Voto rimosso",
+      "guild_update": "Impostazioni del server aggiornate",
+      "guild_role_update": "Impostazioni dei ruoli aggiornate",
+      "guild_complete_onboarding": "Onboarding completato",
+      "guild_logging_disable": "Log disattivato",
+      "restriction_create": "Utente bloccato",
+      "restriction_delete": "Utente sbloccato"
     }
   },
   "footers": {
@@ -1011,6 +1089,10 @@
         "title": "Questo sondaggio non è chiuso!",
         "description": "Il sondaggio non può essere riaperto perché non è chiuso."
       },
+      "not_published": {
+        "title": "Questo sondaggio non è ancora pubblicato!",
+        "description": "Questa azione non può essere eseguita perché il sondaggio non è ancora stato pubblicato."
+      },
       "not_voted": {
         "title": "Non hai votato per questa opzione!",
         "description": "Non puoi rimuovere il tuo voto per questa opzione perché non hai votato per questa opzione."
@@ -1090,6 +1172,7 @@
     "go_to_message": "Vai al messaggio",
     "go_to_page": "Vai alla pagina",
     "view_on_dashboard": "Visualizza su dashboard",
+    "edit_on_dashboard": "Modifica su dashboard",
     "view_poll": "Visualizza il sondaggio",
     "remove_all_votes": "Rimuovi tutti i tuoi voti",
     "remove_vote": "Rimuovi questo voto",

@@ -313,6 +313,9 @@
         "language": {
           "description": "Bu sunucunun dilini değiştir."
         },
+        "logging": {
+          "description": "Denetim günlüğü mesajları için bir günlük kanalı ayarla."
+        },
         "role-weight": {
           "description": "Bir rolün oy ağırlığını değiştir.",
           "options": {
@@ -552,6 +555,8 @@
           "status": "Durum",
           "creator": "Oluşturan",
           "created_at": "Oluşturulma Tarihi",
+          "scheduled_at": "Planlanan Tarih",
+          "published_at": "Yayınlanma Tarihi",
           "ends_at": "Bitiş Tarihi",
           "closed_at": "Kapanış Tarihi",
           "question": "Soru",
@@ -617,7 +622,7 @@
       "embeds": {
         "success": {
           "title": "Anketi Kopyala",
-          "description": "Aynı ayarlarla yeni bir anket oluşturmak için aşağıdaki komutu kopyalayın ve sohbete yapıştırın."
+          "description": "Bu anketi panele kopyalamak ve aynı ayarlarla yeni bir anket oluşturmak için aşağıdaki butona tıklayın."
         }
       }
     },
@@ -887,6 +892,29 @@
             "description": "Botun bu sunucudaki dili {{- language}} olarak değiştirildi."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Günlük",
+            "text_enabled": "Denetim günlüğü mesajları şu anda {{- channel}} kanalına gönderiliyor.\n\nGünlük kanalını değiştirmek için aşağıdan bir kanal seç veya günlüğü devre dışı bırakmak için butona tıkla.",
+            "text_disabled": "Günlük bu sunucuda şu anda devre dışı.\n\nDenetim günlüğü mesajlarını almak için aşağıdan bir kanal seç:",
+            "select": {
+              "placeholder": "Bir günlük kanalı seç..."
+            },
+            "buttons": {
+              "remove": "Günlüğü devre dışı bırak"
+            }
+          },
+          "changed": {
+            "title": "Günlük kanalı ayarlandı",
+            "description": "Denetim günlüğü mesajları artık {{- channel}} kanalına gönderilecek."
+          },
+          "removed": {
+            "title": "Günlük devre dışı bırakıldı",
+            "description": "Denetim günlüğü mesajları artık gönderilmeyecek ve günlük webhook'u kaldırıldı."
+          }
+        }
       }
     },
     "unblock": {
@@ -896,6 +924,56 @@
           "description": "Kullanıcının bu sunucuda botla etkileşimi başarıyla kaldırıldı."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Örnek: {{example}}",
+      "invalid": "Tarih tanınamadı — örn. 'tomorrow 9am' veya 'in 2 hours'"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} • {{platform}} aracılığıyla",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Değişiklikler",
+        "data": "Veri",
+        "pollId": "Anket",
+        "reason": "Sebep",
+        "restrictedUserId": "Kullanıcı",
+        "channelId": "Kanal",
+        "userId": "Kullanıcı",
+        "roleId": "Rol",
+        "restrictionId": "Kısıtlama ID",
+        "oldChannelId": "Eski kanal",
+        "newChannelId": "Yeni kanal",
+        "oldMessageId": "Eski mesaj",
+        "newMessageId": "Yeni mesaj",
+        "expiresAt": "Bitiş"
+      },
+      "buttons": {
+        "view_poll": "Anketi görüntüle"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Anket oluşturuldu",
+      "poll_publish": "Anket yayınlandı",
+      "poll_update": "Anket güncellendi",
+      "poll_close": "Anket kapatıldı",
+      "poll_reopen": "Anket yeniden açıldı",
+      "poll_delete": "Anket silindi",
+      "poll_move": "Anket taşındı",
+      "poll_export": "Anket dışa aktarıldı",
+      "poll_answer_update": "Yanıt güncellendi",
+      "poll_answer_bulk_update": "Yanıtlar güncellendi",
+      "poll_answer_delete": "Yanıt silindi",
+      "poll_vote_delete": "Oy kaldırıldı",
+      "guild_update": "Sunucu ayarları güncellendi",
+      "guild_role_update": "Rol ayarları güncellendi",
+      "guild_complete_onboarding": "Kurulum tamamlandı",
+      "guild_logging_disable": "Günlük devre dışı bırakıldı",
+      "restriction_create": "Kullanıcı engellendi",
+      "restriction_delete": "Kullanıcının engeli kaldırıldı"
     }
   },
   "footers": {
@@ -1011,6 +1089,10 @@
         "title": "Bu anket kapatılmadı!",
         "description": "Anket kapatılmadığı için tekrar açılamadı."
       },
+      "not_published": {
+        "title": "Bu anket henüz yayımlanmadı!",
+        "description": "Bu işlem yapılamaz çünkü anket henüz yayımlanmadı."
+      },
       "not_voted": {
         "title": "Bu seçenek için oy kullanılmadı!",
         "description": "Bu seçenek için oy kullanmadığınız için oyunuzu kaldıramazsınız."
@@ -1090,6 +1172,7 @@
     "go_to_message": "Mesaja git",
     "go_to_page": "Sayfaya git",
     "view_on_dashboard": "Kontrol Panelinde Görüntüle",
+    "edit_on_dashboard": "Kontrol Panelinde Düzenle",
     "view_poll": "Anketi Görüntüle",
     "remove_all_votes": "Tüm oylarınızı kaldırın",
     "remove_vote": "Bu oyu kaldır",

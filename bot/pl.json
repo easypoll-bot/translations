@@ -316,6 +316,9 @@
         "language": {
           "description": "Zmień język tego serwera."
         },
+        "logging": {
+          "description": "Skonfiguruj kanał logów dla wiadomości rejestru audytu."
+        },
         "role-weight": {
           "description": "Zmień wagę głosu dla danej roli.",
           "options": {
@@ -560,6 +563,8 @@
           "status": "Stan",
           "creator": "Twórca",
           "created_at": "Utworzenie",
+          "scheduled_at": "Zaplanowano",
+          "published_at": "Opublikowano",
           "ends_at": "Zakończenie",
           "closed_at": "Zamknięcie",
           "question": "Pytanie",
@@ -625,7 +630,7 @@
       "embeds": {
         "success": {
           "title": "Skopiuj ankietę",
-          "description": "Skopiuj poniższą komendę i wklej ją w czacie, aby stworzyć nową ankietę z tymi samymi ustawieniami."
+          "description": "Kliknij przycisk poniżej, aby skopiować tę ankietę w panelu i utworzyć nową z tymi samymi ustawieniami."
         }
       }
     },
@@ -895,6 +900,29 @@
             "description": "Język bota na tym serwerze został zmieniony na {{- language}}."
           }
         }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Logi",
+            "text_enabled": "Wiadomości rejestru audytu są obecnie wysyłane na {{- channel}}.\n\nWybierz kanał poniżej, aby zmienić kanał logów, lub kliknij przycisk, aby wyłączyć logowanie.",
+            "text_disabled": "Logowanie jest obecnie wyłączone na tym serwerze.\n\nWybierz kanał poniżej, aby otrzymywać wiadomości rejestru audytu:",
+            "select": {
+              "placeholder": "Wybierz kanał logów..."
+            },
+            "buttons": {
+              "remove": "Wyłącz logowanie"
+            }
+          },
+          "changed": {
+            "title": "Ustawiono kanał logów",
+            "description": "Wiadomości rejestru audytu będą teraz wysyłane na {{- channel}}."
+          },
+          "removed": {
+            "title": "Logowanie wyłączone",
+            "description": "Wiadomości rejestru audytu nie będą już wysyłane, a webhook logowania został usunięty."
+          }
+        }
       }
     },
     "unblock": {
@@ -904,6 +932,56 @@
           "description": "Ten użytkownik został pomyślnie odblokowany i może podejmować interakcję z botem na tym serwerze."
         }
       }
+    },
+    "timeAutocomplete": {
+      "example": "Przykład: {{example}}",
+      "invalid": "Nie rozpoznano daty — np. „tomorrow 9am” lub „in 2 hours”"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} przez {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Zmiany",
+        "data": "Dane",
+        "pollId": "Ankieta",
+        "reason": "Powód",
+        "restrictedUserId": "Użytkownik",
+        "channelId": "Kanał",
+        "userId": "Użytkownik",
+        "roleId": "Rola",
+        "restrictionId": "ID ograniczenia",
+        "oldChannelId": "Poprzedni kanał",
+        "newChannelId": "Nowy kanał",
+        "oldMessageId": "Poprzednia wiadomość",
+        "newMessageId": "Nowa wiadomość",
+        "expiresAt": "Wygasa"
+      },
+      "buttons": {
+        "view_poll": "Pokaż ankietę"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Utworzono ankietę",
+      "poll_publish": "Opublikowano ankietę",
+      "poll_update": "Zaktualizowano ankietę",
+      "poll_close": "Zamknięto ankietę",
+      "poll_reopen": "Ponownie otwarto ankietę",
+      "poll_delete": "Usunięto ankietę",
+      "poll_move": "Przeniesiono ankietę",
+      "poll_export": "Wyeksportowano ankietę",
+      "poll_answer_update": "Zaktualizowano odpowiedź",
+      "poll_answer_bulk_update": "Zaktualizowano odpowiedzi",
+      "poll_answer_delete": "Usunięto odpowiedź",
+      "poll_vote_delete": "Usunięto głos",
+      "guild_update": "Zaktualizowano ustawienia serwera",
+      "guild_role_update": "Zaktualizowano ustawienia ról",
+      "guild_complete_onboarding": "Ukończono wdrożenie",
+      "guild_logging_disable": "Logowanie wyłączone",
+      "restriction_create": "Zablokowano użytkownika",
+      "restriction_delete": "Odblokowano użytkownika"
     }
   },
   "footers": {
@@ -1019,6 +1097,10 @@
         "title": "Ta ankieta nie jest zamknięta!",
         "description": "Ankieta nie mogła zostać ponownie otwarta, ponieważ nie została jeszcze zamknięta."
       },
+      "not_published": {
+        "title": "Ta ankieta nie została jeszcze opublikowana!",
+        "description": "Tej czynności nie można wykonać, ponieważ ankieta nie została jeszcze opublikowana."
+      },
       "not_voted": {
         "title": "Nie oddano głosu na tę opcję!",
         "description": "Nie możesz wycofać swojego głosu na tę opcję, ponieważ nie zagłosowałeś na nią."
@@ -1098,6 +1180,7 @@
     "go_to_message": "Idź do wiadomości",
     "go_to_page": "Idź do strony",
     "view_on_dashboard": "Zobacz w panelu sterowania",
+    "edit_on_dashboard": "Edytuj w panelu sterowania",
     "view_poll": "Wyświetl ankietę",
     "remove_all_votes": "Wycofaj wszystkie swoje głosy",
     "remove_vote": "Wycofaj ten głos",
