@@ -3,7 +3,8 @@
     "locale": "it",
     "name": "Italian",
     "name_native": "Italiano",
-    "emoji_unicode": "🇮🇹"
+    "emoji_unicode": "🇮🇹",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -58,7 +59,10 @@
             "all": "Tutti",
             "open": "Aperti",
             "running": "In corso",
-            "closed": "Chiusi"
+            "closed": "Chiusi",
+            "failed": "Falliti",
+            "scheduled": "Programmati",
+            "unpublished": "Non pubblicati"
           }
         },
         "channel": {
@@ -380,37 +384,6 @@
         }
       }
     },
-    "settings": {
-      "events": {
-        "title": "Impostazioni eventi",
-        "components": {
-          "settings": {
-            "label": "Seleziona per attivare/disattivare",
-            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
-            "options": {
-              "pin_poll_message_while_running": "Fissa il messaggio del sondaggio mentre è in corso",
-              "announce_winner_on_poll_auto_close": "Annuncia il vincitore quando un sondaggio viene chiuso automaticamente",
-              "remove_votes_on_ban": "Rimuovi i voti attivi quando un utente viene bannato",
-              "remove_votes_on_kick": "Rimuovi i voti attivi quando un utente viene espulso",
-              "remove_votes_on_leave": "Rimuovi i voti attivi quando un utente lascia"
-            }
-          }
-        }
-      },
-      "threads": {
-        "title": "Impostazioni thread",
-        "components": {
-          "settings": {
-            "label": "Seleziona per attivare/disattivare",
-            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
-            "options": {
-              "create_thread_with_poll": "Crea un thread quando viene creato un nuovo sondaggio",
-              "lock_and_unlock_thread_with_poll": "Blocca/sblocca un thread quando il sondaggio correlato viene chiuso/riaperto"
-            }
-          }
-        }
-      }
-    },
     "pollbuilder": {
       "title": {
         "create": "Crea sondaggio",
@@ -459,6 +432,37 @@
         }
       }
     },
+    "settings": {
+      "events": {
+        "title": "Impostazioni eventi",
+        "components": {
+          "settings": {
+            "label": "Seleziona per attivare/disattivare",
+            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
+            "options": {
+              "pin_poll_message_while_running": "Fissa il messaggio del sondaggio mentre è in corso",
+              "announce_winner_on_poll_auto_close": "Annuncia il vincitore quando un sondaggio viene chiuso automaticamente",
+              "remove_votes_on_ban": "Rimuovi i voti attivi quando un utente viene bannato",
+              "remove_votes_on_kick": "Rimuovi i voti attivi quando un utente viene espulso",
+              "remove_votes_on_leave": "Rimuovi i voti attivi quando un utente lascia"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Impostazioni thread",
+        "components": {
+          "settings": {
+            "label": "Seleziona per attivare/disattivare",
+            "description": "Le impostazioni selezionate sono attive. Quelle non selezionate sono disattive.",
+            "options": {
+              "create_thread_with_poll": "Crea un thread quando viene creato un nuovo sondaggio",
+              "lock_and_unlock_thread_with_poll": "Blocca/sblocca un thread quando il sondaggio correlato viene chiuso/riaperto"
+            }
+          }
+        }
+      }
+    },
     "block": {
       "title": "Blocca utente",
       "components": {
@@ -482,7 +486,10 @@
       "status": {
         "open": "Aperto",
         "running": "In corso",
-        "closed": "Chiuso"
+        "closed": "Chiuso",
+        "failed": "Fallito",
+        "scheduled": "Programmato",
+        "unpublished": "Non pubblicato"
       },
       "reactions": {
         "yes": "Si",
@@ -526,6 +533,8 @@
         "hidden": "Sondaggio nascosto",
         "maxchoices_one": "{{count}} scelta consentita",
         "maxchoices_other": "{{count}} scelte consentite",
+        "maxtotalvotes_one": "{{count}} voto consentito in totale",
+        "maxtotalvotes_other": "{{count}} voti consentiti in totale",
         "removevotesnotallowed": "Non è consentito rimuovere i voti",
         "allowedroles": "Ruoli consentiti"
       },
@@ -615,6 +624,14 @@
           "error_missingaccess": "Tuttavia, il messaggio originale non può essere aggiornato perché il bot non ha le autorizzazioni per accedere al canale.",
           "error_unknownchannel": "Tuttavia, il messaggio originale non può essere aggiornato perché non è stato possibile trovare il canale.",
           "error_unknownmessage": "Tuttavia, il messaggio originale non può essere aggiornato perché non è stato possibile trovare il messaggio."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Sondaggio spostato",
+          "description": "Il sondaggio è stato spostato con successo in {{- channel}}."
         }
       }
     },
@@ -891,6 +908,10 @@
             "title": "La lingua è cambiata",
             "description": "La lingua del bot su questo server è stata modificata ad {{- language}}."
           }
+        },
+        "notice": {
+          "community": "EasyPoll è tradotto dai membri della community, quindi alcune traduzioni potrebbero contenere errori. Se vuoi correggere un errore o aggiungere una lingua mancante, puoi contribuire su [GitHub]({{- githubUrl}}). Se hai bisogno di aiuto, entra nel nostro [server Discord]({{- discordUrl}}).",
+          "ai": "⚠️ Questa lingua è stata tradotta con l'IA e potrebbe contenere errori. Puoi suggerire miglioramenti e aiutare con la traduzione su [GitHub]({{- githubUrl}}). Se hai bisogno di aiuto, entra nel nostro [server Discord]({{- discordUrl}})."
         }
       },
       "logging": {
@@ -1068,6 +1089,10 @@
       "title": "Ha raggiunto il numero massimo di scelte!",
       "description": "Hai raggiunto il numero massimo di scelte per questo sondaggio. Puoi rimuovere alcuni dei tuoi voti per votare altre opzioni."
     },
+    "max_total_votes_reached": {
+      "title": "Raggiunto il numero massimo di voti!",
+      "description": "Il sondaggio ha raggiunto il numero massimo di voti consentiti e non puoi più votare."
+    },
     "not_allowed_role": {
       "title": "Solo alcuni ruoli hanno il permesso di votare per questo sondaggio!",
       "description": "Non puoi votare per questo sondaggio perché non possiedi nessuno dei ruoli consentiti."
@@ -1210,6 +1235,7 @@
     "manage_webhooks": "Gestire i webhook",
     "manage_threads": "Gestire i thread",
     "create_public_threads": "Crea thread pubblici",
-    "send_messages_in_threads": "Invia messaggi nei thread"
+    "send_messages_in_threads": "Invia messaggi nei thread",
+    "pin_messages": "Fissare messaggi"
   }
 }

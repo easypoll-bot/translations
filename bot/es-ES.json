@@ -1,0 +1,1241 @@
+{
+  "meta": {
+    "locale": "es-ES",
+    "name": "Spanish",
+    "name_native": "Español",
+    "emoji_unicode": "🇪🇸",
+    "ai_translated": true
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Cierra una encuesta.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a cerrar."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Copia una encuesta existente.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a copiar."
+        },
+        "channel": {
+          "description": "El canal al que se copiará la encuesta."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Elimina una encuesta por completo.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a eliminar."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Modifica una encuesta existente.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a modificar."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Exporta los resultados de una encuesta.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a exportar."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Muestra una lista de todas las encuestas del servidor actual.",
+      "options": {
+        "status": {
+          "description": "¿Qué estado deben tener las encuestas?",
+          "choices": {
+            "all": "Todas",
+            "open": "Abiertas",
+            "running": "En curso",
+            "closed": "Cerradas",
+            "failed": "Fallidas",
+            "scheduled": "Programadas",
+            "unpublished": "Sin publicar"
+          }
+        },
+        "channel": {
+          "description": "¿En qué canal deben estar las encuestas?"
+        },
+        "user": {
+          "description": "¿De qué usuario deben ser las encuestas?"
+        }
+      }
+    },
+    "movepoll": {
+      "description": "Mueve una encuesta a otro canal.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a mover."
+        },
+        "channel": {
+          "description": "El canal al que se moverá la encuesta."
+        }
+      }
+    },
+    "poll": {
+      "description": "Crea una encuesta normal.",
+      "options": {
+        "question": {
+          "description": "¿Cuál es la pregunta de la encuesta?"
+        },
+        "type": {
+          "description": "¿Qué tipo de encuesta se debe crear?",
+          "choices": {
+            "normal-buttons": "Normal (Botones)",
+            "normal-selectmenu": "Normal (Menú de selección)",
+            "anonymous-buttons": "Anónima (Botones)",
+            "anonymous-selectmenu": "Anónima (Menú de selección)",
+            "hidden-buttons": "Oculta (Botones)",
+            "hidden-selectmenu": "Oculta (Menú de selección)"
+          }
+        },
+        "maxchoices": {
+          "description": "¿Cuántas respuestas puede elegir cada usuario? (Predeterminado: 1)"
+        },
+        "text": {
+          "description": "¿Qué texto debe aparecer encima de la encuesta?"
+        },
+        "allowedrole": {
+          "description": "¿Qué rol puede votar? (Predeterminado: Todos)"
+        },
+        "answer": {
+          "description": "Respuesta {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Crea una encuesta más compleja con el creador de encuestas.",
+      "options": {
+        "answer": {
+          "description": "Respuesta {{id}}"
+        }
+      }
+    },
+    "pollresult": {
+      "description": "Publica de nuevo el resultado de una encuesta cerrada.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje cuyo resultado se va a publicar."
+        },
+        "text": {
+          "description": "¿Qué texto debe aparecer encima del resultado publicado de la encuesta?"
+        },
+        "channel": {
+          "description": "El canal en el que se publicará el resultado."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Reabre una encuesta ya cerrada.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a reabrir."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Repite una encuesta en determinados intervalos de tiempo.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a repetir."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Muestra una encuesta específica con toda la información y las acciones.",
+      "options": {
+        "id": {
+          "description": "El ID de la encuesta o del mensaje que se va a mostrar."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Crea una encuesta con límite de tiempo.",
+      "options": {
+        "question": {
+          "description": "¿Cuál es la pregunta de la encuesta?"
+        },
+        "time": {
+          "description": "¿Cuánto tiempo debe durar la encuesta?"
+        },
+        "type": {
+          "description": "¿Qué tipo de encuesta se debe crear?",
+          "choices": {
+            "normal-buttons": "Normal (Botones)",
+            "normal-selectmenu": "Normal (Menú de selección)",
+            "anonymous-buttons": "Anónima (Botones)",
+            "anonymous-selectmenu": "Anónima (Menú de selección)",
+            "hidden-buttons": "Oculta (Botones)",
+            "hidden-selectmenu": "Oculta (Menú de selección)"
+          }
+        },
+        "maxchoices": {
+          "description": "¿Cuántas respuestas puede elegir cada usuario? (Predeterminado: 1)"
+        },
+        "text": {
+          "description": "¿Qué texto debe aparecer encima de la encuesta?"
+        },
+        "allowedrole": {
+          "description": "¿Qué rol puede votar? (Predeterminado: Todos)"
+        },
+        "answer": {
+          "description": "Respuesta {{id}}"
+        }
+      }
+    },
+    "schedulepoll": {
+      "description": "Crea una encuesta programada.",
+      "options": {
+        "question": {
+          "description": "¿Cuál es la pregunta de la encuesta?"
+        },
+        "scheduled-time": {
+          "description": "¿Cuándo se debe publicar la encuesta?"
+        },
+        "time": {
+          "description": "¿Cuánto tiempo debe durar la encuesta?"
+        },
+        "type": {
+          "description": "¿Qué tipo de encuesta se debe crear?",
+          "choices": {
+            "normal-buttons": "Normal (Botones)",
+            "normal-selectmenu": "Normal (Menú de selección)",
+            "anonymous-buttons": "Anónima (Botones)",
+            "anonymous-selectmenu": "Anónima (Menú de selección)",
+            "hidden-buttons": "Oculta (Botones)",
+            "hidden-selectmenu": "Oculta (Menú de selección)"
+          }
+        },
+        "maxchoices": {
+          "description": "¿Cuántas respuestas puede elegir cada usuario? (Predeterminado: 1)"
+        },
+        "text": {
+          "description": "¿Qué texto debe aparecer encima de la encuesta?"
+        },
+        "allowedrole": {
+          "description": "¿Qué rol puede votar? (Predeterminado: Todos)"
+        },
+        "answer": {
+          "description": "Respuesta {{id}}"
+        }
+      }
+    },
+    "block": {
+      "description": "Bloquea a un usuario para que no interactúe con el bot en este servidor.",
+      "options": {
+        "user": {
+          "description": "El usuario que se va a bloquear."
+        },
+        "reason": {
+          "description": "El motivo público del bloqueo del usuario."
+        },
+        "time": {
+          "description": "El tiempo durante el que el usuario estará bloqueado."
+        }
+      }
+    },
+    "debug": {
+      "description": "Comprueba los permisos del servidor y algunos problemas comunes.",
+      "options": {
+        "channel": {
+          "description": "Canal que se va a depurar. (Predeterminado: Canal actual)"
+        }
+      }
+    },
+    "help": {
+      "description": "Obtén ayuda e información sobre los comandos disponibles."
+    },
+    "invite": {
+      "description": "Obtén un enlace para añadir el bot a tu propio servidor."
+    },
+    "dashboard": {
+      "description": "Obtén un enlace al panel de control de este servidor."
+    },
+    "listblocks": {
+      "description": "Muestra una lista de todos los usuarios bloqueados en el servidor actual."
+    },
+    "premium": {
+      "description": "Comprueba el estado premium actual de este servidor."
+    },
+    "settings": {
+      "description": "Cambia la configuración de este servidor.",
+      "subcommands": {
+        "colors": {
+          "description": "Cambia los colores predeterminados de este servidor.",
+          "subcommands": {
+            "embeds": {
+              "description": "Cambia los colores predeterminados de los embeds.",
+              "options": {
+                "state": {
+                  "description": "El estado de los embeds.",
+                  "choices": {
+                    "open": "Abierta",
+                    "closed": "Cerrada",
+                    "running": "En curso",
+                    "result": "Resultado"
+                  }
+                },
+                "color": {
+                  "description": "El color de los embeds."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Cambia los colores predeterminados de los botones.",
+              "options": {
+                "color": {
+                  "description": "El color de los botones.",
+                  "choices": {
+                    "primary": "Primario (Azul)",
+                    "secondary": "Secundario (Gris)",
+                    "success": "Éxito (Verde)",
+                    "danger": "Peligro (Rojo)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Cambia la configuración de los eventos."
+        },
+        "emojis": {
+          "description": "Cambia los emojis predeterminados de este servidor."
+        },
+        "language": {
+          "description": "Cambia el idioma de este servidor."
+        },
+        "logging": {
+          "description": "Configura un canal de registro para los mensajes del registro de auditoría."
+        },
+        "role-weight": {
+          "description": "Cambia el peso de voto de un rol.",
+          "options": {
+            "role": {
+              "description": "El rol cuyo peso se va a cambiar."
+            },
+            "weight": {
+              "description": "El peso del rol."
+            }
+          }
+        },
+        "threads": {
+          "description": "Cambia la configuración de los hilos."
+        }
+      }
+    },
+    "unblock": {
+      "description": "Desbloquea a un usuario para que interactúe con el bot en este servidor.",
+      "options": {
+        "user": {
+          "description": "El usuario que se va a desbloquear."
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Cerrar"
+    },
+    "details": {
+      "name": "Detalles"
+    },
+    "edit": {
+      "name": "Editar"
+    },
+    "participants": {
+      "name": "Participantes"
+    },
+    "delete": {
+      "name": "Eliminar"
+    },
+    "export": {
+      "name": "Exportar"
+    },
+    "reopen": {
+      "name": "Reabrir"
+    },
+    "block": {
+      "name": "Bloquear"
+    },
+    "unblock": {
+      "name": "Desbloquear"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Ir a la página",
+      "components": {
+        "page_number": {
+          "label": "Número de página",
+          "placeholder": "Introduce el número de la página a la que quieres ir..."
+        }
+      }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Crear encuesta",
+        "edit": "Editar encuesta"
+      },
+      "components": {
+        "question": {
+          "label": "Pregunta",
+          "placeholder": "Introduce la pregunta de la encuesta..."
+        },
+        "answer": {
+          "label": "Texto de la respuesta",
+          "placeholder": "Introduce el texto de la respuesta..."
+        },
+        "description": {
+          "label": "Descripción",
+          "placeholder": "Introduce la descripción de la encuesta..."
+        },
+        "time": {
+          "label": "Tiempo",
+          "description": "Introduce el tiempo que debe durar la encuesta (p. ej. 3d 12h). Déjalo vacío para tiempo ilimitado.",
+          "placeholder": "Introduce el tiempo que debe durar la encuesta..."
+        },
+        "image": {
+          "label": "URL de la imagen",
+          "description": "La URL de la imagen debe ser un enlace directo válido a una imagen (png, jpeg, gif).",
+          "placeholder": "Introduce la URL de la imagen de la encuesta..."
+        },
+        "colors": {
+          "open": {
+            "label": "Color: Abierta",
+            "placeholder": "Introduce el nombre o el código hex del color para encuestas abiertas..."
+          },
+          "closed": {
+            "label": "Color: Cerrada",
+            "placeholder": "Introduce el nombre o el código hex del color para encuestas cerradas..."
+          },
+          "running": {
+            "label": "Color: En curso",
+            "placeholder": "Introduce el nombre o el código hex del color para encuestas en curso..."
+          },
+          "result": {
+            "label": "Color: Resultado",
+            "placeholder": "Introduce el nombre o el código hex del color para resultados..."
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Configuración de eventos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Las opciones seleccionadas están activadas. Las opciones no seleccionadas están desactivadas.",
+            "options": {
+              "pin_poll_message_while_running": "Fijar el mensaje de la encuesta mientras la encuesta está en curso",
+              "announce_winner_on_poll_auto_close": "Anunciar al ganador cuando una encuesta se cierre automáticamente",
+              "remove_votes_on_ban": "Eliminar los votos activos cuando se banea a un usuario",
+              "remove_votes_on_kick": "Eliminar los votos activos cuando se expulsa a un usuario",
+              "remove_votes_on_leave": "Eliminar los votos activos cuando un usuario abandona el servidor"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Configuración de hilos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Las opciones seleccionadas están activadas. Las opciones no seleccionadas están desactivadas.",
+            "options": {
+              "create_thread_with_poll": "Crear un hilo cuando se crea una nueva encuesta",
+              "lock_and_unlock_thread_with_poll": "Bloquear/desbloquear un hilo cuando la encuesta relacionada se cierra/reabre"
+            }
+          }
+        }
+      }
+    },
+    "block": {
+      "title": "Bloquear usuario",
+      "components": {
+        "reason": {
+          "label": "Motivo",
+          "placeholder": "Introduce un motivo para bloquear a este usuario..."
+        },
+        "time": {
+          "label": "Duración",
+          "placeholder": "p. ej. 1d, 1w, 1h..."
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Encuesta creada",
+        "description": "La encuesta se ha creado correctamente."
+      },
+      "status": {
+        "open": "Abierta",
+        "running": "En curso",
+        "closed": "Cerrada",
+        "failed": "Fallida",
+        "scheduled": "Programada",
+        "unpublished": "Sin publicar"
+      },
+      "reactions": {
+        "yes": "Sí",
+        "no": "No"
+      },
+      "select": {
+        "placeholder_one": "Selecciona una opción para votar...",
+        "placeholder_other": "Selecciona una o varias opciones para votar...",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} votos"
+      },
+      "description": {
+        "question": "Pregunta",
+        "choices": "Opciones",
+        "result": "Resultado",
+        "final_result": "Resultado final",
+        "settings": "Configuración"
+      },
+      "result": {
+        "title": "Resultado de la encuesta",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} votos",
+        "votes_weighted_one": "{{count}} voto ponderado",
+        "votes_weighted_other": "{{count}} votos ponderados",
+        "users_one": "de {{count}} usuario",
+        "users_other": "de {{count}} usuarios"
+      },
+      "winner": {
+        "content": "La encuesta **{{- question}}** de {{- user}} se ha cerrado.",
+        "text": {
+          "no_winner": "No hubo ganador",
+          "tied": "Hubo un empate",
+          "winner": "Respuesta ganadora"
+        }
+      },
+      "settings": {
+        "ends": "Termina {{- timestamp}}",
+        "ended": "La encuesta ya ha terminado",
+        "closed": "No se permiten más votos",
+        "anonymous": "Encuesta anónima",
+        "hidden": "Encuesta oculta",
+        "maxchoices_one": "{{count}} opción permitida",
+        "maxchoices_other": "{{count}} opciones permitidas",
+        "maxtotalvotes_one": "{{count}} voto permitido en total",
+        "maxtotalvotes_other": "{{count}} votos permitidos en total",
+        "removevotesnotallowed": "No se permite eliminar votos",
+        "allowedroles": "Roles permitidos"
+      },
+      "participants": {
+        "title": "Participantes",
+        "votes": "Usuarios que han votado por esta opción:",
+        "no_votes": "Ningún usuario ha votado por esta opción.",
+        "weight": "Peso: {{weight}}",
+        "select": {
+          "placeholder": "Selecciona una opción para ver los participantes...",
+          "participants_one": "{{count}} participante",
+          "participants_other": "{{count}} participantes",
+          "votes_one": "{{count}} voto",
+          "votes_other": "{{count}} votos",
+          "username_asc": "Nombre de usuario (Ascendente)",
+          "username_desc": "Nombre de usuario (Descendente)",
+          "voted_at_asc": "Votado el (Ascendente)",
+          "voted_at_desc": "Votado el (Descendente)",
+          "weight_asc": "Peso (Ascendente)",
+          "weight_desc": "Peso (Descendente)"
+        }
+      },
+      "info": {
+        "title": "Información de la encuesta",
+        "fields": {
+          "id": "ID",
+          "status": "Estado",
+          "creator": "Creador",
+          "created_at": "Creada el",
+          "scheduled_at": "Programada para",
+          "published_at": "Publicada el",
+          "ends_at": "Termina el",
+          "closed_at": "Cerrada el",
+          "question": "Pregunta",
+          "choices": "Opciones",
+          "result": "Resultado",
+          "settings": "Configuración",
+          "message": "Mensaje"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Voto añadido",
+        "description": "Has votado correctamente por la opción {{- option}}.",
+        "description2_one": "Te queda **{{count}} voto**.",
+        "description2_other": "Te quedan **{{count}} votos**."
+      },
+      "added_selected": {
+        "title": "Votos añadidos",
+        "description1": "Has votado correctamente por las siguientes opciones:",
+        "description2_one": "Te queda **{{count}} voto**.",
+        "description2_other": "Te quedan **{{count}} votos**."
+      },
+      "removed": {
+        "title": "Voto eliminado",
+        "description": "Has eliminado correctamente tu voto por la opción {{- option}}."
+      },
+      "removed_selected": {
+        "title": "Votos eliminados",
+        "description": "Has eliminado correctamente tus votos por las siguientes opciones:"
+      },
+      "removed_all": {
+        "title": "Todos los votos eliminados",
+        "description": "Has eliminado correctamente todos tus votos de esta encuesta."
+      },
+      "manage": {
+        "title": "Gestiona tus votos",
+        "description": "Puedes eliminar tus votos de la encuesta seleccionando las opciones:"
+      },
+      "select": {
+        "placeholder": "Selecciona una o varias opciones para eliminar tus votos..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Cerrar encuesta",
+          "description1": "¿Seguro que quieres cerrar esta encuesta?",
+          "description2": "ID de la encuesta: {{id}}",
+          "description3": "Pregunta de la encuesta: {{question}}"
+        },
+        "success": {
+          "title": "Encuesta cerrada",
+          "description": "La encuesta se ha cerrado correctamente.",
+          "error": "Sin embargo, no se pudo actualizar el mensaje original.",
+          "error_missingaccess": "Sin embargo, no se pudo actualizar el mensaje original porque el bot no tiene los permisos para acceder al canal.",
+          "error_unknownchannel": "Sin embargo, no se pudo actualizar el mensaje original porque no se pudo encontrar el canal.",
+          "error_unknownmessage": "Sin embargo, no se pudo actualizar el mensaje original porque no se pudo encontrar el mensaje."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Encuesta movida",
+          "description": "La encuesta se ha movido correctamente a {{- channel}}."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Copiar encuesta",
+          "description": "Haz clic en el botón de abajo para copiar esta encuesta en el panel de control y crear una nueva con la misma configuración."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Encuesta programada",
+          "description": "La encuesta `{{pollId}}` se ha programado para {{- scheduledAt}}."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Eliminar encuesta",
+          "description1": "¿Seguro que quieres eliminar esta encuesta de forma permanente?",
+          "description2": "ID de la encuesta: {{id}}",
+          "description3": "Pregunta de la encuesta: {{question}}"
+        },
+        "success": {
+          "title": "Encuesta eliminada",
+          "description": "La encuesta se ha eliminado correctamente.",
+          "error": "Sin embargo, no se pudo eliminar el mensaje original.",
+          "error_missingaccess": "Sin embargo, no se pudo eliminar el mensaje original porque el bot no tiene los permisos para acceder al canal.",
+          "error_unknownchannel": "Sin embargo, no se pudo eliminar el mensaje original porque no se pudo encontrar el canal.",
+          "error_unknownmessage": "Sin embargo, no se pudo eliminar el mensaje original porque no se pudo encontrar el mensaje."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Exportar encuesta",
+          "description": "Puedes exportar la encuesta a un archivo y usarla fuera del bot.\nSelecciona el formato en el que quieres exportar la encuesta."
+        },
+        "success": {
+          "title": "Encuesta exportada",
+          "description": "La encuesta se ha exportado correctamente y está adjunta a este mensaje.\nAhora puedes descargar el archivo adjunto y usarlo fuera del bot."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Lista de encuestas"
+        }
+      },
+      "select": {
+        "placeholder": "Selecciona una encuesta para mostrar..."
+      }
+    },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Respuestas",
+          "description": "Selecciona la respuesta que quieres modificar o añade una nueva:"
+        },
+        "answers_update": {
+          "title": "Actualizar respuesta",
+          "description": "Selecciona una acción para actualizar esta respuesta."
+        },
+        "type": {
+          "title": "Tipo de encuesta",
+          "description": "Selecciona el tipo de la encuesta. En algunos casos, el tipo de encuesta no se puede cambiar."
+        },
+        "channel": {
+          "title": "Canal",
+          "description": "Selecciona el canal en el que se debe publicar la encuesta."
+        },
+        "buttoncolor": {
+          "title": "Color de los botones",
+          "description": "Selecciona el color de los botones de la encuesta."
+        },
+        "maxchoices": {
+          "title": "Máximo de opciones",
+          "description": "Selecciona el número máximo de opciones que puede elegir cada usuario."
+        },
+        "allowedroles": {
+          "title": "Roles permitidos",
+          "description": "Selecciona los roles que pueden votar.\nLa selección sobrescribe todos los roles ya permitidos, así que vuelve a seleccionar los roles ya permitidos si quieres conservarlos."
+        },
+        "allowvoteremove": {
+          "title": "Permitir eliminar votos",
+          "description": "Selecciona si los usuarios pueden eliminar sus votos.",
+          "select": {
+            "yes": "Sí",
+            "no": "No"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Crear encuesta",
+            "description": "¿Seguro que quieres crear esta encuesta?"
+          },
+          "success": {
+            "title": "Encuesta creada",
+            "description": "La encuesta se ha creado correctamente."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Guardar encuesta",
+            "description": "¿Seguro que quieres guardar esta encuesta?",
+            "description2": "ID de la encuesta: {{id}}",
+            "description3": "Se cambiarán las siguientes propiedades:"
+          },
+          "success": {
+            "title": "Encuesta guardada",
+            "description": "La encuesta se ha guardado correctamente."
+          },
+          "changes": {
+            "added": "Añadido",
+            "changed": "Cambiado",
+            "removed": "Eliminado"
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Salir",
+            "description": "¿Seguro que quieres salir del menú y descartar todos los cambios?"
+          }
+        }
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Resultado de la encuesta publicado",
+          "description": "El resultado de la encuesta se ha publicado correctamente en {{- channel}}."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Reabrir encuesta",
+          "description1": "¿Seguro que quieres reabrir esta encuesta?",
+          "description2": "ID de la encuesta: {{id}}",
+          "description3": "Pregunta de la encuesta: {{question}}"
+        },
+        "success": {
+          "title": "Encuesta reabierta",
+          "description": "La encuesta se ha reabierto correctamente."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Usuario bloqueado",
+          "description": "El usuario ha sido bloqueado correctamente para que no interactúe con el bot en este servidor."
+        }
+      }
+    },
+    "debug": {
+      "content": "Si necesitas ayuda de nuestro equipo de soporte, comparte con ellos el siguiente enlace:",
+      "embeds": {
+        "success": {
+          "title": "Depuración",
+          "fields": {
+            "guild_information": {
+              "title": "Información del servidor",
+              "guild_id": "ID del servidor",
+              "guild_name": "Nombre del servidor",
+              "guild_language": "Idioma del servidor",
+              "guild_preferred_locale": "Idioma preferido del servidor",
+              "channel_id": "ID del canal",
+              "channel_name": "Nombre del canal"
+            },
+            "user_information": {
+              "title": "Información del usuario",
+              "user_id": "ID del usuario",
+              "user_name": "Nombre de usuario",
+              "user_locale": "Idioma del usuario",
+              "guild_owner": "Propietario del servidor",
+              "permissions": "Permisos"
+            },
+            "bot_information": {
+              "title": "Información del bot",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "Permisos de la app en el servidor"
+            },
+            "channel_permissions": {
+              "title": "Permisos del canal ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Pesos de los roles"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "Ayuda de EasyPoll",
+          "fields": {
+            "poll": "Comandos de encuestas",
+            "miscellaneous": "Comandos varios",
+            "settings": "Comandos de configuración"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "¡Invita a EasyPoll a tu servidor!",
+          "description": "Haz clic en el botón de abajo para invitar a EasyPoll a tu servidor."
+        }
+      }
+    },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Abrir el panel de control",
+          "description": "Haz clic en el botón de abajo para abrir el panel de control de este servidor."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Lista de usuarios bloqueados",
+          "no_blocks": "Ningún usuario está bloqueado en este servidor."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "¡Este servidor no tiene premium!",
+          "description": "¡Consigue premium para desbloquear más funciones!"
+        },
+        "premium": {
+          "title": "¡Este servidor tiene premium!",
+          "fields": {
+            "premium_until": "Premium hasta"
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "changed": {
+          "description": "La configuración de eventos se ha actualizado correctamente."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "La configuración de hilos se ha actualizado correctamente."
+        }
+      },
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Cambiar idioma",
+            "text": "Aquí puedes cambiar el idioma del bot en este servidor.\n\nSelecciona un idioma para el bot en este servidor:",
+            "select": {
+              "placeholder": "Selecciona un idioma..."
+            }
+          },
+          "changed": {
+            "title": "Idioma cambiado",
+            "description": "El idioma del bot en este servidor se ha cambiado a {{- language}}."
+          }
+        },
+        "notice": {
+          "community": "EasyPoll está traducido por miembros de la comunidad, por lo que algunas traducciones pueden contener errores. Si quieres corregir un error o añadir un idioma que falta, puedes contribuir en [GitHub]({{- githubUrl}}). Si necesitas ayuda, únete a nuestro [servidor de Discord]({{- discordUrl}}).",
+          "ai": "⚠️ Este idioma se ha traducido con IA y puede contener errores. Puedes sugerir mejoras y ayudar con la traducción en [GitHub]({{- githubUrl}}). Si necesitas ayuda, únete a nuestro [servidor de Discord]({{- discordUrl}})."
+        }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Registro",
+            "text_enabled": "Los mensajes del registro de auditoría se envían actualmente a {{- channel}}.\n\nSelecciona un canal abajo para cambiar el canal de registro, o haz clic en el botón para desactivar el registro.",
+            "text_disabled": "El registro está actualmente desactivado en este servidor.\n\nSelecciona un canal abajo para recibir los mensajes del registro de auditoría:",
+            "select": {
+              "placeholder": "Selecciona un canal de registro..."
+            },
+            "buttons": {
+              "remove": "Desactivar el registro"
+            }
+          },
+          "changed": {
+            "title": "Canal de registro establecido",
+            "description": "Los mensajes del registro de auditoría se enviarán ahora a {{- channel}}."
+          },
+          "removed": {
+            "title": "Registro desactivado",
+            "description": "Los mensajes del registro de auditoría ya no se enviarán y se ha eliminado el webhook de registro."
+          }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Usuario desbloqueado",
+          "description": "El usuario ha sido desbloqueado correctamente para interactuar con el bot en este servidor."
+        }
+      }
+    },
+    "timeAutocomplete": {
+      "example": "Ejemplo: {{example}}",
+      "invalid": "No se pudo reconocer esta fecha — prueba p. ej. 'mañana a las 9' o 'en 2 horas'"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} vía {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Cambios",
+        "data": "Datos",
+        "pollId": "Encuesta",
+        "reason": "Motivo",
+        "restrictedUserId": "Usuario",
+        "channelId": "Canal",
+        "userId": "Usuario",
+        "roleId": "Rol",
+        "restrictionId": "ID de la restricción",
+        "oldChannelId": "Canal anterior",
+        "newChannelId": "Canal nuevo",
+        "oldMessageId": "Mensaje anterior",
+        "newMessageId": "Mensaje nuevo",
+        "expiresAt": "Expira el"
+      },
+      "buttons": {
+        "view_poll": "Ver encuesta"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Encuesta creada",
+      "poll_publish": "Encuesta publicada",
+      "poll_update": "Encuesta actualizada",
+      "poll_close": "Encuesta cerrada",
+      "poll_reopen": "Encuesta reabierta",
+      "poll_delete": "Encuesta eliminada",
+      "poll_move": "Encuesta movida",
+      "poll_export": "Encuesta exportada",
+      "poll_answer_update": "Respuesta de encuesta actualizada",
+      "poll_answer_bulk_update": "Respuestas de encuesta actualizadas",
+      "poll_answer_delete": "Respuesta de encuesta eliminada",
+      "poll_vote_delete": "Voto eliminado",
+      "guild_update": "Configuración del servidor actualizada",
+      "guild_role_update": "Configuración de rol actualizada",
+      "guild_complete_onboarding": "Incorporación completada",
+      "guild_logging_disable": "Registro desactivado",
+      "restriction_create": "Usuario bloqueado",
+      "restriction_delete": "Usuario desbloqueado"
+    }
+  },
+  "footers": {
+    "poll_id": "ID de la encuesta: {{id}}",
+    "poll_type": "Tipo: {{type}} ({{votingType}})",
+    "error_id": "ID del error: {{id}}",
+    "pages": "Página {{page}} de {{pages}}",
+    "edited": "Editado"
+  },
+  "errors": {
+    "default": {
+      "title": "¡La tarea falló con éxito!",
+      "description": "Se ha producido un error, pero no puedo decirte por qué.\nPide más ayuda al soporte."
+    },
+    "guild_command": {
+      "title": "¡Comando de servidor!",
+      "description": "Este comando solo se puede usar en servidores."
+    },
+    "guild_communication_disabled": {
+      "title": "¡El bot está aislado temporalmente!",
+      "description": "El bot está aislado temporalmente en este servidor y no puede comunicarse en él.\nRetira el aislamiento para volver a usar el bot."
+    },
+    "missing_bot_permissions": {
+      "title": "¡Faltan permisos!",
+      "description1": "Al bot le faltan los siguientes permisos:",
+      "description2": "Asegúrate de que el bot tenga todos los permisos necesarios."
+    },
+    "missing_user_permissions": {
+      "title": "¡Faltan permisos!",
+      "description1": "Te faltan los siguientes permisos:",
+      "description2": "No puedes realizar esta acción sin los permisos necesarios."
+    },
+    "premium_required": {
+      "title": "¡Se requiere premium!",
+      "description": "Esta función solo está disponible para servidores premium. Consigue premium para usar esta función."
+    },
+    "invalid_channel_type": {
+      "title": "¡Tipo de canal no válido!",
+      "description": "El canal seleccionado no es un tipo de canal permitido para esta acción."
+    },
+    "invalid_color": {
+      "title": "¡Color no válido!",
+      "description": "El color introducido no es válido. Asegúrate de que el color esté en el formato correcto."
+    },
+    "invalid_image": {
+      "title": "¡Imagen no válida!",
+      "description": "La URL de la imagen introducida no es válida. Asegúrate de que la URL de la imagen sea válida y de que la imagen esté en el formato correcto."
+    },
+    "invalid_page": {
+      "title": "¡Página no válida!",
+      "description": "El número de página introducido no es válido. Asegúrate de que el número de página esté en el formato correcto y dentro del rango válido."
+    },
+    "invalid_time": {
+      "title": "¡Tiempo no válido!",
+      "description": "El tiempo introducido no es válido. Asegúrate de que el tiempo esté en el formato correcto."
+    },
+    "max_time": {
+      "title": "¡Tiempo máximo alcanzado!",
+      "description": "Has alcanzado el tiempo máximo de {{maxtime}}.\nAsegúrate de que el tiempo introducido no sea mayor que el tiempo máximo permitido.",
+      "description_upgrade": "Puedes aumentar el tiempo máximo a {{maxtime}} mejorando a premium."
+    },
+    "scheduled_poll_limit": {
+      "title": "¡Límite de encuestas programadas alcanzado!",
+      "max_unpublished": "Se permiten como máximo {{max}} encuestas programadas sin publicar.",
+      "min_interval": "Las encuestas programadas deben tener un intervalo de al menos {{seconds}} segundos. Elige otra hora."
+    },
+    "unknown_emoji": {
+      "title": "¡Emoji desconocido!",
+      "description": "¡Has especificado un emoji desconocido!\nSolo puedes usar emojis de servidores en los que EasyPoll esté invitado. Asegúrate de que {{- emoji}} sea un emoji **oficial de Discord** o un emoji **de este servidor**."
+    },
+    "restricted": {
+      "title": "¡No puedes realizar esta acción!",
+      "description": {
+        "user_global": "Tienes restringido globalmente el uso de esta acción.",
+        "user_local": "Tienes restringido el uso de esta acción en este servidor.",
+        "guild": "Este servidor tiene restringido el uso de esta acción."
+      },
+      "fields": {
+        "reason": "Motivo",
+        "expires_at": "Expira el"
+      }
+    },
+    "already_restricted": {
+      "title": "¡Ya está restringido!",
+      "description": "El usuario seleccionado ya tiene restringido el uso del bot."
+    },
+    "already_voted": {
+      "title": "¡Ya has votado por esta opción!",
+      "description": "Ya has votado por esta opción y no puedes volver a votar por la misma opción."
+    },
+    "max_choices_reached": {
+      "title": "¡Has alcanzado el número máximo de opciones!",
+      "description": "Has alcanzado el número máximo de opciones para esta encuesta. Puedes eliminar algunos de tus votos para votar por otras opciones."
+    },
+    "max_total_votes_reached": {
+      "title": "¡Se ha alcanzado el número máximo de votos!",
+      "description": "La encuesta ha alcanzado el número máximo de votos permitido y ya no puedes votar."
+    },
+    "not_allowed_role": {
+      "title": "¡Solo se permiten ciertos roles en esta encuesta!",
+      "description": "No puedes votar en esta encuesta porque no tienes ninguno de los roles permitidos."
+    },
+    "not_allowed_user": {
+      "title": "¡Usuario no permitido!",
+      "description": "No puedes seleccionar a este usuario porque no tienes permiso para hacerlo."
+    },
+    "not_restricted": {
+      "title": "¡No está restringido!",
+      "description": "El usuario seleccionado no tiene restringido el uso del bot."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "¡Esta encuesta ya está cerrada!",
+        "description": "No puedes interactuar con esta encuesta porque ya está cerrada."
+      },
+      "not_closed": {
+        "title": "¡Esta encuesta no está cerrada!",
+        "description": "La encuesta no se pudo reabrir porque no está cerrada."
+      },
+      "not_published": {
+        "title": "¡Esta encuesta aún no está publicada!",
+        "description": "Esta acción no se puede realizar porque la encuesta aún no se ha publicado."
+      },
+      "not_voted": {
+        "title": "¡No has votado por esta opción!",
+        "description": "No puedes eliminar tu voto por esta opción porque no has votado por ella."
+      },
+      "no_votes": {
+        "title": "¡No hay votos en esta encuesta!",
+        "description": "No has votado por ninguna opción de esta encuesta."
+      },
+      "invalid_poll": {
+        "title": "¡Esto no es una encuesta!",
+        "description_input": "El ID introducido no es una encuesta. Asegúrate de haber introducido el ID correcto de la encuesta o del mensaje.",
+        "description_select": "El mensaje seleccionado no es una encuesta. Asegúrate de haber seleccionado el mensaje de encuesta correcto."
+      },
+      "participants_not_available": {
+        "title": "¡Lista de participantes no permitida!",
+        "description": "La lista de participantes no está disponible para esta encuesta."
+      },
+      "vote_remove_not_allowed": {
+        "title": "¡No se permite eliminar votos!",
+        "description": "No puedes eliminar tu voto de esta encuesta porque no se permite eliminar votos."
+      },
+      "no_polls_found": {
+        "title": "¡No se encontraron encuestas!",
+        "description": "No se han encontrado encuestas en este servidor que coincidan con los criterios de búsqueda."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "¡No se puede mover una encuesta con hilo!",
+          "description": "Esta encuesta tiene un hilo vinculado y no se puede mover a otro canal."
+        },
+        "already_in_channel": {
+          "title": "¡La encuesta ya está en este canal!",
+          "description": "Selecciona un canal diferente para mover esta encuesta."
+        }
+      }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "¡Encuesta bloqueada!",
+        "description": "La encuesta está bloqueada en este momento y no se puede modificar. Inténtalo de nuevo en unos segundos."
+      },
+      "validation": {
+        "title": "¡Validación fallida!",
+        "description": "Los valores introducidos no son válidos. Asegúrate de que todos los valores sean correctos e inténtalo de nuevo."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Sitio web",
+    "dashboard": "Panel de control",
+    "invite": "Invitar",
+    "support": "Soporte",
+    "wiki": "Wiki",
+    "learn_more": "Más información",
+    "premium": "Conseguir premium",
+    "troubleshooting": "Solución de problemas",
+    "discord_helpcenter": "Centro de ayuda de Discord",
+    "vote": "Votar",
+    "participants": "Participantes",
+    "enable": "Activar",
+    "disable": "Desactivar",
+    "close": "Cerrar",
+    "reopen": "Reabrir",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Atrás",
+    "save": "Guardar",
+    "create": "Crear",
+    "exit": "Salir",
+    "cancel": "Cancelar",
+    "confirm_close": "Sí, cerrar la encuesta",
+    "confirm_reopen": "Sí, reabrir la encuesta",
+    "confirm_delete": "Sí, eliminar la encuesta",
+    "confirm_save": "Sí, guardar la encuesta",
+    "confirm_create": "Sí, crear la encuesta",
+    "confirm_exit": "Sí, salir",
+    "go_to_message": "Ir al mensaje",
+    "go_to_page": "Ir a la página",
+    "view_on_dashboard": "Ver en el panel de control",
+    "edit_on_dashboard": "Editar en el panel de control",
+    "view_poll": "Ver encuesta",
+    "remove_all_votes": "Eliminar todos tus votos",
+    "remove_vote": "Eliminar este voto",
+    "manage_votes": "Gestionar tus votos",
+    "export_json": "Exportar como JSON",
+    "export_csv": "Exportar como CSV",
+    "question": "Pregunta",
+    "answers": "Respuestas",
+    "description": "Descripción",
+    "type": "Tipo",
+    "time": "Tiempo",
+    "image": "Imagen",
+    "channel": "Canal",
+    "embed_colors": "Colores del embed",
+    "button_color": "Color de los botones",
+    "maxchoices": "Máximo de opciones",
+    "allowedroles": "Roles permitidos",
+    "allowedroles_clear": "Borrar roles permitidos",
+    "allowvoteremove": "Permitir eliminar votos",
+    "answer_new": "Añadir nueva respuesta"
+  },
+  "permissions": {
+    "administrator": "Administrador",
+    "add_reactions": "Añadir reacciones",
+    "view_audit_log": "Ver el registro de auditoría",
+    "view_channel": "Ver canales",
+    "send_messages": "Enviar mensajes",
+    "manage_messages": "Gestionar mensajes",
+    "manage_guild": "Gestionar servidor",
+    "embed_links": "Insertar enlaces",
+    "attach_files": "Adjuntar archivos",
+    "read_message_history": "Leer el historial de mensajes",
+    "mention_everyone": "Mencionar a todos",
+    "use_external_emojis": "Usar emojis externos",
+    "manage_webhooks": "Gestionar webhooks",
+    "manage_threads": "Gestionar hilos",
+    "create_public_threads": "Crear hilos públicos",
+    "send_messages_in_threads": "Enviar mensajes en hilos",
+    "pin_messages": "Fijar mensajes"
+  }
+}

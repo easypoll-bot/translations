@@ -1,0 +1,1241 @@
+{
+  "meta": {
+    "locale": "pt-BR",
+    "name": "Portuguese, Brazilian",
+    "name_native": "Português do Brasil",
+    "emoji_unicode": "🇧🇷",
+    "ai_translated": true
+  },
+  "commands": {
+    "closepoll": {
+      "description": "Feche uma enquete.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser fechada."
+        }
+      }
+    },
+    "copypoll": {
+      "description": "Copie uma enquete existente.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser copiada."
+        },
+        "channel": {
+          "description": "O canal para onde a enquete deve ser copiada."
+        }
+      }
+    },
+    "deletepoll": {
+      "description": "Exclua uma enquete completamente.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser excluída."
+        }
+      }
+    },
+    "editpoll": {
+      "description": "Modifique uma enquete existente.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser modificada."
+        }
+      }
+    },
+    "exportpoll": {
+      "description": "Exporte os resultados de uma enquete.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser exportada."
+        }
+      }
+    },
+    "listpolls": {
+      "description": "Mostre uma lista de todas as enquetes no servidor atual.",
+      "options": {
+        "status": {
+          "description": "Qual status as enquetes devem ter?",
+          "choices": {
+            "all": "Todas",
+            "open": "Abertas",
+            "running": "Em andamento",
+            "closed": "Fechadas",
+            "failed": "Com falha",
+            "scheduled": "Agendadas",
+            "unpublished": "Não publicadas"
+          }
+        },
+        "channel": {
+          "description": "Em qual canal as enquetes devem estar?"
+        },
+        "user": {
+          "description": "De qual usuário as enquetes devem ser?"
+        }
+      }
+    },
+    "movepoll": {
+      "description": "Mova uma enquete para outro canal.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser movida."
+        },
+        "channel": {
+          "description": "O canal para onde a enquete deve ser movida."
+        }
+      }
+    },
+    "poll": {
+      "description": "Crie uma enquete normal.",
+      "options": {
+        "question": {
+          "description": "Qual é a pergunta da enquete?"
+        },
+        "type": {
+          "description": "Que tipo de enquete deve ser criada?",
+          "choices": {
+            "normal-buttons": "Normal (Botões)",
+            "normal-selectmenu": "Normal (Menu de Seleção)",
+            "anonymous-buttons": "Anônima (Botões)",
+            "anonymous-selectmenu": "Anônima (Menu de Seleção)",
+            "hidden-buttons": "Oculta (Botões)",
+            "hidden-selectmenu": "Oculta (Menu de Seleção)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quantas respostas cada usuário pode escolher? (Padrão: 1)"
+        },
+        "text": {
+          "description": "Qual texto deve aparecer acima da enquete?"
+        },
+        "allowedrole": {
+          "description": "Qual cargo pode votar? (Padrão: Todos)"
+        },
+        "answer": {
+          "description": "Resposta {{id}}"
+        }
+      }
+    },
+    "pollbuilder": {
+      "description": "Crie uma enquete mais complexa com o construtor de enquetes.",
+      "options": {
+        "answer": {
+          "description": "Resposta {{id}}"
+        }
+      }
+    },
+    "pollresult": {
+      "description": "Publique novamente o resultado de uma enquete fechada.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem cujo resultado deve ser publicado."
+        },
+        "text": {
+          "description": "Qual texto deve aparecer acima do resultado publicado da enquete?"
+        },
+        "channel": {
+          "description": "O canal onde o resultado deve ser publicado."
+        }
+      }
+    },
+    "reopenpoll": {
+      "description": "Reabra uma enquete já fechada.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser reaberta."
+        }
+      }
+    },
+    "repeatpoll": {
+      "description": "Repita uma enquete em determinados intervalos de tempo.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser repetida."
+        }
+      }
+    },
+    "showpoll": {
+      "description": "Mostre uma enquete específica com todas as informações e ações.",
+      "options": {
+        "id": {
+          "description": "O ID da enquete ou mensagem a ser mostrada."
+        }
+      }
+    },
+    "timepoll": {
+      "description": "Crie uma enquete com limite de tempo.",
+      "options": {
+        "question": {
+          "description": "Qual é a pergunta da enquete?"
+        },
+        "time": {
+          "description": "Por quanto tempo a enquete deve durar?"
+        },
+        "type": {
+          "description": "Que tipo de enquete deve ser criada?",
+          "choices": {
+            "normal-buttons": "Normal (Botões)",
+            "normal-selectmenu": "Normal (Menu de Seleção)",
+            "anonymous-buttons": "Anônima (Botões)",
+            "anonymous-selectmenu": "Anônima (Menu de Seleção)",
+            "hidden-buttons": "Oculta (Botões)",
+            "hidden-selectmenu": "Oculta (Menu de Seleção)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quantas respostas cada usuário pode escolher? (Padrão: 1)"
+        },
+        "text": {
+          "description": "Qual texto deve aparecer acima da enquete?"
+        },
+        "allowedrole": {
+          "description": "Qual cargo pode votar? (Padrão: Todos)"
+        },
+        "answer": {
+          "description": "Resposta {{id}}"
+        }
+      }
+    },
+    "schedulepoll": {
+      "description": "Crie uma enquete agendada.",
+      "options": {
+        "question": {
+          "description": "Qual é a pergunta da enquete?"
+        },
+        "scheduled-time": {
+          "description": "Quando a enquete deve ser publicada?"
+        },
+        "time": {
+          "description": "Por quanto tempo a enquete deve durar?"
+        },
+        "type": {
+          "description": "Que tipo de enquete deve ser criada?",
+          "choices": {
+            "normal-buttons": "Normal (Botões)",
+            "normal-selectmenu": "Normal (Menu de Seleção)",
+            "anonymous-buttons": "Anônima (Botões)",
+            "anonymous-selectmenu": "Anônima (Menu de Seleção)",
+            "hidden-buttons": "Oculta (Botões)",
+            "hidden-selectmenu": "Oculta (Menu de Seleção)"
+          }
+        },
+        "maxchoices": {
+          "description": "Quantas respostas cada usuário pode escolher? (Padrão: 1)"
+        },
+        "text": {
+          "description": "Qual texto deve aparecer acima da enquete?"
+        },
+        "allowedrole": {
+          "description": "Qual cargo pode votar? (Padrão: Todos)"
+        },
+        "answer": {
+          "description": "Resposta {{id}}"
+        }
+      }
+    },
+    "block": {
+      "description": "Bloqueie um usuário de interagir com o bot neste servidor.",
+      "options": {
+        "user": {
+          "description": "O usuário a ser bloqueado."
+        },
+        "reason": {
+          "description": "O motivo público do bloqueio do usuário."
+        },
+        "time": {
+          "description": "O tempo pelo qual o usuário deve ficar bloqueado."
+        }
+      }
+    },
+    "debug": {
+      "description": "Verifique as permissões do servidor e alguns problemas comuns.",
+      "options": {
+        "channel": {
+          "description": "Canal a ser depurado. (Padrão: Canal atual)"
+        }
+      }
+    },
+    "help": {
+      "description": "Obtenha ajuda e informações sobre os comandos disponíveis."
+    },
+    "invite": {
+      "description": "Obtenha um link para adicionar o bot ao seu próprio servidor."
+    },
+    "dashboard": {
+      "description": "Obtenha um link para o painel deste servidor."
+    },
+    "listblocks": {
+      "description": "Mostre uma lista de todos os usuários bloqueados no servidor atual."
+    },
+    "premium": {
+      "description": "Verifique o status premium atual deste servidor."
+    },
+    "settings": {
+      "description": "Altere as configurações deste servidor.",
+      "subcommands": {
+        "colors": {
+          "description": "Altere as cores padrão deste servidor.",
+          "subcommands": {
+            "embeds": {
+              "description": "Altere as cores padrão das embeds.",
+              "options": {
+                "state": {
+                  "description": "O estado das embeds.",
+                  "choices": {
+                    "open": "Aberta",
+                    "closed": "Fechada",
+                    "running": "Em andamento",
+                    "result": "Resultado"
+                  }
+                },
+                "color": {
+                  "description": "A cor das embeds."
+                }
+              }
+            },
+            "buttons": {
+              "description": "Altere as cores padrão dos botões.",
+              "options": {
+                "color": {
+                  "description": "A cor dos botões.",
+                  "choices": {
+                    "primary": "Primária (Azul)",
+                    "secondary": "Secundária (Cinza)",
+                    "success": "Sucesso (Verde)",
+                    "danger": "Perigo (Vermelho)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "events": {
+          "description": "Altere as configurações de eventos."
+        },
+        "emojis": {
+          "description": "Altere os emojis padrão deste servidor."
+        },
+        "language": {
+          "description": "Altere o idioma deste servidor."
+        },
+        "logging": {
+          "description": "Configure um canal de logs para mensagens do registro de auditoria."
+        },
+        "role-weight": {
+          "description": "Altere o peso de voto de um cargo.",
+          "options": {
+            "role": {
+              "description": "O cargo cujo peso deve ser alterado."
+            },
+            "weight": {
+              "description": "O peso do cargo."
+            }
+          }
+        },
+        "threads": {
+          "description": "Altere as configurações de tópicos."
+        }
+      }
+    },
+    "unblock": {
+      "description": "Desbloqueie um usuário para interagir com o bot neste servidor.",
+      "options": {
+        "user": {
+          "description": "O usuário a ser desbloqueado."
+        }
+      }
+    }
+  },
+  "contextmenus": {
+    "close": {
+      "name": "Fechar"
+    },
+    "details": {
+      "name": "Detalhes"
+    },
+    "edit": {
+      "name": "Editar"
+    },
+    "participants": {
+      "name": "Participantes"
+    },
+    "delete": {
+      "name": "Excluir"
+    },
+    "export": {
+      "name": "Exportar"
+    },
+    "reopen": {
+      "name": "Reabrir"
+    },
+    "block": {
+      "name": "Bloquear"
+    },
+    "unblock": {
+      "name": "Desbloquear"
+    }
+  },
+  "modals": {
+    "go_to_page": {
+      "title": "Ir para a página",
+      "components": {
+        "page_number": {
+          "label": "Número da página",
+          "placeholder": "Digite o número da página para a qual você quer ir..."
+        }
+      }
+    },
+    "pollbuilder": {
+      "title": {
+        "create": "Criar Enquete",
+        "edit": "Editar Enquete"
+      },
+      "components": {
+        "question": {
+          "label": "Pergunta",
+          "placeholder": "Digite a pergunta da enquete..."
+        },
+        "answer": {
+          "label": "Texto da Resposta",
+          "placeholder": "Digite o texto da resposta..."
+        },
+        "description": {
+          "label": "Descrição",
+          "placeholder": "Digite a descrição da enquete..."
+        },
+        "time": {
+          "label": "Tempo",
+          "description": "Digite o tempo que a enquete deve durar (ex.: 3d 12h). Deixe vazio para tempo ilimitado.",
+          "placeholder": "Digite o tempo que a enquete deve durar..."
+        },
+        "image": {
+          "label": "URL da Imagem",
+          "description": "A URL da imagem deve ser um link direto válido para uma imagem (png, jpeg, gif).",
+          "placeholder": "Digite a URL da imagem da enquete..."
+        },
+        "colors": {
+          "open": {
+            "label": "Cor: Aberta",
+            "placeholder": "Digite o nome ou o código hex da cor para enquetes abertas..."
+          },
+          "closed": {
+            "label": "Cor: Fechada",
+            "placeholder": "Digite o nome ou o código hex da cor para enquetes fechadas..."
+          },
+          "running": {
+            "label": "Cor: Em andamento",
+            "placeholder": "Digite o nome ou o código hex da cor para enquetes em andamento..."
+          },
+          "result": {
+            "label": "Cor: Resultado",
+            "placeholder": "Digite o nome ou o código hex da cor para resultados..."
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Configurações de Eventos",
+        "components": {
+          "settings": {
+            "label": "Selecione para ativar/desativar",
+            "description": "As configurações selecionadas estão ativadas. As configurações não selecionadas estão desativadas.",
+            "options": {
+              "pin_poll_message_while_running": "Fixar a mensagem da enquete enquanto a enquete estiver em andamento",
+              "announce_winner_on_poll_auto_close": "Anunciar o vencedor quando uma enquete for fechada automaticamente",
+              "remove_votes_on_ban": "Remover votos ativos quando um usuário for banido",
+              "remove_votes_on_kick": "Remover votos ativos quando um usuário for expulso",
+              "remove_votes_on_leave": "Remover votos ativos quando um usuário sair"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Configurações de Tópicos",
+        "components": {
+          "settings": {
+            "label": "Selecione para ativar/desativar",
+            "description": "As configurações selecionadas estão ativadas. As configurações não selecionadas estão desativadas.",
+            "options": {
+              "create_thread_with_poll": "Criar um tópico quando uma nova enquete for criada",
+              "lock_and_unlock_thread_with_poll": "Bloquear/desbloquear um tópico quando a enquete relacionada for fechada/reaberta"
+            }
+          }
+        }
+      }
+    },
+    "block": {
+      "title": "Bloquear Usuário",
+      "components": {
+        "reason": {
+          "label": "Motivo",
+          "placeholder": "Digite um motivo para bloquear este usuário..."
+        },
+        "time": {
+          "label": "Duração",
+          "placeholder": "ex.: 1d, 1w, 1h..."
+        }
+      }
+    }
+  },
+  "messages": {
+    "poll": {
+      "success": {
+        "title": "Enquete criada",
+        "description": "A enquete foi criada com sucesso."
+      },
+      "status": {
+        "open": "Aberta",
+        "running": "Em andamento",
+        "closed": "Fechada",
+        "failed": "Com falha",
+        "scheduled": "Agendada",
+        "unpublished": "Não publicada"
+      },
+      "reactions": {
+        "yes": "Sim",
+        "no": "Não"
+      },
+      "select": {
+        "placeholder_one": "Selecione uma opção para votar...",
+        "placeholder_other": "Selecione uma ou mais opções para votar...",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} votos"
+      },
+      "description": {
+        "question": "Pergunta",
+        "choices": "Opções",
+        "result": "Resultado",
+        "final_result": "Resultado Final",
+        "settings": "Configurações"
+      },
+      "result": {
+        "title": "Resultado da Enquete",
+        "votes_one": "{{count}} voto",
+        "votes_other": "{{count}} votos",
+        "votes_weighted_one": "{{count}} voto ponderado",
+        "votes_weighted_other": "{{count}} votos ponderados",
+        "users_one": "de {{count}} usuário",
+        "users_other": "de {{count}} usuários"
+      },
+      "winner": {
+        "content": "A enquete **{{- question}}** de {{- user}} foi fechada.",
+        "text": {
+          "no_winner": "Não houve vencedor",
+          "tied": "Houve um empate",
+          "winner": "Resposta vencedora"
+        }
+      },
+      "settings": {
+        "ends": "Termina {{- timestamp}}",
+        "ended": "Enquete já encerrada",
+        "closed": "Não são permitidos mais votos",
+        "anonymous": "Enquete Anônima",
+        "hidden": "Enquete Oculta",
+        "maxchoices_one": "{{count}} escolha permitida",
+        "maxchoices_other": "{{count}} escolhas permitidas",
+        "maxtotalvotes_one": "{{count}} voto permitido no total",
+        "maxtotalvotes_other": "{{count}} votos permitidos no total",
+        "removevotesnotallowed": "Não é permitido remover votos",
+        "allowedroles": "Cargos permitidos"
+      },
+      "participants": {
+        "title": "Participantes",
+        "votes": "Usuários que votaram nesta opção:",
+        "no_votes": "Nenhum usuário votou nesta opção.",
+        "weight": "Peso: {{weight}}",
+        "select": {
+          "placeholder": "Selecione uma opção para ver os participantes...",
+          "participants_one": "{{count}} participante",
+          "participants_other": "{{count}} participantes",
+          "votes_one": "{{count}} voto",
+          "votes_other": "{{count}} votos",
+          "username_asc": "Nome de usuário (Crescente)",
+          "username_desc": "Nome de usuário (Decrescente)",
+          "voted_at_asc": "Votou em (Crescente)",
+          "voted_at_desc": "Votou em (Decrescente)",
+          "weight_asc": "Peso (Crescente)",
+          "weight_desc": "Peso (Decrescente)"
+        }
+      },
+      "info": {
+        "title": "Informações da Enquete",
+        "fields": {
+          "id": "ID",
+          "status": "Status",
+          "creator": "Criador",
+          "created_at": "Criada em",
+          "scheduled_at": "Agendada para",
+          "published_at": "Publicada em",
+          "ends_at": "Termina em",
+          "closed_at": "Fechada em",
+          "question": "Pergunta",
+          "choices": "Opções",
+          "result": "Resultado",
+          "settings": "Configurações",
+          "message": "Mensagem"
+        }
+      }
+    },
+    "votes": {
+      "added": {
+        "title": "Voto adicionado",
+        "description": "Você votou com sucesso na opção {{- option}}.",
+        "description2_one": "Você ainda tem **{{count}} voto restante**.",
+        "description2_other": "Você ainda tem **{{count}} votos restantes**."
+      },
+      "added_selected": {
+        "title": "Votos adicionados",
+        "description1": "Você votou com sucesso nas seguintes opções:",
+        "description2_one": "Você ainda tem **{{count}} voto restante**.",
+        "description2_other": "Você ainda tem **{{count}} votos restantes**."
+      },
+      "removed": {
+        "title": "Voto removido",
+        "description": "Você removeu com sucesso seu voto na opção {{- option}}."
+      },
+      "removed_selected": {
+        "title": "Votos removidos",
+        "description": "Você removeu com sucesso seus votos nas seguintes opções:"
+      },
+      "removed_all": {
+        "title": "Todos os votos removidos",
+        "description": "Você removeu com sucesso todos os seus votos desta enquete."
+      },
+      "manage": {
+        "title": "Gerencie seus votos",
+        "description": "Você pode remover seus votos da enquete selecionando as opções:"
+      },
+      "select": {
+        "placeholder": "Selecione uma ou mais opções para remover seus votos..."
+      }
+    },
+    "closepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Fechar enquete",
+          "description1": "Tem certeza de que deseja fechar esta enquete?",
+          "description2": "ID da enquete: {{id}}",
+          "description3": "Pergunta da enquete: {{question}}"
+        },
+        "success": {
+          "title": "Enquete fechada",
+          "description": "A enquete foi fechada com sucesso.",
+          "error": "No entanto, a mensagem original não pôde ser atualizada.",
+          "error_missingaccess": "No entanto, a mensagem original não pôde ser atualizada porque o bot não tem as permissões para acessar o canal.",
+          "error_unknownchannel": "No entanto, a mensagem original não pôde ser atualizada porque o canal não pôde ser encontrado.",
+          "error_unknownmessage": "No entanto, a mensagem original não pôde ser atualizada porque a mensagem não pôde ser encontrada."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Enquete movida",
+          "description": "A enquete foi movida com sucesso para {{- channel}}."
+        }
+      }
+    },
+    "copypoll": {
+      "embeds": {
+        "success": {
+          "title": "Copiar Enquete",
+          "description": "Clique no botão abaixo para copiar esta enquete para o painel e criar uma nova com as mesmas configurações."
+        }
+      }
+    },
+    "schedulepoll": {
+      "embeds": {
+        "success": {
+          "title": "Enquete agendada",
+          "description": "A enquete `{{pollId}}` foi agendada para {{- scheduledAt}}."
+        }
+      }
+    },
+    "deletepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Excluir enquete",
+          "description1": "Tem certeza de que deseja excluir esta enquete permanentemente?",
+          "description2": "ID da enquete: {{id}}",
+          "description3": "Pergunta da enquete: {{question}}"
+        },
+        "success": {
+          "title": "Enquete excluída",
+          "description": "A enquete foi excluída com sucesso.",
+          "error": "No entanto, a mensagem original não pôde ser excluída.",
+          "error_missingaccess": "No entanto, a mensagem original não pôde ser excluída porque o bot não tem as permissões para acessar o canal.",
+          "error_unknownchannel": "No entanto, a mensagem original não pôde ser excluída porque o canal não pôde ser encontrado.",
+          "error_unknownmessage": "No entanto, a mensagem original não pôde ser excluída porque a mensagem não pôde ser encontrada."
+        }
+      }
+    },
+    "exportpoll": {
+      "embeds": {
+        "export": {
+          "title": "Exportar enquete",
+          "description": "Você pode exportar a enquete para um arquivo e usá-la fora do bot.\nSelecione o formato no qual deseja exportar a enquete."
+        },
+        "success": {
+          "title": "Enquete exportada",
+          "description": "A enquete foi exportada com sucesso e está anexada a esta mensagem.\nAgora você pode baixar o arquivo anexado e usá-lo fora do bot."
+        }
+      }
+    },
+    "listpolls": {
+      "embeds": {
+        "list": {
+          "title": "Lista de Enquetes"
+        }
+      },
+      "select": {
+        "placeholder": "Selecione uma enquete para mostrar..."
+      }
+    },
+    "pollbuilder": {
+      "embeds": {
+        "answers": {
+          "title": "Respostas",
+          "description": "Selecione a resposta que você deseja modificar ou adicione uma nova:"
+        },
+        "answers_update": {
+          "title": "Atualizar Resposta",
+          "description": "Selecione uma ação para atualizar esta resposta."
+        },
+        "type": {
+          "title": "Tipo de Enquete",
+          "description": "Selecione o tipo da enquete. Em alguns casos, o tipo da enquete não pode ser alterado."
+        },
+        "channel": {
+          "title": "Canal",
+          "description": "Selecione o canal onde a enquete deve ser publicada."
+        },
+        "buttoncolor": {
+          "title": "Cor dos Botões",
+          "description": "Selecione a cor dos botões da enquete."
+        },
+        "maxchoices": {
+          "title": "Máximo de Escolhas",
+          "description": "Selecione o número máximo de escolhas que cada usuário pode fazer."
+        },
+        "allowedroles": {
+          "title": "Cargos Permitidos",
+          "description": "Selecione os cargos que podem votar.\nA seleção substitui todos os cargos já permitidos, então selecione novamente os cargos já permitidos se quiser mantê-los."
+        },
+        "allowvoteremove": {
+          "title": "Permitir Remoção de Votos",
+          "description": "Selecione se os usuários podem remover seus votos.",
+          "select": {
+            "yes": "Sim",
+            "no": "Não"
+          }
+        },
+        "create": {
+          "confirm": {
+            "title": "Criar enquete",
+            "description": "Tem certeza de que deseja criar esta enquete?"
+          },
+          "success": {
+            "title": "Enquete criada",
+            "description": "A enquete foi criada com sucesso."
+          }
+        },
+        "save": {
+          "confirm": {
+            "title": "Salvar enquete",
+            "description": "Tem certeza de que deseja salvar esta enquete?",
+            "description2": "ID da enquete: {{id}}",
+            "description3": "As seguintes propriedades serão alteradas:"
+          },
+          "success": {
+            "title": "Enquete salva",
+            "description": "A enquete foi salva com sucesso."
+          },
+          "changes": {
+            "added": "Adicionado",
+            "changed": "Alterado",
+            "removed": "Removido"
+          }
+        },
+        "exit": {
+          "confirm": {
+            "title": "Sair",
+            "description": "Tem certeza de que deseja sair do menu e descartar todas as alterações?"
+          }
+        }
+      }
+    },
+    "pollresult": {
+      "embeds": {
+        "confirm": {
+          "title": "Resultado da enquete publicado",
+          "description": "O resultado da enquete foi publicado com sucesso em {{- channel}}."
+        }
+      }
+    },
+    "reopenpoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Reabrir enquete",
+          "description1": "Tem certeza de que deseja reabrir esta enquete?",
+          "description2": "ID da enquete: {{id}}",
+          "description3": "Pergunta da enquete: {{question}}"
+        },
+        "success": {
+          "title": "Enquete reaberta",
+          "description": "A enquete foi reaberta com sucesso."
+        }
+      }
+    },
+    "block": {
+      "embeds": {
+        "success": {
+          "title": "Usuário bloqueado",
+          "description": "O usuário foi bloqueado com sucesso de interagir com o bot neste servidor."
+        }
+      }
+    },
+    "debug": {
+      "content": "Se você precisar de ajuda da nossa equipe de suporte, compartilhe o seguinte link com eles:",
+      "embeds": {
+        "success": {
+          "title": "Depuração",
+          "fields": {
+            "guild_information": {
+              "title": "Informações do Servidor",
+              "guild_id": "ID do Servidor",
+              "guild_name": "Nome do Servidor",
+              "guild_language": "Idioma do Servidor",
+              "guild_preferred_locale": "Localidade Preferida do Servidor",
+              "channel_id": "ID do Canal",
+              "channel_name": "Nome do Canal"
+            },
+            "user_information": {
+              "title": "Informações do Usuário",
+              "user_id": "ID do Usuário",
+              "user_name": "Nome de usuário",
+              "user_locale": "Localidade do Usuário",
+              "guild_owner": "Dono do Servidor",
+              "permissions": "Permissões"
+            },
+            "bot_information": {
+              "title": "Informações do Bot",
+              "premium": "Premium"
+            },
+            "app_permissions": {
+              "title": "Permissões do App no Servidor"
+            },
+            "channel_permissions": {
+              "title": "Permissões do Canal ({{- channel}})"
+            },
+            "role_weights": {
+              "title": "Pesos dos Cargos"
+            }
+          }
+        }
+      }
+    },
+    "help": {
+      "embeds": {
+        "success": {
+          "title": "Ajuda do EasyPoll",
+          "fields": {
+            "poll": "Comandos de Enquete",
+            "miscellaneous": "Comandos Diversos",
+            "settings": "Comandos de Configuração"
+          }
+        }
+      }
+    },
+    "invite": {
+      "embeds": {
+        "success": {
+          "title": "Convide o EasyPoll para o seu servidor!",
+          "description": "Clique no botão abaixo para convidar o EasyPoll para o seu servidor."
+        }
+      }
+    },
+    "dashboard": {
+      "embeds": {
+        "success": {
+          "title": "Abrir o Painel",
+          "description": "Clique no botão abaixo para abrir o painel deste servidor."
+        }
+      }
+    },
+    "listblocks": {
+      "embeds": {
+        "list": {
+          "title": "Lista de Usuários Bloqueados",
+          "no_blocks": "Nenhum usuário está bloqueado neste servidor."
+        }
+      }
+    },
+    "premium": {
+      "embeds": {
+        "no_premium": {
+          "title": "Este servidor não tem premium!",
+          "description": "Adquira o premium para desbloquear mais recursos!"
+        },
+        "premium": {
+          "title": "Este servidor tem premium!",
+          "fields": {
+            "premium_until": "Premium até"
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "changed": {
+          "description": "Configurações de eventos atualizadas com sucesso."
+        }
+      },
+      "threads": {
+        "changed": {
+          "description": "Configurações de tópicos atualizadas com sucesso."
+        }
+      },
+      "language": {
+        "embeds": {
+          "change": {
+            "title": "Alterar idioma",
+            "text": "Aqui você pode alterar o idioma do bot neste servidor.\n\nSelecione um idioma para o bot neste servidor:",
+            "select": {
+              "placeholder": "Selecione um idioma..."
+            }
+          },
+          "changed": {
+            "title": "Idioma alterado",
+            "description": "O idioma do bot neste servidor foi alterado para {{- language}}."
+          }
+        },
+        "notice": {
+          "community": "O EasyPoll é traduzido por membros da comunidade, então algumas traduções podem conter erros. Se você quiser corrigir um erro ou adicionar um idioma que falta, pode contribuir no [GitHub]({{- githubUrl}}). Se precisar de ajuda, entre no nosso [servidor do Discord]({{- discordUrl}}).",
+          "ai": "⚠️ Este idioma foi traduzido com IA e pode conter erros. Você pode sugerir melhorias e ajudar com a tradução no [GitHub]({{- githubUrl}}). Se precisar de ajuda, entre no nosso [servidor do Discord]({{- discordUrl}})."
+        }
+      },
+      "logging": {
+        "embeds": {
+          "change": {
+            "title": "Logs",
+            "text_enabled": "As mensagens do registro de auditoria estão sendo enviadas atualmente para {{- channel}}.\n\nSelecione um canal abaixo para alterar o canal de logs, ou clique no botão para desativar os logs.",
+            "text_disabled": "Os logs estão atualmente desativados neste servidor.\n\nSelecione um canal abaixo para receber mensagens do registro de auditoria:",
+            "select": {
+              "placeholder": "Selecione um canal de logs..."
+            },
+            "buttons": {
+              "remove": "Desativar logs"
+            }
+          },
+          "changed": {
+            "title": "Canal de Logs Definido",
+            "description": "As mensagens do registro de auditoria agora serão enviadas para {{- channel}}."
+          },
+          "removed": {
+            "title": "Logs Desativados",
+            "description": "As mensagens do registro de auditoria não serão mais enviadas e o webhook de logs foi removido."
+          }
+        }
+      }
+    },
+    "unblock": {
+      "embeds": {
+        "success": {
+          "title": "Usuário desbloqueado",
+          "description": "O usuário foi desbloqueado com sucesso para interagir com o bot neste servidor."
+        }
+      }
+    },
+    "timeAutocomplete": {
+      "example": "Exemplo: {{example}}",
+      "invalid": "Não foi possível reconhecer esta data — tente, por exemplo, 'amanhã às 9h' ou 'em 2 horas'"
+    }
+  },
+  "logging": {
+    "embed": {
+      "footer": "@{{username}} via {{platform}}",
+      "fields": {
+        "generic": "{{key}}",
+        "changes": "Alterações",
+        "data": "Dados",
+        "pollId": "Enquete",
+        "reason": "Motivo",
+        "restrictedUserId": "Usuário",
+        "channelId": "Canal",
+        "userId": "Usuário",
+        "roleId": "Cargo",
+        "restrictionId": "ID da Restrição",
+        "oldChannelId": "Canal Antigo",
+        "newChannelId": "Novo Canal",
+        "oldMessageId": "Mensagem Antiga",
+        "newMessageId": "Nova Mensagem",
+        "expiresAt": "Expira em"
+      },
+      "buttons": {
+        "view_poll": "Ver Enquete"
+      }
+    },
+    "actions": {
+      "generic": "{{action}}",
+      "poll_create": "Enquete Criada",
+      "poll_publish": "Enquete Publicada",
+      "poll_update": "Enquete Atualizada",
+      "poll_close": "Enquete Fechada",
+      "poll_reopen": "Enquete Reaberta",
+      "poll_delete": "Enquete Excluída",
+      "poll_move": "Enquete Movida",
+      "poll_export": "Enquete Exportada",
+      "poll_answer_update": "Resposta da Enquete Atualizada",
+      "poll_answer_bulk_update": "Respostas da Enquete Atualizadas",
+      "poll_answer_delete": "Resposta da Enquete Excluída",
+      "poll_vote_delete": "Voto Removido",
+      "guild_update": "Configurações do Servidor Atualizadas",
+      "guild_role_update": "Configurações de Cargo Atualizadas",
+      "guild_complete_onboarding": "Onboarding Concluído",
+      "guild_logging_disable": "Logs Desativados",
+      "restriction_create": "Usuário Bloqueado",
+      "restriction_delete": "Usuário Desbloqueado"
+    }
+  },
+  "footers": {
+    "poll_id": "ID da Enquete: {{id}}",
+    "poll_type": "Tipo: {{type}} ({{votingType}})",
+    "error_id": "ID do Erro: {{id}}",
+    "pages": "Página {{page}} de {{pages}}",
+    "edited": "Editado"
+  },
+  "errors": {
+    "default": {
+      "title": "Tarefa falhou com sucesso!",
+      "description": "Ocorreu um erro, mas não consigo dizer o motivo.\nPeça mais ajuda ao suporte."
+    },
+    "guild_command": {
+      "title": "Comando de servidor!",
+      "description": "Este comando só pode ser usado em servidores."
+    },
+    "guild_communication_disabled": {
+      "title": "O bot está de castigo!",
+      "description": "O bot está de castigo neste servidor e não pode se comunicar neste servidor.\nRemova o castigo para usar o bot novamente."
+    },
+    "missing_bot_permissions": {
+      "title": "Permissões faltando!",
+      "description1": "O bot não tem as seguintes permissões:",
+      "description2": "Verifique se o bot tem todas as permissões necessárias."
+    },
+    "missing_user_permissions": {
+      "title": "Permissões faltando!",
+      "description1": "Você não tem as seguintes permissões:",
+      "description2": "Você não pode executar esta ação sem as permissões necessárias."
+    },
+    "premium_required": {
+      "title": "Premium necessário!",
+      "description": "Este recurso está disponível apenas para servidores premium. Adquira o premium para usar este recurso."
+    },
+    "invalid_channel_type": {
+      "title": "Tipo de canal inválido!",
+      "description": "O canal selecionado não é um tipo de canal permitido para esta ação."
+    },
+    "invalid_color": {
+      "title": "Cor inválida!",
+      "description": "A cor inserida é inválida. Verifique se a cor está no formato correto."
+    },
+    "invalid_image": {
+      "title": "Imagem inválida!",
+      "description": "A URL da imagem inserida é inválida. Verifique se a URL da imagem é válida e se a imagem está no formato correto."
+    },
+    "invalid_page": {
+      "title": "Página inválida!",
+      "description": "O número da página inserido é inválido. Verifique se o número da página está no formato correto e dentro do intervalo válido."
+    },
+    "invalid_time": {
+      "title": "Tempo inválido!",
+      "description": "O tempo inserido é inválido. Verifique se o tempo está no formato correto."
+    },
+    "max_time": {
+      "title": "Tempo máximo atingido!",
+      "description": "Você atingiu o tempo máximo de {{maxtime}}.\nVerifique se o tempo inserido não é maior que o tempo máximo permitido.",
+      "description_upgrade": "Você pode aumentar o tempo máximo para {{maxtime}} fazendo upgrade para o premium."
+    },
+    "scheduled_poll_limit": {
+      "title": "Limite de enquetes agendadas atingido!",
+      "max_unpublished": "São permitidas no máximo {{max}} enquetes agendadas não publicadas.",
+      "min_interval": "As enquetes agendadas devem ter um intervalo de pelo menos {{seconds}} segundos. Escolha um horário diferente."
+    },
+    "unknown_emoji": {
+      "title": "Emoji desconhecido!",
+      "description": "Você especificou um emoji desconhecido!\nVocê só pode usar emojis de servidores em que o EasyPoll está presente. Verifique se {{- emoji}} é um emoji **oficial do Discord** ou um emoji **deste servidor**."
+    },
+    "restricted": {
+      "title": "Você não pode executar esta ação!",
+      "description": {
+        "user_global": "Você está globalmente impedido de usar esta ação.",
+        "user_local": "Você está impedido de usar esta ação neste servidor.",
+        "guild": "Este servidor está impedido de usar esta ação."
+      },
+      "fields": {
+        "reason": "Motivo",
+        "expires_at": "Expira em"
+      }
+    },
+    "already_restricted": {
+      "title": "Já restrito!",
+      "description": "O usuário selecionado já está impedido de usar o bot."
+    },
+    "already_voted": {
+      "title": "Você já votou nesta opção!",
+      "description": "Você já votou nesta opção e não pode votar novamente na mesma opção."
+    },
+    "max_choices_reached": {
+      "title": "Número máximo de escolhas atingido!",
+      "description": "Você atingiu o número máximo de escolhas para esta enquete. Você pode remover alguns de seus votos para votar em outras opções."
+    },
+    "max_total_votes_reached": {
+      "title": "Número máximo de votos atingido!",
+      "description": "A enquete atingiu o número máximo de votos permitido e você não pode mais votar."
+    },
+    "not_allowed_role": {
+      "title": "Apenas determinados cargos são permitidos nesta enquete!",
+      "description": "Você não pode votar nesta enquete porque não possui nenhum dos cargos permitidos."
+    },
+    "not_allowed_user": {
+      "title": "Usuário não permitido!",
+      "description": "Você não pode selecionar este usuário porque não tem permissão para isso."
+    },
+    "not_restricted": {
+      "title": "Não restrito!",
+      "description": "O usuário selecionado não está impedido de usar o bot."
+    },
+    "poll": {
+      "already_closed": {
+        "title": "Esta enquete já está fechada!",
+        "description": "Você não pode interagir com esta enquete porque ela já está fechada."
+      },
+      "not_closed": {
+        "title": "Esta enquete não está fechada!",
+        "description": "A enquete não pôde ser reaberta porque não está fechada."
+      },
+      "not_published": {
+        "title": "Esta enquete ainda não foi publicada!",
+        "description": "Esta ação não pode ser executada porque a enquete ainda não foi publicada."
+      },
+      "not_voted": {
+        "title": "Você não votou nesta opção!",
+        "description": "Você não pode remover seu voto desta opção porque não votou nela."
+      },
+      "no_votes": {
+        "title": "Nenhum voto nesta enquete!",
+        "description": "Você não votou em nenhuma opção desta enquete."
+      },
+      "invalid_poll": {
+        "title": "Isto não é uma enquete!",
+        "description_input": "O ID inserido não é uma enquete. Verifique se você inseriu o ID correto da enquete ou da mensagem.",
+        "description_select": "A mensagem selecionada não é uma enquete. Verifique se você selecionou a mensagem de enquete correta."
+      },
+      "participants_not_available": {
+        "title": "Lista de participantes não permitida!",
+        "description": "A lista de participantes não está disponível para esta enquete."
+      },
+      "vote_remove_not_allowed": {
+        "title": "Remoção de votos não permitida!",
+        "description": "Você não pode remover seu voto desta enquete porque a remoção de votos não é permitida."
+      },
+      "no_polls_found": {
+        "title": "Nenhuma enquete encontrada!",
+        "description": "Não foram encontradas enquetes neste servidor que correspondam aos critérios de busca."
+      },
+      "move": {
+        "thread_not_supported": {
+          "title": "Não é possível mover uma enquete com tópico!",
+          "description": "Esta enquete tem um tópico vinculado e não pode ser movida para outro canal."
+        },
+        "already_in_channel": {
+          "title": "A enquete já está neste canal!",
+          "description": "Selecione um canal diferente para mover esta enquete."
+        }
+      }
+    },
+    "pollbuilder": {
+      "locked": {
+        "title": "Enquete bloqueada!",
+        "description": "A enquete está bloqueada no momento e não pode ser modificada. Tente novamente em alguns segundos."
+      },
+      "validation": {
+        "title": "Falha na validação!",
+        "description": "Os valores inseridos são inválidos. Verifique se todos os valores estão corretos e tente novamente."
+      }
+    }
+  },
+  "buttons": {
+    "website": "Site",
+    "dashboard": "Painel",
+    "invite": "Convidar",
+    "support": "Suporte",
+    "wiki": "Wiki",
+    "learn_more": "Saiba Mais",
+    "premium": "Obter Premium",
+    "troubleshooting": "Solução de Problemas",
+    "discord_helpcenter": "Central de Ajuda do Discord",
+    "vote": "Votar",
+    "participants": "Participantes",
+    "enable": "Ativar",
+    "disable": "Desativar",
+    "close": "Fechar",
+    "reopen": "Reabrir",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "save": "Salvar",
+    "create": "Criar",
+    "exit": "Sair",
+    "cancel": "Cancelar",
+    "confirm_close": "Sim, fechar a enquete",
+    "confirm_reopen": "Sim, reabrir a enquete",
+    "confirm_delete": "Sim, excluir a enquete",
+    "confirm_save": "Sim, salvar a enquete",
+    "confirm_create": "Sim, criar a enquete",
+    "confirm_exit": "Sim, sair",
+    "go_to_message": "Ir para a mensagem",
+    "go_to_page": "Ir para a página",
+    "view_on_dashboard": "Ver no Painel",
+    "edit_on_dashboard": "Editar no Painel",
+    "view_poll": "Ver Enquete",
+    "remove_all_votes": "Remover todos os seus votos",
+    "remove_vote": "Remover este voto",
+    "manage_votes": "Gerenciar seus votos",
+    "export_json": "Exportar como JSON",
+    "export_csv": "Exportar como CSV",
+    "question": "Pergunta",
+    "answers": "Respostas",
+    "description": "Descrição",
+    "type": "Tipo",
+    "time": "Tempo",
+    "image": "Imagem",
+    "channel": "Canal",
+    "embed_colors": "Cores da Embed",
+    "button_color": "Cor dos Botões",
+    "maxchoices": "Máximo de escolhas",
+    "allowedroles": "Cargos permitidos",
+    "allowedroles_clear": "Limpar cargos permitidos",
+    "allowvoteremove": "Permitir Remoção de Votos",
+    "answer_new": "Adicionar nova resposta"
+  },
+  "permissions": {
+    "administrator": "Administrador",
+    "add_reactions": "Adicionar Reações",
+    "view_audit_log": "Ver o Registro de Auditoria",
+    "view_channel": "Ver Canais",
+    "send_messages": "Enviar Mensagens",
+    "manage_messages": "Gerenciar Mensagens",
+    "manage_guild": "Gerenciar Servidor",
+    "embed_links": "Inserir Links",
+    "attach_files": "Anexar Arquivos",
+    "read_message_history": "Ver Histórico de Mensagens",
+    "mention_everyone": "Mencionar Todos",
+    "use_external_emojis": "Usar Emojis Externos",
+    "manage_webhooks": "Gerenciar Webhooks",
+    "manage_threads": "Gerenciar Tópicos",
+    "create_public_threads": "Criar Tópicos Públicos",
+    "send_messages_in_threads": "Enviar Mensagens em Tópicos",
+    "pin_messages": "Fixar Mensagens"
+  }
+}

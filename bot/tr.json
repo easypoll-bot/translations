@@ -3,7 +3,8 @@
     "locale": "tr",
     "name": "Turkish",
     "name_native": "Türkçe",
-    "emoji_unicode": "🇹🇷"
+    "emoji_unicode": "🇹🇷",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -58,7 +59,10 @@
             "all": "Tümü",
             "open": "Açık",
             "running": "Devam Ediyor",
-            "closed": "Kapalı"
+            "closed": "Kapalı",
+            "failed": "Başarısız",
+            "scheduled": "Zamanlanmış",
+            "unpublished": "Yayınlanmamış"
           }
         },
         "channel": {
@@ -380,37 +384,6 @@
         }
       }
     },
-    "settings": {
-      "events": {
-        "title": "Etkinlik ayarları",
-        "components": {
-          "settings": {
-            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
-            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
-            "options": {
-              "pin_poll_message_while_running": "Anket sürerken anket mesajını sabitle",
-              "announce_winner_on_poll_auto_close": "Anket otomatik kapanınca kazananı duyur",
-              "remove_votes_on_ban": "Kullanıcı yasaklanınca aktif oyları kaldır",
-              "remove_votes_on_kick": "Kullanıcı atılınca aktif oyları kaldır",
-              "remove_votes_on_leave": "Kullanıcı ayrılınca aktif oyları kaldır"
-            }
-          }
-        }
-      },
-      "threads": {
-        "title": "Konu ayarları",
-        "components": {
-          "settings": {
-            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
-            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
-            "options": {
-              "create_thread_with_poll": "Yeni anket oluşturulunca bir konu oluştur",
-              "lock_and_unlock_thread_with_poll": "İlgili anket kapanınca/açılınca konuyu kilitle/kilidi aç"
-            }
-          }
-        }
-      }
-    },
     "pollbuilder": {
       "title": {
         "create": "Anket Oluştur",
@@ -459,6 +432,37 @@
         }
       }
     },
+    "settings": {
+      "events": {
+        "title": "Etkinlik ayarları",
+        "components": {
+          "settings": {
+            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
+            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
+            "options": {
+              "pin_poll_message_while_running": "Anket sürerken anket mesajını sabitle",
+              "announce_winner_on_poll_auto_close": "Anket otomatik kapanınca kazananı duyur",
+              "remove_votes_on_ban": "Kullanıcı yasaklanınca aktif oyları kaldır",
+              "remove_votes_on_kick": "Kullanıcı atılınca aktif oyları kaldır",
+              "remove_votes_on_leave": "Kullanıcı ayrılınca aktif oyları kaldır"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Konu ayarları",
+        "components": {
+          "settings": {
+            "label": "Etkinleştirmek/devre dışı bırakmak için seç",
+            "description": "Seçilen ayarlar etkindir. Seçilmeyen ayarlar devre dışıdır.",
+            "options": {
+              "create_thread_with_poll": "Yeni anket oluşturulunca bir konu oluştur",
+              "lock_and_unlock_thread_with_poll": "İlgili anket kapanınca/açılınca konuyu kilitle/kilidi aç"
+            }
+          }
+        }
+      }
+    },
     "block": {
       "title": "Kullanıcıyı Engelle",
       "components": {
@@ -482,7 +486,10 @@
       "status": {
         "open": "Açık",
         "running": "Devam Ediyor",
-        "closed": "Kapalı"
+        "closed": "Kapalı",
+        "failed": "Başarısız",
+        "scheduled": "Zamanlanmış",
+        "unpublished": "Yayınlanmamış"
       },
       "reactions": {
         "yes": "Evet",
@@ -526,6 +533,8 @@
         "hidden": "Gizli Anket",
         "maxchoices_one": "{{count}} seçeneğe izin verildi",
         "maxchoices_other": "{{count}} seçeneğe izin verildi",
+        "maxtotalvotes_one": "Toplam {{count}} oya izin verildi",
+        "maxtotalvotes_other": "Toplam {{count}} oya izin verildi",
         "removevotesnotallowed": "Oyların kaldırılmasına izin verilmiyor",
         "allowedroles": "İzin verilen roller"
       },
@@ -615,6 +624,14 @@
           "error_missingaccess": "Ancak orijinal mesaj güncellenemedi çünkü botun kanala erişim izinleri yok.",
           "error_unknownchannel": "Ancak orijinal mesaj güncellenemedi çünkü kanal bulunamadı.",
           "error_unknownmessage": "Ancak orijinal mesaj güncellenemedi çünkü mesaj bulunamadı."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Anket taşındı",
+          "description": "Anket başarıyla {{- channel}} kanalına taşındı."
         }
       }
     },
@@ -891,6 +908,10 @@
             "title": "Dil değiştirildi",
             "description": "Botun bu sunucudaki dili {{- language}} olarak değiştirildi."
           }
+        },
+        "notice": {
+          "community": "EasyPoll topluluk üyeleri tarafından çevrilmektedir, bu nedenle bazı çeviriler hata içerebilir. Bir hatayı düzeltmek veya eksik bir dil eklemek isterseniz [GitHub]({{- githubUrl}}) üzerinden katkıda bulunabilirsiniz. Yardıma ihtiyacınız olursa [Discord sunucumuza]({{- discordUrl}}) katılın.",
+          "ai": "⚠️ Bu dil yapay zeka ile çevrildi ve hatalar içerebilir. [GitHub]({{- githubUrl}}) üzerinden iyileştirmeler önerebilir ve çeviriye yardımcı olabilirsiniz. Yardıma ihtiyacınız olursa [Discord sunucumuza]({{- discordUrl}}) katılın."
         }
       },
       "logging": {
@@ -1068,6 +1089,10 @@
       "title": "Maksimum seçenek sayısına ulaşıldı!",
       "description": "Bu anket için maksimum seçenek sayısına ulaştınız. Diğer seçeneklere oy vermek için bazı oylarınızı kaldırabilirsiniz."
     },
+    "max_total_votes_reached": {
+      "title": "Maksimum oy sayısına ulaşıldı!",
+      "description": "Anket izin verilen maksimum oy sayısına ulaştı ve artık oy kullanamazsınız."
+    },
     "not_allowed_role": {
       "title": "Bu anket için sadece belirli rollere izin verildi!",
       "description": "İzin verilen rollerden hiçbirine sahip olmadığınız için bu anket için oy kullanamazsınız."
@@ -1210,6 +1235,7 @@
     "manage_webhooks": "Webhook'ları Yönet",
     "manage_threads": "Alt Başlıkları Yönet",
     "create_public_threads": "Herkese Açık Alt Başlıklar Oluştur",
-    "send_messages_in_threads": "Alt Başlıklarda Mesajlar Gönder"
+    "send_messages_in_threads": "Alt Başlıklarda Mesajlar Gönder",
+    "pin_messages": "Mesajları Sabitle"
   }
 }

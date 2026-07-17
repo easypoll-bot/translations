@@ -3,7 +3,8 @@
     "locale": "pl",
     "name": "Polish",
     "name_native": "Polski",
-    "emoji_unicode": "🇵🇱"
+    "emoji_unicode": "🇵🇱",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -383,37 +384,6 @@
         }
       }
     },
-    "settings": {
-      "events": {
-        "title": "Ustawienia zdarzeń",
-        "components": {
-          "settings": {
-            "label": "Wybierz, aby włączyć/wyłączyć",
-            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
-            "options": {
-              "pin_poll_message_while_running": "Przypnij wiadomość ankiety, gdy ankieta trwa",
-              "announce_winner_on_poll_auto_close": "Ogłoś zwycięzcę, gdy ankieta zamknie się automatycznie",
-              "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
-              "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
-              "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
-            }
-          }
-        }
-      },
-      "threads": {
-        "title": "Ustawienia wątków",
-        "components": {
-          "settings": {
-            "label": "Wybierz, aby włączyć/wyłączyć",
-            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
-            "options": {
-              "create_thread_with_poll": "Utwórz wątek po utworzeniu nowej ankiety",
-              "lock_and_unlock_thread_with_poll": "Zablokuj/odblokuj wątek, gdy powiązana ankieta zostanie zamknięta/otwarta"
-            }
-          }
-        }
-      }
-    },
     "pollbuilder": {
       "title": {
         "create": "Utwórz ankietę",
@@ -458,6 +428,37 @@
           "result": {
             "label": "Kolor wyników ankiety",
             "placeholder": "Proszę, wprowadź nazwę lub HEX koloru wyników ankiety..."
+          }
+        }
+      }
+    },
+    "settings": {
+      "events": {
+        "title": "Ustawienia zdarzeń",
+        "components": {
+          "settings": {
+            "label": "Wybierz, aby włączyć/wyłączyć",
+            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
+            "options": {
+              "pin_poll_message_while_running": "Przypnij wiadomość ankiety, gdy ankieta trwa",
+              "announce_winner_on_poll_auto_close": "Ogłoś zwycięzcę, gdy ankieta zamknie się automatycznie",
+              "remove_votes_on_ban": "Usuń aktywne głosy, gdy użytkownik zostanie zbanowany",
+              "remove_votes_on_kick": "Usuń aktywne głosy, gdy użytkownik zostanie wyrzucony",
+              "remove_votes_on_leave": "Usuń aktywne głosy, gdy użytkownik opuści serwer"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Ustawienia wątków",
+        "components": {
+          "settings": {
+            "label": "Wybierz, aby włączyć/wyłączyć",
+            "description": "Wybrane ustawienia są włączone. Niewybrane są wyłączone.",
+            "options": {
+              "create_thread_with_poll": "Utwórz wątek po utworzeniu nowej ankiety",
+              "lock_and_unlock_thread_with_poll": "Zablokuj/odblokuj wątek, gdy powiązana ankieta zostanie zamknięta/otwarta"
+            }
           }
         }
       }
@@ -623,6 +624,14 @@
           "error_missingaccess": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ bot nie ma uprawnień dostępu do kanału.",
           "error_unknownchannel": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ nie bot nie może odnaleźć kanału.",
           "error_unknownmessage": "Jednak oryginalna wiadomość nie mogła zostać zaktualizowana, ponieważ nie można jej znaleźć."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Ankieta przeniesiona",
+          "description": "Ankieta została pomyślnie przeniesiona do {{- channel}}."
         }
       }
     },
@@ -899,6 +908,10 @@
             "title": "Język został zmieniony",
             "description": "Język bota na tym serwerze został zmieniony na {{- language}}."
           }
+        },
+        "notice": {
+          "community": "EasyPoll jest tłumaczony przez członków społeczności, więc niektóre tłumaczenia mogą zawierać błędy. Jeśli chcesz poprawić błąd lub dodać brakujący język, możesz pomóc na [GitHubie]({{- githubUrl}}). Jeśli potrzebujesz pomocy, dołącz do naszego [serwera Discord]({{- discordUrl}}).",
+          "ai": "⚠️ Ten język został przetłumaczony przy użyciu AI i może zawierać błędy. Możesz zaproponować poprawki i pomóc w tłumaczeniu na [GitHubie]({{- githubUrl}}). Jeśli potrzebujesz pomocy, dołącz do naszego [serwera Discord]({{- discordUrl}})."
         }
       },
       "logging": {
@@ -1075,6 +1088,10 @@
     "max_choices_reached": {
       "title": "Oddano maksymalną liczbę głosów!",
       "description": "Oddałeś maksymalną liczbę głosów w tej ankiecie. Możesz wycofać część swoich głosów, aby zagłosować na inne opcje."
+    },
+    "max_total_votes_reached": {
+      "title": "Osiągnięto maksymalną liczbę głosów!",
+      "description": "Ankieta osiągnęła maksymalną dozwoloną liczbę głosów i nie możesz już zagłosować."
     },
     "not_allowed_role": {
       "title": "Tylko niektóre role są dopuszczone do głosowania w tej ankiecie!",

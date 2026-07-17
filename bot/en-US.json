@@ -3,7 +3,8 @@
     "locale": "en-US",
     "name": "English, US",
     "name_native": "English, US",
-    "emoji_unicode": "🇺🇸"
+    "emoji_unicode": "🇺🇸",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -907,6 +908,10 @@
             "title": "Language changed",
             "description": "The language of the bot on this server has been changed to {{- language}}."
           }
+        },
+        "notice": {
+          "community": "EasyPoll is translated by community members, so some translations may contain errors. If you'd like to fix an error or add a missing language, you can contribute on [GitHub]({{- githubUrl}}). If you need help, join our [Discord server]({{- discordUrl}}).",
+          "ai": "⚠️ This language was translated with AI and may contain errors. You can suggest improvements and help with the translation on [GitHub]({{- githubUrl}}). If you need help, join our [Discord server]({{- discordUrl}})."
         }
       },
       "logging": {

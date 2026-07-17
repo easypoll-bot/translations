@@ -3,7 +3,8 @@
     "locale": "es-419",
     "name": "Spanish, LATAM",
     "name_native": "Español, LATAM",
-    "emoji_unicode": "🇲🇽"
+    "emoji_unicode": "🇲🇽",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -58,7 +59,10 @@
             "all": "Todas",
             "open": "Abierta",
             "running": "En curso",
-            "closed": "Cerrada"
+            "closed": "Cerrada",
+            "failed": "Fallida",
+            "scheduled": "Programada",
+            "unpublished": "Sin publicar"
           }
         },
         "channel": {
@@ -380,37 +384,6 @@
         }
       }
     },
-    "settings": {
-      "events": {
-        "title": "Ajustes de eventos",
-        "components": {
-          "settings": {
-            "label": "Selecciona para activar/desactivar",
-            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
-            "options": {
-              "pin_poll_message_while_running": "Fijar el mensaje de la encuesta mientras está en curso",
-              "announce_winner_on_poll_auto_close": "Anunciar al ganador cuando una encuesta se cierre automáticamente",
-              "remove_votes_on_ban": "Eliminar votos activos cuando un usuario sea bloqueado",
-              "remove_votes_on_kick": "Eliminar votos activos cuando un usuario sea expulsado",
-              "remove_votes_on_leave": "Eliminar votos activos cuando un usuario abandone"
-            }
-          }
-        }
-      },
-      "threads": {
-        "title": "Ajustes de hilos",
-        "components": {
-          "settings": {
-            "label": "Selecciona para activar/desactivar",
-            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
-            "options": {
-              "create_thread_with_poll": "Crear un hilo cuando se cree una nueva encuesta",
-              "lock_and_unlock_thread_with_poll": "Bloquear/desbloquear un hilo cuando la encuesta relacionada se cierre/reabra"
-            }
-          }
-        }
-      }
-    },
     "pollbuilder": {
       "title": {
         "create": "Crear Encuesta",
@@ -459,6 +432,37 @@
         }
       }
     },
+    "settings": {
+      "events": {
+        "title": "Ajustes de eventos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
+            "options": {
+              "pin_poll_message_while_running": "Fijar el mensaje de la encuesta mientras está en curso",
+              "announce_winner_on_poll_auto_close": "Anunciar al ganador cuando una encuesta se cierre automáticamente",
+              "remove_votes_on_ban": "Eliminar votos activos cuando un usuario sea bloqueado",
+              "remove_votes_on_kick": "Eliminar votos activos cuando un usuario sea expulsado",
+              "remove_votes_on_leave": "Eliminar votos activos cuando un usuario abandone"
+            }
+          }
+        }
+      },
+      "threads": {
+        "title": "Ajustes de hilos",
+        "components": {
+          "settings": {
+            "label": "Selecciona para activar/desactivar",
+            "description": "Los ajustes seleccionados están activados. Los no seleccionados están desactivados.",
+            "options": {
+              "create_thread_with_poll": "Crear un hilo cuando se cree una nueva encuesta",
+              "lock_and_unlock_thread_with_poll": "Bloquear/desbloquear un hilo cuando la encuesta relacionada se cierre/reabra"
+            }
+          }
+        }
+      }
+    },
     "block": {
       "title": "Bloquear usuario",
       "components": {
@@ -482,7 +486,10 @@
       "status": {
         "open": "Abierta",
         "running": "En curso",
-        "closed": "Cerrada"
+        "closed": "Cerrada",
+        "failed": "Fallida",
+        "scheduled": "Programada",
+        "unpublished": "Sin publicar"
       },
       "reactions": {
         "yes": "Si",
@@ -526,6 +533,8 @@
         "hidden": "Encuesta oculta",
         "maxchoices_one": "{{count}} opción permitida",
         "maxchoices_other": "{{count}} opciones permitidas",
+        "maxtotalvotes_one": "{{count}} voto permitido en total",
+        "maxtotalvotes_other": "{{count}} votos permitidos en total",
         "removevotesnotallowed": "No se permite eliminar votos",
         "allowedroles": "Roles permitidos"
       },
@@ -615,6 +624,14 @@
           "error_missingaccess": "Sin embargo, el mensaje original no pudo ser actualizado porque el bot no tiene los permisos para acceder a este canal.",
           "error_unknownchannel": "Sin embargo, el mensaje original no pudo ser actualizado porque el canal no ha sido encontrado.",
           "error_unknownmessage": "Sin embargo, el mensaje original no pudo ser actualizado porque el mensaje no pudo ser encontrado."
+        }
+      }
+    },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Encuesta movida",
+          "description": "La encuesta ha sido movida satisfactoriamente a {{- channel}}."
         }
       }
     },
@@ -891,6 +908,10 @@
             "title": "Idioma cambiado",
             "description": "El idioma del bot en este servidor ha sido cambiado a {{- language}}."
           }
+        },
+        "notice": {
+          "community": "EasyPoll es traducido por miembros de la comunidad, por lo que algunas traducciones pueden contener errores. Si deseas corregir un error o agregar un idioma faltante, puedes contribuir en [GitHub]({{- githubUrl}}). Si necesitas ayuda, únete a nuestro [servidor de Discord]({{- discordUrl}}).",
+          "ai": "⚠️ Este idioma fue traducido con IA y puede contener errores. Puedes sugerir mejoras y ayudar con la traducción en [GitHub]({{- githubUrl}}). Si necesitas ayuda, únete a nuestro [servidor de Discord]({{- discordUrl}})."
         }
       },
       "logging": {
@@ -1068,6 +1089,10 @@
       "title": "¡Alcansaste el número máximo de opciones!",
       "description": "Has alcanzado el número máximo de opciones para esta encuesta. Puedes eliminar algunos de tus votos para votar otras opciones."
     },
+    "max_total_votes_reached": {
+      "title": "¡Se alcanzó el número máximo de votos!",
+      "description": "La encuesta alcanzó el número máximo de votos permitidos y ya no puedes votar."
+    },
     "not_allowed_role": {
       "title": "¡Solo ciertos roles están permitidos para esta encuesta!",
       "description": "No puedes votar en esta encuesta porque no posees ninguno de los roles permitidos."
@@ -1210,6 +1235,7 @@
     "manage_webhooks": "Gestionar webhooks",
     "manage_threads": "Gestionar hilos",
     "create_public_threads": "Crear hilos públicos",
-    "send_messages_in_threads": "Enviar mensajes en hilos"
+    "send_messages_in_threads": "Enviar mensajes en hilos",
+    "pin_messages": "Fijar mensajes"
   }
 }

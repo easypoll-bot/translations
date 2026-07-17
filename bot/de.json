@@ -3,7 +3,8 @@
     "locale": "de",
     "name": "German",
     "name_native": "Deutsch",
-    "emoji_unicode": "🇩🇪"
+    "emoji_unicode": "🇩🇪",
+    "ai_translated": false
   },
   "commands": {
     "closepoll": {
@@ -626,6 +627,14 @@
         }
       }
     },
+    "movepoll": {
+      "embeds": {
+        "confirm": {
+          "title": "Umfrage verschoben",
+          "description": "Die Umfrage wurde erfolgreich nach {{- channel}} verschoben."
+        }
+      }
+    },
     "copypoll": {
       "embeds": {
         "success": {
@@ -899,6 +908,10 @@
             "title": "Sprache geändert",
             "description": "Die Sprache des Bots auf diesem Server wurde auf {{- language}} geändert."
           }
+        },
+        "notice": {
+          "community": "EasyPoll wird von Community-Mitgliedern übersetzt, daher können einige Übersetzungen Fehler enthalten. Wenn du einen Fehler beheben oder eine fehlende Sprache hinzufügen möchtest, kannst du auf [GitHub]({{- githubUrl}}) beitragen. Wenn du Hilfe brauchst, komm auf unseren [Discord-Server]({{- discordUrl}}).",
+          "ai": "⚠️ Diese Sprache wurde mit KI übersetzt und kann Fehler enthalten. Du kannst auf [GitHub]({{- githubUrl}}) Verbesserungen vorschlagen und bei der Übersetzung mithelfen. Wenn du Hilfe brauchst, komm auf unseren [Discord-Server]({{- discordUrl}})."
         }
       },
       "logging": {
